@@ -1,0 +1,68 @@
+﻿@model Arackiralama.Models.Accounts
+@{
+    ViewBag.Title = "Porfil";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+<div class="container">
+    @if (ViewBag.Hata != null)
+    {
+        <div class="row mb-3">
+            <div class="col-12 alert alert-danger">
+                @ViewBag.hata
+            </div>
+        </div>
+    }
+    @if (ViewBag.SuccessMessage != null)
+    {
+        <div class="row mb-3">
+            <div class="col-12 alert alert-success">
+                @ViewBag.SuccessMessage
+            </div>
+        </div>
+    }
+    <div class="row">
+        @using (Html.BeginForm("AdminProfile", "Admin", FormMethod.Post, new { @style = "width:100%;" }))
+        {
+
+
+            <div class="card">
+
+                <div class="card-header">
+                    <div class="col-12">
+                        <h1>Admin Profil</h1>
+                    </div>
+                </div>
+                @Html.HiddenFor(m => m.ID)
+                <div class="card-body">
+                    <div class="col-12 mt-3">
+                        <div class="row">
+                            <div class="col-12">
+                                <strong>Şifre</strong>
+                            </div>
+                            <div class="col-12">
+                                @Html.TextBoxFor(m => m.Password, new { @class = "form-control", @type = "password" })
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 mt-3">
+                        <div class="row">
+                            <div class="col-12">
+                                <strong>Şifre Tekrar</strong>
+                            </div>
+                            <div class="col-12">
+                                @Html.TextBoxFor(m => m.PasswordAgain, new { @class = "form-control", @type = "password" })
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 mt-3 mb-3">
+                        <input type="submit" class="btn btn-info" value="Güncelle" />
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+
+

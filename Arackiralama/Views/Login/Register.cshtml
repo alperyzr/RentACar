@@ -1,0 +1,202 @@
+﻿@model Arackiralama.ViewModels.User.UserViewModel
+@{
+    ViewBag.Title = "Kayıt Ol";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@if (ViewBag.Hata != null)
+{
+    <div class="container mb-3">
+        <div class="row">
+            <div class="col-12">
+                <label class="hata-message">
+                    @ViewBag.Hata
+                </label>
+            </div>
+        </div>
+    </div>
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="faq-box">
+                @using (Html.BeginForm("Register", "Login", FormMethod.Post, new { @enctype = "multipart/form-data" }))
+                {
+                    <div class="col-12">
+                        <center>
+                            <h1 class="info-box-h1 mt-3 mb-3">
+                                @Html.Raw(Arackiralama.Resources.LanguageFields.RegisterText)
+                            </h1>
+                        </center>
+                    </div>
+                    @*<div class="col-12 mb-3">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <span>@Html.Raw(Arackiralama.Resources.LanguageFields.AvatarImage)</span>
+                                </div>
+                                <div class="col-12">
+                                    @if (!String.IsNullOrEmpty(Model.ImageUrl))
+                                    {
+                                        <img src="@Model.ImageUrl" class="panel-upload-img" />
+                                    }
+                                    @Html.TextBoxFor(m => m.AvatarResim, new { type = "file" })
+                                    @Html.ValidationMessageFor(m => m.AvatarResim, "", new { style = "color:red;font-size:12px" })
+                                </div>
+                            </div>
+                        </div>*@
+
+                    <div class="col-12 mb-3">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <span>@Html.Raw(Arackiralama.Resources.LanguageFields.FormName)</span>
+                            </div>
+                            <div class="col-12">
+                                @Html.TextBoxFor(m => m.Ad, new { @class = "form-control" })
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 mb-3">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <span>@Html.Raw(Arackiralama.Resources.LanguageFields.FormSurname)</span>
+                            </div>
+                            <div class="col-12">
+                                @Html.TextBoxFor(m => m.Soyad, new { @class = "form-control" })
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 mb-3">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <span>@Html.Raw(Arackiralama.Resources.LanguageFields.EmailInfo)</span>
+                            </div>
+                            <div class="col-12">
+                                @Html.TextBoxFor(m => m.EPosta, new { @class = "form-control" })
+                            </div>
+                        </div>
+                    </div>
+                    if (ViewBag.Hata != null)
+                    {
+                        <div class="col-12">
+                            <label class="hata-message">
+                                @ViewBag.EPosta
+                            </label>
+                        </div>
+                    }
+                    <div class="col-12 mb-3">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <span>@Html.Raw(Arackiralama.Resources.LanguageFields.PasswordText)</span>
+                            </div>
+                            <div class="col-12">
+                                @Html.TextBoxFor(m => m.Sifre, new { @class = "form-control", @type = "password" })
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 mb-3">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <span>@Html.Raw(Arackiralama.Resources.LanguageFields.PasswordAgain)</span>
+                            </div>
+                            <div class="col-12">
+                                @Html.TextBoxFor(m => m.SifreTekrar, new { @class = "form-control", @type = "password" })
+                            </div>
+                        </div>
+                    </div>
+                    if (ViewBag.Hata != null)
+                    {
+                        <div class="col-12">
+                            <label class="hata-message">
+                                @ViewBag.Sifre
+                            </label>
+                        </div>
+                    }
+                    @*<div class="col-12 mb-3">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <span>@Html.Raw(Arackiralama.Resources.LanguageFields.AddressTitle)</span>
+                                </div>
+                                <div class="col-12">
+                                    @Html.TextBoxFor(m => m.Adres, new { @class = "form-control" })
+                                </div>
+                            </div>
+                        </div>*@
+                    <div class="col-12 mb-3">
+                        <div class="row">
+                            <div class="col-lg-1">
+                                <span>@Html.Raw(Arackiralama.Resources.LanguageFields.GenderTitle)</span>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="row">
+                                    <div class="col-3">
+                                        @Html.RadioButtonFor(m => m.Cinsiyet, "Erkek")<span>@Html.Raw(Arackiralama.Resources.LanguageFields.Male)</span>
+                                    </div>
+                                    <div class="col-3">
+                                        @Html.RadioButtonFor(m => m.Cinsiyet, "Kadın")<span>@Html.Raw(Arackiralama.Resources.LanguageFields.Female)</span>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-12 mb-3">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <span>@Html.Raw(Arackiralama.Resources.LanguageFields.AddressTitle)</span>
+                            </div>
+                            <div class="col-12">
+                                @Html.TextAreaFor(m => m.Adres, new { @class = "form-control" })
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 mb-3">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <span>@Html.Raw(Arackiralama.Resources.LanguageFields.TelephoneTitle)</span>
+                            </div>
+                            <div class="col-12">
+                                @Html.TextBoxFor(m => m.Telefon, new { @class = "form-control" })
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 mb-3">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <span>@Html.Raw(Arackiralama.Resources.LanguageFields.BirthDate)</span>
+                            </div>
+                            <div class="col-12">
+                                @Html.TextBoxFor(m => m.DogumTarihi, new { @class = "form-control", @type = "date" })
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 mb-3">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <span>Gizliik Sözleşmesi</span>
+                            </div>
+                            <div class="col-12">
+
+                                <span>
+                                    <input id="CookiePolicyIsChecked" name="CookiePolicyIsChecked" value="true" type="checkbox" />
+
+                                    <strong>
+                                        <a href="#" data-toggle="modal" data-target="#KVKK">Çerez Politikası</a>
+
+                                    </strong>
+                                    <span>'nı kabul ediyorum.</span>
+                                </span>
+                                @{ Html.RenderAction("_KVKK", "Content");}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 mb-3">
+                        <input type="submit" value="@Html.Raw(Arackiralama.Resources.LanguageFields.RegisterText)" class="btn btn-save" />
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>

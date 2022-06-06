@@ -1,0 +1,285 @@
+﻿
+@model IEnumerable<Arackiralama.Models.Cultures>
+<header>
+    <style type="text/css">
+        @@media(max-width:600px) {
+            .desktop {
+                display: none;
+            }
+
+            .mobile {
+                display: block;
+            }
+
+            .header-top ul {
+                display: block;
+                padding-left:0px;
+            }
+            .header-top ul li a {
+               color:#fff;
+            }
+        }
+
+        @@media(min-width:601px) {
+            .desktop {
+                display: block;
+            }
+
+            .mobile {
+                display: none;
+            }
+        }
+    </style>
+</header>
+<div class="mb-3 desktop">
+    <div class="header-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <ul>
+                        <li>
+                            <img src="~/Contents/img/googleplay.png" class="header-img" />
+                        </li>
+                        <li>
+                            <img src="~/Contents/img/applestore.png" class="header-img" />
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="float-right m-1" style="display:flex;">
+                        @if (Session["KullaniciAdi"] != null)
+                        {
+                            <div class="dropdown mr-3" style="margin-top: 4.3%;">
+
+                                <a href="#" class="dropbtn"> @Session["KullaniciAdi"]</a>
+                                <div class="dropdown-content">
+
+
+                                    <a href="~/Member/Profile"><i class="fas fa-user mr-1"></i>@Html.Raw(Arackiralama.Resources.LanguageFields.Profile)</a>
+
+
+                                    <a href="~/Member/OrderHistory"><i class="fas fa-car mr-1"></i>@Html.Raw(Arackiralama.Resources.LanguageFields.ProfileOrderHistoryButton)</a>
+                                    <a href="~/Login/Index"><i class="fas fa-door-open mr-1"></i>@Html.Raw(Arackiralama.Resources.LanguageFields.ProfileLogOut)</a>
+                                </div>
+                            </div>
+                        }
+
+                        else
+                        {
+                            <a href="~/Login/Index" class="header-a mr-3">@Html.Raw(Arackiralama.Resources.LanguageFields.LogInText)</a>
+                        }
+
+                        <select class="form-control header-select" id="cultureID" onchange="CultureIDOnChangeHandler(this)">
+
+                            @foreach (var item in Model)
+                            {
+
+                                <option value="@item.Code" @(Session["culture"].ToString() == item.Code ? "selected" : "")>@item.Name</option>
+                            }
+
+                        </select>
+                        <select class="form-control header-select" id="currencyID" onchange="CurrencyIDOnChangeHandler(this)">
+                            @if (Session["currency"] != null)
+                            {
+                                if (Session["currency"].ToString() == "USD")
+                                {
+                                    <option>TRY</option>
+                                    <option>EUR</option>
+                                    <option selected>USD </option>
+                                }
+                                else if (Session["currency"].ToString() == "EUR")
+                                {
+                                    <option>TRY</option>
+                                    <option selected>EUR</option>
+                                    <option>USD </option>
+                                }
+                                else
+                                {
+                                    <option selected>TRY</option>
+                                    <option>EUR</option>
+                                    <option>USD </option>
+                                }
+                            }
+                            else
+                            {
+                                <option selected>TRY</option>
+                                <option>EUR</option>
+                                <option>USD </option>
+                            }
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="header-middle">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-4">
+                    <div class="mt-3">
+                        <a href="~/Car/Index">
+                            <img src="~/Contents/img/arac_var_arac_logo2.png" />
+                        </a>
+
+                    </div>
+                </div>
+                <div class="col-12 col-md-8">
+                    <div class="float-right">
+                        <ul class="p-3">
+                            <li class="mr-3 mt-3">
+                                <a href="~/Content/OrderManegment">@Html.Raw(Arackiralama.Resources.LanguageFields.OrderManegment)</a>
+                            </li>
+                            <li class="mr-3 mt-3">
+                                <a href="~/Content/PrivacyPolicy">@Html.Raw(Arackiralama.Resources.LanguageFields.PrivacyPolicyTitle)</a>
+                            </li>
+                            <li class="mr-3 mt-3">
+                                <a href="~/Content/Contact">@Html.Raw(Arackiralama.Resources.LanguageFields.ContactInfo)</a>
+                            </li>
+                            <li class="mr-3 mt-3">
+                                <a href="~/Content/FAQ">@Html.Raw(Arackiralama.Resources.LanguageFields.FrequentlyAskedQuestionsTitle)</a>
+                            </li>
+                            <li class="mr-3 mt-3">
+                                <a href="~/Content/Blog">@Html.Raw(Arackiralama.Resources.LanguageFields.Blog)</a>
+                            </li>
+                            <li class="mt-3">
+                                <a href="~/Admin/Admin/Login" target="_blank">@Html.Raw(Arackiralama.Resources.LanguageFields.ManagementPanel)</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light header-top mb-3 mobile row">
+    <div style="text-align:right;">
+        <div class="row">
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-4 mt-2">
+                        <img src="~/Contents/img/googleplay.png" style="max-width:75px; width:auto;" />
+                    </div>
+                    <div class="col-4 mt-2">
+                        <img src="~/Contents/img/applestore.png" style="max-width:75px; width:auto;" />
+                    </div>
+                    <div class="col-4">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="col-12 collapse navbar-collapse" id="navbarSupportedContent">
+
+        @if (Session["KullaniciAdi"] != null)
+        {
+            <div class="dropdown mr-3" style="margin-top: 4.3%;">
+
+                <a href="#" class="dropbtn"> @Session["KullaniciAdi"]</a>
+                <div class="dropdown-content">
+
+
+                    <a href="~/Member/Profile"><i class="fas fa-user mr-1"></i>@Html.Raw(Arackiralama.Resources.LanguageFields.Profile)</a>
+
+
+                    <a href="~/Member/OrderHistory"><i class="fas fa-car mr-1"></i>@Html.Raw(Arackiralama.Resources.LanguageFields.ProfileOrderHistoryButton)</a>
+                    <a href="~/Login/Index"><i class="fas fa-door-open mr-1"></i>@Html.Raw(Arackiralama.Resources.LanguageFields.ProfileLogOut)</a>
+                </div>
+            </div>
+        }
+
+        else
+        {
+            <a href="~/Login/Index" class="header-a mr-3 ml-2">@Html.Raw(Arackiralama.Resources.LanguageFields.LogInText)</a>
+        }
+
+        <select class="form-control header-select" id="cultureID" onchange="CultureIDOnChangeHandler(this)">
+
+            @foreach (var item in Model)
+            {
+
+                <option value="@item.Code" @(Session["culture"].ToString() == item.Code ? "selected" : "")>@item.Name</option>
+            }
+
+        </select>
+        <select class="form-control header-select" id="currencyID" onchange="CurrencyIDOnChangeHandler(this)">
+            @if (Session["currency"] != null)
+            {
+                if (Session["currency"].ToString() == "USD")
+                {
+                    <option>TRY</option>
+                    <option>EUR</option>
+                    <option selected>USD </option>
+                }
+                else if (Session["currency"].ToString() == "EUR")
+                {
+                    <option>TRY</option>
+                    <option selected>EUR</option>
+                    <option>USD </option>
+                }
+                else
+                {
+                    <option selected>TRY</option>
+                    <option>EUR</option>
+                    <option>USD </option>
+                }
+            }
+            else
+            {
+                <option selected>TRY</option>
+                <option>EUR</option>
+                <option>USD </option>
+            }
+        </select>
+        <hr />
+        <div class="row">
+            <div class="col-12">
+                <ul class="">
+                    <li class="mr-3 mt-3">
+                        <a href="~/Content/OrderManegment">@Html.Raw(Arackiralama.Resources.LanguageFields.OrderManegment)</a>
+                    </li>
+                    <li class="mr-3 mt-3">
+                        <a href="~/Content/PrivacyPolicy">@Html.Raw(Arackiralama.Resources.LanguageFields.PrivacyPolicyTitle)</a>
+                    </li>
+                    <li class="mr-3 mt-3">
+                        <a href="~/Content/Contact">@Html.Raw(Arackiralama.Resources.LanguageFields.ContactInfo)</a>
+                    </li>
+                    <li class="mr-3 mt-3">
+                        <a href="~/Content/FAQ">@Html.Raw(Arackiralama.Resources.LanguageFields.FrequentlyAskedQuestionsTitle)</a>
+                    </li>
+                    <li class="mr-3 mt-3">
+                        <a href="~/Content/Blog">@Html.Raw(Arackiralama.Resources.LanguageFields.Blog)</a>
+                    </li>
+                    <li class="mt-3">
+                        <a href="~/Admin/Admin/Login" target="_blank">@Html.Raw(Arackiralama.Resources.LanguageFields.ManagementPanel)</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+
+
+</nav>
+

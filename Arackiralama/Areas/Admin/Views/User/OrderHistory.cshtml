@@ -1,0 +1,70 @@
+﻿@model IEnumerable<Arackiralama.Models.Orders>
+@{
+    ViewBag.Title = "Önceki Siparişler";
+    if (Session["currency"] == null)
+    {
+        Session["currency"] = "TRY";
+    }
+}
+
+<div class="col">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">Önceki Siparişler</h2>
+                </div>
+                <div class="card-body">
+
+                    <table id="OrderHistory" class="table table-responsive-md table-striped mb-0 table-bordered">
+                        <thead>
+                            <tr>
+
+                                <th>Araç Markası</th>
+
+                                <th>Teslim Alınan Yer</th>
+                                <th>Teslim alınan Tarih</th>
+                                <th>Teslim Ediln Yer</th>
+                                <th>Teslim Edilen Tarih</th>
+                                <th>Ödenen Miktar</th>
+                                <th>İşlemler</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+
+                                    <td>@item.VehicleOrders.FirstOrDefault().VehicleName</td>
+
+                                    <td>@item.VehicleOrders.FirstOrDefault().StartOfficeName</td>
+                                    <td>@item.VehicleOrders.FirstOrDefault().StartAt @item.VehicleOrders.FirstOrDefault().StartTime</td>
+                                    <td>@item.VehicleOrders.FirstOrDefault().EndOfficeName</td>
+                                    <td>@item.VehicleOrders.FirstOrDefault().EndAt @item.VehicleOrders.FirstOrDefault().EndTime</td>
+                                    <td>@item.Total @Session["currency"].ToString() </td>
+                                    <td>
+                                        <a href="@Url.Action("OrderHistoryDetail", "User", new { ID = item.ID })" class="btn btn-info">Detay</a>
+
+
+                                    </td>
+                                </tr>
+                            }
+
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section scripts{
+
+    <script src="~/DataTables/DataTables.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#OrderHistory').DataTable();
+        });
+    </script>
+
+}

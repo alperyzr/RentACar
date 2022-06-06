@@ -1,0 +1,3202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="AracKiralamaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Accounts">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RoleID" Type="int" Nullable="false" />
+          <Property Name="Email" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Password" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="FirstName" Type="nvarchar(max)" />
+          <Property Name="LastName" Type="nvarchar(max)" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="HitAt" Type="datetime" />
+          <Property Name="CreatedAt" Type="datetime" />
+          <Property Name="GovermentNo" Type="nvarchar(max)" />
+          <Property Name="Phone" Type="nvarchar(max)" />
+          <Property Name="CellPhone" Type="nvarchar(max)" />
+          <Property Name="Address" Type="nvarchar(max)" />
+          <Property Name="CompanyID" Type="int" />
+          <Property Name="PartnerID" Type="int" />
+          <Property Name="ZipCode" Type="nvarchar(max)" />
+          <Property Name="CityName" Type="nvarchar(max)" />
+          <Property Name="RegionName" Type="nvarchar(max)" />
+          <Property Name="FaxNumber" Type="nvarchar(max)" />
+          <Property Name="UniqueKey" Type="nvarchar(max)" />
+          <Property Name="Status" Type="smallint" Nullable="false" />
+          <Property Name="LastLoginDate" Type="datetime" />
+          <Property Name="AvatarResim" Type="nvarchar(max)" />
+          <Property Name="Gender" Type="nvarchar" MaxLength="50" />
+          <Property Name="BirthDate" Type="date" />
+          <Property Name="IsActive" Type="nvarchar" MaxLength="50" />
+          <Property Name="DateOfRegistration" Type="datetime" />
+          <Property Name="DateOfUpdate" Type="datetime" />
+          <Property Name="RecordPerson" Type="nvarchar" MaxLength="50" />
+          <Property Name="UpdatedPerson" Type="nvarchar" MaxLength="50" />
+          <Property Name="PasswordAgain" Type="nvarchar" MaxLength="50" />
+          <Property Name="CookiePolicyIsChecked" Type="bit" />
+        </EntityType>
+        <EntityType Name="Blog">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CultureID" Type="int" />
+          <Property Name="Title" Type="nvarchar(max)" />
+          <Property Name="ImageURL" Type="nvarchar(max)" />
+          <Property Name="ShowCaseDescription" Type="nvarchar(max)" />
+          <Property Name="DescriptionCK" Type="nvarchar(max)" />
+          <Property Name="Rank" Type="int" />
+          <Property Name="Date" Type="datetime" />
+          <Property Name="CreatedAt" Type="datetime" />
+          <Property Name="CreatedBy" Type="nvarchar(max)" />
+          <Property Name="UpdatedAt" Type="datetime" />
+          <Property Name="UpdatedBy" Type="nvarchar(max)" />
+          <Property Name="IsActive" Type="nvarchar" MaxLength="50" />
+          <Property Name="ImageTitle" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Car">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="CompanyID" Type="int" />
+          <Property Name="Marka" Type="nvarchar" MaxLength="50" />
+          <Property Name="Model" Type="nvarchar" MaxLength="50" />
+          <Property Name="Sinif" Type="nvarchar" MaxLength="50" />
+          <Property Name="Segment" Type="nvarchar" MaxLength="50" />
+          <Property Name="Resim" Type="nvarchar(max)" />
+          <Property Name="KisiSayisi" Type="nvarchar" MaxLength="50" />
+          <Property Name="BagajKapasitesi" Type="nvarchar" MaxLength="50" />
+          <Property Name="KapiSaysi" Type="nvarchar" MaxLength="50" />
+          <Property Name="Sanzuman" Type="nvarchar" MaxLength="50" />
+          <Property Name="YakitTuru" Type="nvarchar" MaxLength="50" />
+          <Property Name="CarPoitScaleID" Type="int" />
+          <Property Name="CarExtraMaterialID" Type="int" />
+          <Property Name="KiralamaTutari" Type="float" />
+          <Property Name="EklendigiTarih" Type="date" />
+          <Property Name="EkleyenKisi" Type="nvarchar" MaxLength="50" />
+          <Property Name="GuncellendigiTarih" Type="date" />
+          <Property Name="GuncelleyenKisi" Type="nvarchar" MaxLength="50" />
+          <Property Name="IsActive" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="CarLocation">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="CarID" Type="uniqueidentifier" />
+          <Property Name="MemberID" Type="uniqueidentifier" />
+          <Property Name="KiralandigiYer" Type="nvarchar(max)" />
+          <Property Name="KiralandigiTarih" Type="date" />
+          <Property Name="KiralandigiSaat" Type="nvarchar" MaxLength="50" />
+          <Property Name="TeslimEdildigiYer" Type="nvarchar(max)" />
+          <Property Name="TeslimEdildigiTarih" Type="date" />
+          <Property Name="TeslimEdildigiSaat" Type="nvarchar" MaxLength="50" />
+          <Property Name="KiralandigiTutar" Type="int" />
+        </EntityType>
+        <EntityType Name="CarPointScale">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PuanAraligi" Type="nvarchar" MaxLength="50" />
+          <Property Name="PuanIfadesi" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Cities">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CountryID" Type="int" Nullable="false" />
+          <Property Name="Code" Type="nvarchar(max)" />
+          <Property Name="IsCapital" Type="bit" Nullable="false" />
+          <Property Name="Latitude" Type="decimal" Precision="20" Scale="15" />
+          <Property Name="Longitude" Type="decimal" Precision="20" Scale="15" />
+          <Property Name="RefID" Type="int" />
+          <Property Name="Distance" Type="int" Nullable="false" />
+          <Property Name="SearchRadius" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CityTranslations">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CityID" Type="int" Nullable="false" />
+          <Property Name="CultureID" Type="int" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="99" Nullable="false" />
+          <Property Name="Slug" Type="nvarchar" MaxLength="99" Nullable="false" />
+          <Property Name="Information" Type="nvarchar" MaxLength="333" />
+          <Property Name="MetaKeyWord" Type="nvarchar" MaxLength="333" />
+          <Property Name="MetaDescription" Type="nvarchar" MaxLength="333" />
+          <Property Name="Html" Type="nvarchar(max)" />
+          <Property Name="Title" Type="nvarchar" MaxLength="99" />
+        </EntityType>
+        <EntityType Name="Company">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Logo" Type="nvarchar(max)" />
+          <Property Name="SirketAdi" Type="nvarchar" MaxLength="50" />
+          <Property Name="TicariUnvani" Type="nvarchar(max)" />
+          <Property Name="VergiDairesi" Type="nvarchar(max)" />
+          <Property Name="VergiNo" Type="nvarchar" MaxLength="50" />
+          <Property Name="SirketTuru" Type="nvarchar" MaxLength="50" />
+          <Property Name="SirketSahibi" Type="nvarchar" MaxLength="50" />
+          <Property Name="EklendigiTarih" Type="date" />
+          <Property Name="EkleyenKisi" Type="nvarchar" MaxLength="50" />
+          <Property Name="GuncellendigiTarih" Type="date" />
+          <Property Name="GuncelleyenKisi" Type="nvarchar" MaxLength="50" />
+          <Property Name="IsActive" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="ContactInfo">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CreatedAt" Type="date" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="50" />
+          <Property Name="UpdatedAt" Type="date" />
+          <Property Name="UpdatedBy" Type="nvarchar" MaxLength="50" />
+          <Property Name="IsActive" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="ContactInfoTranslation">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CultureID" Type="int" />
+          <Property Name="ContactInfoID" Type="int" />
+          <Property Name="Title" Type="nvarchar(max)" />
+          <Property Name="Explanation" Type="nvarchar(max)" />
+          <Property Name="IsActive" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Contacts">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AccountID" Type="int" />
+          <Property Name="Email" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="FirstName" Type="nvarchar(max)" />
+          <Property Name="LastName" Type="nvarchar(max)" />
+          <Property Name="Phone" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="Countries">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Code" Type="nvarchar(max)" />
+          <Property Name="IsDomestic" Type="bit" Nullable="false" />
+          <Property Name="RefID" Type="int" />
+        </EntityType>
+        <EntityType Name="CountryTranslations">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CountryID" Type="int" Nullable="false" />
+          <Property Name="CultureID" Type="int" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="99" Nullable="false" />
+          <Property Name="Slug" Type="nvarchar" MaxLength="99" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Cultures">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Code" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="IsDefault" Type="bit" Nullable="false" />
+          <Property Name="CurrencyID" Type="int" />
+          <Property Name="Currency_ID" Type="int" />
+          <Property Name="IsActive" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Currencies">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Code" Type="nvarchar" MaxLength="4" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="25" Nullable="false" />
+          <Property Name="IsDefault" Type="bit" Nullable="false" />
+          <Property Name="RefID" Type="int" />
+        </EntityType>
+        <EntityType Name="ExtraMaterial">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Icon" Type="nvarchar(max)" />
+          <Property Name="Materyal" Type="nvarchar" MaxLength="50" />
+          <Property Name="Aciklama" Type="nvarchar" MaxLength="250" />
+          <Property Name="MinDeger" Type="int" />
+          <Property Name="MaxDeger" Type="int" />
+          <Property Name="EklendigiTarih" Type="date" />
+          <Property Name="EkleyenKisi" Type="nvarchar" MaxLength="50" />
+          <Property Name="GuncellemeTarihi" Type="date" />
+          <Property Name="GuncelleyenKisi" Type="nvarchar" MaxLength="50" />
+          <Property Name="IsActive" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="FAQ">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CreatedAt" Type="date" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="50" />
+          <Property Name="UpdatedAt" Type="date" />
+          <Property Name="UpdatedBy" Type="nvarchar" MaxLength="50" />
+          <Property Name="IsActive" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="FAQTranslation">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CultureID" Type="int" />
+          <Property Name="FAQID" Type="int" />
+          <Property Name="Question" Type="nvarchar(max)" />
+          <Property Name="Answer" Type="nvarchar(max)" />
+          <Property Name="IsActiive" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Language">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="LanguageTitle" Type="nvarchar(max)" />
+          <Property Name="IsActive" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="OrderHistory">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="UserID" Type="uniqueidentifier" />
+          <Property Name="CompanyID" Type="int" />
+          <Property Name="CarID" Type="uniqueidentifier" />
+          <Property Name="CarLocationID" Type="uniqueidentifier" />
+        </EntityType>
+        <EntityType Name="OrderHistoryDetail">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="UserID" Type="uniqueidentifier" />
+          <Property Name="CompanyID" Type="int" />
+          <Property Name="CarID" Type="uniqueidentifier" />
+          <Property Name="CarPointScaleID" Type="int" />
+          <Property Name="CarLocationID" Type="uniqueidentifier" />
+        </EntityType>
+        <EntityType Name="Orders">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="OrderedAt" Type="datetime" Nullable="false" />
+          <Property Name="Identifier" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="ContactID" Type="int" Nullable="false" />
+          <Property Name="Total" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="CommisionStatus" Type="int" Nullable="false" />
+          <Property Name="ReservationStatus" Type="int" Nullable="false" />
+          <Property Name="OrderType" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="PrivacyPolicy">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CreatedAt" Type="datetime" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="50" />
+          <Property Name="UpdatedAt" Type="datetime" />
+          <Property Name="UpdatedBy" Type="nvarchar" MaxLength="50" />
+          <Property Name="IsActive" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="PrivacyPolicyTranslation">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CultureID" Type="int" />
+          <Property Name="PrivacyPolicyID" Type="int" />
+          <Property Name="Title" Type="nvarchar(max)" />
+          <Property Name="Explanation" Type="nvarchar(max)" />
+          <Property Name="IsActive" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Regions">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CityID" Type="int" Nullable="false" />
+          <Property Name="Latitude" Type="decimal" Precision="20" Scale="14" />
+          <Property Name="Longitude" Type="decimal" Precision="20" Scale="15" />
+          <Property Name="Coordinate" Type="nvarchar(max)" />
+          <Property Name="IsCenter" Type="bit" Nullable="false" />
+          <Property Name="IsShow" Type="int" Nullable="false" />
+          <Property Name="SearchRating" Type="int" Nullable="false" />
+          <Property Name="Distance" Type="int" Nullable="false" />
+          <Property Name="SearchRadius" Type="int" Nullable="false" />
+          <Property Name="RefID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="RegionTranslations">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RegionID" Type="int" Nullable="false" />
+          <Property Name="CultureID" Type="int" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="99" Nullable="false" />
+          <Property Name="Slug" Type="nvarchar" MaxLength="99" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Rol">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RolAciklama" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="AvatarResim" Type="nvarchar(max)" />
+          <Property Name="Ad" Type="nvarchar" MaxLength="50" />
+          <Property Name="Soyad" Type="nvarchar" MaxLength="50" />
+          <Property Name="Telefon" Type="nvarchar" MaxLength="50" />
+          <Property Name="DogumTarihi" Type="date" />
+          <Property Name="Adres" Type="nvarchar(max)" />
+          <Property Name="EPosta" Type="nvarchar" MaxLength="50" />
+          <Property Name="Sifre" Type="nvarchar(max)" />
+          <Property Name="SifreTekrar" Type="nvarchar(max)" />
+          <Property Name="Cinsiyet" Type="nvarchar" MaxLength="50" />
+          <Property Name="SonGirisTarihi" Type="date" />
+          <Property Name="KayitTarihi" Type="date" />
+          <Property Name="KayıtEdenKisi" Type="nvarchar" MaxLength="50" />
+          <Property Name="GuncellemeTarihi" Type="date" />
+          <Property Name="GuncelleyenKisi" Type="nvarchar" MaxLength="50" />
+          <Property Name="RolID" Type="int" />
+          <Property Name="IsActive" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="UserSearchLogs">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="LeaveCity" Type="nvarchar(max)" />
+          <Property Name="ReturnCity" Type="nvarchar(max)" />
+          <Property Name="InsertedDate" Type="datetime" Nullable="false" />
+          <Property Name="LogType" Type="int" Nullable="false" />
+          <Property Name="StartAt" Type="datetime" Nullable="false" />
+          <Property Name="EndAt" Type="datetime" />
+        </EntityType>
+        <EntityType Name="VehicleInfo">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CategoryID" Type="int" />
+          <Property Name="GearType" Type="nvarchar" MaxLength="50" />
+          <Property Name="PassengerCount" Type="nvarchar" MaxLength="50" />
+          <Property Name="FuelType" Type="nvarchar" MaxLength="50" />
+          <Property Name="DoorCount" Type="nvarchar" MaxLength="50" />
+          <Property Name="BaggageCount" Type="nvarchar" MaxLength="50" />
+          <Property Name="CompanyImage" Type="nvarchar(max)" />
+          <Property Name="VehicleOrdersID" Type="int" />
+          <Property Name="CompanyName" Type="nvarchar(max)" />
+          <Property Name="ThumImage" Type="nvarchar(max)" />
+          <Property Name="OfficeName" Type="nvarchar(max)" />
+          <Property Name="OfficeAddress" Type="nvarchar(max)" />
+          <Property Name="OfficeTel" Type="nvarchar" MaxLength="50" />
+          <Property Name="FuelPolicy" Type="nvarchar" MaxLength="50" />
+          <Property Name="Name" Type="nvarchar(max)" />
+          <Property Name="AirConditionInd" Type="bit" />
+          <Property Name="TransmissionType" Type="nvarchar" MaxLength="50" />
+          <Property Name="VehicleCharges" Type="nvarchar(max)" />
+          <Property Name="PricedCoverages" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="VehicleOrders">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="VehicleID" Type="int" Nullable="false" />
+          <Property Name="StartAt" Type="datetime" Nullable="false" />
+          <Property Name="EndAt" Type="datetime" Nullable="false" />
+          <Property Name="PaymentStatusID" Type="int" Nullable="false" />
+          <Property Name="PaymentIdentifier" Type="nvarchar(max)" />
+          <Property Name="TotalRate" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="CurrencyID" Type="int" Nullable="false" />
+          <Property Name="OrderID" Type="int" Nullable="false" />
+          <Property Name="FlightNumber" Type="nvarchar(max)" />
+          <Property Name="StartTime" Type="nvarchar(max)" />
+          <Property Name="EndTime" Type="nvarchar(max)" />
+          <Property Name="VehicleExtraFee" Type="nvarchar(max)" />
+          <Property Name="CreditCardNumber" Type="nvarchar(max)" />
+          <Property Name="CreditCardNameandSurname" Type="nvarchar(max)" />
+          <Property Name="CreditCardType" Type="nvarchar(max)" />
+          <Property Name="CreditCardExpirationMonth" Type="nvarchar(max)" />
+          <Property Name="CreditCardExpirationYear" Type="nvarchar(max)" />
+          <Property Name="CreditCardSecurityCode" Type="nvarchar(max)" />
+          <Property Name="Identifier" Type="nvarchar(max)" />
+          <Property Name="StartOfficeName" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="EndOfficeName" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="OfficeAddress" Type="nvarchar(max)" />
+          <Property Name="OfficePhone" Type="nvarchar(max)" />
+          <Property Name="VehicleName" Type="nvarchar(max)" />
+          <Property Name="VehicleRefID" Type="int" Nullable="false" />
+          <Property Name="StartOfficeID" Type="int" Nullable="false" />
+          <Property Name="EndOfficeID" Type="int" Nullable="false" />
+          <Property Name="PaymentTypeID" Type="int" Nullable="false" />
+          <Property Name="ConfirmedID" Type="nvarchar(max)" />
+          <Property Name="EndOfficeAddress" Type="nvarchar(max)" />
+          <Property Name="EndOfficePhone" Type="nvarchar(max)" />
+          <Property Name="ThumImage" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="VehicleOtherPassengers">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="OrderID" Type="int" Nullable="false" />
+          <Property Name="FirstName" Type="nvarchar(max)" />
+          <Property Name="LastName" Type="nvarchar(max)" />
+          <Property Name="Address" Type="nvarchar(max)" />
+          <Property Name="FlightNumber" Type="nvarchar(max)" />
+          <Property Name="Phone" Type="nvarchar(max)" />
+          <Property Name="Email" Type="nvarchar(max)" />
+        </EntityType>
+        <Association Name="FK_Blog_Cultures">
+          <End Role="Cultures" Type="Self.Cultures" Multiplicity="0..1" />
+          <End Role="Blog" Type="Self.Blog" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cultures">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Blog">
+              <PropertyRef Name="CultureID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Blog_Language1">
+          <End Role="Language" Type="Self.Language" Multiplicity="0..1" />
+          <End Role="Blog" Type="Self.Blog" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Language">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Blog">
+              <PropertyRef Name="CultureID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Car_CarPointScale1">
+          <End Role="CarPointScale" Type="Self.CarPointScale" Multiplicity="0..1" />
+          <End Role="Car" Type="Self.Car" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CarPointScale">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Car">
+              <PropertyRef Name="CarPoitScaleID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Car_Company">
+          <End Role="Company" Type="Self.Company" Multiplicity="0..1" />
+          <End Role="Car" Type="Self.Car" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Company">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Car">
+              <PropertyRef Name="CompanyID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Car_ExtraMaterial1">
+          <End Role="ExtraMaterial" Type="Self.ExtraMaterial" Multiplicity="0..1" />
+          <End Role="Car" Type="Self.Car" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ExtraMaterial">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Car">
+              <PropertyRef Name="CarExtraMaterialID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CarLocation_Car">
+          <End Role="Car" Type="Self.Car" Multiplicity="0..1" />
+          <End Role="CarLocation" Type="Self.CarLocation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Car">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="CarLocation">
+              <PropertyRef Name="CarID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CarLocation_User">
+          <End Role="User" Type="Self.User" Multiplicity="0..1" />
+          <End Role="CarLocation" Type="Self.CarLocation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="CarLocation">
+              <PropertyRef Name="MemberID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Cities_Countries_CountryID">
+          <End Role="Countries" Type="Self.Countries" Multiplicity="1" />
+          <End Role="Cities" Type="Self.Cities" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Countries">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Cities">
+              <PropertyRef Name="CountryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CityTranslations_Cities_CityID">
+          <End Role="Cities" Type="Self.Cities" Multiplicity="1" />
+          <End Role="CityTranslations" Type="Self.CityTranslations" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cities">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="CityTranslations">
+              <PropertyRef Name="CityID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CityTranslations_Cultures_CultureID">
+          <End Role="Cultures" Type="Self.Cultures" Multiplicity="1" />
+          <End Role="CityTranslations" Type="Self.CityTranslations" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cultures">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="CityTranslations">
+              <PropertyRef Name="CultureID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ContactInfoTranslation_ContactInfo">
+          <End Role="ContactInfo" Type="Self.ContactInfo" Multiplicity="0..1" />
+          <End Role="ContactInfoTranslation" Type="Self.ContactInfoTranslation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ContactInfo">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ContactInfoTranslation">
+              <PropertyRef Name="ContactInfoID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ContactInfoTranslation_Cultures">
+          <End Role="Cultures" Type="Self.Cultures" Multiplicity="0..1" />
+          <End Role="ContactInfoTranslation" Type="Self.ContactInfoTranslation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cultures">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ContactInfoTranslation">
+              <PropertyRef Name="CultureID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ContactInfoTranslation_Language">
+          <End Role="Language" Type="Self.Language" Multiplicity="0..1" />
+          <End Role="ContactInfoTranslation" Type="Self.ContactInfoTranslation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Language">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ContactInfoTranslation">
+              <PropertyRef Name="CultureID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Contacts_Accounts_AccountID">
+          <End Role="Accounts" Type="Self.Accounts" Multiplicity="0..1" />
+          <End Role="Contacts" Type="Self.Contacts" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Accounts">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Contacts">
+              <PropertyRef Name="AccountID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CountryTranslations_Countries_CountryID">
+          <End Role="Countries" Type="Self.Countries" Multiplicity="1" />
+          <End Role="CountryTranslations" Type="Self.CountryTranslations" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Countries">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="CountryTranslations">
+              <PropertyRef Name="CountryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CountryTranslations_Cultures_CultureID">
+          <End Role="Cultures" Type="Self.Cultures" Multiplicity="1" />
+          <End Role="CountryTranslations" Type="Self.CountryTranslations" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cultures">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="CountryTranslations">
+              <PropertyRef Name="CultureID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Cultures_Currencies_CurrencyID">
+          <End Role="Currencies" Type="Self.Currencies" Multiplicity="0..1" />
+          <End Role="Cultures" Type="Self.Cultures" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Currencies">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Cultures">
+              <PropertyRef Name="CurrencyID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FAQTranslation_Cultures">
+          <End Role="Cultures" Type="Self.Cultures" Multiplicity="0..1" />
+          <End Role="FAQTranslation" Type="Self.FAQTranslation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cultures">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="FAQTranslation">
+              <PropertyRef Name="CultureID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FAQTranslation_FAQ">
+          <End Role="FAQ" Type="Self.FAQ" Multiplicity="0..1" />
+          <End Role="FAQTranslation" Type="Self.FAQTranslation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FAQ">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="FAQTranslation">
+              <PropertyRef Name="FAQID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FAQTranslation_Language">
+          <End Role="Language" Type="Self.Language" Multiplicity="0..1" />
+          <End Role="FAQTranslation" Type="Self.FAQTranslation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Language">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="FAQTranslation">
+              <PropertyRef Name="CultureID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OrderHistory_Car">
+          <End Role="Car" Type="Self.Car" Multiplicity="0..1" />
+          <End Role="OrderHistory" Type="Self.OrderHistory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Car">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="OrderHistory">
+              <PropertyRef Name="CarID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OrderHistory_CarLocation">
+          <End Role="CarLocation" Type="Self.CarLocation" Multiplicity="0..1" />
+          <End Role="OrderHistory" Type="Self.OrderHistory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CarLocation">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="OrderHistory">
+              <PropertyRef Name="CarLocationID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OrderHistory_Company">
+          <End Role="Company" Type="Self.Company" Multiplicity="0..1" />
+          <End Role="OrderHistory" Type="Self.OrderHistory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Company">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="OrderHistory">
+              <PropertyRef Name="CompanyID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OrderHistory_User">
+          <End Role="User" Type="Self.User" Multiplicity="0..1" />
+          <End Role="OrderHistory" Type="Self.OrderHistory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="OrderHistory">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OrderHistoryDetail_Car">
+          <End Role="Car" Type="Self.Car" Multiplicity="0..1" />
+          <End Role="OrderHistoryDetail" Type="Self.OrderHistoryDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Car">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="OrderHistoryDetail">
+              <PropertyRef Name="CarID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OrderHistoryDetail_CarLocation">
+          <End Role="CarLocation" Type="Self.CarLocation" Multiplicity="0..1" />
+          <End Role="OrderHistoryDetail" Type="Self.OrderHistoryDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CarLocation">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="OrderHistoryDetail">
+              <PropertyRef Name="CarLocationID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OrderHistoryDetail_CarPointScale">
+          <End Role="CarPointScale" Type="Self.CarPointScale" Multiplicity="0..1" />
+          <End Role="OrderHistoryDetail" Type="Self.OrderHistoryDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CarPointScale">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="OrderHistoryDetail">
+              <PropertyRef Name="CarPointScaleID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OrderHistoryDetail_Company">
+          <End Role="Company" Type="Self.Company" Multiplicity="0..1" />
+          <End Role="OrderHistoryDetail" Type="Self.OrderHistoryDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Company">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="OrderHistoryDetail">
+              <PropertyRef Name="CompanyID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OrderHistoryDetail_User1">
+          <End Role="User" Type="Self.User" Multiplicity="0..1" />
+          <End Role="OrderHistoryDetail" Type="Self.OrderHistoryDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="OrderHistoryDetail">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Orders_Contacts_ContactID">
+          <End Role="Contacts" Type="Self.Contacts" Multiplicity="1" />
+          <End Role="Orders" Type="Self.Orders" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Contacts">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Orders">
+              <PropertyRef Name="ContactID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PrivacyPolicyTranslation_Cultures">
+          <End Role="Cultures" Type="Self.Cultures" Multiplicity="0..1" />
+          <End Role="PrivacyPolicyTranslation" Type="Self.PrivacyPolicyTranslation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cultures">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="PrivacyPolicyTranslation">
+              <PropertyRef Name="CultureID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PrivacyPolicyTranslation_Language">
+          <End Role="Language" Type="Self.Language" Multiplicity="0..1" />
+          <End Role="PrivacyPolicyTranslation" Type="Self.PrivacyPolicyTranslation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Language">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="PrivacyPolicyTranslation">
+              <PropertyRef Name="CultureID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PrivacyPolicyTranslation_PrivacyPolicy">
+          <End Role="PrivacyPolicy" Type="Self.PrivacyPolicy" Multiplicity="0..1" />
+          <End Role="PrivacyPolicyTranslation" Type="Self.PrivacyPolicyTranslation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PrivacyPolicy">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="PrivacyPolicyTranslation">
+              <PropertyRef Name="PrivacyPolicyID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Regions_Cities_CityID">
+          <End Role="Cities" Type="Self.Cities" Multiplicity="1" />
+          <End Role="Regions" Type="Self.Regions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cities">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Regions">
+              <PropertyRef Name="CityID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RegionTranslations_Cultures_CultureID">
+          <End Role="Cultures" Type="Self.Cultures" Multiplicity="1" />
+          <End Role="RegionTranslations" Type="Self.RegionTranslations" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cultures">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="RegionTranslations">
+              <PropertyRef Name="CultureID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RegionTranslations_Regions_RegionID">
+          <End Role="Regions" Type="Self.Regions" Multiplicity="1" />
+          <End Role="RegionTranslations" Type="Self.RegionTranslations" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Regions">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="RegionTranslations">
+              <PropertyRef Name="RegionID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_User_Rol">
+          <End Role="Rol" Type="Self.Rol" Multiplicity="0..1" />
+          <End Role="User" Type="Self.User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Rol">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="User">
+              <PropertyRef Name="RolID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Vehicle_VehicleOrders">
+          <End Role="VehicleOrders" Type="Self.VehicleOrders" Multiplicity="0..1" />
+          <End Role="VehicleInfo" Type="Self.VehicleInfo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="VehicleOrders">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="VehicleInfo">
+              <PropertyRef Name="VehicleOrdersID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_VehicleOrders_Currencies_CurrencyID">
+          <End Role="Currencies" Type="Self.Currencies" Multiplicity="1" />
+          <End Role="VehicleOrders" Type="Self.VehicleOrders" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Currencies">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="VehicleOrders">
+              <PropertyRef Name="CurrencyID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_VehicleOrders_Orders_OrderID">
+          <End Role="Orders" Type="Self.Orders" Multiplicity="1" />
+          <End Role="VehicleOrders" Type="Self.VehicleOrders" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Orders">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="VehicleOrders">
+              <PropertyRef Name="OrderID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_VehicleOtherPassengers_Orders_OrderID">
+          <End Role="Orders" Type="Self.Orders" Multiplicity="1" />
+          <End Role="VehicleOtherPassengers" Type="Self.VehicleOtherPassengers" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Orders">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="VehicleOtherPassengers">
+              <PropertyRef Name="OrderID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+        <Function Name="GetVehicleRegions" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="query" Type="nvarchar" Mode="In" />
+          <Parameter Name="culture" Type="bit" Mode="In" />
+        </Function>
+        <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="version" Type="int" Mode="In" />
+          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="version" Type="int" Mode="In" />
+          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <EntityContainer Name="AracKiralamaModelStoreContainer">
+          <EntitySet Name="Accounts" EntityType="Self.Accounts" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Blog" EntityType="Self.Blog" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Car" EntityType="Self.Car" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CarLocation" EntityType="Self.CarLocation" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CarPointScale" EntityType="Self.CarPointScale" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Cities" EntityType="Self.Cities" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CityTranslations" EntityType="Self.CityTranslations" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Company" EntityType="Self.Company" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ContactInfo" EntityType="Self.ContactInfo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ContactInfoTranslation" EntityType="Self.ContactInfoTranslation" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Contacts" EntityType="Self.Contacts" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Countries" EntityType="Self.Countries" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CountryTranslations" EntityType="Self.CountryTranslations" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Cultures" EntityType="Self.Cultures" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Currencies" EntityType="Self.Currencies" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ExtraMaterial" EntityType="Self.ExtraMaterial" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FAQ" EntityType="Self.FAQ" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FAQTranslation" EntityType="Self.FAQTranslation" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Language" EntityType="Self.Language" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="OrderHistory" EntityType="Self.OrderHistory" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="OrderHistoryDetail" EntityType="Self.OrderHistoryDetail" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Orders" EntityType="Self.Orders" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PrivacyPolicy" EntityType="Self.PrivacyPolicy" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PrivacyPolicyTranslation" EntityType="Self.PrivacyPolicyTranslation" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Regions" EntityType="Self.Regions" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="RegionTranslations" EntityType="Self.RegionTranslations" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Rol" EntityType="Self.Rol" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UserSearchLogs" EntityType="Self.UserSearchLogs" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="VehicleInfo" EntityType="Self.VehicleInfo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="VehicleOrders" EntityType="Self.VehicleOrders" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="VehicleOtherPassengers" EntityType="Self.VehicleOtherPassengers" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Blog_Cultures" Association="Self.FK_Blog_Cultures">
+            <End Role="Cultures" EntitySet="Cultures" />
+            <End Role="Blog" EntitySet="Blog" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Blog_Language1" Association="Self.FK_Blog_Language1">
+            <End Role="Language" EntitySet="Language" />
+            <End Role="Blog" EntitySet="Blog" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Car_CarPointScale1" Association="Self.FK_Car_CarPointScale1">
+            <End Role="CarPointScale" EntitySet="CarPointScale" />
+            <End Role="Car" EntitySet="Car" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Car_Company" Association="Self.FK_Car_Company">
+            <End Role="Company" EntitySet="Company" />
+            <End Role="Car" EntitySet="Car" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Car_ExtraMaterial1" Association="Self.FK_Car_ExtraMaterial1">
+            <End Role="ExtraMaterial" EntitySet="ExtraMaterial" />
+            <End Role="Car" EntitySet="Car" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CarLocation_Car" Association="Self.FK_CarLocation_Car">
+            <End Role="Car" EntitySet="Car" />
+            <End Role="CarLocation" EntitySet="CarLocation" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CarLocation_User" Association="Self.FK_CarLocation_User">
+            <End Role="User" EntitySet="User" />
+            <End Role="CarLocation" EntitySet="CarLocation" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Cities_Countries_CountryID" Association="Self.FK_Cities_Countries_CountryID">
+            <End Role="Countries" EntitySet="Countries" />
+            <End Role="Cities" EntitySet="Cities" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CityTranslations_Cities_CityID" Association="Self.FK_CityTranslations_Cities_CityID">
+            <End Role="Cities" EntitySet="Cities" />
+            <End Role="CityTranslations" EntitySet="CityTranslations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CityTranslations_Cultures_CultureID" Association="Self.FK_CityTranslations_Cultures_CultureID">
+            <End Role="Cultures" EntitySet="Cultures" />
+            <End Role="CityTranslations" EntitySet="CityTranslations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ContactInfoTranslation_ContactInfo" Association="Self.FK_ContactInfoTranslation_ContactInfo">
+            <End Role="ContactInfo" EntitySet="ContactInfo" />
+            <End Role="ContactInfoTranslation" EntitySet="ContactInfoTranslation" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ContactInfoTranslation_Cultures" Association="Self.FK_ContactInfoTranslation_Cultures">
+            <End Role="Cultures" EntitySet="Cultures" />
+            <End Role="ContactInfoTranslation" EntitySet="ContactInfoTranslation" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ContactInfoTranslation_Language" Association="Self.FK_ContactInfoTranslation_Language">
+            <End Role="Language" EntitySet="Language" />
+            <End Role="ContactInfoTranslation" EntitySet="ContactInfoTranslation" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Contacts_Accounts_AccountID" Association="Self.FK_Contacts_Accounts_AccountID">
+            <End Role="Accounts" EntitySet="Accounts" />
+            <End Role="Contacts" EntitySet="Contacts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CountryTranslations_Countries_CountryID" Association="Self.FK_CountryTranslations_Countries_CountryID">
+            <End Role="Countries" EntitySet="Countries" />
+            <End Role="CountryTranslations" EntitySet="CountryTranslations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CountryTranslations_Cultures_CultureID" Association="Self.FK_CountryTranslations_Cultures_CultureID">
+            <End Role="Cultures" EntitySet="Cultures" />
+            <End Role="CountryTranslations" EntitySet="CountryTranslations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Cultures_Currencies_CurrencyID" Association="Self.FK_Cultures_Currencies_CurrencyID">
+            <End Role="Currencies" EntitySet="Currencies" />
+            <End Role="Cultures" EntitySet="Cultures" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FAQTranslation_Cultures" Association="Self.FK_FAQTranslation_Cultures">
+            <End Role="Cultures" EntitySet="Cultures" />
+            <End Role="FAQTranslation" EntitySet="FAQTranslation" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FAQTranslation_FAQ" Association="Self.FK_FAQTranslation_FAQ">
+            <End Role="FAQ" EntitySet="FAQ" />
+            <End Role="FAQTranslation" EntitySet="FAQTranslation" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FAQTranslation_Language" Association="Self.FK_FAQTranslation_Language">
+            <End Role="Language" EntitySet="Language" />
+            <End Role="FAQTranslation" EntitySet="FAQTranslation" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OrderHistory_Car" Association="Self.FK_OrderHistory_Car">
+            <End Role="Car" EntitySet="Car" />
+            <End Role="OrderHistory" EntitySet="OrderHistory" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OrderHistory_CarLocation" Association="Self.FK_OrderHistory_CarLocation">
+            <End Role="CarLocation" EntitySet="CarLocation" />
+            <End Role="OrderHistory" EntitySet="OrderHistory" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OrderHistory_Company" Association="Self.FK_OrderHistory_Company">
+            <End Role="Company" EntitySet="Company" />
+            <End Role="OrderHistory" EntitySet="OrderHistory" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OrderHistory_User" Association="Self.FK_OrderHistory_User">
+            <End Role="User" EntitySet="User" />
+            <End Role="OrderHistory" EntitySet="OrderHistory" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OrderHistoryDetail_Car" Association="Self.FK_OrderHistoryDetail_Car">
+            <End Role="Car" EntitySet="Car" />
+            <End Role="OrderHistoryDetail" EntitySet="OrderHistoryDetail" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OrderHistoryDetail_CarLocation" Association="Self.FK_OrderHistoryDetail_CarLocation">
+            <End Role="CarLocation" EntitySet="CarLocation" />
+            <End Role="OrderHistoryDetail" EntitySet="OrderHistoryDetail" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OrderHistoryDetail_CarPointScale" Association="Self.FK_OrderHistoryDetail_CarPointScale">
+            <End Role="CarPointScale" EntitySet="CarPointScale" />
+            <End Role="OrderHistoryDetail" EntitySet="OrderHistoryDetail" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OrderHistoryDetail_Company" Association="Self.FK_OrderHistoryDetail_Company">
+            <End Role="Company" EntitySet="Company" />
+            <End Role="OrderHistoryDetail" EntitySet="OrderHistoryDetail" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OrderHistoryDetail_User1" Association="Self.FK_OrderHistoryDetail_User1">
+            <End Role="User" EntitySet="User" />
+            <End Role="OrderHistoryDetail" EntitySet="OrderHistoryDetail" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Orders_Contacts_ContactID" Association="Self.FK_Orders_Contacts_ContactID">
+            <End Role="Contacts" EntitySet="Contacts" />
+            <End Role="Orders" EntitySet="Orders" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PrivacyPolicyTranslation_Cultures" Association="Self.FK_PrivacyPolicyTranslation_Cultures">
+            <End Role="Cultures" EntitySet="Cultures" />
+            <End Role="PrivacyPolicyTranslation" EntitySet="PrivacyPolicyTranslation" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PrivacyPolicyTranslation_Language" Association="Self.FK_PrivacyPolicyTranslation_Language">
+            <End Role="Language" EntitySet="Language" />
+            <End Role="PrivacyPolicyTranslation" EntitySet="PrivacyPolicyTranslation" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PrivacyPolicyTranslation_PrivacyPolicy" Association="Self.FK_PrivacyPolicyTranslation_PrivacyPolicy">
+            <End Role="PrivacyPolicy" EntitySet="PrivacyPolicy" />
+            <End Role="PrivacyPolicyTranslation" EntitySet="PrivacyPolicyTranslation" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Regions_Cities_CityID" Association="Self.FK_Regions_Cities_CityID">
+            <End Role="Cities" EntitySet="Cities" />
+            <End Role="Regions" EntitySet="Regions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RegionTranslations_Cultures_CultureID" Association="Self.FK_RegionTranslations_Cultures_CultureID">
+            <End Role="Cultures" EntitySet="Cultures" />
+            <End Role="RegionTranslations" EntitySet="RegionTranslations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RegionTranslations_Regions_RegionID" Association="Self.FK_RegionTranslations_Regions_RegionID">
+            <End Role="Regions" EntitySet="Regions" />
+            <End Role="RegionTranslations" EntitySet="RegionTranslations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_User_Rol" Association="Self.FK_User_Rol">
+            <End Role="Rol" EntitySet="Rol" />
+            <End Role="User" EntitySet="User" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Vehicle_VehicleOrders" Association="Self.FK_Vehicle_VehicleOrders">
+            <End Role="VehicleOrders" EntitySet="VehicleOrders" />
+            <End Role="VehicleInfo" EntitySet="VehicleInfo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_VehicleOrders_Currencies_CurrencyID" Association="Self.FK_VehicleOrders_Currencies_CurrencyID">
+            <End Role="Currencies" EntitySet="Currencies" />
+            <End Role="VehicleOrders" EntitySet="VehicleOrders" />
+          </AssociationSet>
+          <AssociationSet Name="FK_VehicleOrders_Orders_OrderID" Association="Self.FK_VehicleOrders_Orders_OrderID">
+            <End Role="Orders" EntitySet="Orders" />
+            <End Role="VehicleOrders" EntitySet="VehicleOrders" />
+          </AssociationSet>
+          <AssociationSet Name="FK_VehicleOtherPassengers_Orders_OrderID" Association="Self.FK_VehicleOtherPassengers_Orders_OrderID">
+            <End Role="Orders" EntitySet="Orders" />
+            <End Role="VehicleOtherPassengers" EntitySet="VehicleOtherPassengers" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="AracKiralamaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="AracKiralamaEntities1" annotation:LazyLoadingEnabled="true">
+          <FunctionImport Name="GetVehicleRegions" ReturnType="Collection(AracKiralamaModel.GetVehicleRegions_Result)">
+            <Parameter Name="query" Mode="In" Type="String" />
+            <Parameter Name="culture" Mode="In" Type="Boolean" />
+          </FunctionImport>
+          <FunctionImport Name="sp_alterdiagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_creatediagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_dropdiagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(AracKiralamaModel.sp_helpdiagramdefinition_Result)">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(AracKiralamaModel.sp_helpdiagrams_Result)">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_renamediagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="new_diagramname" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_upgraddiagrams" />
+          <FunctionImport Name="GetVehicleRegions1" ReturnType="Collection(AracKiralamaModel.GetVehicleRegions1_Result)">
+            <Parameter Name="query" Mode="In" Type="String" />
+            <Parameter Name="culture" Mode="In" Type="Boolean" />
+          </FunctionImport>
+          <FunctionImport Name="sp_alterdiagram1">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_creatediagram1">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_dropdiagram1">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagramdefinition1" ReturnType="Collection(AracKiralamaModel.sp_helpdiagramdefinition1_Result)">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagrams1" ReturnType="Collection(AracKiralamaModel.sp_helpdiagrams1_Result)">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_renamediagram1">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="new_diagramname" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_upgraddiagrams1" />
+          <FunctionImport Name="GetVehicleRegions2" ReturnType="Collection(AracKiralamaModel.GetVehicleRegions2_Result)">
+            <Parameter Name="query" Mode="In" Type="String" />
+            <Parameter Name="culture" Mode="In" Type="Boolean" />
+          </FunctionImport>
+          <FunctionImport Name="sp_alterdiagram2">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_creatediagram2">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_dropdiagram2">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagramdefinition2" ReturnType="Collection(AracKiralamaModel.sp_helpdiagramdefinition2_Result)">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagrams2" ReturnType="Collection(AracKiralamaModel.sp_helpdiagrams2_Result)">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_renamediagram2">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="new_diagramname" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_upgraddiagrams2" />
+          <EntitySet Name="Accounts" EntityType="AracKiralamaModel.Accounts" />
+          <EntitySet Name="Blog" EntityType="AracKiralamaModel.Blog" />
+          <EntitySet Name="Car" EntityType="AracKiralamaModel.Car" />
+          <EntitySet Name="CarLocation" EntityType="AracKiralamaModel.CarLocation" />
+          <EntitySet Name="CarPointScale" EntityType="AracKiralamaModel.CarPointScale" />
+          <EntitySet Name="Cities" EntityType="AracKiralamaModel.Cities" />
+          <EntitySet Name="CityTranslations" EntityType="AracKiralamaModel.CityTranslations" />
+          <EntitySet Name="Company" EntityType="AracKiralamaModel.Company" />
+          <EntitySet Name="ContactInfo" EntityType="AracKiralamaModel.ContactInfo" />
+          <EntitySet Name="ContactInfoTranslation" EntityType="AracKiralamaModel.ContactInfoTranslation" />
+          <EntitySet Name="Contacts" EntityType="AracKiralamaModel.Contacts" />
+          <EntitySet Name="Countries" EntityType="AracKiralamaModel.Countries" />
+          <EntitySet Name="CountryTranslations" EntityType="AracKiralamaModel.CountryTranslations" />
+          <EntitySet Name="Cultures" EntityType="AracKiralamaModel.Cultures" />
+          <EntitySet Name="Currencies" EntityType="AracKiralamaModel.Currencies" />
+          <EntitySet Name="ExtraMaterial" EntityType="AracKiralamaModel.ExtraMaterial" />
+          <EntitySet Name="FAQ" EntityType="AracKiralamaModel.FAQ" />
+          <EntitySet Name="FAQTranslation" EntityType="AracKiralamaModel.FAQTranslation" />
+          <EntitySet Name="Language" EntityType="AracKiralamaModel.Language" />
+          <EntitySet Name="OrderHistory" EntityType="AracKiralamaModel.OrderHistory" />
+          <EntitySet Name="OrderHistoryDetail" EntityType="AracKiralamaModel.OrderHistoryDetail" />
+          <EntitySet Name="Orders" EntityType="AracKiralamaModel.Orders" />
+          <EntitySet Name="PrivacyPolicy" EntityType="AracKiralamaModel.PrivacyPolicy" />
+          <EntitySet Name="PrivacyPolicyTranslation" EntityType="AracKiralamaModel.PrivacyPolicyTranslation" />
+          <EntitySet Name="Regions" EntityType="AracKiralamaModel.Regions" />
+          <EntitySet Name="RegionTranslations" EntityType="AracKiralamaModel.RegionTranslations" />
+          <EntitySet Name="Rol" EntityType="AracKiralamaModel.Rol" />
+          <EntitySet Name="sysdiagrams" EntityType="AracKiralamaModel.sysdiagrams" />
+          <EntitySet Name="User" EntityType="AracKiralamaModel.User" />
+          <EntitySet Name="UserSearchLogs" EntityType="AracKiralamaModel.UserSearchLogs" />
+          <EntitySet Name="VehicleOrders" EntityType="AracKiralamaModel.VehicleOrders" />
+          <EntitySet Name="VehicleOtherPassengers" EntityType="AracKiralamaModel.VehicleOtherPassengers" />
+          <AssociationSet Name="FK_Contacts_Accounts_AccountID" Association="AracKiralamaModel.FK_Contacts_Accounts_AccountID">
+            <End Role="Accounts" EntitySet="Accounts" />
+            <End Role="Contacts" EntitySet="Contacts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Blog_Cultures" Association="AracKiralamaModel.FK_Blog_Cultures">
+            <End Role="Cultures" EntitySet="Cultures" />
+            <End Role="Blog" EntitySet="Blog" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Blog_Language1" Association="AracKiralamaModel.FK_Blog_Language1">
+            <End Role="Language" EntitySet="Language" />
+            <End Role="Blog" EntitySet="Blog" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Car_CarPointScale1" Association="AracKiralamaModel.FK_Car_CarPointScale1">
+            <End Role="CarPointScale" EntitySet="CarPointScale" />
+            <End Role="Car" EntitySet="Car" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Car_Company" Association="AracKiralamaModel.FK_Car_Company">
+            <End Role="Company" EntitySet="Company" />
+            <End Role="Car" EntitySet="Car" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Car_ExtraMaterial1" Association="AracKiralamaModel.FK_Car_ExtraMaterial1">
+            <End Role="ExtraMaterial" EntitySet="ExtraMaterial" />
+            <End Role="Car" EntitySet="Car" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CarLocation_Car" Association="AracKiralamaModel.FK_CarLocation_Car">
+            <End Role="Car" EntitySet="Car" />
+            <End Role="CarLocation" EntitySet="CarLocation" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OrderHistory_Car" Association="AracKiralamaModel.FK_OrderHistory_Car">
+            <End Role="Car" EntitySet="Car" />
+            <End Role="OrderHistory" EntitySet="OrderHistory" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OrderHistoryDetail_Car" Association="AracKiralamaModel.FK_OrderHistoryDetail_Car">
+            <End Role="Car" EntitySet="Car" />
+            <End Role="OrderHistoryDetail" EntitySet="OrderHistoryDetail" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CarLocation_User" Association="AracKiralamaModel.FK_CarLocation_User">
+            <End Role="User" EntitySet="User" />
+            <End Role="CarLocation" EntitySet="CarLocation" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OrderHistory_CarLocation" Association="AracKiralamaModel.FK_OrderHistory_CarLocation">
+            <End Role="CarLocation" EntitySet="CarLocation" />
+            <End Role="OrderHistory" EntitySet="OrderHistory" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OrderHistoryDetail_CarLocation" Association="AracKiralamaModel.FK_OrderHistoryDetail_CarLocation">
+            <End Role="CarLocation" EntitySet="CarLocation" />
+            <End Role="OrderHistoryDetail" EntitySet="OrderHistoryDetail" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OrderHistoryDetail_CarPointScale" Association="AracKiralamaModel.FK_OrderHistoryDetail_CarPointScale">
+            <End Role="CarPointScale" EntitySet="CarPointScale" />
+            <End Role="OrderHistoryDetail" EntitySet="OrderHistoryDetail" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Cities_Countries_CountryID" Association="AracKiralamaModel.FK_Cities_Countries_CountryID">
+            <End Role="Countries" EntitySet="Countries" />
+            <End Role="Cities" EntitySet="Cities" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CityTranslations_Cities_CityID" Association="AracKiralamaModel.FK_CityTranslations_Cities_CityID">
+            <End Role="Cities" EntitySet="Cities" />
+            <End Role="CityTranslations" EntitySet="CityTranslations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Regions_Cities_CityID" Association="AracKiralamaModel.FK_Regions_Cities_CityID">
+            <End Role="Cities" EntitySet="Cities" />
+            <End Role="Regions" EntitySet="Regions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CityTranslations_Cultures_CultureID" Association="AracKiralamaModel.FK_CityTranslations_Cultures_CultureID">
+            <End Role="Cultures" EntitySet="Cultures" />
+            <End Role="CityTranslations" EntitySet="CityTranslations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OrderHistory_Company" Association="AracKiralamaModel.FK_OrderHistory_Company">
+            <End Role="Company" EntitySet="Company" />
+            <End Role="OrderHistory" EntitySet="OrderHistory" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OrderHistoryDetail_Company" Association="AracKiralamaModel.FK_OrderHistoryDetail_Company">
+            <End Role="Company" EntitySet="Company" />
+            <End Role="OrderHistoryDetail" EntitySet="OrderHistoryDetail" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ContactInfoTranslation_ContactInfo" Association="AracKiralamaModel.FK_ContactInfoTranslation_ContactInfo">
+            <End Role="ContactInfo" EntitySet="ContactInfo" />
+            <End Role="ContactInfoTranslation" EntitySet="ContactInfoTranslation" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ContactInfoTranslation_Cultures" Association="AracKiralamaModel.FK_ContactInfoTranslation_Cultures">
+            <End Role="Cultures" EntitySet="Cultures" />
+            <End Role="ContactInfoTranslation" EntitySet="ContactInfoTranslation" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ContactInfoTranslation_Language" Association="AracKiralamaModel.FK_ContactInfoTranslation_Language">
+            <End Role="Language" EntitySet="Language" />
+            <End Role="ContactInfoTranslation" EntitySet="ContactInfoTranslation" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Orders_Contacts_ContactID" Association="AracKiralamaModel.FK_Orders_Contacts_ContactID">
+            <End Role="Contacts" EntitySet="Contacts" />
+            <End Role="Orders" EntitySet="Orders" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CountryTranslations_Countries_CountryID" Association="AracKiralamaModel.FK_CountryTranslations_Countries_CountryID">
+            <End Role="Countries" EntitySet="Countries" />
+            <End Role="CountryTranslations" EntitySet="CountryTranslations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CountryTranslations_Cultures_CultureID" Association="AracKiralamaModel.FK_CountryTranslations_Cultures_CultureID">
+            <End Role="Cultures" EntitySet="Cultures" />
+            <End Role="CountryTranslations" EntitySet="CountryTranslations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Cultures_Currencies_CurrencyID" Association="AracKiralamaModel.FK_Cultures_Currencies_CurrencyID">
+            <End Role="Currencies" EntitySet="Currencies" />
+            <End Role="Cultures" EntitySet="Cultures" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FAQTranslation_Cultures" Association="AracKiralamaModel.FK_FAQTranslation_Cultures">
+            <End Role="Cultures" EntitySet="Cultures" />
+            <End Role="FAQTranslation" EntitySet="FAQTranslation" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PrivacyPolicyTranslation_Cultures" Association="AracKiralamaModel.FK_PrivacyPolicyTranslation_Cultures">
+            <End Role="Cultures" EntitySet="Cultures" />
+            <End Role="PrivacyPolicyTranslation" EntitySet="PrivacyPolicyTranslation" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RegionTranslations_Cultures_CultureID" Association="AracKiralamaModel.FK_RegionTranslations_Cultures_CultureID">
+            <End Role="Cultures" EntitySet="Cultures" />
+            <End Role="RegionTranslations" EntitySet="RegionTranslations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_VehicleOrders_Currencies_CurrencyID" Association="AracKiralamaModel.FK_VehicleOrders_Currencies_CurrencyID">
+            <End Role="Currencies" EntitySet="Currencies" />
+            <End Role="VehicleOrders" EntitySet="VehicleOrders" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FAQTranslation_FAQ" Association="AracKiralamaModel.FK_FAQTranslation_FAQ">
+            <End Role="FAQ" EntitySet="FAQ" />
+            <End Role="FAQTranslation" EntitySet="FAQTranslation" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FAQTranslation_Language" Association="AracKiralamaModel.FK_FAQTranslation_Language">
+            <End Role="Language" EntitySet="Language" />
+            <End Role="FAQTranslation" EntitySet="FAQTranslation" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PrivacyPolicyTranslation_Language" Association="AracKiralamaModel.FK_PrivacyPolicyTranslation_Language">
+            <End Role="Language" EntitySet="Language" />
+            <End Role="PrivacyPolicyTranslation" EntitySet="PrivacyPolicyTranslation" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OrderHistory_User" Association="AracKiralamaModel.FK_OrderHistory_User">
+            <End Role="User" EntitySet="User" />
+            <End Role="OrderHistory" EntitySet="OrderHistory" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OrderHistoryDetail_User1" Association="AracKiralamaModel.FK_OrderHistoryDetail_User1">
+            <End Role="User" EntitySet="User" />
+            <End Role="OrderHistoryDetail" EntitySet="OrderHistoryDetail" />
+          </AssociationSet>
+          <AssociationSet Name="FK_VehicleOrders_Orders_OrderID" Association="AracKiralamaModel.FK_VehicleOrders_Orders_OrderID">
+            <End Role="Orders" EntitySet="Orders" />
+            <End Role="VehicleOrders" EntitySet="VehicleOrders" />
+          </AssociationSet>
+          <AssociationSet Name="FK_VehicleOtherPassengers_Orders_OrderID" Association="AracKiralamaModel.FK_VehicleOtherPassengers_Orders_OrderID">
+            <End Role="Orders" EntitySet="Orders" />
+            <End Role="VehicleOtherPassengers" EntitySet="VehicleOtherPassengers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PrivacyPolicyTranslation_PrivacyPolicy" Association="AracKiralamaModel.FK_PrivacyPolicyTranslation_PrivacyPolicy">
+            <End Role="PrivacyPolicy" EntitySet="PrivacyPolicy" />
+            <End Role="PrivacyPolicyTranslation" EntitySet="PrivacyPolicyTranslation" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RegionTranslations_Regions_RegionID" Association="AracKiralamaModel.FK_RegionTranslations_Regions_RegionID">
+            <End Role="Regions" EntitySet="Regions" />
+            <End Role="RegionTranslations" EntitySet="RegionTranslations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_User_Rol" Association="AracKiralamaModel.FK_User_Rol">
+            <End Role="Rol" EntitySet="Rol" />
+            <End Role="User" EntitySet="User" />
+          </AssociationSet>
+          <EntitySet Name="VehicleInfo" EntityType="AracKiralamaModel.VehicleInfo" />
+          <AssociationSet Name="FK_Vehicle_VehicleOrders" Association="AracKiralamaModel.FK_Vehicle_VehicleOrders">
+            <End Role="VehicleOrders" EntitySet="VehicleOrders" />
+            <End Role="VehicleInfo" EntitySet="VehicleInfo" />
+          </AssociationSet>
+          </EntityContainer>
+        <ComplexType Name="GetVehicleRegions_Result">
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="99" />
+          <Property Type="String" Name="Name1" Nullable="false" MaxLength="99" />
+          <Property Type="String" Name="Code" Nullable="true" />
+          <Property Type="Int32" Name="RefID" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="sp_helpdiagramdefinition_Result">
+          <Property Type="Int32" Name="version" Nullable="true" />
+          <Property Type="Binary" Name="definition" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="sp_helpdiagrams_Result">
+          <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+          <Property Type="Int32" Name="OwnerID" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="GetVehicleRegions1_Result">
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="99" />
+          <Property Type="String" Name="Name1" Nullable="false" MaxLength="99" />
+          <Property Type="String" Name="Code" Nullable="true" />
+          <Property Type="Int32" Name="RefID" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="sp_helpdiagramdefinition1_Result">
+          <Property Type="Int32" Name="version" Nullable="true" />
+          <Property Type="Binary" Name="definition" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="sp_helpdiagrams1_Result">
+          <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+          <Property Type="Int32" Name="OwnerID" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="GetVehicleRegions2_Result">
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="99" />
+          <Property Type="String" Name="Name1" Nullable="false" MaxLength="99" />
+          <Property Type="String" Name="Code" Nullable="true" />
+          <Property Type="Int32" Name="RefID" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="sp_helpdiagramdefinition2_Result">
+          <Property Type="Int32" Name="version" Nullable="true" />
+          <Property Type="Binary" Name="definition" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="sp_helpdiagrams2_Result">
+          <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+          <Property Type="Int32" Name="OwnerID" Nullable="false" />
+        </ComplexType>
+        <EntityType Name="Accounts">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RoleID" Type="Int32" Nullable="false" />
+          <Property Name="Email" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="FirstName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="LastName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="HitAt" Type="DateTime" Precision="3" />
+          <Property Name="CreatedAt" Type="DateTime" Precision="3" />
+          <Property Name="GovermentNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Phone" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CellPhone" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CompanyID" Type="Int32" />
+          <Property Name="PartnerID" Type="Int32" />
+          <Property Name="ZipCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CityName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="RegionName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="FaxNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="UniqueKey" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Status" Type="Int16" Nullable="false" />
+          <Property Name="LastLoginDate" Type="DateTime" Precision="3" />
+          <Property Name="AvatarResim" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Gender" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BirthDate" Type="DateTime" Precision="0" />
+          <Property Name="IsActive" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DateOfRegistration" Type="DateTime" Precision="3" />
+          <Property Name="DateOfUpdate" Type="DateTime" Precision="3" />
+          <Property Name="RecordPerson" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UpdatedPerson" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PasswordAgain" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CookiePolicyIsChecked" Type="Boolean" />
+          <NavigationProperty Name="Contacts" Relationship="AracKiralamaModel.FK_Contacts_Accounts_AccountID" FromRole="Accounts" ToRole="Contacts" />
+        </EntityType>
+        <EntityType Name="Blog">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CultureID" Type="Int32" />
+          <Property Name="Title" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ImageURL" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ShowCaseDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DescriptionCK" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Rank" Type="Int32" />
+          <Property Name="Date" Type="DateTime" Precision="3" />
+          <Property Name="CreatedAt" Type="DateTime" Precision="3" />
+          <Property Name="CreatedBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="UpdatedAt" Type="DateTime" Precision="3" />
+          <Property Name="UpdatedBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IsActive" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ImageTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Cultures" Relationship="AracKiralamaModel.FK_Blog_Cultures" FromRole="Blog" ToRole="Cultures" />
+          <NavigationProperty Name="Language" Relationship="AracKiralamaModel.FK_Blog_Language1" FromRole="Blog" ToRole="Language" />
+        </EntityType>
+        <EntityType Name="Car">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Guid" Nullable="false" />
+          <Property Name="CompanyID" Type="Int32" />
+          <Property Name="Marka" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Model" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Sinif" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Segment" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Resim" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="KisiSayisi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BagajKapasitesi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="KapiSaysi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Sanzuman" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="YakitTuru" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CarPoitScaleID" Type="Int32" />
+          <Property Name="CarExtraMaterialID" Type="Int32" />
+          <Property Name="KiralamaTutari" Type="Double" />
+          <Property Name="EklendigiTarih" Type="DateTime" Precision="0" />
+          <Property Name="EkleyenKisi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="GuncellendigiTarih" Type="DateTime" Precision="0" />
+          <Property Name="GuncelleyenKisi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IsActive" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="CarPointScale" Relationship="AracKiralamaModel.FK_Car_CarPointScale1" FromRole="Car" ToRole="CarPointScale" />
+          <NavigationProperty Name="Company" Relationship="AracKiralamaModel.FK_Car_Company" FromRole="Car" ToRole="Company" />
+          <NavigationProperty Name="ExtraMaterial" Relationship="AracKiralamaModel.FK_Car_ExtraMaterial1" FromRole="Car" ToRole="ExtraMaterial" />
+          <NavigationProperty Name="CarLocation" Relationship="AracKiralamaModel.FK_CarLocation_Car" FromRole="Car" ToRole="CarLocation" />
+          <NavigationProperty Name="OrderHistory" Relationship="AracKiralamaModel.FK_OrderHistory_Car" FromRole="Car" ToRole="OrderHistory" />
+          <NavigationProperty Name="OrderHistoryDetail" Relationship="AracKiralamaModel.FK_OrderHistoryDetail_Car" FromRole="Car" ToRole="OrderHistoryDetail" />
+        </EntityType>
+        <EntityType Name="CarLocation">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Guid" Nullable="false" />
+          <Property Name="CarID" Type="Guid" />
+          <Property Name="MemberID" Type="Guid" />
+          <Property Name="KiralandigiYer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="KiralandigiTarih" Type="DateTime" Precision="0" />
+          <Property Name="KiralandigiSaat" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TeslimEdildigiYer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="TeslimEdildigiTarih" Type="DateTime" Precision="0" />
+          <Property Name="TeslimEdildigiSaat" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="KiralandigiTutar" Type="Int32" />
+          <NavigationProperty Name="Car" Relationship="AracKiralamaModel.FK_CarLocation_Car" FromRole="CarLocation" ToRole="Car" />
+          <NavigationProperty Name="User" Relationship="AracKiralamaModel.FK_CarLocation_User" FromRole="CarLocation" ToRole="User" />
+          <NavigationProperty Name="OrderHistory" Relationship="AracKiralamaModel.FK_OrderHistory_CarLocation" FromRole="CarLocation" ToRole="OrderHistory" />
+          <NavigationProperty Name="OrderHistoryDetail" Relationship="AracKiralamaModel.FK_OrderHistoryDetail_CarLocation" FromRole="CarLocation" ToRole="OrderHistoryDetail" />
+        </EntityType>
+        <EntityType Name="CarPointScale">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PuanAraligi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PuanIfadesi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Car" Relationship="AracKiralamaModel.FK_Car_CarPointScale1" FromRole="CarPointScale" ToRole="Car" />
+          <NavigationProperty Name="OrderHistoryDetail" Relationship="AracKiralamaModel.FK_OrderHistoryDetail_CarPointScale" FromRole="CarPointScale" ToRole="OrderHistoryDetail" />
+        </EntityType>
+        <EntityType Name="Cities">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CountryID" Type="Int32" Nullable="false" />
+          <Property Name="Code" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IsCapital" Type="Boolean" Nullable="false" />
+          <Property Name="Latitude" Type="Decimal" Precision="20" Scale="15" />
+          <Property Name="Longitude" Type="Decimal" Precision="20" Scale="15" />
+          <Property Name="RefID" Type="Int32" />
+          <Property Name="Distance" Type="Int32" Nullable="false" />
+          <Property Name="SearchRadius" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Countries" Relationship="AracKiralamaModel.FK_Cities_Countries_CountryID" FromRole="Cities" ToRole="Countries" />
+          <NavigationProperty Name="CityTranslations" Relationship="AracKiralamaModel.FK_CityTranslations_Cities_CityID" FromRole="Cities" ToRole="CityTranslations" />
+          <NavigationProperty Name="Regions" Relationship="AracKiralamaModel.FK_Regions_Cities_CityID" FromRole="Cities" ToRole="Regions" />
+        </EntityType>
+        <EntityType Name="CityTranslations">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CityID" Type="Int32" Nullable="false" />
+          <Property Name="CultureID" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="99" FixedLength="false" Unicode="true" />
+          <Property Name="Slug" Type="String" Nullable="false" MaxLength="99" FixedLength="false" Unicode="true" />
+          <Property Name="Information" Type="String" MaxLength="333" FixedLength="false" Unicode="true" />
+          <Property Name="MetaKeyWord" Type="String" MaxLength="333" FixedLength="false" Unicode="true" />
+          <Property Name="MetaDescription" Type="String" MaxLength="333" FixedLength="false" Unicode="true" />
+          <Property Name="Html" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Title" Type="String" MaxLength="99" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Cities" Relationship="AracKiralamaModel.FK_CityTranslations_Cities_CityID" FromRole="CityTranslations" ToRole="Cities" />
+          <NavigationProperty Name="Cultures" Relationship="AracKiralamaModel.FK_CityTranslations_Cultures_CultureID" FromRole="CityTranslations" ToRole="Cultures" />
+        </EntityType>
+        <EntityType Name="Company">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Logo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SirketAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TicariUnvani" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="VergiDairesi" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="VergiNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SirketTuru" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SirketSahibi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="EklendigiTarih" Type="DateTime" Precision="0" />
+          <Property Name="EkleyenKisi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="GuncellendigiTarih" Type="DateTime" Precision="0" />
+          <Property Name="GuncelleyenKisi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IsActive" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Car" Relationship="AracKiralamaModel.FK_Car_Company" FromRole="Company" ToRole="Car" />
+          <NavigationProperty Name="OrderHistory" Relationship="AracKiralamaModel.FK_OrderHistory_Company" FromRole="Company" ToRole="OrderHistory" />
+          <NavigationProperty Name="OrderHistoryDetail" Relationship="AracKiralamaModel.FK_OrderHistoryDetail_Company" FromRole="Company" ToRole="OrderHistoryDetail" />
+        </EntityType>
+        <EntityType Name="ContactInfo">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CreatedAt" Type="DateTime" Precision="0" />
+          <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UpdatedAt" Type="DateTime" Precision="0" />
+          <Property Name="UpdatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IsActive" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="ContactInfoTranslation" Relationship="AracKiralamaModel.FK_ContactInfoTranslation_ContactInfo" FromRole="ContactInfo" ToRole="ContactInfoTranslation" />
+        </EntityType>
+        <EntityType Name="ContactInfoTranslation">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CultureID" Type="Int32" />
+          <Property Name="ContactInfoID" Type="Int32" />
+          <Property Name="Title" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Explanation" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IsActive" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="ContactInfo" Relationship="AracKiralamaModel.FK_ContactInfoTranslation_ContactInfo" FromRole="ContactInfoTranslation" ToRole="ContactInfo" />
+          <NavigationProperty Name="Cultures" Relationship="AracKiralamaModel.FK_ContactInfoTranslation_Cultures" FromRole="ContactInfoTranslation" ToRole="Cultures" />
+          <NavigationProperty Name="Language" Relationship="AracKiralamaModel.FK_ContactInfoTranslation_Language" FromRole="ContactInfoTranslation" ToRole="Language" />
+        </EntityType>
+        <EntityType Name="Contacts">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AccountID" Type="Int32" />
+          <Property Name="Email" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="FirstName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="LastName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Phone" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Accounts" Relationship="AracKiralamaModel.FK_Contacts_Accounts_AccountID" FromRole="Contacts" ToRole="Accounts" />
+          <NavigationProperty Name="Orders" Relationship="AracKiralamaModel.FK_Orders_Contacts_ContactID" FromRole="Contacts" ToRole="Orders" />
+        </EntityType>
+        <EntityType Name="Countries">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IsDomestic" Type="Boolean" Nullable="false" />
+          <Property Name="RefID" Type="Int32" />
+          <NavigationProperty Name="Cities" Relationship="AracKiralamaModel.FK_Cities_Countries_CountryID" FromRole="Countries" ToRole="Cities" />
+          <NavigationProperty Name="CountryTranslations" Relationship="AracKiralamaModel.FK_CountryTranslations_Countries_CountryID" FromRole="Countries" ToRole="CountryTranslations" />
+        </EntityType>
+        <EntityType Name="CountryTranslations">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CountryID" Type="Int32" Nullable="false" />
+          <Property Name="CultureID" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="99" FixedLength="false" Unicode="true" />
+          <Property Name="Slug" Type="String" Nullable="false" MaxLength="99" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Countries" Relationship="AracKiralamaModel.FK_CountryTranslations_Countries_CountryID" FromRole="CountryTranslations" ToRole="Countries" />
+          <NavigationProperty Name="Cultures" Relationship="AracKiralamaModel.FK_CountryTranslations_Cultures_CultureID" FromRole="CountryTranslations" ToRole="Cultures" />
+        </EntityType>
+        <EntityType Name="Cultures">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IsDefault" Type="Boolean" Nullable="false" />
+          <Property Name="CurrencyID" Type="Int32" />
+          <Property Name="Currency_ID" Type="Int32" />
+          <Property Name="IsActive" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Blog" Relationship="AracKiralamaModel.FK_Blog_Cultures" FromRole="Cultures" ToRole="Blog" />
+          <NavigationProperty Name="CityTranslations" Relationship="AracKiralamaModel.FK_CityTranslations_Cultures_CultureID" FromRole="Cultures" ToRole="CityTranslations" />
+          <NavigationProperty Name="ContactInfoTranslation" Relationship="AracKiralamaModel.FK_ContactInfoTranslation_Cultures" FromRole="Cultures" ToRole="ContactInfoTranslation" />
+          <NavigationProperty Name="CountryTranslations" Relationship="AracKiralamaModel.FK_CountryTranslations_Cultures_CultureID" FromRole="Cultures" ToRole="CountryTranslations" />
+          <NavigationProperty Name="Currencies" Relationship="AracKiralamaModel.FK_Cultures_Currencies_CurrencyID" FromRole="Cultures" ToRole="Currencies" />
+          <NavigationProperty Name="FAQTranslation" Relationship="AracKiralamaModel.FK_FAQTranslation_Cultures" FromRole="Cultures" ToRole="FAQTranslation" />
+          <NavigationProperty Name="PrivacyPolicyTranslation" Relationship="AracKiralamaModel.FK_PrivacyPolicyTranslation_Cultures" FromRole="Cultures" ToRole="PrivacyPolicyTranslation" />
+          <NavigationProperty Name="RegionTranslations" Relationship="AracKiralamaModel.FK_RegionTranslations_Cultures_CultureID" FromRole="Cultures" ToRole="RegionTranslations" />
+        </EntityType>
+        <EntityType Name="Currencies">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="IsDefault" Type="Boolean" Nullable="false" />
+          <Property Name="RefID" Type="Int32" />
+          <NavigationProperty Name="Cultures" Relationship="AracKiralamaModel.FK_Cultures_Currencies_CurrencyID" FromRole="Currencies" ToRole="Cultures" />
+          <NavigationProperty Name="VehicleOrders" Relationship="AracKiralamaModel.FK_VehicleOrders_Currencies_CurrencyID" FromRole="Currencies" ToRole="VehicleOrders" />
+        </EntityType>
+        <EntityType Name="ExtraMaterial">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Icon" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Materyal" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Aciklama" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="MinDeger" Type="Int32" />
+          <Property Name="MaxDeger" Type="Int32" />
+          <Property Name="EklendigiTarih" Type="DateTime" Precision="0" />
+          <Property Name="EkleyenKisi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="GuncellemeTarihi" Type="DateTime" Precision="0" />
+          <Property Name="GuncelleyenKisi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IsActive" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Car" Relationship="AracKiralamaModel.FK_Car_ExtraMaterial1" FromRole="ExtraMaterial" ToRole="Car" />
+        </EntityType>
+        <EntityType Name="FAQ">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CreatedAt" Type="DateTime" Precision="0" />
+          <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UpdatedAt" Type="DateTime" Precision="0" />
+          <Property Name="UpdatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IsActive" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="FAQTranslation" Relationship="AracKiralamaModel.FK_FAQTranslation_FAQ" FromRole="FAQ" ToRole="FAQTranslation" />
+        </EntityType>
+        <EntityType Name="FAQTranslation">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CultureID" Type="Int32" />
+          <Property Name="FAQID" Type="Int32" />
+          <Property Name="Question" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Answer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IsActiive" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Cultures" Relationship="AracKiralamaModel.FK_FAQTranslation_Cultures" FromRole="FAQTranslation" ToRole="Cultures" />
+          <NavigationProperty Name="FAQ" Relationship="AracKiralamaModel.FK_FAQTranslation_FAQ" FromRole="FAQTranslation" ToRole="FAQ" />
+          <NavigationProperty Name="Language" Relationship="AracKiralamaModel.FK_FAQTranslation_Language" FromRole="FAQTranslation" ToRole="Language" />
+        </EntityType>
+        <EntityType Name="Language">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="LanguageTitle" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IsActive" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Blog" Relationship="AracKiralamaModel.FK_Blog_Language1" FromRole="Language" ToRole="Blog" />
+          <NavigationProperty Name="ContactInfoTranslation" Relationship="AracKiralamaModel.FK_ContactInfoTranslation_Language" FromRole="Language" ToRole="ContactInfoTranslation" />
+          <NavigationProperty Name="FAQTranslation" Relationship="AracKiralamaModel.FK_FAQTranslation_Language" FromRole="Language" ToRole="FAQTranslation" />
+          <NavigationProperty Name="PrivacyPolicyTranslation" Relationship="AracKiralamaModel.FK_PrivacyPolicyTranslation_Language" FromRole="Language" ToRole="PrivacyPolicyTranslation" />
+        </EntityType>
+        <EntityType Name="OrderHistory">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Guid" Nullable="false" />
+          <Property Name="UserID" Type="Guid" />
+          <Property Name="CompanyID" Type="Int32" />
+          <Property Name="CarID" Type="Guid" />
+          <Property Name="CarLocationID" Type="Guid" />
+          <NavigationProperty Name="Car" Relationship="AracKiralamaModel.FK_OrderHistory_Car" FromRole="OrderHistory" ToRole="Car" />
+          <NavigationProperty Name="CarLocation" Relationship="AracKiralamaModel.FK_OrderHistory_CarLocation" FromRole="OrderHistory" ToRole="CarLocation" />
+          <NavigationProperty Name="Company" Relationship="AracKiralamaModel.FK_OrderHistory_Company" FromRole="OrderHistory" ToRole="Company" />
+          <NavigationProperty Name="User" Relationship="AracKiralamaModel.FK_OrderHistory_User" FromRole="OrderHistory" ToRole="User" />
+        </EntityType>
+        <EntityType Name="OrderHistoryDetail">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Guid" Nullable="false" />
+          <Property Name="UserID" Type="Guid" />
+          <Property Name="CompanyID" Type="Int32" />
+          <Property Name="CarID" Type="Guid" />
+          <Property Name="CarPointScaleID" Type="Int32" />
+          <Property Name="CarLocationID" Type="Guid" />
+          <NavigationProperty Name="Car" Relationship="AracKiralamaModel.FK_OrderHistoryDetail_Car" FromRole="OrderHistoryDetail" ToRole="Car" />
+          <NavigationProperty Name="CarLocation" Relationship="AracKiralamaModel.FK_OrderHistoryDetail_CarLocation" FromRole="OrderHistoryDetail" ToRole="CarLocation" />
+          <NavigationProperty Name="CarPointScale" Relationship="AracKiralamaModel.FK_OrderHistoryDetail_CarPointScale" FromRole="OrderHistoryDetail" ToRole="CarPointScale" />
+          <NavigationProperty Name="Company" Relationship="AracKiralamaModel.FK_OrderHistoryDetail_Company" FromRole="OrderHistoryDetail" ToRole="Company" />
+          <NavigationProperty Name="User" Relationship="AracKiralamaModel.FK_OrderHistoryDetail_User1" FromRole="OrderHistoryDetail" ToRole="User" />
+        </EntityType>
+        <EntityType Name="Orders">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="OrderedAt" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Identifier" Type="Guid" Nullable="false" />
+          <Property Name="ContactID" Type="Int32" Nullable="false" />
+          <Property Name="Total" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="CommisionStatus" Type="Int32" Nullable="false" />
+          <Property Name="ReservationStatus" Type="Int32" Nullable="false" />
+          <Property Name="OrderType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Contacts" Relationship="AracKiralamaModel.FK_Orders_Contacts_ContactID" FromRole="Orders" ToRole="Contacts" />
+          <NavigationProperty Name="VehicleOrders" Relationship="AracKiralamaModel.FK_VehicleOrders_Orders_OrderID" FromRole="Orders" ToRole="VehicleOrders" />
+          <NavigationProperty Name="VehicleOtherPassengers" Relationship="AracKiralamaModel.FK_VehicleOtherPassengers_Orders_OrderID" FromRole="Orders" ToRole="VehicleOtherPassengers" />
+        </EntityType>
+        <EntityType Name="PrivacyPolicy">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CreatedAt" Type="DateTime" Precision="3" />
+          <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UpdatedAt" Type="DateTime" Precision="3" />
+          <Property Name="UpdatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IsActive" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="PrivacyPolicyTranslation" Relationship="AracKiralamaModel.FK_PrivacyPolicyTranslation_PrivacyPolicy" FromRole="PrivacyPolicy" ToRole="PrivacyPolicyTranslation" />
+        </EntityType>
+        <EntityType Name="PrivacyPolicyTranslation">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CultureID" Type="Int32" />
+          <Property Name="PrivacyPolicyID" Type="Int32" />
+          <Property Name="Title" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Explanation" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IsActive" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Cultures" Relationship="AracKiralamaModel.FK_PrivacyPolicyTranslation_Cultures" FromRole="PrivacyPolicyTranslation" ToRole="Cultures" />
+          <NavigationProperty Name="Language" Relationship="AracKiralamaModel.FK_PrivacyPolicyTranslation_Language" FromRole="PrivacyPolicyTranslation" ToRole="Language" />
+          <NavigationProperty Name="PrivacyPolicy" Relationship="AracKiralamaModel.FK_PrivacyPolicyTranslation_PrivacyPolicy" FromRole="PrivacyPolicyTranslation" ToRole="PrivacyPolicy" />
+        </EntityType>
+        <EntityType Name="Regions">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CityID" Type="Int32" Nullable="false" />
+          <Property Name="Latitude" Type="Decimal" Precision="20" Scale="14" />
+          <Property Name="Longitude" Type="Decimal" Precision="20" Scale="15" />
+          <Property Name="Coordinate" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IsCenter" Type="Boolean" Nullable="false" />
+          <Property Name="IsShow" Type="Int32" Nullable="false" />
+          <Property Name="SearchRating" Type="Int32" Nullable="false" />
+          <Property Name="Distance" Type="Int32" Nullable="false" />
+          <Property Name="SearchRadius" Type="Int32" Nullable="false" />
+          <Property Name="RefID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Cities" Relationship="AracKiralamaModel.FK_Regions_Cities_CityID" FromRole="Regions" ToRole="Cities" />
+          <NavigationProperty Name="RegionTranslations" Relationship="AracKiralamaModel.FK_RegionTranslations_Regions_RegionID" FromRole="Regions" ToRole="RegionTranslations" />
+        </EntityType>
+        <EntityType Name="RegionTranslations">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RegionID" Type="Int32" Nullable="false" />
+          <Property Name="CultureID" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="99" FixedLength="false" Unicode="true" />
+          <Property Name="Slug" Type="String" Nullable="false" MaxLength="99" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Cultures" Relationship="AracKiralamaModel.FK_RegionTranslations_Cultures_CultureID" FromRole="RegionTranslations" ToRole="Cultures" />
+          <NavigationProperty Name="Regions" Relationship="AracKiralamaModel.FK_RegionTranslations_Regions_RegionID" FromRole="RegionTranslations" ToRole="Regions" />
+        </EntityType>
+        <EntityType Name="Rol">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RolAciklama" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="User" Relationship="AracKiralamaModel.FK_User_Rol" FromRole="Rol" ToRole="User" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Guid" Nullable="false" />
+          <Property Name="AvatarResim" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Ad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Soyad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Telefon" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DogumTarihi" Type="DateTime" Precision="0" />
+          <Property Name="Adres" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="EPosta" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Sifre" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SifreTekrar" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Cinsiyet" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SonGirisTarihi" Type="DateTime" Precision="0" />
+          <Property Name="KayitTarihi" Type="DateTime" Precision="0" />
+          <Property Name="KayıtEdenKisi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="GuncellemeTarihi" Type="DateTime" Precision="0" />
+          <Property Name="GuncelleyenKisi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="RolID" Type="Int32" />
+          <Property Name="IsActive" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="CarLocation" Relationship="AracKiralamaModel.FK_CarLocation_User" FromRole="User" ToRole="CarLocation" />
+          <NavigationProperty Name="OrderHistory" Relationship="AracKiralamaModel.FK_OrderHistory_User" FromRole="User" ToRole="OrderHistory" />
+          <NavigationProperty Name="OrderHistoryDetail" Relationship="AracKiralamaModel.FK_OrderHistoryDetail_User1" FromRole="User" ToRole="OrderHistoryDetail" />
+          <NavigationProperty Name="Rol" Relationship="AracKiralamaModel.FK_User_Rol" FromRole="User" ToRole="Rol" />
+        </EntityType>
+        <EntityType Name="UserSearchLogs">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="LeaveCity" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ReturnCity" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="InsertedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="LogType" Type="Int32" Nullable="false" />
+          <Property Name="StartAt" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="EndAt" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="VehicleOrders">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="VehicleID" Type="Int32" Nullable="false" />
+          <Property Name="StartAt" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="EndAt" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="PaymentStatusID" Type="Int32" Nullable="false" />
+          <Property Name="PaymentIdentifier" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="TotalRate" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+          <Property Name="CurrencyID" Type="Int32" Nullable="false" />
+          <Property Name="OrderID" Type="Int32" Nullable="false" />
+          <Property Name="FlightNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="StartTime" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="EndTime" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="VehicleExtraFee" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CreditCardNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CreditCardNameandSurname" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CreditCardType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CreditCardExpirationMonth" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CreditCardExpirationYear" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CreditCardSecurityCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Identifier" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="StartOfficeName" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="EndOfficeName" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="OfficeAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="OfficePhone" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="VehicleName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="VehicleRefID" Type="Int32" Nullable="false" />
+          <Property Name="StartOfficeID" Type="Int32" Nullable="false" />
+          <Property Name="EndOfficeID" Type="Int32" Nullable="false" />
+          <Property Name="PaymentTypeID" Type="Int32" Nullable="false" />
+          <Property Name="ConfirmedID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="EndOfficeAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="EndOfficePhone" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ThumImage" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Currencies" Relationship="AracKiralamaModel.FK_VehicleOrders_Currencies_CurrencyID" FromRole="VehicleOrders" ToRole="Currencies" />
+          <NavigationProperty Name="Orders" Relationship="AracKiralamaModel.FK_VehicleOrders_Orders_OrderID" FromRole="VehicleOrders" ToRole="Orders" />
+          <NavigationProperty Name="VehicleInfo" Relationship="AracKiralamaModel.FK_Vehicle_VehicleOrders" FromRole="VehicleOrders" ToRole="VehicleInfo" />
+        </EntityType>
+        <EntityType Name="VehicleOtherPassengers">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="OrderID" Type="Int32" Nullable="false" />
+          <Property Name="FirstName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="LastName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="FlightNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Phone" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Orders" Relationship="AracKiralamaModel.FK_VehicleOtherPassengers_Orders_OrderID" FromRole="VehicleOtherPassengers" ToRole="Orders" />
+        </EntityType>
+        <Association Name="FK_Contacts_Accounts_AccountID">
+          <End Type="AracKiralamaModel.Accounts" Role="Accounts" Multiplicity="0..1" />
+          <End Type="AracKiralamaModel.Contacts" Role="Contacts" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Accounts">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Contacts">
+              <PropertyRef Name="AccountID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Blog_Cultures">
+          <End Type="AracKiralamaModel.Cultures" Role="Cultures" Multiplicity="0..1" />
+          <End Type="AracKiralamaModel.Blog" Role="Blog" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cultures">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Blog">
+              <PropertyRef Name="CultureID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Blog_Language1">
+          <End Type="AracKiralamaModel.Language" Role="Language" Multiplicity="0..1" />
+          <End Type="AracKiralamaModel.Blog" Role="Blog" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Language">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Blog">
+              <PropertyRef Name="CultureID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Car_CarPointScale1">
+          <End Type="AracKiralamaModel.CarPointScale" Role="CarPointScale" Multiplicity="0..1" />
+          <End Type="AracKiralamaModel.Car" Role="Car" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CarPointScale">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Car">
+              <PropertyRef Name="CarPoitScaleID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Car_Company">
+          <End Type="AracKiralamaModel.Company" Role="Company" Multiplicity="0..1" />
+          <End Type="AracKiralamaModel.Car" Role="Car" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Company">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Car">
+              <PropertyRef Name="CompanyID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Car_ExtraMaterial1">
+          <End Type="AracKiralamaModel.ExtraMaterial" Role="ExtraMaterial" Multiplicity="0..1" />
+          <End Type="AracKiralamaModel.Car" Role="Car" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ExtraMaterial">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Car">
+              <PropertyRef Name="CarExtraMaterialID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CarLocation_Car">
+          <End Type="AracKiralamaModel.Car" Role="Car" Multiplicity="0..1" />
+          <End Type="AracKiralamaModel.CarLocation" Role="CarLocation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Car">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="CarLocation">
+              <PropertyRef Name="CarID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OrderHistory_Car">
+          <End Type="AracKiralamaModel.Car" Role="Car" Multiplicity="0..1" />
+          <End Type="AracKiralamaModel.OrderHistory" Role="OrderHistory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Car">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="OrderHistory">
+              <PropertyRef Name="CarID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OrderHistoryDetail_Car">
+          <End Type="AracKiralamaModel.Car" Role="Car" Multiplicity="0..1" />
+          <End Type="AracKiralamaModel.OrderHistoryDetail" Role="OrderHistoryDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Car">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="OrderHistoryDetail">
+              <PropertyRef Name="CarID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CarLocation_User">
+          <End Type="AracKiralamaModel.User" Role="User" Multiplicity="0..1" />
+          <End Type="AracKiralamaModel.CarLocation" Role="CarLocation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="CarLocation">
+              <PropertyRef Name="MemberID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OrderHistory_CarLocation">
+          <End Type="AracKiralamaModel.CarLocation" Role="CarLocation" Multiplicity="0..1" />
+          <End Type="AracKiralamaModel.OrderHistory" Role="OrderHistory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CarLocation">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="OrderHistory">
+              <PropertyRef Name="CarLocationID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OrderHistoryDetail_CarLocation">
+          <End Type="AracKiralamaModel.CarLocation" Role="CarLocation" Multiplicity="0..1" />
+          <End Type="AracKiralamaModel.OrderHistoryDetail" Role="OrderHistoryDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CarLocation">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="OrderHistoryDetail">
+              <PropertyRef Name="CarLocationID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OrderHistoryDetail_CarPointScale">
+          <End Type="AracKiralamaModel.CarPointScale" Role="CarPointScale" Multiplicity="0..1" />
+          <End Type="AracKiralamaModel.OrderHistoryDetail" Role="OrderHistoryDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CarPointScale">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="OrderHistoryDetail">
+              <PropertyRef Name="CarPointScaleID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Cities_Countries_CountryID">
+          <End Type="AracKiralamaModel.Countries" Role="Countries" Multiplicity="1" />
+          <End Type="AracKiralamaModel.Cities" Role="Cities" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Countries">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Cities">
+              <PropertyRef Name="CountryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CityTranslations_Cities_CityID">
+          <End Type="AracKiralamaModel.Cities" Role="Cities" Multiplicity="1" />
+          <End Type="AracKiralamaModel.CityTranslations" Role="CityTranslations" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cities">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="CityTranslations">
+              <PropertyRef Name="CityID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Regions_Cities_CityID">
+          <End Type="AracKiralamaModel.Cities" Role="Cities" Multiplicity="1" />
+          <End Type="AracKiralamaModel.Regions" Role="Regions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cities">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Regions">
+              <PropertyRef Name="CityID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CityTranslations_Cultures_CultureID">
+          <End Type="AracKiralamaModel.Cultures" Role="Cultures" Multiplicity="1" />
+          <End Type="AracKiralamaModel.CityTranslations" Role="CityTranslations" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cultures">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="CityTranslations">
+              <PropertyRef Name="CultureID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OrderHistory_Company">
+          <End Type="AracKiralamaModel.Company" Role="Company" Multiplicity="0..1" />
+          <End Type="AracKiralamaModel.OrderHistory" Role="OrderHistory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Company">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="OrderHistory">
+              <PropertyRef Name="CompanyID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OrderHistoryDetail_Company">
+          <End Type="AracKiralamaModel.Company" Role="Company" Multiplicity="0..1" />
+          <End Type="AracKiralamaModel.OrderHistoryDetail" Role="OrderHistoryDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Company">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="OrderHistoryDetail">
+              <PropertyRef Name="CompanyID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ContactInfoTranslation_ContactInfo">
+          <End Type="AracKiralamaModel.ContactInfo" Role="ContactInfo" Multiplicity="0..1" />
+          <End Type="AracKiralamaModel.ContactInfoTranslation" Role="ContactInfoTranslation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ContactInfo">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ContactInfoTranslation">
+              <PropertyRef Name="ContactInfoID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ContactInfoTranslation_Cultures">
+          <End Type="AracKiralamaModel.Cultures" Role="Cultures" Multiplicity="0..1" />
+          <End Type="AracKiralamaModel.ContactInfoTranslation" Role="ContactInfoTranslation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cultures">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ContactInfoTranslation">
+              <PropertyRef Name="CultureID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ContactInfoTranslation_Language">
+          <End Type="AracKiralamaModel.Language" Role="Language" Multiplicity="0..1" />
+          <End Type="AracKiralamaModel.ContactInfoTranslation" Role="ContactInfoTranslation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Language">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ContactInfoTranslation">
+              <PropertyRef Name="CultureID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Orders_Contacts_ContactID">
+          <End Type="AracKiralamaModel.Contacts" Role="Contacts" Multiplicity="1" />
+          <End Type="AracKiralamaModel.Orders" Role="Orders" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Contacts">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Orders">
+              <PropertyRef Name="ContactID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CountryTranslations_Countries_CountryID">
+          <End Type="AracKiralamaModel.Countries" Role="Countries" Multiplicity="1" />
+          <End Type="AracKiralamaModel.CountryTranslations" Role="CountryTranslations" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Countries">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="CountryTranslations">
+              <PropertyRef Name="CountryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CountryTranslations_Cultures_CultureID">
+          <End Type="AracKiralamaModel.Cultures" Role="Cultures" Multiplicity="1" />
+          <End Type="AracKiralamaModel.CountryTranslations" Role="CountryTranslations" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cultures">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="CountryTranslations">
+              <PropertyRef Name="CultureID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Cultures_Currencies_CurrencyID">
+          <End Type="AracKiralamaModel.Currencies" Role="Currencies" Multiplicity="0..1" />
+          <End Type="AracKiralamaModel.Cultures" Role="Cultures" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Currencies">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Cultures">
+              <PropertyRef Name="CurrencyID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FAQTranslation_Cultures">
+          <End Type="AracKiralamaModel.Cultures" Role="Cultures" Multiplicity="0..1" />
+          <End Type="AracKiralamaModel.FAQTranslation" Role="FAQTranslation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cultures">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="FAQTranslation">
+              <PropertyRef Name="CultureID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PrivacyPolicyTranslation_Cultures">
+          <End Type="AracKiralamaModel.Cultures" Role="Cultures" Multiplicity="0..1" />
+          <End Type="AracKiralamaModel.PrivacyPolicyTranslation" Role="PrivacyPolicyTranslation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cultures">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="PrivacyPolicyTranslation">
+              <PropertyRef Name="CultureID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RegionTranslations_Cultures_CultureID">
+          <End Type="AracKiralamaModel.Cultures" Role="Cultures" Multiplicity="1" />
+          <End Type="AracKiralamaModel.RegionTranslations" Role="RegionTranslations" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cultures">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="RegionTranslations">
+              <PropertyRef Name="CultureID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_VehicleOrders_Currencies_CurrencyID">
+          <End Type="AracKiralamaModel.Currencies" Role="Currencies" Multiplicity="1" />
+          <End Type="AracKiralamaModel.VehicleOrders" Role="VehicleOrders" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Currencies">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="VehicleOrders">
+              <PropertyRef Name="CurrencyID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FAQTranslation_FAQ">
+          <End Type="AracKiralamaModel.FAQ" Role="FAQ" Multiplicity="0..1" />
+          <End Type="AracKiralamaModel.FAQTranslation" Role="FAQTranslation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FAQ">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="FAQTranslation">
+              <PropertyRef Name="FAQID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FAQTranslation_Language">
+          <End Type="AracKiralamaModel.Language" Role="Language" Multiplicity="0..1" />
+          <End Type="AracKiralamaModel.FAQTranslation" Role="FAQTranslation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Language">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="FAQTranslation">
+              <PropertyRef Name="CultureID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PrivacyPolicyTranslation_Language">
+          <End Type="AracKiralamaModel.Language" Role="Language" Multiplicity="0..1" />
+          <End Type="AracKiralamaModel.PrivacyPolicyTranslation" Role="PrivacyPolicyTranslation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Language">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="PrivacyPolicyTranslation">
+              <PropertyRef Name="CultureID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OrderHistory_User">
+          <End Type="AracKiralamaModel.User" Role="User" Multiplicity="0..1" />
+          <End Type="AracKiralamaModel.OrderHistory" Role="OrderHistory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="OrderHistory">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OrderHistoryDetail_User1">
+          <End Type="AracKiralamaModel.User" Role="User" Multiplicity="0..1" />
+          <End Type="AracKiralamaModel.OrderHistoryDetail" Role="OrderHistoryDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="OrderHistoryDetail">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_VehicleOrders_Orders_OrderID">
+          <End Type="AracKiralamaModel.Orders" Role="Orders" Multiplicity="1" />
+          <End Type="AracKiralamaModel.VehicleOrders" Role="VehicleOrders" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Orders">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="VehicleOrders">
+              <PropertyRef Name="OrderID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_VehicleOtherPassengers_Orders_OrderID">
+          <End Type="AracKiralamaModel.Orders" Role="Orders" Multiplicity="1" />
+          <End Type="AracKiralamaModel.VehicleOtherPassengers" Role="VehicleOtherPassengers" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Orders">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="VehicleOtherPassengers">
+              <PropertyRef Name="OrderID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PrivacyPolicyTranslation_PrivacyPolicy">
+          <End Type="AracKiralamaModel.PrivacyPolicy" Role="PrivacyPolicy" Multiplicity="0..1" />
+          <End Type="AracKiralamaModel.PrivacyPolicyTranslation" Role="PrivacyPolicyTranslation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PrivacyPolicy">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="PrivacyPolicyTranslation">
+              <PropertyRef Name="PrivacyPolicyID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RegionTranslations_Regions_RegionID">
+          <End Type="AracKiralamaModel.Regions" Role="Regions" Multiplicity="1" />
+          <End Type="AracKiralamaModel.RegionTranslations" Role="RegionTranslations" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Regions">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="RegionTranslations">
+              <PropertyRef Name="RegionID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_User_Rol">
+          <End Type="AracKiralamaModel.Rol" Role="Rol" Multiplicity="0..1" />
+          <End Type="AracKiralamaModel.User" Role="User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Rol">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="User">
+              <PropertyRef Name="RolID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="VehicleInfo">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CategoryID" Type="Int32" />
+          <Property Name="GearType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PassengerCount" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FuelType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DoorCount" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BaggageCount" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CompanyImage" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="VehicleOrdersID" Type="Int32" />
+          <Property Name="CompanyName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ThumImage" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="OfficeName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="OfficeAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="OfficeTel" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FuelPolicy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="AirConditionInd" Type="Boolean" />
+          <Property Name="TransmissionType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="VehicleCharges" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PricedCoverages" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="VehicleOrders" Relationship="AracKiralamaModel.FK_Vehicle_VehicleOrders" FromRole="VehicleInfo" ToRole="VehicleOrders" />
+        </EntityType>
+        <Association Name="FK_Vehicle_VehicleOrders">
+          <End Type="AracKiralamaModel.VehicleOrders" Role="VehicleOrders" Multiplicity="0..1" />
+          <End Type="AracKiralamaModel.VehicleInfo" Role="VehicleInfo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="VehicleOrders">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="VehicleInfo">
+              <PropertyRef Name="VehicleOrdersID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="AracKiralamaModelStoreContainer" CdmEntityContainer="AracKiralamaEntities1">
+          <FunctionImportMapping FunctionImportName="GetVehicleRegions2" FunctionName="AracKiralamaModel.Store.GetVehicleRegions">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="AracKiralamaModel.GetVehicleRegions2_Result">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Name1" ColumnName="Name1" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="RefID" ColumnName="RefID" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_alterdiagram2" FunctionName="AracKiralamaModel.Store.sp_alterdiagram" />
+          <FunctionImportMapping FunctionImportName="sp_creatediagram2" FunctionName="AracKiralamaModel.Store.sp_creatediagram" />
+          <FunctionImportMapping FunctionImportName="sp_dropdiagram2" FunctionName="AracKiralamaModel.Store.sp_dropdiagram" />
+          <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition2" FunctionName="AracKiralamaModel.Store.sp_helpdiagramdefinition">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="AracKiralamaModel.sp_helpdiagramdefinition2_Result">
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_helpdiagrams2" FunctionName="AracKiralamaModel.Store.sp_helpdiagrams">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="AracKiralamaModel.sp_helpdiagrams2_Result">
+                <ScalarProperty Name="Database" ColumnName="Database" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Owner" ColumnName="Owner" />
+                <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_renamediagram2" FunctionName="AracKiralamaModel.Store.sp_renamediagram" />
+          <FunctionImportMapping FunctionImportName="sp_upgraddiagrams2" FunctionName="AracKiralamaModel.Store.sp_upgraddiagrams" />
+          <EntitySetMapping Name="Accounts">
+            <EntityTypeMapping TypeName="AracKiralamaModel.Accounts">
+              <MappingFragment StoreEntitySet="Accounts">
+                <ScalarProperty Name="CookiePolicyIsChecked" ColumnName="CookiePolicyIsChecked" />
+                <ScalarProperty Name="PasswordAgain" ColumnName="PasswordAgain" />
+                <ScalarProperty Name="UpdatedPerson" ColumnName="UpdatedPerson" />
+                <ScalarProperty Name="RecordPerson" ColumnName="RecordPerson" />
+                <ScalarProperty Name="DateOfUpdate" ColumnName="DateOfUpdate" />
+                <ScalarProperty Name="DateOfRegistration" ColumnName="DateOfRegistration" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="BirthDate" ColumnName="BirthDate" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="AvatarResim" ColumnName="AvatarResim" />
+                <ScalarProperty Name="LastLoginDate" ColumnName="LastLoginDate" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="UniqueKey" ColumnName="UniqueKey" />
+                <ScalarProperty Name="FaxNumber" ColumnName="FaxNumber" />
+                <ScalarProperty Name="RegionName" ColumnName="RegionName" />
+                <ScalarProperty Name="CityName" ColumnName="CityName" />
+                <ScalarProperty Name="ZipCode" ColumnName="ZipCode" />
+                <ScalarProperty Name="PartnerID" ColumnName="PartnerID" />
+                <ScalarProperty Name="CompanyID" ColumnName="CompanyID" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="CellPhone" ColumnName="CellPhone" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="GovermentNo" ColumnName="GovermentNo" />
+                <ScalarProperty Name="CreatedAt" ColumnName="CreatedAt" />
+                <ScalarProperty Name="HitAt" ColumnName="HitAt" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Blog">
+            <EntityTypeMapping TypeName="AracKiralamaModel.Blog">
+              <MappingFragment StoreEntitySet="Blog">
+                <ScalarProperty Name="ImageTitle" ColumnName="ImageTitle" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="UpdatedAt" ColumnName="UpdatedAt" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedAt" ColumnName="CreatedAt" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Rank" ColumnName="Rank" />
+                <ScalarProperty Name="DescriptionCK" ColumnName="DescriptionCK" />
+                <ScalarProperty Name="ShowCaseDescription" ColumnName="ShowCaseDescription" />
+                <ScalarProperty Name="ImageURL" ColumnName="ImageURL" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="CultureID" ColumnName="CultureID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Car">
+            <EntityTypeMapping TypeName="AracKiralamaModel.Car">
+              <MappingFragment StoreEntitySet="Car">
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="GuncelleyenKisi" ColumnName="GuncelleyenKisi" />
+                <ScalarProperty Name="GuncellendigiTarih" ColumnName="GuncellendigiTarih" />
+                <ScalarProperty Name="EkleyenKisi" ColumnName="EkleyenKisi" />
+                <ScalarProperty Name="EklendigiTarih" ColumnName="EklendigiTarih" />
+                <ScalarProperty Name="KiralamaTutari" ColumnName="KiralamaTutari" />
+                <ScalarProperty Name="CarExtraMaterialID" ColumnName="CarExtraMaterialID" />
+                <ScalarProperty Name="CarPoitScaleID" ColumnName="CarPoitScaleID" />
+                <ScalarProperty Name="YakitTuru" ColumnName="YakitTuru" />
+                <ScalarProperty Name="Sanzuman" ColumnName="Sanzuman" />
+                <ScalarProperty Name="KapiSaysi" ColumnName="KapiSaysi" />
+                <ScalarProperty Name="BagajKapasitesi" ColumnName="BagajKapasitesi" />
+                <ScalarProperty Name="KisiSayisi" ColumnName="KisiSayisi" />
+                <ScalarProperty Name="Resim" ColumnName="Resim" />
+                <ScalarProperty Name="Segment" ColumnName="Segment" />
+                <ScalarProperty Name="Sinif" ColumnName="Sinif" />
+                <ScalarProperty Name="Model" ColumnName="Model" />
+                <ScalarProperty Name="Marka" ColumnName="Marka" />
+                <ScalarProperty Name="CompanyID" ColumnName="CompanyID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CarLocation">
+            <EntityTypeMapping TypeName="AracKiralamaModel.CarLocation">
+              <MappingFragment StoreEntitySet="CarLocation">
+                <ScalarProperty Name="KiralandigiTutar" ColumnName="KiralandigiTutar" />
+                <ScalarProperty Name="TeslimEdildigiSaat" ColumnName="TeslimEdildigiSaat" />
+                <ScalarProperty Name="TeslimEdildigiTarih" ColumnName="TeslimEdildigiTarih" />
+                <ScalarProperty Name="TeslimEdildigiYer" ColumnName="TeslimEdildigiYer" />
+                <ScalarProperty Name="KiralandigiSaat" ColumnName="KiralandigiSaat" />
+                <ScalarProperty Name="KiralandigiTarih" ColumnName="KiralandigiTarih" />
+                <ScalarProperty Name="KiralandigiYer" ColumnName="KiralandigiYer" />
+                <ScalarProperty Name="MemberID" ColumnName="MemberID" />
+                <ScalarProperty Name="CarID" ColumnName="CarID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CarPointScale">
+            <EntityTypeMapping TypeName="AracKiralamaModel.CarPointScale">
+              <MappingFragment StoreEntitySet="CarPointScale">
+                <ScalarProperty Name="PuanIfadesi" ColumnName="PuanIfadesi" />
+                <ScalarProperty Name="PuanAraligi" ColumnName="PuanAraligi" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Cities">
+            <EntityTypeMapping TypeName="AracKiralamaModel.Cities">
+              <MappingFragment StoreEntitySet="Cities">
+                <ScalarProperty Name="SearchRadius" ColumnName="SearchRadius" />
+                <ScalarProperty Name="Distance" ColumnName="Distance" />
+                <ScalarProperty Name="RefID" ColumnName="RefID" />
+                <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+                <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+                <ScalarProperty Name="IsCapital" ColumnName="IsCapital" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="CountryID" ColumnName="CountryID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CityTranslations">
+            <EntityTypeMapping TypeName="AracKiralamaModel.CityTranslations">
+              <MappingFragment StoreEntitySet="CityTranslations">
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Html" ColumnName="Html" />
+                <ScalarProperty Name="MetaDescription" ColumnName="MetaDescription" />
+                <ScalarProperty Name="MetaKeyWord" ColumnName="MetaKeyWord" />
+                <ScalarProperty Name="Information" ColumnName="Information" />
+                <ScalarProperty Name="Slug" ColumnName="Slug" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="CultureID" ColumnName="CultureID" />
+                <ScalarProperty Name="CityID" ColumnName="CityID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Company">
+            <EntityTypeMapping TypeName="AracKiralamaModel.Company">
+              <MappingFragment StoreEntitySet="Company">
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="GuncelleyenKisi" ColumnName="GuncelleyenKisi" />
+                <ScalarProperty Name="GuncellendigiTarih" ColumnName="GuncellendigiTarih" />
+                <ScalarProperty Name="EkleyenKisi" ColumnName="EkleyenKisi" />
+                <ScalarProperty Name="EklendigiTarih" ColumnName="EklendigiTarih" />
+                <ScalarProperty Name="SirketSahibi" ColumnName="SirketSahibi" />
+                <ScalarProperty Name="SirketTuru" ColumnName="SirketTuru" />
+                <ScalarProperty Name="VergiNo" ColumnName="VergiNo" />
+                <ScalarProperty Name="VergiDairesi" ColumnName="VergiDairesi" />
+                <ScalarProperty Name="TicariUnvani" ColumnName="TicariUnvani" />
+                <ScalarProperty Name="SirketAdi" ColumnName="SirketAdi" />
+                <ScalarProperty Name="Logo" ColumnName="Logo" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ContactInfo">
+            <EntityTypeMapping TypeName="AracKiralamaModel.ContactInfo">
+              <MappingFragment StoreEntitySet="ContactInfo">
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="UpdatedAt" ColumnName="UpdatedAt" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedAt" ColumnName="CreatedAt" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ContactInfoTranslation">
+            <EntityTypeMapping TypeName="AracKiralamaModel.ContactInfoTranslation">
+              <MappingFragment StoreEntitySet="ContactInfoTranslation">
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="Explanation" ColumnName="Explanation" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="ContactInfoID" ColumnName="ContactInfoID" />
+                <ScalarProperty Name="CultureID" ColumnName="CultureID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Contacts">
+            <EntityTypeMapping TypeName="AracKiralamaModel.Contacts">
+              <MappingFragment StoreEntitySet="Contacts">
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="AccountID" ColumnName="AccountID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Countries">
+            <EntityTypeMapping TypeName="AracKiralamaModel.Countries">
+              <MappingFragment StoreEntitySet="Countries">
+                <ScalarProperty Name="RefID" ColumnName="RefID" />
+                <ScalarProperty Name="IsDomestic" ColumnName="IsDomestic" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CountryTranslations">
+            <EntityTypeMapping TypeName="AracKiralamaModel.CountryTranslations">
+              <MappingFragment StoreEntitySet="CountryTranslations">
+                <ScalarProperty Name="Slug" ColumnName="Slug" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="CultureID" ColumnName="CultureID" />
+                <ScalarProperty Name="CountryID" ColumnName="CountryID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Cultures">
+            <EntityTypeMapping TypeName="AracKiralamaModel.Cultures">
+              <MappingFragment StoreEntitySet="Cultures">
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="Currency_ID" ColumnName="Currency_ID" />
+                <ScalarProperty Name="CurrencyID" ColumnName="CurrencyID" />
+                <ScalarProperty Name="IsDefault" ColumnName="IsDefault" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Currencies">
+            <EntityTypeMapping TypeName="AracKiralamaModel.Currencies">
+              <MappingFragment StoreEntitySet="Currencies">
+                <ScalarProperty Name="RefID" ColumnName="RefID" />
+                <ScalarProperty Name="IsDefault" ColumnName="IsDefault" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ExtraMaterial">
+            <EntityTypeMapping TypeName="AracKiralamaModel.ExtraMaterial">
+              <MappingFragment StoreEntitySet="ExtraMaterial">
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="GuncelleyenKisi" ColumnName="GuncelleyenKisi" />
+                <ScalarProperty Name="GuncellemeTarihi" ColumnName="GuncellemeTarihi" />
+                <ScalarProperty Name="EkleyenKisi" ColumnName="EkleyenKisi" />
+                <ScalarProperty Name="EklendigiTarih" ColumnName="EklendigiTarih" />
+                <ScalarProperty Name="MaxDeger" ColumnName="MaxDeger" />
+                <ScalarProperty Name="MinDeger" ColumnName="MinDeger" />
+                <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
+                <ScalarProperty Name="Materyal" ColumnName="Materyal" />
+                <ScalarProperty Name="Icon" ColumnName="Icon" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FAQ">
+            <EntityTypeMapping TypeName="AracKiralamaModel.FAQ">
+              <MappingFragment StoreEntitySet="FAQ">
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="UpdatedAt" ColumnName="UpdatedAt" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedAt" ColumnName="CreatedAt" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FAQTranslation">
+            <EntityTypeMapping TypeName="AracKiralamaModel.FAQTranslation">
+              <MappingFragment StoreEntitySet="FAQTranslation">
+                <ScalarProperty Name="IsActiive" ColumnName="IsActiive" />
+                <ScalarProperty Name="Answer" ColumnName="Answer" />
+                <ScalarProperty Name="Question" ColumnName="Question" />
+                <ScalarProperty Name="FAQID" ColumnName="FAQID" />
+                <ScalarProperty Name="CultureID" ColumnName="CultureID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Language">
+            <EntityTypeMapping TypeName="AracKiralamaModel.Language">
+              <MappingFragment StoreEntitySet="Language">
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="LanguageTitle" ColumnName="LanguageTitle" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OrderHistory">
+            <EntityTypeMapping TypeName="AracKiralamaModel.OrderHistory">
+              <MappingFragment StoreEntitySet="OrderHistory">
+                <ScalarProperty Name="CarLocationID" ColumnName="CarLocationID" />
+                <ScalarProperty Name="CarID" ColumnName="CarID" />
+                <ScalarProperty Name="CompanyID" ColumnName="CompanyID" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OrderHistoryDetail">
+            <EntityTypeMapping TypeName="AracKiralamaModel.OrderHistoryDetail">
+              <MappingFragment StoreEntitySet="OrderHistoryDetail">
+                <ScalarProperty Name="CarLocationID" ColumnName="CarLocationID" />
+                <ScalarProperty Name="CarPointScaleID" ColumnName="CarPointScaleID" />
+                <ScalarProperty Name="CarID" ColumnName="CarID" />
+                <ScalarProperty Name="CompanyID" ColumnName="CompanyID" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Orders">
+            <EntityTypeMapping TypeName="AracKiralamaModel.Orders">
+              <MappingFragment StoreEntitySet="Orders">
+                <ScalarProperty Name="OrderType" ColumnName="OrderType" />
+                <ScalarProperty Name="ReservationStatus" ColumnName="ReservationStatus" />
+                <ScalarProperty Name="CommisionStatus" ColumnName="CommisionStatus" />
+                <ScalarProperty Name="Total" ColumnName="Total" />
+                <ScalarProperty Name="ContactID" ColumnName="ContactID" />
+                <ScalarProperty Name="Identifier" ColumnName="Identifier" />
+                <ScalarProperty Name="OrderedAt" ColumnName="OrderedAt" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PrivacyPolicy">
+            <EntityTypeMapping TypeName="AracKiralamaModel.PrivacyPolicy">
+              <MappingFragment StoreEntitySet="PrivacyPolicy">
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="UpdatedAt" ColumnName="UpdatedAt" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedAt" ColumnName="CreatedAt" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PrivacyPolicyTranslation">
+            <EntityTypeMapping TypeName="AracKiralamaModel.PrivacyPolicyTranslation">
+              <MappingFragment StoreEntitySet="PrivacyPolicyTranslation">
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="Explanation" ColumnName="Explanation" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="PrivacyPolicyID" ColumnName="PrivacyPolicyID" />
+                <ScalarProperty Name="CultureID" ColumnName="CultureID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Regions">
+            <EntityTypeMapping TypeName="AracKiralamaModel.Regions">
+              <MappingFragment StoreEntitySet="Regions">
+                <ScalarProperty Name="RefID" ColumnName="RefID" />
+                <ScalarProperty Name="SearchRadius" ColumnName="SearchRadius" />
+                <ScalarProperty Name="Distance" ColumnName="Distance" />
+                <ScalarProperty Name="SearchRating" ColumnName="SearchRating" />
+                <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+                <ScalarProperty Name="IsCenter" ColumnName="IsCenter" />
+                <ScalarProperty Name="Coordinate" ColumnName="Coordinate" />
+                <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+                <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+                <ScalarProperty Name="CityID" ColumnName="CityID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RegionTranslations">
+            <EntityTypeMapping TypeName="AracKiralamaModel.RegionTranslations">
+              <MappingFragment StoreEntitySet="RegionTranslations">
+                <ScalarProperty Name="Slug" ColumnName="Slug" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="CultureID" ColumnName="CultureID" />
+                <ScalarProperty Name="RegionID" ColumnName="RegionID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Rol">
+            <EntityTypeMapping TypeName="AracKiralamaModel.Rol">
+              <MappingFragment StoreEntitySet="Rol">
+                <ScalarProperty Name="RolAciklama" ColumnName="RolAciklama" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="AracKiralamaModel.sysdiagrams">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="definition" ColumnName="definition" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="User">
+            <EntityTypeMapping TypeName="AracKiralamaModel.User">
+              <MappingFragment StoreEntitySet="User">
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="RolID" ColumnName="RolID" />
+                <ScalarProperty Name="GuncelleyenKisi" ColumnName="GuncelleyenKisi" />
+                <ScalarProperty Name="GuncellemeTarihi" ColumnName="GuncellemeTarihi" />
+                <ScalarProperty Name="KayıtEdenKisi" ColumnName="KayıtEdenKisi" />
+                <ScalarProperty Name="KayitTarihi" ColumnName="KayitTarihi" />
+                <ScalarProperty Name="SonGirisTarihi" ColumnName="SonGirisTarihi" />
+                <ScalarProperty Name="Cinsiyet" ColumnName="Cinsiyet" />
+                <ScalarProperty Name="SifreTekrar" ColumnName="SifreTekrar" />
+                <ScalarProperty Name="Sifre" ColumnName="Sifre" />
+                <ScalarProperty Name="EPosta" ColumnName="EPosta" />
+                <ScalarProperty Name="Adres" ColumnName="Adres" />
+                <ScalarProperty Name="DogumTarihi" ColumnName="DogumTarihi" />
+                <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+                <ScalarProperty Name="Soyad" ColumnName="Soyad" />
+                <ScalarProperty Name="Ad" ColumnName="Ad" />
+                <ScalarProperty Name="AvatarResim" ColumnName="AvatarResim" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserSearchLogs">
+            <EntityTypeMapping TypeName="AracKiralamaModel.UserSearchLogs">
+              <MappingFragment StoreEntitySet="UserSearchLogs">
+                <ScalarProperty Name="EndAt" ColumnName="EndAt" />
+                <ScalarProperty Name="StartAt" ColumnName="StartAt" />
+                <ScalarProperty Name="LogType" ColumnName="LogType" />
+                <ScalarProperty Name="InsertedDate" ColumnName="InsertedDate" />
+                <ScalarProperty Name="ReturnCity" ColumnName="ReturnCity" />
+                <ScalarProperty Name="LeaveCity" ColumnName="LeaveCity" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VehicleOrders">
+            <EntityTypeMapping TypeName="AracKiralamaModel.VehicleOrders">
+              <MappingFragment StoreEntitySet="VehicleOrders">
+                <ScalarProperty Name="ThumImage" ColumnName="ThumImage" />
+                <ScalarProperty Name="EndOfficePhone" ColumnName="EndOfficePhone" />
+                <ScalarProperty Name="EndOfficeAddress" ColumnName="EndOfficeAddress" />
+                <ScalarProperty Name="ConfirmedID" ColumnName="ConfirmedID" />
+                <ScalarProperty Name="PaymentTypeID" ColumnName="PaymentTypeID" />
+                <ScalarProperty Name="EndOfficeID" ColumnName="EndOfficeID" />
+                <ScalarProperty Name="StartOfficeID" ColumnName="StartOfficeID" />
+                <ScalarProperty Name="VehicleRefID" ColumnName="VehicleRefID" />
+                <ScalarProperty Name="VehicleName" ColumnName="VehicleName" />
+                <ScalarProperty Name="OfficePhone" ColumnName="OfficePhone" />
+                <ScalarProperty Name="OfficeAddress" ColumnName="OfficeAddress" />
+                <ScalarProperty Name="EndOfficeName" ColumnName="EndOfficeName" />
+                <ScalarProperty Name="StartOfficeName" ColumnName="StartOfficeName" />
+                <ScalarProperty Name="Identifier" ColumnName="Identifier" />
+                <ScalarProperty Name="CreditCardSecurityCode" ColumnName="CreditCardSecurityCode" />
+                <ScalarProperty Name="CreditCardExpirationYear" ColumnName="CreditCardExpirationYear" />
+                <ScalarProperty Name="CreditCardExpirationMonth" ColumnName="CreditCardExpirationMonth" />
+                <ScalarProperty Name="CreditCardType" ColumnName="CreditCardType" />
+                <ScalarProperty Name="CreditCardNameandSurname" ColumnName="CreditCardNameandSurname" />
+                <ScalarProperty Name="CreditCardNumber" ColumnName="CreditCardNumber" />
+                <ScalarProperty Name="VehicleExtraFee" ColumnName="VehicleExtraFee" />
+                <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+                <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+                <ScalarProperty Name="FlightNumber" ColumnName="FlightNumber" />
+                <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+                <ScalarProperty Name="CurrencyID" ColumnName="CurrencyID" />
+                <ScalarProperty Name="TotalRate" ColumnName="TotalRate" />
+                <ScalarProperty Name="PaymentIdentifier" ColumnName="PaymentIdentifier" />
+                <ScalarProperty Name="PaymentStatusID" ColumnName="PaymentStatusID" />
+                <ScalarProperty Name="EndAt" ColumnName="EndAt" />
+                <ScalarProperty Name="StartAt" ColumnName="StartAt" />
+                <ScalarProperty Name="VehicleID" ColumnName="VehicleID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VehicleOtherPassengers">
+            <EntityTypeMapping TypeName="AracKiralamaModel.VehicleOtherPassengers">
+              <MappingFragment StoreEntitySet="VehicleOtherPassengers">
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="FlightNumber" ColumnName="FlightNumber" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VehicleInfo">
+            <EntityTypeMapping TypeName="AracKiralamaModel.VehicleInfo">
+              <MappingFragment StoreEntitySet="VehicleInfo">
+                <ScalarProperty Name="PricedCoverages" ColumnName="PricedCoverages" />
+                <ScalarProperty Name="VehicleCharges" ColumnName="VehicleCharges" />
+                <ScalarProperty Name="TransmissionType" ColumnName="TransmissionType" />
+                <ScalarProperty Name="AirConditionInd" ColumnName="AirConditionInd" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="FuelPolicy" ColumnName="FuelPolicy" />
+                <ScalarProperty Name="OfficeTel" ColumnName="OfficeTel" />
+                <ScalarProperty Name="OfficeAddress" ColumnName="OfficeAddress" />
+                <ScalarProperty Name="OfficeName" ColumnName="OfficeName" />
+                <ScalarProperty Name="ThumImage" ColumnName="ThumImage" />
+                <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+                <ScalarProperty Name="VehicleOrdersID" ColumnName="VehicleOrdersID" />
+                <ScalarProperty Name="CompanyImage" ColumnName="CompanyImage" />
+                <ScalarProperty Name="BaggageCount" ColumnName="BaggageCount" />
+                <ScalarProperty Name="DoorCount" ColumnName="DoorCount" />
+                <ScalarProperty Name="FuelType" ColumnName="FuelType" />
+                <ScalarProperty Name="PassengerCount" ColumnName="PassengerCount" />
+                <ScalarProperty Name="GearType" ColumnName="GearType" />
+                <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

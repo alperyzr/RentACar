@@ -1,0 +1,45 @@
+﻿
+@{
+    ViewBag.Title = "Index1";
+
+}
+    <script>
+    $(document).ready(function () {
+    	$('#startCityComplate').autoComplate({
+    		  url: 'http://bileteviniz.com/FlightBooking/SearchLocations?term=ist',
+            culture: 'tr',
+            icon:'blueArrow.png'
+
+            });
+
+            $('#endCityComplate').autoComplate({
+            url: 'http://bileteviniz.com/FlightBooking/SearchLocations?term=ist',
+            culture: 'tr',
+            icon:'blueArrow.png'
+
+            });
+            });
+    </script>
+            <h2>Index1</h2>
+            <br />
+            <br />
+            <br />
+            <br />
+            <input type="text" id="autocomplete" class="autocomplete" placeholder="new Search" />
+            <br />
+            <br />
+            <br />
+            <br />
+            <input type="text" id="startCityComplate" class="autocomplete" placeholder="new Search" />
+            <br />
+            <br />
+            <br />
+            <br />
+            <input type="text" id="endCityComplate" class="autocomplete" placeholder="new Search" />
+
+
+
+            <br />
+            <br />
+            <br />
+            <br />

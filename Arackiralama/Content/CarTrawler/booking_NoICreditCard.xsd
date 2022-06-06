@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OTA_VehResRQ xmlns="http://www.opentravel.org/OTA/2003/05" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opentravel.org/OTA/2003/05 OTA_VehResRQ.xsd" Target="Test" Version="1.005" PrimaryLangID="<?Culture?>">
+    <POS>
+        <Source ISOCurrency="<?Currency?>">
+            <RequestorID Type="16" ID="576761" ID_Context="CARTRAWLER" />
+        </Source>
+        <Source>
+            <RequestorID Type="16" ID="576761" ID_Context="ORDERID" />
+        </Source>
+    </POS>
+    <VehResRQCore Status="All">
+        <VehRentalCore PickUpDateTime="<?StartDate?>" ReturnDateTime="<?EndDate?>">
+			<PickUpLocation CodeContext="CARTRAWLER" LocationCode="<?StartLocation?>" />
+			<ReturnLocation CodeContext="CARTRAWLER" LocationCode="<?ReturnLocation?>" />
+		</VehRentalCore>
+        <Customer>
+            <Primary>
+                <PersonName>
+                    <NamePrefix>Mr.</NamePrefix>
+                    <GivenName><?FirstName?></GivenName>
+                    <Surname><?LastName?></Surname>
+                </PersonName>
+                <Telephone PhoneTechType="1" AreaCityCode="405" PhoneNumber="5555828" />
+                <Email EmailType="2"><?email?></Email>
+                <Address Type="2">
+                    <AddressLine><?Address?></AddressLine>
+                    <CountryName Code="<?Country?>" />
+                </Address>
+                <CitizenCountryName Code="<?Country?>" />
+            </Primary>
+        </Customer>
+        <DriverType Age="30" />
+		<?Equips?>
+    </VehResRQCore>
+    <VehResRQInfo>
+        <ArrivalDetails TransportationCode="14" Number="123">
+            <OperatingCompany><?Country?></OperatingCompany>
+        </ArrivalDetails>
+        <Reference Type="16" ID="<?ReferanceID?>" ID_Context="CARTRAWLER" DateTime="<?StartDate?>" URL="<?Url?>" />
+    </VehResRQInfo>
+</OTA_VehResRQ>

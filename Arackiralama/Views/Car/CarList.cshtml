@@ -1,0 +1,48 @@
+﻿
+@{
+    ViewBag.Title = "CarList";
+}
+
+<div class="row">
+    <div class="col-12">
+        @Html.Partial("_AccordionMenu")
+    </div>
+
+    <div class="col-12">
+        <div class="row">
+            <!--#region Filtre-->
+            <div class="col-md-3 mt-3">
+                @Html.Partial("_Filtre")
+            </div>
+            <!--#endregion-->
+
+            <div class="col-md-9">
+                <!--#region AccordionPage-->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="steps-fields">
+
+                            <form>
+                                @Html.Partial("_AccordionPages")
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!--#endregion-->
+                
+                
+            </div>
+        </div>
+    </div>
+
+</div>
+
+@{Html.RenderAction("_ImportantInformations", "Car");
+}
+
+
+
+
+
+
+

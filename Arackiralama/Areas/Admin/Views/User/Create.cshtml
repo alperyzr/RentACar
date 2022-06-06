@@ -1,0 +1,212 @@
+﻿@model Arackiralama.Models.Accounts
+@{
+    ViewBag.Title = "Kullanıcı Ekle / Düzenle";
+  
+}
+
+<div class="col">
+    <div class="row">
+        @if (ViewBag.Message != null)
+        {
+
+            <div class="col-12 mb-3">
+
+                <div class="alert alert-success">
+                    @ViewBag.Message
+                </div>
+
+
+            </div>
+
+        }
+        @if (ViewBag.Hata != null)
+        {
+            <div class="container mb-3">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="hata-message alert alert-danger">
+                            @ViewBag.Hata
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">Kullanıcı Ekle / Düzenle</h2>
+                </div>
+            </div>
+            <div class="card-body p-3">
+                @using (Html.BeginForm("Create", "User", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                {
+
+                    @*<div class="row mb-3">
+                        <div class="col-12 col-md-3">
+                            <span style="float:right;" class="float-right-absorbe">
+                                Resim
+                            </span>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            @if (!String.IsNullOrEmpty(Model.ImageUrl))
+                            {
+                                <img src="@Model.ImageUrl" class="panel-upload-img" />
+                            }
+                            @Html.TextBoxFor(m => m.AvatarResim, new { type = "file" })
+                            @Html.ValidationMessageFor(m => m.AvatarResim, "", new { style = "color:red;font-size:12px" })
+
+                        </div>
+                    </div>*@
+                    <div class="row mb-3">
+                        <div class="col-12 col-md-3">
+                            <span style="float:right;" class="float-right-absorbe">
+                                Rol
+                            </span>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            @Html.DropDownListFor(m => m.RoleID,
+Model.Rol.Select(d => new SelectListItem()
+{
+    Value = d.ID.ToString(),
+    Text = d.RolAciklama
+}), new { @class = "form-control" })
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-12 col-md-3">
+                            <span style="float:right;" class="float-right-absorbe">
+                                Ad
+                            </span>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            @Html.TextBoxFor(u => u.FirstName, null, new { @class = "form-control" })
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-12 col-md-3">
+                            <span style="float:right;" class="float-right-absorbe">
+                                Soyad
+                            </span>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            @Html.TextBoxFor(u => u.LastName, new { @class = "form-control" })
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-12 col-md-3">
+                            <span style="float:right;" class="float-right-absorbe">
+                                Doğum tarihi
+                            </span>
+                        </div>
+                        <div class="col-12 col-md-6">
+
+                            <input type="date" name="BirthDate" value="@Model.BirthDate.Value.ToString("yyyy-MM-dd")" class="form-control" />
+
+
+                            @Html.ValidationMessageFor(m => m.BirthDate, "", new { style = "color:red;font-size:12px" })
+
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-12 col-md-3">
+                            <span style="float:right;" class="float-right-absorbe">
+                                Adres
+                            </span>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            @Html.TextAreaFor(u => u.Address, new { @class = "form-control datepicker" })
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-12 col-md-3">
+                            <span style="float:right;" class="float-right-absorbe">
+                                E-Posta
+                            </span>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            @Html.TextBoxFor(u => u.Email, null, new { @class = "form-control" })
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-12 col-md-3">
+                            <span style="float:right;" class="float-right-absorbe">
+                                Şifre
+                            </span>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            @Html.TextBoxFor(u => u.Password, new { @class = "form-control", @type = "password" })
+                            @Html.ValidationMessageFor(u => u.Password)
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-12 col-md-3">
+                            <span style="float:right;" class="float-right-absorbe">
+                                Şifre Tekrar
+                            </span>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            @Html.TextBoxFor(u => u.PasswordAgain, new { @class = "form-control", @type = "password" })
+                            @Html.ValidationMessageFor(u => u.PasswordAgain)
+                        </div>
+                    </div>
+                    if (ViewBag.Password != null)
+                    {
+                        <div class="row mb-3">
+                            <div class="col-12">
+                                <center>
+                                    <label style="color:red;font-size:12px">
+                                        @ViewBag.Password
+                                    </label>
+                                </center>
+
+                            </div>
+                        </div>
+                    }
+
+                    <div class="row mb-3">
+                        <div class="col-12 col-md-3">
+                            <span style="float:right;" class="float-right-absorbe">
+                                Cinsiyet
+                            </span>
+                        </div>
+                        <div class="col-12 col-md-3">
+
+                            @Html.RadioButtonFor(m => m.Gender, "Erkek")<span>Erkek</span>
+
+                        </div>
+                        <div class="col-12 col-md-3">
+
+                            @Html.RadioButtonFor(m => m.Gender, "Kadın")<span>Kadın</span>
+
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <div class="col-12 col-md-3">
+                            <span style="float:right;" class="float-right-absorbe">
+                                Aktif mi ?
+                            </span>
+                        </div>
+                        <div class="col-12 col-md-3">
+
+                            @Html.RadioButtonFor(m => m.IsActive, "Aktif")<span>Aktif</span>
+
+                        </div>
+                        <div class="col-12 col-md-3">
+
+                            @Html.RadioButtonFor(m => m.IsActive, "Aktif Değil")<span>Aktif Değil</span>
+
+                        </div>
+                    </div>
+                    <center>
+                        <div class="col-12 mb-3">
+                            <input type="submit" class="btn btn-success" value="Kaydet" />
+                        </div>
+                    </center>
+                }
+
+            </div>
+        </div>
+    </div>
+</div>

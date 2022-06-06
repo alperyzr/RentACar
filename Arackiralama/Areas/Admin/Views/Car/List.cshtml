@@ -1,0 +1,63 @@
+﻿@model IEnumerable<Arackiralama.Models.Car>
+@{
+    ViewBag.Title = "Araç listesi";
+}
+
+<div class="row">
+    @if (ViewBag.Message!=null)
+    {
+        <div class="col-12 mb-3">
+            <div class="alert alert-success">
+                @ViewBag.Message
+            </div>
+        </div>
+    }
+    <div class="col-12">
+        <section class="card">
+            <header class="card-header">
+                <h2 class="card-title">Araç Listesi</h2>
+            </header>
+            <div class="card-body">
+                <table class="table table-responsive-md table-striped mb-0 table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Şirket Logosu</th>
+                            <th>Araç Markası</th>
+                            <th>Araç Modeli</th>
+                            <th>Araç Segmenti</th>
+                            <th>Araç Klas</th>
+                            <th>Detay</th>
+                            <th>Düzenle</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+
+                        <tr>
+                            <td>
+                                <img src="@item.Resim" class="panel-upload-img" />
+                            </td>
+                            <td>@item.Marka</td>
+                            <td>
+                                @item.Model
+                            </td>                          
+                            <td>@item.Segment</td>  
+                            <td>@item.Sinif</td>                           
+                            <td>
+                                <a href="@Url.Action("Edit","Car",new { @id = item.ID })" class="btn btn-info">Düzenle</a>
+                            </td>
+                            <td>
+                                <a href="@Url.Action("Detail","Car",new { @id = item.ID })" class="btn btn-info">Detay</a>
+                            </td>
+
+                        </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+</div>
+

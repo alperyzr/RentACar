@@ -1,0 +1,497 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_IndexLayout.cshtml";
+    if (Session["culture"].ToString()== "tr-TR")
+    {
+        ViewBag.Culture = "tr";
+    }
+    else if (Session["culture"].ToString() == "en-GB")
+    {
+        ViewBag.Culture = "en";
+    }
+    else if (Session["culture"].ToString() == "ru-RU")
+    {
+        ViewBag.Culture = "ru";
+    }
+    else
+    {
+        ViewBag.Culture = "tr";
+    }
+
+}
+
+
+<script type="text/javascript">
+    function differentLocationCheck() {
+        if (this.checked) {
+            $("#EndRegion").removeAttr("disabled");
+        } else {
+            $("#EndRegion").attr("disabled", true);
+        }
+    }
+ 
+    //$("#differentLocationCheck").click(function () {
+        
+    //});
+    
+
+           function datepickerValidate() {
+        var i = 0;
+
+        var startDate = $('input[name=StartAt]').val();
+        var endDate = $('input[name=EndAt]').val();
+        var region1 = $('input[name=StartRegionID]').val();
+        var region2 = $('#EndRegion').val();
+
+
+        if(startDate == '' || endDate == ''){
+        	alert('@Arackiralama.Resources.LanguageFields.HotelDateError'.replace('&#252;', 'ü').replace('&#231;','ç'));
+        	return false;
+        }
+
+        if (region1 == '') {
+        	alert('@(HttpUtility.HtmlDecode(Arackiralama.Resources.LanguageFields.VehicleSearchAlert))'.replace("&#246;", "ö").replace("&#231;", "ç"));
+        	return false;
+        }
+    	if (region2 == '') {
+       alert('@(HttpUtility.HtmlDecode(Arackiralama.Resources.LanguageFields.VehicleSearchAlert1))'.replace("&#246;", "ö").replace("&#231;", "ç"));
+        	return false;
+        }
+
+
+        if ($('select[name=StartTimeHour]').val() == "") {
+       alert('@(HttpUtility.HtmlDecode(Arackiralama.Resources.LanguageFields.VehicleHourAlertMessage1))'.replace("&#246;", "ö").replace("&#231;", "ç"));
+        	return false;
+        }
+
+        if ($('select[name=EndTimeHour]').val() == "") {
+        	alert('@(HttpUtility.HtmlDecode(Arackiralama.Resources.LanguageFields.VehicleHourAlertMessage2))'.replace("&#246;", "ö").replace("&#231;", "ç"));
+
+        	return false;
+        }
+
+    	@*var str = "";
+    	var end="";
+    	if ("@ViewBag.Culture" == "tr") {
+        	var bol = new Array();
+        	var esp=new Array();
+        	esp=endDate.split('-');
+        	end=esp[1] + "-" +esp[0] + "-" +esp[2];
+
+        	bol = startDate.split('-');
+        	str = bol[1] + "-" + bol[0] + "-" + bol[2];
+
+        } else {
+        	end = endDate;
+        	str = startDate;
+        }
+
+        var d1 = new Date(str);
+        var d2 = new Date(end);
+        var msPerDay = 24 * 60 * 60 * 1000;
+        var daysUp = (d2.getTime() - d1.getTime()) / msPerDay;
+        daysUp = Math.round(daysUp);
+
+
+        if (str > end) {
+        	alert("Dönüş tarihiniz, gidiş tarihinizden önce olamaz. Lütfen bilgilerinizi düzenleyiniz.");
+        	i++;
+        }
+        if (daysUp>=28)
+        {
+        	alert("Girdiğiniz tarih aralığı 28 günü geçmemelidir.");
+        	i++;
+        }*@
+		//validation
+
+        if (i > 0) {
+            return false;
+        } else {
+
+            document.searchForm.submit();
+            $('#vehiclePhoto').show();
+        }
+
+    }
+
+
+
+@*culture:'@ViewBag.Culture',*@
+    $(document).ready(function () {
+        localStorage.clear();
+        $('#vehiclePhoto').hide();
+        //$("#vehicleSearch").submit(function () {
+        //    $('#vehiclePhoto').show();
+        //});
+            $('#differentLocationCheck').click(function (event) { //on click
+                if (this.checked) { 
+                    $('#EndRegion').removeAttr('disabled', 'disabled');
+                 
+                } else {
+                    $('#EndRegion').attr('disabled', 'disabled');
+                 
+                
+                }
+            });
+
+
+              $('#StartAt').Zebra_DatePicker({
+			direction: true,
+			pair: $('#EndAt')
+			@if(ViewBag.Culture != "tr"){
+				@Html.Raw(",  format: 'm-d-Y'");
+			}else{
+				@Html.Raw(",  format: 'd-m-Y'");
+			}
+		});
+
+		$('#EndAt').Zebra_DatePicker({
+			direction: 1
+			@if(ViewBag.Culture != "tr"){
+				@Html.Raw(",  format: 'm-d-Y'")
+			}else{
+				@Html.Raw(",  format: 'd-m-Y'")
+			}
+        });
+
+        $('#vehicleStartRegionComplate').autoComplate({
+			url:'@Url.Action("VehicleComplateRegion", "Ajax")',
+    		culture:'tr',
+    		icon:'vehicleCarLogo.png'
+    	});
+        $('#vehicleEndRegionComplate').autoComplate({
+    		url:'@Url.Action("VehicleComplateRegion", "Ajax")',
+    		culture:'tr',
+    		icon:'vehicleCarLogo.png'
+    	});
+
+    });
+</script>
+<style>
+    .searchPhoto {
+        z-index: 99999;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        display: none;
+        background: rgba(87,85,85,0.78);
+        text-align: center;
+    }
+
+</style>
+<div class="mt-3 mb-3">
+    @*<iframe src="https://book.cartrawler.com/?clientID=YOUR_CLIENT_ID" width="350" height="450" marginwidth="0" marginheight="0" frameborder="0" scrolling="no"></iframe>*@
+
+    @*----------- Form -------------*@
+    @if (ViewBag.Message!=null)
+    {
+        <div class="row">
+            <div class="col-12">
+                <div class="alert alert-success">
+                    @ViewBag.Message
+                </div>
+            </div>
+        </div>
+    }
+    @if (Session["culture"].ToString() == "tr-TR")
+    {
+        <div class="searchPhoto" id="vehiclePhoto">
+            <img src="@Url.Content("~/Contents/img/arayuz-araba4.png")" style="margin-top:75px;" alt="" />
+            <img src="@Url.Content("~/Contents/img/load_indicator.gif")" class="currently-loading" style="margin-top:190px;margin-left:-250px;" alt="" />
+        </div>
+    }
+    else
+    {
+       
+        <div class="searchPhoto" id="vehiclePhoto">
+            <img src="@Url.Content("~/Contents/img/arayuz-araba-en.png")" style="margin-top:75px;" alt="" />
+            <img src="@Url.Content("~/Contents/img/load_indicator.gif")" class="currently-loading" style="margin-top:190px;margin-left:-250px;" alt="" />
+        </div>
+    }
+    @if (ViewBag.IsOpenModal == true)
+    {
+        Html.Action("_KVKK", "Content");
+    }
+    @*<div id="loading-modal">
+            <div class="content-out">
+                <div class="content" style="min-height: 20vh">
+                    <div class="text-center">
+                        <p>&nbsp;</p>
+                        <p>Uygulama hazırlanıyor, lütfen bekleyiniz...</p>
+                        <p>&nbsp;</p>
+                    </div>
+                    <div class="text-center">
+                        <img src="Content/Media/Images/loading-bar.gif" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>*@
+    <div class="jumbotron jumbotron-bg p-3">
+        @using (Html.BeginForm("ListAvailableItems", "Car", FormMethod.Post, new { name = "searchForm", @Id = "vehicleSearch" }))
+        {
+            <div class="row">
+                <div class="col-12 col-lg-12 mb-3">
+                    <h1>
+                        @*@Html.Raw(Arackiralama.Resources.LanguageFields.IndexSearchTitle)*@
+                    </h1>
+
+                </div>
+                <br />
+                <div class="col-12">
+                    <div class="row">
+                        <div class="col-lg-6 margin-top-1rem">
+                            <span>@(Html.Raw(Arackiralama.Resources.LanguageFields.PickUpPlace))</span><br />
+                            <div class="" id="vehicleStartRegionComplate">
+                                <input type="text" placeholder="@(Html.Raw(Arackiralama.Resources.LanguageFields.PickUp))" onfocus="this.placeholder=''" onblur="this.placeholder='@(Html.Raw(Arackiralama.Resources.LanguageFields.PickUp))'" autocomplete="off" class="startRegion form-control" id="startRegion" />
+                                <ul class="car-search-service-ul"></ul>
+                                <input type="hidden" name="StartRegionID" />
+                            </div>
+                        </div>
+                        <div class="col-lg-6 margin-top-1rem">
+                            <span>@(Html.Raw(Arackiralama.Resources.LanguageFields.DropOffPlace))</span><br />
+                            <div class="" id="vehicleEndRegionComplate">
+                                <input type="text" disabled placeholder="@(Html.Raw(Arackiralama.Resources.LanguageFields.DropOff))" onfocus="this.placeholder=''" onblur="this.placeholder='@(Html.Raw(Arackiralama.Resources.LanguageFields.DropOff))'" autocomplete="off" class="EndRegion form-control" id="EndRegion" />
+                                <ul class="car-search-service-ul"></ul>
+                                <input type="hidden" name="EndRegionID" />
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <br />
+
+                @*<div class="col-12 col-lg-8 mb-3">
+                        <div class="box-flight" id="vehicleStartRegionComplate">
+                            <i class="fas fa-map-marker-alt m-3"></i>
+                            <input type="text" class="autocomplete form-control pl-5" id="autocomplete" placeholder="Şehir, havaalanı, adres, istasyon, posta kodu..." />
+                            <ul id="VehicleRegions">
+                            </ul>
+                            <input type="hidden" name="StartRegionID" />
+                        </div>
+
+                    </div>*@
+
+                <div class="col-12 col-lg-4 mb-3 mt-3">
+                    <input type="checkbox" id="differentLocationCheck" class="mr-2" /><span>@Html.Raw(Arackiralama.Resources.LanguageFields.CarDifferentCheckboxText)</span>
+                </div>
+                <div class="col-12 col-lg-12">
+                    <div class="row">
+                        <div class="col-12 col-lg-6 mb-3">
+                            <div class="row">
+                                <div class="col-12">
+                                    <span>
+                                        @Html.Raw(Arackiralama.Resources.LanguageFields.CarReceiveDate)
+                                    </span>
+                                </div>
+                                <div class="col-12">
+                                    <div class="row">
+                                        <div class="col-7 col-md-8">
+                                            <span>
+                                                <i class="far fa-clock mt-3 ml-2">   </i>
+                                                <input type="text" id="StartAt" name="StartAt" class="form-control pl-4" />
+                                            </span>
+
+                                        </div>
+                                        <div class="col-5 col-md-4 pl-0 pr-3">
+                                            <select name="StartTimeHour" class="form-control">
+                                                <option>00:00</option>
+                                                <option>00:30</option>
+                                                <option>01:00</option>
+                                                <option>01:30</option>
+                                                <option>02:00</option>
+                                                <option>02:30</option>
+                                                <option>03:00</option>
+                                                <option>03:30</option>
+                                                <option>04:00</option>
+                                                <option>04:30</option>
+                                                <option>05:00</option>
+                                                <option>05:30</option>
+                                                <option>06:00</option>
+                                                <option>06:30</option>
+                                                <option>07:00</option>
+                                                <option>07:30</option>
+                                                <option>08:00</option>
+                                                <option>08:30</option>
+                                                <option>09:00</option>
+                                                <option>09:30</option>
+                                                <option selected>10:00</option>
+                                                <option>10:30</option>
+                                                <option>11:00</option>
+                                                <option>11:30</option>
+                                                <option>12:00</option>
+                                                <option>12:30</option>
+                                                <option>13:00</option>
+                                                <option>13:30</option>
+                                                <option>14:00</option>
+                                                <option>14:30</option>
+                                                <option>15:00</option>
+                                                <option>15:30</option>
+                                                <option>16:00</option>
+                                                <option>16:30</option>
+                                                <option>17:00</option>
+                                                <option>17:30</option>
+                                                <option>18:00</option>
+                                                <option>18:30</option>
+                                                <option>19:00</option>
+                                                <option>19:30</option>
+                                                <option>20:00</option>
+                                                <option>20:30</option>
+                                                <option>21:00</option>
+                                                <option>21:30</option>
+                                                <option>22:00</option>
+                                                <option>22:30</option>
+                                                <option>23:00</option>
+                                                <option>23:30</option>
+
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="col-12 col-lg-6 mb-3">
+                            <div class="row">
+                                <div class="col-12">
+                                    <span>
+                                        @Html.Raw(Arackiralama.Resources.LanguageFields.CarDeliverDate)
+                                    </span>
+                                </div>
+                                <div class="col-12">
+                                    <div class="row">
+                                        <div class="col-7 col-md-8">
+                                            <span>
+                                                <i class="far fa-clock mt-3 ml-2"></i>
+                                                <input type="text" id="EndAt" name="EndAt" class="form-control pl-4" />
+                                            </span>
+
+                                        </div>
+                                        <div class="col-5 col-md-4 pl-0 pr-3">
+                                            <select name="EndTimeHour" class="form-control">
+                                                <option>00:00</option>
+                                                <option>00:30</option>
+                                                <option>01:00</option>
+                                                <option>01:30</option>
+                                                <option>02:00</option>
+                                                <option>02:30</option>
+                                                <option>03:00</option>
+                                                <option>03:30</option>
+                                                <option>04:00</option>
+                                                <option>04:30</option>
+                                                <option>05:00</option>
+                                                <option>05:30</option>
+                                                <option>06:00</option>
+                                                <option>06:30</option>
+                                                <option>07:00</option>
+                                                <option>07:30</option>
+                                                <option>08:00</option>
+                                                <option>08:30</option>
+                                                <option>09:00</option>
+                                                <option>09:30</option>
+                                                <option selected>10:00</option>
+                                                <option>10:30</option>
+                                                <option>11:00</option>
+                                                <option>11:30</option>
+                                                <option>12:00</option>
+                                                <option>12:30</option>
+                                                <option>13:00</option>
+                                                <option>13:30</option>
+                                                <option>14:00</option>
+                                                <option>14:30</option>
+                                                <option>15:00</option>
+                                                <option>15:30</option>
+                                                <option>16:00</option>
+                                                <option>16:30</option>
+                                                <option>17:00</option>
+                                                <option>17:30</option>
+                                                <option>18:00</option>
+                                                <option>18:30</option>
+                                                <option>19:00</option>
+                                                <option>19:30</option>
+                                                <option>20:00</option>
+                                                <option>20:30</option>
+                                                <option>21:00</option>
+                                                <option>21:30</option>
+                                                <option>22:00</option>
+                                                <option>22:30</option>
+                                                <option>23:00</option>
+                                                <option>23:30</option>
+
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 mt-3">
+                    <input type="checkbox" class="mr-2" /><span>@Html.Raw(Arackiralama.Resources.LanguageFields.CarBetweenYearsOld)</span>
+                </div>
+                <div class="col-12 col-md-6 mt-3">
+
+                    <input type="submit" onclick="datepickerValidate(); return false;" value="@Html.Raw(Arackiralama.Resources.LanguageFields.CarSearchButton)" class="btn btn-orange btn-block" />
+
+
+                </div>
+
+
+                @*<div id="loading-modal">
+                        <div class="content-out">
+                            <div class="content" style="min-height: 20vh">
+                                <div class="text-center">
+                                    <p>&nbsp;</p>
+                                    <p>Uygulama hazırlanıyor, lütfen bekleyiniz...</p>
+                                    <p>&nbsp;</p>
+                                </div>
+                                <div class="text-center">
+                                    <img src="~/Contents/img/loading-bar.gif" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>*@
+            </div>
+        }
+    </div>
+    @*----------- Form Bitiş -------------*@
+
+
+</div>
+
+@*<script>
+    $(document).ready(function () {
+        $("#loading-modal").show();
+       
+        localStorage.clear();
+        var isMobileDevice = 'true';
+
+        
+
+
+        $.ajax({
+            url: 'https://mobilapi.bileteviniz.com/API/SearchLocations?term=ist',
+            dataType: 'json',
+            method: 'GET',
+            success: function (data) {
+
+                $("#loading-modal").hide();
+
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+
+                $("#loading-modal").hide();
+            }
+        });
+        $("#loading-modal").hide();
+
+       
+    });
+
+</script>*@

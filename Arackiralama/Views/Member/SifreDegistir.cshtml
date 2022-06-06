@@ -1,0 +1,81 @@
+﻿@model Arackiralama.ViewModels.User.UserViewModel
+@{
+    ViewBag.Title = "Şifre Değiştir";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@if (ViewBag.Message!=null)
+{
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                @if (ViewBag.Message == "Şifre başaryla güncellendi.")
+                {
+                    <div class="alert alert-success">
+                        @ViewBag.Message
+                    </div>
+                }
+                else
+                {
+                    <div class="alert alert-danger">
+                        @ViewBag.Message
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+}
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            @using (Html.BeginForm("SifreDegistir", "Member", FormMethod.Post, new { @enctype = "multipart/form-data" }))
+            {
+                <div class="faq-box pt-0">
+                    <div class="row">
+                        
+                        <div class="col-md-12 p-3">
+                            <div class="col-12 mt-3 mb-3">
+                                <center>
+                                    <h1 class="info-box-h1">
+                                       @Html.Raw(Arackiralama.Resources.LanguageFields.ChangePasswordTitle)
+                                    </h1>
+                                </center>
+                            </div>
+                            <div class="col-12">
+                                <span>@Html.Raw(Arackiralama.Resources.LanguageFields.CurrentPassword)</span>
+                            </div>
+                            <div class="col-12 mb-3">
+                                @Html.TextBoxFor(m => m.Sifre, new { @class = "form-control",@type="password" })
+                            </div>
+
+
+                            <div class="col-12">
+                                <span>@Html.Raw(Arackiralama.Resources.LanguageFields.NewPassword)</span>
+                            </div>
+                            <div class="col-12 mb-3">
+                                @Html.TextBoxFor(m => m.YeniSifre, new { @class = "form-control", @type = "password" })
+                            </div>
+                            <div class="col-12">
+                                <span>@Html.Raw(Arackiralama.Resources.LanguageFields.NewPasswordAgain)</span>
+                            </div>
+                            <div class="col-12 mb-3">
+                                @Html.TextBoxFor(m => m.YeniSifreTekrar, new { @class = "form-control", @type = "password" })
+                            </div>
+                          
+                            <div class="col-12 mt-3 mt-3">
+                                <center>
+                                    <div>
+                                        <input type="hidden" name="ID" value="@Session["ID"]" />                                    
+                                        <input type="submit" class="btn btn-save" value="@Html.Raw(Arackiralama.Resources.LanguageFields.EditBtnText)" />
+                                      
+                                    </div>
+
+                                </center>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>

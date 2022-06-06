@@ -1,0 +1,269 @@
+﻿@model Arackiralama.Models.Car
+@{
+    ViewBag.Title = "Araç Detayı";
+}
+
+<div class="col">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">Araç Detayı</h2>
+                </div>
+            </div>
+            <div class="card-body p-3">
+                <div class="row mb-3">
+                    <div class="col-6">
+                        <a href="@Url.Action("Edit","Car",new { @id = Model.ID })" class="btn btn-info float-right">Düzenle</a>
+                    </div>
+                    <div class="col-6">
+                        <a href="@Url.Action("List","Car")" class="btn btn-info">Araç Listesine Dön</a>
+                    </div>
+                </div>
+                <hr />
+                <div class="row mb-3">
+                    <div class="col-12 col-md-3">
+                        <strong style="float:right;" class="float-right-absorbe">
+                            Şirket İsmi
+                        </strong>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <span>
+                          @Html.TextBoxFor(m=>m.Company.SirketAdi)
+                        </span>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-12 col-md-3">
+                        <strong style="float:right;" class="float-right-absorbe">
+                            Resim
+                        </strong>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <span>
+                            <img src="@Model.Resim" class="panel-upload-img" />
+                        </span>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-12 col-md-3">
+                        <strong style="float:right;" class="float-right-absorbe">
+                           Araç Markası
+                        </strong>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <span>
+                            @Model.Marka
+                        </span>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-12 col-md-3">
+                        <strong style="float:right;" class="float-right-absorbe">
+                            Araç Modeli
+                        </strong>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <span>
+                            @Model.Model
+                        </span>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-12 col-md-3">
+                        <strong style="float:right;" class="float-right-absorbe">
+                            Araç Segmenti
+                        </strong>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <span>
+                            @Model.Segment
+                        </span>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-12 col-md-3">
+                        <strong style="float:right;" class="float-right-absorbe">
+                            Araç Klası
+                        </strong>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <span>
+                            @Model.Sinif
+                        </span>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-12 col-md-3">
+                        <strong style="float:right;" class="float-right-absorbe">
+                           Şanzuman
+                        </strong>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <span>@Model.Sanzuman</span>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-12 col-md-3">
+                        <strong style="float:right;" class="float-right-absorbe">
+                            Yakıt Türü
+                        </strong>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <span>
+                            @Model.YakitTuru
+                        </span>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-12 col-md-3">
+                        <strong style="float:right;" class="float-right-absorbe">
+                            Seçilebilecek Extra Mataryeller
+                        </strong>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <span>
+                            @Model.ExtraMaterial
+                        </span>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-12 col-md-3">
+                        <strong style="float:right;" class="float-right-absorbe">
+                            Araç Puanı
+                        </strong>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <span>
+                            @Model.CarPoitScaleID
+                        </span>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-12 col-md-3">
+                        <strong style="float:right;" class="float-right-absorbe">
+                            Araç Puanı İfadesi
+                        </strong>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <span>
+                            @*@Model.CarPointScale.PuanIfadesi*@
+                        </span>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-12 col-md-3">
+                        <strong style="float:right;" class="float-right-absorbe">
+                            Eklendiği Tarih
+                        </strong>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <span>@Model.EklendigiTarih</span>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-12 col-md-3">
+                        <strong style="float:right;" class="float-right-absorbe">
+                            Ekleyen Kişi
+                        </strong>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <span>@Model.EkleyenKisi</span>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-12 col-md-3">
+                        <strong style="float:right;" class="float-right-absorbe">
+                           Güncellendiği Tarih
+                        </strong>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <span>@Model.EklendigiTarih</span>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-12 col-md-3">
+                        <strong style="float:right;" class="float-right-absorbe">
+                           Güncelleyen Kişi
+                        </strong>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <span>
+                            @Model.GuncelleyenKisi
+                        </span>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-12 col-md-3">
+                        <strong style="float:right;" class="float-right-absorbe">
+                            Kiralandığı Yer
+                        </strong>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <span>
+                           
+                        </span>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-12 col-md-3">
+                        <strong style="float:right;" class="float-right-absorbe">
+                           Kiralandığı Tarih
+                        </strong>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <span></span>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-12 col-md-3">
+                        <strong style="float:right;" class="float-right-absorbe">
+                            Teslim Edildiği Yer
+                        </strong>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <span>
+
+                        </span>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-12 col-md-3">
+                        <strong style="float:right;" class="float-right-absorbe">
+                           Teslim Edildiği Tarih
+                        </strong>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <span>
+
+                        </span>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-12 col-md-3">
+                        <strong style="float:right;" class="float-right-absorbe">
+                            Kiralama Tutarı
+                        </strong>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <span>@Model.KiralamaTutari</span>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-12 col-md-3">
+                        <strong style="float:right;" class="float-right-absorbe">
+                           Araç Aktif mi ?
+                        </strong>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <span>
+                            @Model.IsActive
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+

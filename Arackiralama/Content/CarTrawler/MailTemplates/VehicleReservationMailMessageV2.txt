@@ -1,0 +1,407 @@
+﻿<!DOCTYPE html>
+
+<html lang="tr-TR">
+    <head>
+        <meta charset="utf-8" />
+        <title>Mail</title>
+        <style type="text/css">
+            table {
+               font-size: 12px;
+               font-family: Arial;
+            }
+        </style>
+    </head>
+    <body>
+       
+        <table width="700" border="0" cellpadding="50" cellspacing="0" style="background-color:#f4f4f4;">
+            <tr>
+                <td align="center">
+                    
+                    <!--Üst Bölüm-->
+                        <table width="700" border="0">
+				            <tr>
+					            <td height="50" width="510">
+						          <a href="http://www.aracvararac.com"><img src="https://aracvararac.com/Contents/img/arac_var_arac_logo2.png"/></a>
+					            </td>
+					           
+				            </tr>
+			            </table>
+                    <!--Üst Bölüm Bitti-->
+                    <!--Orta Bölüm-->
+                        <table width="700" border="0" cellpadding="15" style="background-color:#FFF;margin-top:17px;border-top:2px solid #5db3e1;">
+				            <tr>
+					            <td height="450" style="color:#6f6f6f;" valign="top">
+						            						
+						<br /><br />
+						<%Dear%> <u><%UserName%>&nbsp;&nbsp;<%UserLastName%></u>,
+						<br /><br />
+						<%Thanks%> <b><%OrderNum%></b><br /><br />
+						<table>
+						<tr>
+						<td></td>
+						<td><%PickUp%></td>
+						<td><%DropOff%></td>
+						</tr>
+							<tr>
+								<td width="160"><b><%Date%></b></td>
+								<td><%StartAt%></td>
+								<td><%EndAt%></td>
+							</tr>
+							<tr>
+								<td><b><%Time%></b></td>
+								<td><%StartHour%>:<%StartMinute%></td>
+								<td><%EndHour%>:<%EndMinute%></td>
+							</tr>
+							<tr>
+								<td><b><%Company%></b></td>
+								<td><%StartOffice%>&nbsp;
+								<td><%EndOffice%>&nbsp;
+							</tr>
+							<tr>
+								<td><b></b></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td><b><%Telephone%></b></td>
+								<td><%Phone%></td>
+							</tr>
+							<tr>
+								<td><b></b></td>
+								<td></td>
+							</tr>
+							
+							<tr>
+								<td style="vertical-align:top;"><b><%VehicleModel2%></b></td>
+								<td><%VehicleModel%></td>
+							</tr>
+							<tr>
+								<td><b><%ResNo%></b></td>
+								<td><%OrderNum%></td>
+							</tr>						
+						
+							<tr>
+								<td style="vertical-align:top;"><b><%SubTotal%></b></td>
+								<td><%Price%></td>
+							</tr>
+							<tr>
+								<td style="vertical-align=top;"><b><%ExtraFee2%></b></td>
+								<td><%ExtraFee%></td>
+							</tr>
+							<tr>
+								<td><b><%GeneralTotal%></b></td>
+								<td><%TotalPrice%></td>
+							</tr>
+							<tr>
+								<td><b><%OriginalPrice%></b></td>
+								<td><%OriginalTotal%></td>
+							</tr>
+							<tr>
+								<td colspan="2">
+									<%PriceFarkText%>
+								</td>
+							</tr>
+							
+							
+							
+						</table>
+						<br />
+						<br />
+						<%VehicleTerm%><br/><br/><br/>
+						<table>
+						<tr>
+						    <td width="100"><%PriceIndex%></td>
+							<td><b><%Inclusive%></b></td>
+						</tr>
+						
+						<tr>
+							<td></td>
+							<td><%VehicleMailTerm%></td>
+						</tr>
+										
+						</table>
+						<br/><br/><br/>
+						<%NiceTrip%>
+						<br/><br/><br/><br/>
+						<%aracvararacTeam%><br><br>
+						<a href="http://www.aracvararac.com" style="color:rgb(9, 124, 248);font-family:Museo;text-decoration:none;font-size:15px;line-height:2px;">aracvararac</a>
+						</td>
+						</table>
+					    
+                    <!--Orta Bölüm Bitti-->
+                    <!--Footer Bölüm-->
+                        <table border="0" width="700" cellpadding="0" cellspacing="0" style="margin-top:17px;">
+				            <tr>
+					            <td width="420">
+						            <ul class="contact-info" style="list-style-type:none;margin:0;padding:0;">
+							            <li style="margin-top:17px;color:#7f7f7f;"><b><font color="#3d3d3">T</font></b> 0(212) 554 00 04</li>
+							            <li style="margin-top:17px;color:#7f7f7f;"><b><font color="#3d3d3">F</font></b> 0(212) 212 00 12</li>
+							            <li style="margin-top:17px;color:#7f7f7f;"><b><font color="#0d74bb">E</font></b> <a href="mailto:aracvararacinfo@gmail.com">aracvararacinfo@gmail.com</a></li>
+						            </ul>
+					            </td>
+					            <td valign="top" >
+						            <table border="0" cellpadding="8" cellspacing="0" align="right">
+							            <tr>
+								            <td width="40"><a href="http://aracvararac.com/tr" target="_blank"><img src="http://aracvararac.com/Content/images/mailotellogo.png" alt=""/></a></td>
+								            <td width="40"><a href="http://aracvararac.com/tr/ucuslar" target="_blank"><img src="http://aracvararac.com/Content/images/mailucaklogo.png" alt=""/></a></td>
+								            <td width="40"><a href="http://aracvararac.com/tr/arabalar" target="_blank"><img src="http://aracvararac.com/Content/images/mailaraclogo.png" alt=""/></a></td>
+							            </tr>
+							            <tr>
+                                            <td colspan="3">
+                                                 <center><a href="http://aracvararac.com/tr" target="_blank"><b>www.aracvararac.com</b></a></center>
+                                            </td>
+                                        </tr>
+						            </table>
+					            </td>
+				            </tr>
+			            </table>
+                    <!--Footer Bölüm Bitti-->
+                </td>
+            </tr>
+        </table>
+		<br>
+         <table width="700" border="0" cellpadding="50" cellspacing="0" style="background-color:#f4f4f4;">
+            <tr>
+                <td align="center">
+                    
+                    <!--Üst Bölüm-->
+                        <table width="700" border="0">
+				            <tr>
+					            <td height="50" width="510">
+						            <h2><%DistanceTitle%></h2>
+					            </td>
+				            </tr>
+			            </table>
+                    <!--Üst Bölüm Bitti-->
+                    <!--Orta Bölüm-->
+                        <table width="700" border="0" cellpadding="15" style="background-color:#FFF;margin-top:17px;border-top:2px solid #5db3e1;">
+				            <tr>
+					            <td style="color:#6f6f6f;" valign="top">
+						            <!--Mesafeli Satış Sözleşmesi-->
+ 
+<%DistanceTitle%>
+<br><br>
+<%Date%> <%BugunTarih%><br /><br />    
+<b>1.	<%PartiesTitle%></b><br />
+1.1.	<%SellerTitle%><br />
+<%BaslagicOfisi%><br />
+<%BaslangicOfisAdres%><br />
+TEL : <%OfisTelNo%> - FAX : <%OfisFaxNo%>
+<br /><br />
+1.2.	<%ContactName%><br />
+<span id="alici"><%UserName%> <%UserLastName%></span><br />
+<span id="aliciAdres"><%UserAddress%></span><br />
+<span id="aliciTelefon"><%UserEmail%></span><br />
+<span id="aliciMail"><%UserTel%></span>
+<br /><br />
+<b>2.	<%ContactHeader%></b><br />
+<%ContractTitle%>
+<br /><br />
+<b>3.	<%ProductHeader%></b><br />
+<%ProductTitle%>
+<br /><br />
+
+
+<table border="0" width="710" cellpadding="3" cellspacing="1">
+    <tr bgcolor="#f8f8f8">
+	    <td class="styledspan"><b><%Hirer%></b></td>
+        <td class="styledspan" align="center"><%KiralayanKisi%></td>
+    </tr bgcolor="#f8f8f8">
+    <tr>
+        <td class="styledspan"><%TimeDatePickUp%></td>
+        <td class="styledspan" align="center"><%BaslangicTarihSaat%></td>
+    </tr>
+      <tr>
+        <td class="styledspan"><%TimeReturnPickUp%></td>
+        <td class="styledspan" align="center"><%IdadeTarihSaat%></td>
+    </tr>
+      <tr>
+        <td class="styledspan"><%VehicleClass%></td>
+        <td class="styledspan" align="center"><%AracSinifi%></td>
+    </tr>
+     <tr>
+        <td class="styledspan"><%IncludingRent%></td>
+        <td class="styledspan" align="center"><%AracTotalRate%></td>
+    </tr>
+	 <tr>
+        <td class="styledspan"><%ExtraFee2%></td>
+        <td class="styledspan" align="center"><%SoforGunluk%></td>
+    </tr>
+     <tr>
+        <td class="styledspan"><%IncludingTotal%></td>
+        <td class="styledspan" align="center"><%AracToplamRate%></td>
+    </tr>
+     
+ 
+</table>
+
+<%VehicleMailTerm2%><br /><br />
+
+<%VehicleMailTerm3%>
+
+<br /><br />
+<b>4.	<%GeneralProvision%></b><br />
+4.1.	<%GeneralTitle1%><br />
+4.2.	<%GeneralTitle2%><br />
+4.3.	<%GeneralTitle3%><br />
+4.4.	<%GeneralTitle4%><br />
+4.5.	<%GeneralTitle5%><br />
+4.6.	<%GeneralTitle6%><br />
+4.7.	<%GeneralTitle7%><br />
+<br />
+<b>5.	<%RightWith%><br />
+5.1.	<%Right2%><br />
+<%Right3%><br />
+</b>
+5.2.	<%Right4%><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.2.1 <%Right1%><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.2.2 <Right5%><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.2.3 <%Right6%><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.2.6 <%Right7%><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.2.7 <%Right8%><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.2.8 <%Right9%><br />
+5.3.	 <%Right10%><br />
+5.4.	 <%Right11%><br />
+<br />
+<b>6.	 <%CourtTitle%></b><br />
+<%Court1%><br />
+<%Cont%><br />
+
+ <!--Mesafeli Satış Sözleşmesi-->				
+								</td>
+                            </tr>
+                        </table>
+                    <!--Orta Bölüm Bitti-->
+                 
+                </td>
+            </tr>
+        </table>
+       <!--Mesafeli Satış Sözleşmesi Bitti-->
+<br>
+        <!--Ön Bilgilendirme Formu-->
+        <table width="700" border="0" cellpadding="50" cellspacing="0" style="background-color:#f4f4f4;">
+            <tr>
+                <td align="center">
+                    
+                    <!--Üst Bölüm-->
+                        <table width="700" border="0">
+				            <tr>
+					            <td height="50" width="510">
+						            <h2><%PreNotification%></h2>
+					            </td>
+				            </tr>
+			            </table>
+                    <!--Üst Bölüm Bitti-->
+                    <!--Orta Bölüm-->
+                        <table width="700" border="0" cellpadding="15" style="background-color:#FFF;margin-top:17px;border-top:2px solid #5db3e1;">
+				            <tr>
+					            <td style="color:#6f6f6f;" valign="top">
+						            <!--Ön Bilgilendirme Formu-->
+<%Date%> : <%BugunTarih%><br /><br />  
+<%VehicleTerm3%><br /><br /><br />
+<table>
+    <tr>
+        <td><b><%VehicleTerm4%></b></td>
+        <td><%BaslagicOfisi%></td>
+    </tr>
+    <tr>
+        <td><b><%VehicleTerm5%></b></td>
+        <td><%BaslangicOfisAdres%></td>
+    </tr>
+    <tr>
+        <td><b><%VehicleTerm5%></b></td>
+        <td><%OfisTelNo%> / <%OfisFaxNo%></td>
+    </tr>
+</table>
+
+<br /><br />
+2.	<%VehicleTerm7%>
+<br />
+<table border="0" width="710" cellpadding="3" cellspacing="1">
+    <tr bgcolor="#f8f8f8">
+	    <td class="styledspan"><b><%Hirer%></b></td>
+        <td class="styledspan" align="center"><%KiralayanKisi%></td>
+    </tr bgcolor="#f8f8f8">
+    <tr>
+        <td class="styledspan"><%TimeDatePickUp%></td>
+        <td class="styledspan" align="center"><%BaslangicTarihSaat%></td>
+    </tr>
+      <tr>
+        <td class="styledspan"><%TimeReturnPickUp%></td>
+        <td class="styledspan" align="center"><%IdadeTarihSaat%></td>
+    </tr>
+      <tr>
+        <td class="styledspan"><%VehicleClass%></td>
+        <td class="styledspan" align="center"><%AracSinifi%></td>
+    </tr>
+	 <tr>
+        <td class="styledspan"><%ExtraFee2%></td>
+        <td class="styledspan" align="center"><%SoforGunluk%></td>
+    </tr>
+	
+     <tr>
+        <td class="styledspan"><%IncludingRent%></td>
+        <td class="styledspan" align="center"><%AracTotalRate%></td>
+    </tr>
+    <tr>
+        <td class="styledspan"><%IncludingTotal%></td>
+        <td class="styledspan" align="center"><%AracToplamRate%></td>
+    </tr>
+
+	
+</table>
+<br /><br />
+<%VehicleMailTerm2%><br /><br />
+3.	<%PaymentTerms%><br />
+<%PaymentTerms1%>
+<br /><br />
+4. <%CustomerTerm6%> : <%Conf%><br /><br />
+5. <%CustomerTerm7%> : <%Confed%><br /><br />
+<%Payment1%><br /><br />
+
+<b>6.	<%RightWith%><br />
+<b><%Payment2%><br /><br />
+</b><br /><br />
+7. <%CustomerTerm%>
+<br /><br />
+8.<%CustomerTerm1%>
+<br /><br />
+9. <%CustomerTerm2%>
+<br /><br />
+10. <%CustomerTerm3%>
+                   <br /><br />
+11. <%CustomerTerm4%>
+ <br /><br />
+12. <%CustomerTerm5%>
+ <br /><br />
+13. <%Payment3%>
+ <br /><br />
+14.<%Payment4%>
+                    <br /><br />
+15.	<%123%><br /><br />
+
+<table border="0" width="710" cellpadding="3" cellspacing="1">
+    <tr>
+        <td class="styledspan" align="center" width="120"><b><%FormName%></b></td>
+        <td class="styledspan" align="center"><b><%FrmAddress%></b></td>
+        <td class="styledspan" align="center"><b>E-Mail</b></td>
+        <td class="styledspan" align="center" width="100"><b><%Telephone%></b></td>
+    </tr>
+    <tr>
+        <td  class="styledspan" align="center" id="alici4"><%UserName%> <%UserLastName%></td>
+        <td  class="styledspan" align="center" id="aliciAdres4"><%UserAddress%></td>
+        <td  class="styledspan" align="center" id="aliciMail4"><%UserEmail%></td>
+        <td  class="styledspan" align="center" id="alicitel4"><%UserTel%></td>
+    </tr>
+</table>
+ <!--Ön Bilgilendirme Formu-->				
+								</td>
+                            </tr>
+                        </table>
+                    <!--Orta Bölüm Bitti-->
+                   
+                </td>
+            </tr>
+        </table>
+        <!--Ön Bilgilendirme Formu Bitti-->
+    </body>
+</html>

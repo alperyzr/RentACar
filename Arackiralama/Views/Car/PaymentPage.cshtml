@@ -1,0 +1,902 @@
+﻿@using Arackiralama.Models;
+@model Arackiralama.Models.VehicleSearchModel
+@{
+    ViewBag.Title = "PaymentPage";
+
+    string[] selectedExtraIDs = Model.extraFeeHdn.Split(',');
+    string totalExtras = string.Empty;
+    foreach (var item in Model.Vehicle.IncludePrice)
+    {
+        for (int i = 0; i < selectedExtraIDs.Length; i++)
+        {
+
+            if (!string.IsNullOrEmpty(selectedExtraIDs[i]))
+            {
+
+
+                if (selectedExtraIDs[i] == item.Item4)
+                {
+                    totalExtras = totalExtras + item.Item1 + ' ' + item.Item2 + "<br/>";
+                }
+            }
+        }
+    }
+    Accounts LoginUser = new Accounts();
+    AracKiralamaEntities1 db = new AracKiralamaEntities1();
+
+    if (Session["KullaniciAdi"] != null)
+    {
+        int UID =Convert.ToInt32(Session["ID"].ToString());
+        LoginUser = db.Accounts.FirstOrDefault(u => u.ID == UID);
+    }
+   
+
+}
+<style>
+    @@media(min-width:1024px) {
+        .credit-cart-input-width {
+            width: 75%;
+        }
+    }
+</style>
+<script src="~/scripts/jquery.payment.js"></script>
+<script type="text/javascript">
+
+	function validateEmail(email) {
+		var re = /^(([^<>()[\]\\.,;:\s@@\"]+(\.[^<>()[\]\\.,;:\s@@\"]+)*)|(\".+\"))@@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+		return re.test(email);
+	}
+
+    function formControl() {
+        
+		var i = 0;
+
+
+
+
+		@if(Model.Vehicle.CC_Info == "true"){
+
+
+
+      @Html.Raw(
+            "if ($('#CreditCardType').val() == '') {" +
+            "alert('" + Arackiralama.Resources.LanguageFields.SelectCardType + "'.replace(/&#252;/g, 'ü').replace('&#231;', 'ç'));" +
+            "return false;" +
+        "}" +
+         "if ($('#CardNum').val() == '') {" +
+            "alert('" + Arackiralama.Resources.LanguageFields.CreditcardValid + "'.replace('&#231;', 'ç'));" +
+            "return false;" +
+        "}" +
+           "if ($('#CarHolder').val() == '') {" +
+            "alert('" + Arackiralama.Resources.LanguageFields.CardHolderValid + "'.replace('&#231;', 'ç'));" +
+            "return false;" +
+        "}" +
+
+      "if ($('#securitycode').val() == '') {" +
+            "alert('" + Arackiralama.Resources.LanguageFields.CreditcardValid + "'.replace('&#231;','ç'));" +
+
+            "return false;" +
+        "}"
+        );
+        }
+		@*if($('#custemail').val()!=$('#custemailconfirm').val())
+		{
+			alert("@(Html.Raw(Arackiralama.Resources.LanguageFields.MailUnavaible))");
+			i++;
+		}*@
+
+        var checkControl = $("input[name=onBilgilendirme]:checked").length > 0;
+        //var campControl = $("input[name=onBilgilendirme]:checked").length > 0;
+
+        if (checkControl == 0) {
+
+			alert('@(HttpUtility.HtmlDecode(Arackiralama.Resources.LanguageFields.GeneralTerm))'.replace(/&#214;/g, "ö").replace("&#231;", "ç").replace(/&#246;/g,"ö"));
+			i++;
+		}
+		@*else if (campControl != 0 && checkControl == 0) {
+			alert('@(HttpUtility.HtmlDecode(Arackiralama.Resources.LanguageFields.GeneralTerm1))'.replace(/&#214;/g, "ö").replace("&#231;", "ç").replace(/&#246;/g,"ö"));
+			i++;
+		}
+		else if (campControl == 0 && checkControl != 0) {
+			alert('@(HttpUtility.HtmlDecode(Arackiralama.Resources.LanguageFields.GeneralTerm2))'.replace(/&#214;/g, "ö").replace("&#231;", "ç").replace(/&#246;/g,"ö"));
+			i++;
+		}*@
+
+
+        var email = $('input[name="Contact.Email"]').val();
+		if (!validateEmail(email)) {
+			alert('@(HttpUtility.HtmlDecode(Arackiralama.Resources.LanguageFields.ValidEmail))'.replace("&#246;", "ö").replace("&#231;", "ç"));
+			$('input[name="Contact.Email"]').css("border", "1px solid #ff0000");
+			i++;
+		}
+      
+        var FirstName = $('input[name="Contact.FirstName"]').val();
+        
+        if (FirstName=='') {
+			
+            $('input[name="Contact.FirstName"]').css("border", "1px solid #ff0000");
+			i++;
+        }
+        var LastName = $('input[name="Contact.LastName"]').val();
+        if (LastName == '') {
+			
+            $('input[name="Contact.LastName"]').css("border", "1px solid #ff0000");
+			i++;
+        }
+
+
+        var Phone = $('input[name="Contact.Phone"]').val();
+        if (Phone == '') {
+			
+            $('input[name="Contact.Phone"]').css("border", "1px solid #ff0000");
+			i++;
+        }
+        var Address = $('input[name="Contact.Address"]').val();
+        if (Address == '') {
+
+            $('input[name="Contact.Address"]').css("border", "1px solid #ff0000");
+            i++;
+        }
+
+        var City = $('input[name="Contact.City"]').val();
+        if (City == '') {
+
+            $('input[name="Contact.City"]').css("border", "1px solid #ff0000");
+            i++;
+        }
+        var PostCode = $('input[name="Contact.PostCode"]').val();
+        if (PostCode == '') {
+
+            $('input[name="Contact.PostCode"]').css("border", "1px solid #ff0000");
+            i++;
+        }
+        var DriverAge = $('input[name="Contact.DriverAge"]').val();
+        if (DriverAge == '') {
+
+            $('input[name="Contact.DriverAge"]').css("border", "1px solid #ff0000");
+            i++;
+        }
+        
+        
+
+		if (i == 0) {
+           //$('#reservationBtn').hide();
+			//$("#yukle").show();
+			$("#rezerv").submit();
+        } else {
+         
+            i = 0;
+           
+			return false;
+		}
+	}
+</script>
+<body>
+    <div class="row">
+        <div class="col-md-3 mb-1">
+            <button id="active-button1" style="width:100%;" disabled="disabled" class="btn btn-step btn-save" type="button" data-toggle="collapse" data-target="#edit-step1"><span style="color:#fff;">1.</span> @Html.Raw(Arackiralama.Resources.LanguageFields.SearchResults)</button>
+        </div>
+        <div class="col-md-3 mb-1">
+            <button id="active-button2" style="width:100%;" disabled="disabled" class="btn btn-step btn-save collapsed" type="button" data-toggle="collapse" data-target="#edit-step2"><span style="color:#fff;">2.</span> @Html.Raw(Arackiralama.Resources.LanguageFields.Options)</button>
+        </div>
+        <div class="col-md-3 mb-1">
+            <button id="active-button3" style="width:100%;" class="btn btn-step btn-save collapsed" type="button" data-toggle="collapse" data-target="#edit-step3"><span style="color:#fff;">3.</span> @Html.Raw(Arackiralama.Resources.LanguageFields.Details)</button>
+        </div>
+        <div class="col-md-3 mb-1">
+            <button id="active-button4" style="width:100%;" disabled="disabled" class="btn btn-step btn-save collapsed" type="button" data-toggle="collapse" data-target="#edit-step4"><span style="color:#fff;">4.</span>@Html.Raw(Arackiralama.Resources.LanguageFields.Confirmation)</button>
+        </div>
+    </div>
+</body>
+
+<!--#region Adım3 -->
+<div id="edit-step3" class="mt-3">
+    <div class="row">
+        <div class="col-12 col-md-8">
+
+
+            @using (Html.BeginForm("ConfirmAction", "Car", FormMethod.Post, new { name = "vehicleForm", @Id = "rezerv" }))
+            {
+                <input type="hidden" name="extraFeeHdn" value="@Model.extraFeeHdn" />
+                <input type="hidden" name="UniqueKey" value="@Model.UniqueKey" />
+                <input type="hidden" name="vehicleID" value="@Model.Vehicle.ID" />
+
+
+
+                //username alanaı
+                if (Session["KullaniciAdi"] != null)
+                {
+                    <div class="row">
+                        <div class="col-12 mb-3">
+                            <div class="carinfo-steptwo-rightbox-header pb-1">
+                                <strong>
+                                    Ana sürücü bilgileri
+                                </strong>
+                            </div>
+                        </div>
+                        <div class="col-12 mb-3">
+                            <center>
+                                <strong>
+                                    Lütfen ana sürücünün adını girin
+                                </strong>
+                            </center>
+                        </div>
+                        <div class="col-12 mb-3">
+                            <div class="row">
+
+                                <div class="col-12 col-md-4">
+                                    <span class="float-right mt-2 float-right-absorbe">
+                                        Adı*
+                                    </span>
+                                </div>
+                                <div class="col-12 col-md-4">
+                                    <input type="text" name="Contact.FirstName" value="@LoginUser.FirstName"  class="form-control" />
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-12 mb-3">
+                            <div class="row">
+                                <div class="col-12 col-md-4">
+                                    <span class="float-right mt-2 float-right-absorbe">
+                                        Soyadı*
+
+                                    </span>
+                                </div>
+                                <div class="col-12 col-md-4">
+                                    <input type="text" name="Contact.LastName" value="@LoginUser.LastName"  class="form-control" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 mb-3">
+                            <div class="row">
+                                <div class="col-12 col-md-4">
+                                    <span class="float-right mt-2 float-right-absorbe">
+                                        E-Posta*
+
+                                    </span>
+                                </div>
+                                <div class="col-12 col-md-4">
+                                    <input type="text" name="Contact.Email"  value="@LoginUser.Email" class="form-control" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 mb-3">
+                            <div class="row">
+                                <div class="col-12 col-md-4">
+                                    <span class="float-right mt-2 float-right-absorbe">
+                                        Telefon*
+
+                                    </span>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <div class="row">
+                                        @*<div class="col-lg-4">
+                                        <select class="form-control">
+                                            <option>Türkiye</option>
+                                        </select>
+                                    </div>*@
+                                        <div class="col-lg-8">
+                                            <input type="text" name="Contact.Phone" value="@LoginUser.Phone" placeholder="+905434670990" class="form-control" />
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 mb-3">
+                            <div class="row">
+                                <div class="col-12 col-md-4">
+                                    <span class="float-right mt-2 float-right-absorbe">
+                                        Adres*
+
+                                    </span>
+                                </div>
+                                <div class="col-12 col-md-4">
+                                    <input type="text" name="Contact.Address" value="@LoginUser.Address" class="form-control" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 mb-3">
+                            <div class="row">
+                                <div class="col-12 col-md-4">
+                                    <span class="float-right mt-2 float-right-absorbe">
+                                        Şehir*
+
+
+                                    </span>
+                                </div>
+                                <div class="col-12 col-md-4">
+                                    <input type="text" name="Contact.City" class="form-control" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 mb-3">
+                            <div class="row">
+                                <div class="col-12 col-md-4">
+                                    <span class="float-right mt-2 float-right-absorbe">
+                                        Posta Kodu
+                                    </span>
+                                </div>
+                                <div class="col-12 col-md-4">
+                                    <input type="text" name="Contact.PostCode" class="form-control" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 mb-3">
+                            <div class="row">
+                                <div class="col-12 col-md-4">
+                                    <span class="float-right mt-2 float-right-absorbe">
+                                        Ülke/Bölge*
+                                    </span>
+                                </div>
+                                <div class="col-12 col-md-4">
+                                    <select name="Contact.Country" class="form-control">
+                                        <option>Türkiye</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 mb-3">
+                            <div class="row">
+                                <div class="col-12 col-md-4">
+                                    <span class="float-right mt-2 float-right-absorbe">
+                                        Sürücünün Yaşı*
+                                    </span>
+                                </div>
+                                <div class="col-12 col-md-4">
+                                    <input type="text" name="Contact.DriverAge" class="form-control" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+                else
+                {
+                    <div class="row">
+                        <div class="col-12 mb-3">
+                            <div class="carinfo-steptwo-rightbox-header pb-1">
+                                <strong>
+                                    @Html.Raw(Arackiralama.Resources.LanguageFields.MainDriverInformation)
+                                </strong>
+                            </div>
+                        </div>
+                        <div class="col-12 mb-3">
+                            <center>
+                                <strong>
+                                    @Html.Raw(Arackiralama.Resources.LanguageFields.PleaseEnterTheNameOfTheMainDriver)
+                                </strong>
+                            </center>
+                        </div>
+                        <div class="col-12 mb-3">
+                            <div class="row">
+
+                                <div class="col-12 col-md-4">
+                                    <span class="float-right mt-2 float-right-absorbe">
+                                        @Html.Raw(Arackiralama.Resources.LanguageFields.FormName)*
+                                    </span>
+                                </div>
+                                <div class="col-12 col-md-4">
+                                    <input type="text" name="Contact.FirstName"  class="form-control" />
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-12 mb-3">
+                            <div class="row">
+                                <div class="col-12 col-md-4">
+                                    <span class="float-right mt-2 float-right-absorbe">
+                                        @Html.Raw(Arackiralama.Resources.LanguageFields.FormSurname)*
+
+                                    </span>
+                                </div>
+                                <div class="col-12 col-md-4">
+                                    <input type="text" name="Contact.LastName" class="form-control" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 mb-3">
+                            <div class="row">
+                                <div class="col-12 col-md-4">
+                                    <span class="float-right mt-2 float-right-absorbe">
+                                        @Html.Raw(Arackiralama.Resources.LanguageFields.EmailInfo)*
+
+                                    </span>
+                                </div>
+                                <div class="col-12 col-md-4">
+                                    <input type="text" name="Contact.Email"  class="form-control" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 mb-3">
+                            <div class="row">
+                                <div class="col-12 col-md-4">
+                                    <span class="float-right mt-2 float-right-absorbe">
+                                        @Html.Raw(Arackiralama.Resources.LanguageFields.CellPhoneTitle)*
+
+                                    </span>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <div class="row">
+                                        @*<div class="col-lg-4">
+                                        <select class="form-control">
+                                            <option>Türkiye</option>
+                                        </select>
+                                    </div>*@
+                                        <div class="col-lg-8">
+                                            <input type="text" name="Contact.Phone" placeholder="+90--- --- ----" class="form-control" />
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 mb-3">
+                            <div class="row">
+                                <div class="col-12 col-md-4">
+                                    <span class="float-right mt-2 float-right-absorbe">
+                                        @Html.Raw(Arackiralama.Resources.LanguageFields.AddressTitle)*
+
+                                    </span>
+                                </div>
+                                <div class="col-12 col-md-4">
+                                    <input type="text" name="Contact.Address"  class="form-control" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 mb-3">
+                            <div class="row">
+                                <div class="col-12 col-md-4">
+                                    <span class="float-right mt-2 float-right-absorbe">
+                                        @Html.Raw(Arackiralama.Resources.LanguageFields.FlightCityTitle)*
+
+
+                                    </span>
+                                </div>
+                                <div class="col-12 col-md-4">
+                                    <input type="text" name="Contact.City" class="form-control" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 mb-3">
+                            <div class="row">
+                                <div class="col-12 col-md-4">
+                                    <span class="float-right mt-2 float-right-absorbe">
+                                        @Html.Raw(Arackiralama.Resources.LanguageFields.PostCode)*
+                                    </span>
+                                </div>
+                                <div class="col-12 col-md-4">
+                                    <input type="text" name="Contact.PostCode" class="form-control" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 mb-3">
+                            <div class="row">
+                                <div class="col-12 col-md-4">
+                                    <span class="float-right mt-2 float-right-absorbe">
+                                        @Html.Raw(Arackiralama.Resources.LanguageFields.CountryTitle)*
+                                    </span>
+                                </div>
+                                <div class="col-12 col-md-4">
+                                    <select name="Contact.Country" class="form-control">
+                                        <option selected value="TR">Türkiye</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 mb-3">
+                            <div class="row">
+                                <div class="col-12 col-md-4">
+                                    <span class="float-right mt-2 float-right-absorbe">
+                                        @Html.Raw(Arackiralama.Resources.LanguageFields.DriverYearsOld)*
+                                    </span>
+                                </div>
+                                <div class="col-12 col-md-4">
+                                    <input type="text" name="Contact.DriverAge" class="form-control" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+                //username end
+
+                if (Model.Vehicle.CC_Info != "false")
+                {
+
+                    <div class="row mt-3">
+
+                            <div class="col-12">
+                                <div class="carinfo-steptwo-rightbox-header">
+                                    <span>
+                                        <i class="fas fa-lock mr-1"></i>
+                                        <strong>@Html.Raw(Arackiralama.Resources.LanguageFields.SecurePaymentDetails)</strong>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="alert-info">
+                                    <div class="row p-2">
+                                        <div class="col-12 mt-3">
+                                            <center>
+                                                <img src="/Contents/img/creditcard.png">
+                                            </center>
+
+                                        </div>
+                                        <div class="col-12 mt-3">
+                                            <div class="row">
+                                                <div class="col-12 col-md-6">
+                                                    <span class="float-right mt-2 float-right-absorbe">@(Html.Raw(Arackiralama.Resources.LanguageFields.CardNo)) *</span>
+                                                </div>
+                                                <div class="col-12 col-md-6">
+                                                    <input type="text" id="CardNum" class="form-control credit-cart-input-width" name="CreditCard.Number" placeholder="@(Html.Raw(Arackiralama.Resources.LanguageFields.CardNo))" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 mt-3">
+                                            <div class="row">
+                                                <div class="col-12 col-md-6">
+                                                    <span class="float-right mt-2 float-right-absorbe">@(Html.Raw(Arackiralama.Resources.LanguageFields.CardHolder)) *</span>
+                                                </div>
+                                                <div class="col-12 col-md-6">
+                                                    <input type="text" class="form-control credit-cart-input-width" id="CardHolder" name="CreditCard.NameSurname" placeholder="@(Html.Raw(Arackiralama.Resources.LanguageFields.CardHolder))" />
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+
+                                    <div class="col-12 mt-3">
+                                        <div class="row">
+                                            <div class="col-12 col-md-6">
+                                                <span class="float-right mt-2 float-right-absorbe">@(Html.Raw(Arackiralama.Resources.LanguageFields.CardType)) *</span>
+                                            </div>
+                                            <div class="col-12 col-md-6">
+                                                <div class="araba_sepet_form_satir_input">
+                                                    <div class="styled-select6">
+                                                        <select name="CreditCard.Type" id="CreditCardType" class="form-control credit-cart-input-width">
+                                                            <option value="">@(Html.Raw(Arackiralama.Resources.LanguageFields.ChooseCardType))</option>
+                                                            <option value="VI">Visa</option>
+                                                            <option value="AX">American Express</option>
+
+                                                            <option value="MC">MasterCard</option>
+                                                            @*<option value="BC">BC Card</option>
+                                                                                                                    <option value="CB">Carte Blanche</option>
+                                                        <option value="CU">China Union Pay</option>
+                                                        <option value="DS">Discover</option>
+                                                        <option value="DC">Diners Club</option>
+                                                        <option value="T">Carta Si</option>
+                                                        <option value="R">Carte Bleue</option>
+                                                        <option value="N">Dankort</option>
+                                                        <option value="L">Delta</option>
+                                                        <option value="E">Electron</option>
+                                                        <option value="JC">Japan Credit Bureau</option>
+                                                        <option value="TO">Maestro</option>
+                                                        <option value="S">Switch</option>*@
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                        <div class="col-12 mt-3">
+                                            <div class="row">
+                                                <div class="col-12 col-md-6">
+                                                    <span class="float-right mt-2 float-right-absorbe"> @(Html.Raw(Arackiralama.Resources.LanguageFields.ExpirationDate)) *</span>
+                                                </div>
+                                                <div class="col-12 col-md-6">
+                                                    <div class="row">
+                                                        <div class="col-12 col-md-5">
+                                                            <select name="CreditCard.Month" class="form-control">
+                                                                <option disabled="disabled">@Html.Raw(Arackiralama.Resources.LanguageFields.Month)</option>
+                                                                <option value="01">01 - @(Html.Raw(Arackiralama.Resources.LanguageFields.Jan))</option>
+                                                                <option value="02">02 - @(Html.Raw(Arackiralama.Resources.LanguageFields.Feb))</option>
+                                                                <option value="03">03 - @(Html.Raw(Arackiralama.Resources.LanguageFields.Mar))</option>
+                                                                <option value="04">04 - @(Html.Raw(Arackiralama.Resources.LanguageFields.Apr))</option>
+                                                                <option value="05">05 - @(Html.Raw(Arackiralama.Resources.LanguageFields.May))</option>
+                                                                <option value="06">06 - @(Html.Raw(Arackiralama.Resources.LanguageFields.Jun))</option>
+                                                                <option value="07">07 - @(Html.Raw(Arackiralama.Resources.LanguageFields.July))</option>
+                                                                <option value="08">08 - @(Html.Raw(Arackiralama.Resources.LanguageFields.Agu))</option>
+                                                                <option value="09">09 - @(Html.Raw(Arackiralama.Resources.LanguageFields.Sep))</option>
+                                                                <option value="10">10 - @(Html.Raw(Arackiralama.Resources.LanguageFields.Oct))</option>
+                                                                <option value="11">11 - @(Html.Raw(Arackiralama.Resources.LanguageFields.Nov))</option>
+                                                                <option value="12">12 - @(Html.Raw(Arackiralama.Resources.LanguageFields.Dec))</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-12 col-md-5">
+                                                            <select name="CreditCard.Year" class="form-control" style="width:80%;">
+                                                                <option disabled="disabled">@Html.Raw(Arackiralama.Resources.LanguageFields.Year)</option>
+                                                                <option value="20">2020</option>
+                                                                <option value="21">2021</option>
+                                                                <option value="22">2022</option>
+                                                                <option value="23">2023</option>
+                                                                <option value="24">2024</option>
+                                                                <option value="25">2025</option>
+                                                                <option value="26">2026</option>
+                                                                <option value="27">2027</option>
+                                                                <option value="28">2028</option>
+                                                                <option value="29">2029</option>
+                                                                <option value="30">2030</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 mt-3 mb-3">
+                                        <div class="row">
+                                            <div class="col-12 col-md-6">
+                                                <span class="float-right mt-2 float-right-absorbe">  @(Html.Raw(Arackiralama.Resources.LanguageFields.SecurityCode)) *</span>
+                                            </div>
+                                            <div class="col-12 col-md-6">
+                                                <input type="text" class="form-control credit-cart-input-width" id="securitycode" name="CreditCard.Code" placeholder="CVC" />
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                }
+
+
+                    <div class="row mt-3">
+                        <div class="col-12">
+                            <span>
+                                <input type="checkbox" name="onBilgilendirme" class="mr-1" />
+                                <a href="#" data-toggle="modal" data-target="#ImportantInformation">
+                                    <strong>
+                                        @Html.Raw(Arackiralama.Resources.LanguageFields.CarRentalTermsAndConditions)
+                                    </strong>
+
+                                </a>
+
+                                @{ Html.RenderAction("_ImportantInformations", "Car");}
+                                <span>,</span>
+                                <a href="#" data-toggle="modal" data-target="#ReservationTermsAndConditions">
+                                <strong>@Html.Raw(Arackiralama.Resources.LanguageFields.ReservationTermsAndConditions)
+                                    </strong> 
+                                </a>
+
+                                @{ Html.RenderAction("_ReservationTermsAndConditionsModal", "Car");}
+                                <span>@Html.Raw(Arackiralama.Resources.LanguageFields.And)</span>
+                                
+                                <a href="#" data-toggle="modal" data-target="#PrivacyPolicy">
+                                <strong>@Html.Raw(Arackiralama.Resources.LanguageFields.PrivacyPolicyTitle)
+                                    </strong> 
+                                </a>
+                                @{ Html.RenderAction("_PrivacyPolicyModal", "Car");}
+
+                                <span> @Html.Raw(Arackiralama.Resources.LanguageFields.IAcceptOurCoverage)</span>
+                            </span>
+                        </div>
+                        @*<div class="col-12">
+                            <input type="checkbox" class="mr-1" />
+                            <a href="#">@Html.Raw(Arackiralama.Resources.LanguageFields.ReceiveMailMessage)</a>
+                        </div>*@
+                        @*<div class="col-12">
+                    <div class="araba_sepet_form_sozlesme" style="padding:12px 0; height:auto !important;">
+                        <table border="0" cellpadding="0" cellspacing="0">
+                            <tr>
+                                <td><input type="checkbox" name="musteriBilgi" value="1" /></td>
+                                <td><a class="ml-2" href="javascript:void(0)" id="satissozlesme" style="color:rgb(65, 59, 145);text-decoration:none; font-size:12px;">@Html.Raw(Arackiralama.Resources.LanguageFields.TermForm1)</a></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="onBilgilendirme" value="1" /></td>
+                                <td><a class="ml-2" href="javascript:void(0)" id="ikincisozlesme" style="color:rgb(65, 59, 145);text-decoration:none;font-size:12px;">@Html.Raw(Arackiralama.Resources.LanguageFields.TermForm2)</a></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>*@
+                    </div>
+                    <input type="submit" onclick="formControl(); return false;" value="@Html.Raw(Arackiralama.Resources.LanguageFields.Confirmation)" class="btn btn-primary scroll-to" style="float:right;" />
+                }
+</div>
+        <div class="col-12 col-md-4">
+            <div class="row mb-3">
+                <div class="col-12">
+                    <div class="carinfo-steptwo-rightbox-header">
+                        <strong class="p-3">
+                            @Html.Raw(Arackiralama.Resources.LanguageFields.PriceSummary)
+                        </strong>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="carinfo-steptwo-rightbox-content">
+                        <div class="row">
+                            <div class="col-6 mt-3">
+                                <span class="p-3">
+                                    @Html.Raw(Arackiralama.Resources.LanguageFields.CarRentalFee)
+                                </span>
+                            </div>
+                            <div class="col-6 mt-3">
+                                <span class="">
+                                    @Model.Vehicle.TotalRate @Model.Currency
+                                </span>
+                            </div>
+
+                            @if (!string.IsNullOrEmpty(totalExtras))
+                            {
+                                <div class="col-6 mb-3">
+                                    <span class="p-3">
+                                        @Html.Raw(Arackiralama.Resources.LanguageFields.ExtraFee)
+                                    </span>
+                                </div>
+                                <div class="col-6 mb-3">
+                                    <span class="">
+
+                                        <span style="white-space: pre-line">@Html.Raw(totalExtras) </span>@Model.Currency
+
+
+                                    </span>
+                                </div>
+                            }
+
+                            <div class="col-6 mb-3">
+                                <strong class="p-3"> @Html.Raw(Arackiralama.Resources.LanguageFields.GeneralTotal)</strong>
+                            </div>
+                            <div class="col-6 mb-3">
+                                <strong> @Model.Vehicle.TotalAll @Model.Currency</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                @*<div class="col-12">
+                        <button onclick="DisabledFunction3()" class="btn btn-block btn-save" type="button" data-toggle="collapse" data-target="#edit-step4">
+
+                            <i style="color:#fff;" class="fas fa-play mr-1"></i>
+                            <span style="color:#fff;">Şimdi Öde</span>
+                            <span style="color:#fff;" class="float-right">3.764,81 ₺</span>
+
+                        </button>
+                    </div>*@
+            </div>
+
+            <div class="carinfo-steptwo-rightbox-content">
+                <div class="col-12">
+                    <strong>
+                        @Model.Vehicle.Name
+                    </strong>
+                </div>
+
+                <div class="col-12 mb-3">
+                    <span>
+                        @Model.Vehicle.CompanyName
+                    </span>
+                    <span class="float-right">
+                        @*<img src="@Model.Vehicle.CompanyImage" />*@
+                        <img src="@Model.Vehicle.CompanyImage" onerror="this.onerror=null;this.src='~/Contents/images/no-image.jpg';" />
+                    </span>
+                </div>
+                <div class="col-12">
+                    <div class="row">
+                        <div class="col-6">
+                            <img src="@Model.Vehicle.ThumImage" />
+                        </div>
+                        <div class="col-6">
+                            <div class="row">
+                                <div class="col-4">
+                                    <span>
+                                        <span>@Model.Vehicle.PassengerCount</span>
+                                        <i class="fa fa-user"></i>
+                                    </span>
+                                </div>
+                                <div class="col-4">
+                                    <span>@Model.Vehicle.BaggageCount</span>
+                                    <i class="fas fa-briefcase"></i>
+                                </div>
+                                <div class="col-4">
+                                    <span>@Model.Vehicle.DoorCount</span>
+                                    <img src="~/Contents/img/car-door.jpg" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 mt-3 mb-3">
+                    <strong>
+                        @Html.Raw(Arackiralama.Resources.LanguageFields.CommentPlace)
+                    </strong>
+                </div>
+                <div class="col-12 mb-3">
+                    <span>
+                        <strong>@Model.Vehicle.CompanyName</strong>,@Model.StartRegion.Name
+                        <br /> @(Model.Vehicle.OfficeAddress.ToLower())
+                        @Html.Raw(Model.Vehicle.OfficeTel.Replace("/", "<br/>"))
+
+                    </span>
+
+                </div>
+                <div class="col-12 mb-3">
+                    <strong>
+                        @Html.Raw(Arackiralama.Resources.LanguageFields.DeliveryPlace)
+                    </strong>
+                </div>
+                <div class="col-12 mb-3">
+                    <span>
+                        <strong>@Model.Vehicle.CompanyName</strong>,@Model.EndRegion.Name
+                        <br />   @(Model.Vehicle.EndOfficeAddress.ToLower())
+                        @Html.Raw(Model.Vehicle.EndOfficeTel.Replace("/", "<br/>"))
+
+                    </span>
+                </div>
+                @*<div class="col-12">
+                        <div class="row">
+                            <div class="col-6">
+                                <strong>
+                                    Kiralık Araç Güvencesi
+                                </strong>
+                            </div>
+                            <div class="col-6">
+                                <a href="#" data-toggle="modal" data-target="#SteepThreeCreateModal" class="carinfo-a float-right">Ekle</a>
+                                @{ Html.RenderAction("_SteepThreeCreateModal", "Car");}
+                            </div>
+                        </div>
+                    </div>*@
+                @*<div class="col-12 mb-3">
+                        <span>
+                            Dahil değil.
+                        </span>
+                    </div>*@
+                @*<div class="col-12">
+                        <div class="row">
+                            <div class="col-6">
+                                <strong>
+                                    Ekstralar
+                                </strong>
+                            </div>
+                            <div class="col-6">
+                                <a href="#" data-toggle="modal" data-target="#SteepThreeEditModal" class="carinfo-a float-right">Düzenle</a>
+                                @{ Html.RenderAction("_SteepThreeEditModal", "Car");}
+                            </div>
+                        </div>
+                    </div>*@
+                @*<div class="col-12 mb-3">
+                        <span>
+                            Dahil değil.
+
+                        </span>
+                    </div>*@
+                <div class="col-12"></div>
+            </div>
+            <div class="carinfo-steptwo-rightbox-content mb-3 mt-3">
+                <div class="col-12">
+                    <span>
+                        <i class="far fa-check-circle mr-1"></i>
+                        <span>@Html.Raw(Arackiralama.Resources.LanguageFields.MoreThan10MillionCustomersTrust)</span>
+                    </span>
+                </div>
+                <div class="col-12">
+                    <span>
+                        <i class="far fa-credit-card mr-1"></i>
+                        <span>@Html.Raw(Arackiralama.Resources.LanguageFields.NoCardFee)</span>
+                    </span>
+                </div>
+                <div class="col-12">
+                    <span>
+                        <i class="far fa-comments mr-1"></i>
+                        <span>@Html.Raw(Arackiralama.Resources.LanguageFields.SpecialCustomerService)</span>
+                    </span>
+                </div>
+                <div class="col-12 mb-3">
+                    <div class="row">
+                        <div class="col-3">
+                            <img src="~/Contents/img/Digicert-secure.png" class="mr-1" />
+                        </div>
+                        <div class="col-9">
+                            <span>@Html.Raw(Arackiralama.Resources.LanguageFields.Password128BitSSL)</span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,302 @@
+﻿@model Arackiralama.Models.Orders
+@{
+    ViewBag.Title = "Önceki Sipariş Detaı";
+    var Extras = Model.VehicleOrders.FirstOrDefault().VehicleExtraFee.Split('~');
+
+    string currencyValue = "TRY";
+    if (Model.VehicleOrders.FirstOrDefault().CurrencyID==2)
+    {
+        currencyValue = "USD";
+    }
+    else if (Model.VehicleOrders.FirstOrDefault().CurrencyID == 3)
+    {
+        currencyValue = "EUR";
+    }
+}
+
+<div class="col">
+    <div class="row">
+        <div class="card">
+            <div class="card-header">
+                <h2 class="card-title">
+                     Önceki Sipariş Detayı
+                </h2>
+            </div>
+            <div class="card-body">
+
+                <div class="mb-3">
+                    <div class="row">
+                        <div class="col-12 col-md-8">
+                            @*<center class="mt-3">
+                                <span>
+                                    <strong>@Model.Contacts.FirstName @Model.Contacts.LastName</strong>
+                                    <span> adlı kullanıcının</span>
+                                    <strong>@Model.VehicleOrder.StartAt</strong>
+                                    <span>Tarihli Sipariş Detayı</span>
+                                </span>
+                            </center>*@
+
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <input type="hidden" id="@Model.Contacts.AccountID" name="@Model.Contacts.AccountID" />
+                            <a href="~/Admin/User/OrderList" id="@Model.Contacts.AccountID" value="@Model.Contacts.AccountID" class="btn btn-info float-right mt-2">Sipariş Listesine Dön</a>
+
+
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <hr />
+                <div class="col-md-12">
+                    <div class="row">
+                        <!-- #region Araç Bilgisi Sol Kısım -->
+                        <div class="col-12 col-md-4">
+                            <div class="row">
+
+                                @*<div class="col-lg-12 mt-2 mb-3">
+            <img src="@Model..FirstOrDefault()."/>
+        </div>*@
+                                <div class="col-md-12">
+                                    <strong>@Model.VehicleOrders.FirstOrDefault().VehicleName</strong>
+
+                                </div>
+                                <div class="col-md-12">
+                                    <span>Ekonomi</span>
+                                </div>
+                                <div class="col-12">
+                                    <img src="@Model.VehicleOrders.FirstOrDefault().ThumImage" style="width:135px; height:76px; margin-bottom:2%;" />
+                                </div>
+                                @*<div class="col-12 mt-2">
+            <div class="row">
+                <div class="col-4 col-lg-4">
+                    <span>5</span>
+                    <i class="fa fa-user"></i>
+                </div>
+                <div class="col-4 col-lg-4">
+                    <span>2</span>
+                    <i class="fas fa-briefcase"></i>
+                </div>
+                <div class="col-4 col-lg-4">
+                    <span>3</span>
+                    <img src="~/Contents/img/car-door.jpg" />
+                </div>
+            </div>
+        </div>*@
+                                @*<div class="col-lg-12 mt-2">
+            <span>
+                <i class="far fa-check-circle mr-1"></i><span>Manuel Şanzıman</span>
+            </span>
+        </div>
+        <div class="col-lg-12 mt-2">
+            <span>
+                <i class="far fa-check-circle mr-1"></i><span>Klima</span>
+            </span>
+        </div>
+        <div class="col-lg-12 mt-2">
+            <span>
+                <i class="far fa-check-circle mr-1"></i><span>Dizel</span>
+            </span>
+        </div>
+
+        <div class="col-lg-12 mt-2 mb-3">
+            <span>
+                <span class="mr-3">Çok İyi</span>
+                <a href="#" class="btn btn-success">7.1</a>
+            </span>
+        </div>*@
+                                <div class="col-12 mb-3">
+                                    <div class="row">
+                                        <div class="col-5">
+                                            <strong class="float-right-absorbe">
+                                                Toplam
+                                            </strong>
+                                        </div>
+
+                                        <div class="col-7">
+                                            <span>
+                                                @Model.VehicleOrders.FirstOrDefault().TotalRate @currencyValue
+                                                @*@Model.Total*@
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                @if (!string.IsNullOrEmpty(Model.VehicleOrders.FirstOrDefault().VehicleExtraFee))
+                                {
+                                    <div class="col-12 mb-3">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <strong class="float-right-absorbe">
+                                                    Extra Materialler
+                                                </strong>
+                                            </div>
+                                            <div class="col-12">
+                                                <span>
+                                                    @foreach (var itemExtra in Extras)
+                                                    {
+
+                                                        if (!string.IsNullOrEmpty(itemExtra))
+                                                        {
+                                                            <br />
+                                                            <span>
+                                                                @*@Model.VehicleOrders.FirstOrDefault().VehicleExtraFee*@
+                                                                @itemExtra.Split('-')[0]    @itemExtra.Split('-')[1]  @itemExtra.Split('-')[2]
+                                                            </span>
+                                                                }
+
+
+
+                                                                }
+                                                            </span>
+
+</div>
+                                        </div>
+                                    </div>
+                                }
+
+                                    <div class="col-12 mb-3">
+                                        <div class="row">
+                                            <div class="col-5">
+                                                <strong class="float-right-absorbe">
+                                                    Genel Toplam
+                                                </strong>
+                                            </div>
+                                            <div class="col-7">
+                                                <span>
+                                                    @Model.Total  @currencyValue
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                        </div>
+                        <!-- #endregion Araç Bilgisi Sol kısım -->
+                        <div class="col-md-8">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="row mb-3">
+                                        <div class="col-5">
+                                            <strong style="float:right;" class="float-right-absorbe">
+                                                Ad
+                                            </strong>
+                                        </div>
+                                        <div class="col-7">
+                                            <span>
+                                                @Model.Contacts.FirstName
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <div class="col-5">
+                                            <strong style="float:right;" class="float-right-absorbe">
+                                                Soyad
+                                            </strong>
+                                        </div>
+                                        <div class="col-7">
+                                            <span>
+                                                @Model.Contacts.LastName
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <div class="col-5">
+                                            <strong style="float:right;" class="float-right-absorbe">
+                                                Telefon
+                                            </strong>
+                                        </div>
+                                        <div class="col-7">
+                                            <span>
+                                                @Model.Contacts.Phone
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <div class="col-5">
+                                            <strong style="float:right;" class="float-right-absorbe">
+                                                E-Posta
+                                            </strong>
+                                        </div>
+                                        <div class="col-7">
+                                            <span>
+                                                @Model.Contacts.Email
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <div class="col-5">
+                                            <strong style="float:right;" class="float-right-absorbe">
+                                                Adres
+                                            </strong>
+                                        </div>
+                                        <div class="col-7">
+                                            <span>
+                                                @Model.Contacts.Accounts.Address
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <div class="col-5">
+                                            <strong style="float:right;" class="float-right-absorbe">
+                                                Kiralandığı Yer
+                                            </strong>
+                                        </div>
+                                        <div class="col-7">
+                                            <span>
+                                                @Model.VehicleOrders.FirstOrDefault().StartOfficeName
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <div class="col-5">
+                                            <strong style="float:right;" class="float-right-absorbe">
+                                                Kiralandığı Tarih
+                                            </strong>
+                                        </div>
+                                        <div class="col-7">
+                                            <span>
+
+                                                @Model.VehicleOrders.FirstOrDefault().StartAt @Model.VehicleOrders.FirstOrDefault().StartTime
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <div class="col-5">
+                                            <strong style="float:right;" class="float-right-absorbe">
+                                                Teslim edildiği Yer
+                                            </strong>
+                                        </div>
+                                        <div class="col-7">
+                                            <span>
+                                                @Model.VehicleOrders.FirstOrDefault().EndOfficeName
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <div class="col-5">
+                                            <strong style="float:right;" class="float-right-absorbe">
+                                                Teslim Edildiği Tarih
+                                            </strong>
+                                        </div>
+                                        <div class="col-7">
+                                            <span>
+                                                @Model.VehicleOrders.FirstOrDefault().EndTime @Model.VehicleOrders.FirstOrDefault().EndTime
+                                            </span>
+                                        </div>
+                                    </div>
+                                   
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

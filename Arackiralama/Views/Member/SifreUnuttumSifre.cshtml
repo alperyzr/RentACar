@@ -1,0 +1,54 @@
+﻿@model Arackiralama.Models.Accounts
+@{
+    ViewBag.Title = "SifreUnuttumSifre";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@if (ViewBag.Hata != null)
+{
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="alert alert-danger">
+                    @ViewBag.Hata
+                </div>
+            </div>
+        </div>
+    </div>
+}
+<center>
+    <div class="row Loginbox">
+        <div class="col-12">
+
+            @using (Html.BeginForm("SifreUnuttumSifre", "Member", FormMethod.Post))
+            {
+
+                <div class="faq-box">
+                    <div class="col-12">
+                        <h1 class="info-box-h1">
+                            @Html.Raw(Arackiralama.Resources.LanguageFields.RenewPassword)
+                        </h1>
+                    </div>
+                    <div class="col-12">
+                        <span class="float-left">@Html.Raw(Arackiralama.Resources.LanguageFields.NewPasswordTitle)</span>
+                    </div>
+                    <div class="col-12 mb-3">
+                        @Html.TextBoxFor(m => m.Password, new { @class = "form-control",@type="password" })
+                    </div>
+                    <div class="col-12">
+                        <span class="float-left">@Html.Raw(Arackiralama.Resources.LanguageFields.NewPasswordAgain)</span>
+                    </div>
+                    <div class="col-12 mb-3">
+                        @Html.TextBoxFor(m => m.PasswordAgain, new { @class = "form-control", @type = "password" })
+                    </div>
+                    <div class="col-12 mb-3">
+                        <input type="submit" class="btn btn-save" value="@Html.Raw(Arackiralama.Resources.LanguageFields.ChangePasswordTitle)" />
+                    </div>
+                </div>
+
+            }
+
+        </div>
+    </div>
+</center>
+
+

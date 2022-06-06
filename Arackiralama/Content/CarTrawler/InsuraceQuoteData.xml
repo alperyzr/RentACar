@@ -1,0 +1,24 @@
+﻿<Data>
+  <Title OrderID="1"><![CDATA[Masraf Karşılama Sigortası]]></Title>
+  <Image OrderID="2" UIToken="ct_s3_ea_logo_us"><![CDATA[https://cdn.cartrawler.com/insurance/logos/axa.png]]></Image>
+  <Paragraph OrderID="3"><![CDATA[Günde sadece 4,99 GBP'ye yüksek maliyetli Fazla Ücretlerden kaçının! Fazla Masraf Karşılama size içinizin rahat olmasını sağlar.]]></Paragraph>
+  <List OrderID="4" Title="Our Policy covers the Excess up to a sum of £2,500, which includes:">
+    <Item><![CDATA[Windows (650 £]]></Item>
+    <Item><![CDATA[[Lastikler (80 £ / lastik)]]></Item>
+    <Item><![CDATA[Alt Takım (400 £)]]></Item>
+    <Item><![CDATA[Çatı (500 £)]]></Item>
+    <Item><![CDATA[Kiralık araba anahtarı kapağı (£ 450)]]></Item>
+    <Item><![CDATA[Kişisel eşyalar (250 £)]]></Item>
+    <Item><![CDATA[Personal possessions (£250)]]></Item>
+    <Item><![CDATA[Yanlış Besleme (250 £)]]></Item>
+  </List>
+  <Links OrderID="5">
+    <Link OrderID="1" Code="link1" Text="Fazla Masraf Karşılama Sigortası Hüküm ve Koşulları" Url="http://213.41.31.43/CTW/DK/EN/CTW_DK_en_TCs.html"/>
+  </Links>
+  <Functional OrderID="6">
+    <Option OrderID="1" Type="CHECKBOX" Enabled="false" Title="29.99 TL karşılığında Fazla Masraf Karşılama Sigortası satın almak istiyorum ve $ {link1}"/>
+  </Functional>
+  <Paragraph OrderID="7"><![CDATA[Lütfen bu politika kapsamında ödenen tüm masrafların geri ödeme bazında olduğunu unutmayın.]]></Paragraph>
+  <Paragraph OrderID="8"><![CDATA[Bu politika, AXA Assistance Group üyesi INTER PARTNER ASSISSTANCE SA, Avenue Louise 166, 1050 Brüksel, Belçika]]></Paragraph>
+  <Paragraph OrderID="9"><![CDATA[Sigortacı, hasar hizmeti için Axa Seyahat Sigortasını seçti]]></Paragraph>
+</Data>

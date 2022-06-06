@@ -1,0 +1,230 @@
+﻿@model Arackiralama.Models.Accounts
+@{
+    ViewBag.Title = "Kullanıcı Detayı";
+}
+@Html.HiddenFor(user=>user.ID)
+<div class="col">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">@Model.FirstName @Model.LastName Adlı Kullanıcının Detayı</h2>
+                </div>
+            </div>
+            @using (Html.BeginForm("Edit", "User", FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
+            <div class="card-body p-3">
+                <div class="row mb-3">
+                    <div class="col-6">
+
+                        <input type="hidden" name="ID" value="@Model.ID" />
+                        <input type="submit" class="btn btn-info float-right" value="Düzenle" />
+                    </div>
+                    <div class="col-6">
+                        <a href="@Url.Action("OrderHistory", "User", new { id = Model.ID, value=Model.ID })" class="btn btn-info">Siparişleri</a>
+                    </div>
+                </div>
+                <hr />
+                @*<div class="row mb-3">
+            <div class="col-12 col-md-3">
+                <strong style="float:right;" class="float-right-absorbe">
+                    Resim
+                </strong>
+            </div>
+            <div class="col-12 col-md-6">
+                <span>
+
+                    <img src="@Model.AvatarResim" class="panel-upload-img" />
+                </span>
+            </div>
+        </div>*@
+                <div class="row mb-3">
+                    <div class="col-12 col-md-3">
+                        <strong style="float:right;" class="float-right-absorbe">
+                            Rol
+                        </strong>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <span>
+                            @Model.RoleID
+
+                        </span>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-12 col-md-3">
+                        <strong style="float:right;" class="float-right-absorbe">
+                            Ad
+                        </strong>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <span>
+                            @Model.FirstName
+
+                        </span>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-12 col-md-3">
+                        <strong style="float:right;" class="float-right-absorbe">
+                            Soyad
+                        </strong>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <span>
+                            @Model.LastName
+                        </span>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-12 col-md-3">
+                        <strong style="float:right;" class="float-right-absorbe">
+                            Doğum tarihi
+                        </strong>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <span>
+
+                            @if (Model.BirthDate != null)
+                            {
+                                @Model.BirthDate.Value.ToString("dd.MM.yyyy");
+                            }
+                        </span>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-12 col-md-3">
+                        <strong style="float:right;" class="float-right-absorbe">
+                            Adres
+                        </strong>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <span>
+                            @Model.Address
+                        </span>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-12 col-md-3">
+                        <strong style="float:right;" class="float-right-absorbe">
+                            E-Posta
+                        </strong>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <span>
+                            @Model.Email
+                        </span>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-12 col-md-3">
+                        <strong style="float:right;" class="float-right-absorbe">
+                            Şifre
+                        </strong>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <span>
+                         @Model.Password
+                        </span>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-12 col-md-3">
+                        <strong style="float:right;" class="float-right-absorbe">
+                            Cinsiyet
+                        </strong>
+                    </div>
+                    <div class="col-12 col-md-3">
+                        <span>
+                            @Model.Gender
+                        </span>
+
+                    </div>
+
+
+                </div>
+                <div class="row mb-3">
+                    <div class="col-12 col-md-3">
+                        <strong style="float:right;" class="float-right-absorbe">
+                            Son Giriş Tarihi
+                        </strong>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <span>
+                            @if (Model.CreatedAt != null)
+                            {
+                                @Model.CreatedAt.Value.ToString("dd.MM.yyyy");
+                            }
+                        </span>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-12 col-md-3">
+                        <strong style="float:right;" class="float-right-absorbe">
+                            Kayıt Tarihi
+                        </strong>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <span>
+                            @Model.CreatedAt.Value.ToString("dd.MM.yyyy")
+                        </span>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-12 col-md-3">
+                        <strong style="float:right;" class="float-right-absorbe">
+                            Kayıt Eden Kişi
+                        </strong>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <span>
+                            @Model.LastName
+                        </span>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-12 col-md-3">
+                        <strong style="float:right;" class="float-right-absorbe">
+                            Güncelleme Tarihi
+                        </strong>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <span>
+                            @if (Model.CreatedAt != null)
+                            {
+                                @Model.CreatedAt.Value.ToString("dd.MM.yyyy");
+                            }
+                        </span>
+                    </div>
+                </div>
+                @*<div class="row mb-3">
+            <div class="col-12 col-md-3">
+                <strong style="float:right;" class="float-right-absorbe">
+                    Güncelleyene Kişi
+                </strong>
+            </div>
+            <div class="col-12 col-md-6">
+                <span>
+                    @Model.
+                </span>
+            </div>
+        </div>*@
+                <div class="row mb-3">
+                    <div class="col-12 col-md-3">
+                        <strong style="float:right;" class="float-right-absorbe">
+                            Aktif mi ?
+                        </strong>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <span>
+                            @Model.IsActive
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+            }
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,66 @@
+﻿@model IEnumerable<Arackiralama.Models.Blog>
+@{
+    ViewBag.Title = "Blog";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row">
+
+    @foreach (var item in Model)
+    {
+        //using (Html.BeginForm("BlogDetail", "Content", FormMethod.Post, new { @enctype = "multipart/form-data"}))
+        //{
+            <div class="col-12 col-md-4 mb-3">
+
+
+                <div class="card">
+                    <div class="card-body card-body-edited card-body-content-padding-absorbe">
+                        <div class="col-12 card-body-padding-absorbe">
+                            <div class="blog-opacity-div">
+                                <strong>
+                                    @item.ImageTitle
+                                </strong>
+
+                            </div>
+                            <img src="@item.ImageURL" style="width:100%; height:200px;" />
+
+                        </div>
+                        <div class="col-12 mt-3">
+                            <h1 class="info-box-h1">
+                                @item.Title
+                            </h1>
+                        </div>
+                        <div class="col-12 mt-3">
+                            <span>
+                                @item.ShowCaseDescription
+                            </span>
+
+                        </div>
+                        <div class="col-12 mt-3 mb-3">
+
+                            <span class="float-right">
+
+                                @Html.HiddenFor(m => item.ID)
+                               
+                                @*@Html.ActionLink("Devamını Oku", "BlogDetail", "Content", new { ID=item.ID})*@
+       <a href="/Content/BlogDetail/@item.ID">Devamını Oku</a>
+
+                            </span>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        @*}*@
+
+
+    }
+
+
+
+</div>
+
+
+

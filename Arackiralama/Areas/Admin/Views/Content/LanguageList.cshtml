@@ -1,0 +1,73 @@
+﻿@model IEnumerable<Arackiralama.Models.Cultures>
+@{
+    ViewBag.Title = "Dil Listesi";
+}
+
+<div class="row">
+    @if (ViewBag.Message != null)
+    {
+        <div class="col-12 mb-3">
+            <div class="alert alert-success">
+                @ViewBag.Message
+            </div>
+        </div>
+    }
+    <div class="col-12">
+        <section class="card">
+            <header class="card-header">
+                <h2 class="card-title">İletişim Sayfası Listesi</h2>
+            </header>
+            <div class="card-body">
+                <table id="LanguageList" class="table table-responsive-md table-striped mb-0 table-bordered">
+                    <thead>
+                        <tr>
+
+                            <th>Kod</th>
+                            <th>İsim</th>
+                            <th>Varsayılan</th>
+                            <th>Aktif mi?</th>
+                            <th>Düzenle</th>
+
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    @item.Code
+                                </td>
+                                <td>
+                                    @item.Name
+                                </td>
+                                <td> @item.IsDefault</td>
+
+                                <td>
+                                    @item.IsActive
+                                </td>
+                                <td>
+                                    <a href="@Url.Action("LanguageEdit","Content",new { id = item.ID })" class="btn btn-info">Düzenle</a>
+                                </td>
+
+                            </tr>
+                        }
+
+
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+</div>
+@section scripts{
+
+    <script src="~/DataTables/DataTables.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#LanguageList').DataTable();
+        });
+    </script>
+
+}
+

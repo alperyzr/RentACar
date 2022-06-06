@@ -1,0 +1,141 @@
+﻿@model IEnumerable<Arackiralama.Models.Car>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Marka)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Model)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Sinif)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Segment)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Resim)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.KisiSayisi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BagajKapasitesi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.KapiSaysi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Sanzuman)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.YakitTuru)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.KiralamaTutari)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EklendigiTarih)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EkleyenKisi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GuncellendigiTarih)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GuncelleyenKisi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsActive)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CarPointScale.PuanAraligi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Company.Logo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ExtraMaterial.Icon)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Marka)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Model)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Sinif)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Segment)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Resim)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.KisiSayisi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BagajKapasitesi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.KapiSaysi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Sanzuman)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.YakitTuru)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.KiralamaTutari)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EklendigiTarih)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EkleyenKisi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GuncellendigiTarih)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GuncelleyenKisi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsActive)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CarPointScale.PuanAraligi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Company.Logo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ExtraMaterial.Icon)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>

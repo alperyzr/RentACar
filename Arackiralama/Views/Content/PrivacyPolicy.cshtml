@@ -1,0 +1,35 @@
+﻿@model IEnumerable<Arackiralama.Models.PrivacyPolicyTranslation>
+@{
+    ViewBag.Title = "PrivacyPolicy";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="col-md-12">
+    <div class="row">
+        <div class="faq-box">
+            @foreach (var item in Model)
+            {
+                <div class="col-12 mb-3 mt-3">
+                    <div>
+                        <center>
+                            <h1 class="info-box-h1">
+                               
+                                    @item.Title
+                              
+
+                            </h1>
+                        </center>
+
+                    </div>
+                </div>
+                <div class="col-12 mb-3">
+                    <div style="text-align:justify">
+                       
+                            @item.Explanation
+                       
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>

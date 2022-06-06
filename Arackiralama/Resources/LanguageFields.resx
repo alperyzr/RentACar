@@ -1,0 +1,3267 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AboutMore" xml:space="preserve">
+    <value>Hakkında daha fazlası...</value>
+  </data>
+  <data name="AboutOffer" xml:space="preserve">
+    <value>Teklifiniz Hakkında</value>
+  </data>
+  <data name="AcceptOffer" xml:space="preserve">
+    <value>Teklifi Yolla</value>
+  </data>
+  <data name="AcceptOffer3" xml:space="preserve">
+    <value>Bu özel fiyatlar, oteller tarafından iptal Edilemez ve tarihi değiştirilemez koşullar ile kabul edilmektedir.</value>
+  </data>
+  <data name="AcceptOfferMail3" xml:space="preserve">
+    <value>Rezervasyon konfirmasyonunuz anında e-posta olarak tarafınıza gönderilecektir.</value>
+  </data>
+  <data name="AcceptTerm" xml:space="preserve">
+    <value>Kullanım sözleşmesini okuyup onaylamalısınız.</value>
+  </data>
+  <data name="Accommodation" xml:space="preserve">
+    <value>Konaklama</value>
+  </data>
+  <data name="Account" xml:space="preserve">
+    <value>Hesabım</value>
+  </data>
+  <data name="AccountAndTravel" xml:space="preserve">
+    <value>Hesabım ve yolculuklarım</value>
+  </data>
+  <data name="AccountInfo" xml:space="preserve">
+    <value>Üyelik Bilgilerim</value>
+  </data>
+  <data name="AceeptOffer1" xml:space="preserve">
+    <value>İstediğiniz oda istediğiniz fiyat ile isminize konfirme olur.</value>
+  </data>
+  <data name="AceeptOffer2" xml:space="preserve">
+    <value>Sadece, teklifinizdeki rakam kredi kartınızdan tahsil edilir. Başka hiçbir ücret ödemezsiniz.</value>
+  </data>
+  <data name="ActivationAlert" xml:space="preserve">
+    <value>Lütfen Hesabınızı Aktif Ediniz.</value>
+  </data>
+  <data name="ActivationAlert2" xml:space="preserve">
+    <value>Giriş Yapılırken Bir Hata Oluştu.Bilgilerinizi Kontrol Ediniz.</value>
+  </data>
+  <data name="ActivationMail" xml:space="preserve">
+    <value>Aktivasyon E-Mailim Gelmedi.</value>
+  </data>
+  <data name="AddressTitle" xml:space="preserve">
+    <value>Adres</value>
+  </data>
+  <data name="AdultCount" xml:space="preserve">
+    <value>Kişi Sayısı</value>
+  </data>
+  <data name="AdultCountText" xml:space="preserve">
+    <value>Yetişkin Sayısı</value>
+  </data>
+  <data name="AdultNumber" xml:space="preserve">
+    <value>Yetişkin</value>
+  </data>
+  <data name="Affordable" xml:space="preserve">
+    <value>En Hesaplı Seçim</value>
+  </data>
+  <data name="Agu" xml:space="preserve">
+    <value>Ağustos</value>
+  </data>
+  <data name="AirlinePoint" xml:space="preserve">
+    <value>Havayolu Noktası</value>
+  </data>
+  <data name="AirlinePoints" xml:space="preserve">
+    <value>Havayolu Noktaları</value>
+  </data>
+  <data name="AirlinesTitle" xml:space="preserve">
+    <value>Havayolları</value>
+  </data>
+  <data name="AirLineTitle" xml:space="preserve">
+    <value>Hava Yolu</value>
+  </data>
+  <data name="AirportTitle" xml:space="preserve">
+    <value>Hava Yollari</value>
+  </data>
+  <data name="AjaxPass" xml:space="preserve">
+    <value>Kullanıcı adı veya Şifreniz Hatalı.</value>
+  </data>
+  <data name="AjaxValidation" xml:space="preserve">
+    <value>Login Bilgileri Eksiksiz Olmalı.</value>
+  </data>
+  <data name="AllairlinesTitle" xml:space="preserve">
+    <value>Tüm Havayolları</value>
+  </data>
+  <data name="AllinclusivePrice" xml:space="preserve">
+    <value>Her şey Dahil Fiyat</value>
+  </data>
+  <data name="AllNews" xml:space="preserve">
+    <value>Tüm Haberler</value>
+  </data>
+  <data name="AllPriceRates" xml:space="preserve">
+    <value>Tüm Fiyatlar</value>
+  </data>
+  <data name="AllTitle" xml:space="preserve">
+    <value>Hepsi</value>
+  </data>
+  <data name="Amendment" xml:space="preserve">
+    <value>Değişiklikler</value>
+  </data>
+  <data name="Apr" xml:space="preserve">
+    <value>Nisan</value>
+  </data>
+  <data name="ArrivalTime" xml:space="preserve">
+    <value>Varış</value>
+  </data>
+  <data name="ArrTime" xml:space="preserve">
+    <value>Varış Saati</value>
+  </data>
+  <data name="AtMap" xml:space="preserve">
+    <value>Haritada</value>
+  </data>
+  <data name="AverageRate" xml:space="preserve">
+    <value>Gecelik Ortalama</value>
+  </data>
+  <data name="BaggageAllowance" xml:space="preserve">
+    <value>Bagaj Kapasitesi</value>
+  </data>
+  <data name="BannerTopSecret" xml:space="preserve">
+    <value>Oteli rezervasyon yaptıktan sonra öğrenin.</value>
+  </data>
+  <data name="BannerTopSecret1" xml:space="preserve">
+    <value>En Ucuzu</value>
+  </data>
+  <data name="BannerTopSecret2" xml:space="preserve">
+    <value>Burada</value>
+  </data>
+  <data name="BannerTopSecret3" xml:space="preserve">
+    <value>Gecesi</value>
+  </data>
+  <data name="BeforeYouGo" xml:space="preserve">
+    <value>·      Check in yapacak musteri en az 21 yasinda olmalidir.&lt;/br&gt;
+
+ 
+
+·        Bu düşük fiyatları verebilmek için, otel ismini rezervasyon tamamlanana kadar gizliyoruz.&lt;/br&gt;
+
+ 
+
+·        Otelin toplam fiyati rezervasyonu yaptirdiginiz anda tahsil edilecektir.&lt;/br&gt;
+
+ 
+
+·        Gizli otel rezervasyonlari iptal veya iade edilemez.&lt;/br&gt;</value>
+  </data>
+  <data name="BestPrcTitle" xml:space="preserve">
+    <value>En İyi Fiyatlar</value>
+  </data>
+  <data name="BestPriceDescription" xml:space="preserve">
+    <value>&lt;b&gt;aracvararac.com Fiyat Belirle&lt;/b&gt; rezervasyon servisi diğer seyahat portallarından farklı olarak 
+								size oteller ile direk pazarlık yapma imkanı sağlar.
+								5 yıldızlı uluslararası büyük otellerden 5 odalı butik otellere kadar her otelcinin hayali dolu bir oteldir.
+								Biz otelcilerin hem bu hayalini gerçekleştirmek hemde müşterilerimize en uygun fiyatlı odayı sunabilmek için 
+								her gün otellerden &lt;b&gt;boş kalmış odaları&lt;/b&gt; için fiyat alıyoruz. Oteller bu indirimleri marka değerlerine
+								zarar vermemek için gizli tutuyorlar. Teklif kabul olduğu zaman otelin ismini öğreniyorsunuz. Bu sayede hiçbir yerde 
+								bulamayacağınız indirimli fiyatlardan yararlanmış oluyorsunuz.</value>
+  </data>
+  <data name="BestPriceGuaranteed" xml:space="preserve">
+    <value>EN İYİ FİYAT GARANTİSİ</value>
+  </data>
+  <data name="BestPricePerNight" xml:space="preserve">
+    <value>Oda Başına, Gecelik</value>
+  </data>
+  <data name="BestPriceTitle" xml:space="preserve">
+    <value>Siz muhiti, Yıldız Seviyesi ve Gecelik vermek istediğiniz fiyatı teklif edin, biz otellerle sizin için pazarlık edip size en uygun fiyatlı oteli bulalım.</value>
+  </data>
+  <data name="BillingInfo" xml:space="preserve">
+    <value>Ödeme Bilgileri</value>
+  </data>
+  <data name="BirthDate" xml:space="preserve">
+    <value>Doğum Tarihi</value>
+  </data>
+  <data name="BornDate" xml:space="preserve">
+    <value>Doğum Tarihi</value>
+  </data>
+  <data name="Breakfast" xml:space="preserve">
+    <value>Kahvaltı</value>
+  </data>
+  <data name="BreakFastInc" xml:space="preserve">
+    <value>Kahvaltı dahil</value>
+  </data>
+  <data name="ButtonShow" xml:space="preserve">
+    <value>Butonu göremiyorsanız aşağıdaki bağlantıyı tıklayarak da aktivasyonunuzu oluşturabilirsiniz.</value>
+  </data>
+  <data name="ButtonShowMessage" xml:space="preserve">
+    <value>Butonu göremiyorsanız bu bağlantıyı tıklayarak da giriş yapıp şifrenizi oluşturabilirsiniz.</value>
+  </data>
+  <data name="BuyTitle" xml:space="preserve">
+    <value>SATIN AL</value>
+  </data>
+  <data name="CallCenter" xml:space="preserve">
+    <value>Çağrı merkezimiz hafta içi 09:00 – 21:00 saatleri arasında hizmet vermektedir. Bu saatler dışında bize bilgi@aracvararac.com email adresinden veya iletişim formunu doldurarak ulaşabilirsiniz.
+</value>
+  </data>
+  <data name="CallYourBestPrice" xml:space="preserve">
+    <value>&lt;b&gt;Fiyatını sen belirle ve en iyi otel fırsatlarını yakala&lt;/b&gt;</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>İptal</value>
+  </data>
+  <data name="Cancel1" xml:space="preserve">
+    <value>Belirtilen tarih ve saatten sonra gelen iptal talepleri, Tesis tarafından kabul edilmemekte, para iadesi yapılmamaktadır.</value>
+  </data>
+  <data name="Cancel2" xml:space="preserve">
+    <value>Rezervasyon kullanılmaz veya iptal süresi aşılır ise, ilk gecenin tutarı tesis tarafından kredi kartınızdan tahsil edilir.</value>
+  </data>
+  <data name="CancelActive" xml:space="preserve">
+    <value>Rezervasyon İptal Talebiniz Aktiftir.</value>
+  </data>
+  <data name="Cancelled" xml:space="preserve">
+    <value>Rezervasyonunuz iptal edilmiştir.</value>
+  </data>
+  <data name="CancelOwner" xml:space="preserve">
+    <value>Aşağıdaki detaylar ile</value>
+  </data>
+  <data name="CancelPolicy" xml:space="preserve">
+    <value>Rezervasyon İptal Koşulları</value>
+  </data>
+  <data name="CancelReq" xml:space="preserve">
+    <value>Rezervasyon iptal talebini yollamak için emin misiniz?</value>
+  </data>
+  <data name="CancelTitle" xml:space="preserve">
+    <value>İptal Et</value>
+  </data>
+  <data name="CarAfterRes" xml:space="preserve">
+    <value>Firma adini rezervasyon tamamlaninca ogreniyorsunuz. Bu sayede hicbir yerde bulamayacaginiz fiyatlara arabanizi kiralamis oluyorsunuz</value>
+  </data>
+  <data name="CardHolder" xml:space="preserve">
+    <value>Karttaki Ad Soyad</value>
+  </data>
+  <data name="CardNo" xml:space="preserve">
+    <value>Kart Numarası</value>
+  </data>
+  <data name="CardType" xml:space="preserve">
+    <value>Kart Türü</value>
+  </data>
+  <data name="Cars" xml:space="preserve">
+    <value>Araba</value>
+  </data>
+  <data name="CarSearchResult" xml:space="preserve">
+    <value>Arama Sonuçları</value>
+  </data>
+  <data name="CCType" xml:space="preserve">
+    <value>Kart Tipi</value>
+  </data>
+  <data name="CCV2" xml:space="preserve">
+    <value>Güvenlik Kodu</value>
+  </data>
+  <data name="CellPhoneTitle" xml:space="preserve">
+    <value>Cep Telefonu</value>
+  </data>
+  <data name="Chckin" xml:space="preserve">
+    <value>Giriş</value>
+  </data>
+  <data name="Chckout" xml:space="preserve">
+    <value>Çıkış</value>
+  </data>
+  <data name="CheapPrice" xml:space="preserve">
+    <value>En ucuz fiyat garantisi</value>
+  </data>
+  <data name="CheapRentCar" xml:space="preserve">
+    <value>En Hesaplı Araç Kiralama</value>
+  </data>
+  <data name="CheapRentCarText" xml:space="preserve">
+    <value>Büyük firmaları tek bir yerde sorgulatın, karşılaştırın, en hesaplı aracı kiralayın.</value>
+  </data>
+  <data name="CheckInDate" xml:space="preserve">
+    <value>Giriş Tarihi</value>
+  </data>
+  <data name="CheckOutDate" xml:space="preserve">
+    <value>Çıkış Tarihi</value>
+  </data>
+  <data name="CheckOutIn" xml:space="preserve">
+    <value>Giriş / Çıkış</value>
+  </data>
+  <data name="ChildAge" xml:space="preserve">
+    <value>Çocuk Yaşı</value>
+  </data>
+  <data name="ChildAges" xml:space="preserve">
+    <value>Çocuk Yaş(ları)</value>
+  </data>
+  <data name="ChildCount" xml:space="preserve">
+    <value>Çocuk Sayısı</value>
+  </data>
+  <data name="ChildNumber" xml:space="preserve">
+    <value>Çocuk</value>
+  </data>
+  <data name="ChildRateText" xml:space="preserve">
+    <value>Çocuk Fiyatı</value>
+  </data>
+  <data name="ChooseCardType" xml:space="preserve">
+    <value>Kart Türü Seçiniz</value>
+  </data>
+  <data name="ChooseDate" xml:space="preserve">
+    <value>Tarih Seçiniz</value>
+  </data>
+  <data name="ChooseDest" xml:space="preserve">
+    <value>Gidilecek Yeri Seciniz.</value>
+  </data>
+  <data name="Citybycity" xml:space="preserve">
+    <value>Şehir Şehir Türkiye</value>
+  </data>
+  <data name="CityCityInfo" xml:space="preserve">
+    <value>&lt;b&gt;&lt;?Sehir?&gt;&lt;/b&gt; Otelleri aracvararac.com’da en iyi fiyatlarla müşterilerimize sunuluyor. En ucuz 
+&lt;b&gt;&lt;?Sehir?&gt;&lt;/b&gt; otellerini bulmak için isterseniz 
+&lt;b&gt;&lt;?Sehir?&gt;&lt;/b&gt; otelleri sayfamıza girebilir, isterseniz arama kutusuna 
+&lt;b&gt;&lt;?Sehir?&gt;&lt;/b&gt; yazarak, Tüm 
+&lt;b&gt;&lt;?Sehir?&gt;&lt;/b&gt; otelleri ister erken rezervasyon, isterseniz aracvararac fiyatları ile listelenecektir.
+&lt;br/&gt;&lt;br/&gt;Listelemelerimizin yanında harita üzerinden 
+&lt;b&gt;&lt;?Sehir?&gt;&lt;/b&gt; otellerine kolaylıkla ulaşabilirsiniz. 
+&lt;b&gt;&lt;?Sehir?&gt;&lt;/b&gt; otellerini yıldız filtrelememizden 5 yıldızlı 
+&lt;b&gt;&lt;?Sehir?&gt;&lt;/b&gt; otelleri, 4 yıldızlı 
+&lt;b&gt;&lt;?Sehir?&gt;&lt;/b&gt; otelleri, 3 yıldızlı 
+&lt;b&gt;&lt;?Sehir?&gt;&lt;/b&gt; otelleri, 2 yıldızlı 
+&lt;b&gt;&lt;?Sehir?&gt;&lt;/b&gt; otelleri olarak Kategorize edebilirsiniz.
+&lt;br/&gt;&lt;br/&gt;aracvararac.com 
+&lt;b&gt;&lt;?Sehir?&gt;&lt;/b&gt; otelleri ile tam zamanlı en iyi fiyat garantisi ile çalışır. Eğer herhangi  bir 
+&lt;b&gt;&lt;?Sehir?&gt;&lt;/b&gt; otelini aynı tarihlerde daha ucuza bulursanız, aradaki farkı geri ödeme garantisi veriyoruz. aracvararac.com için müşteri memnuniyeti her şeyin üstünde gelir. En hesaplı ve en kaliteli 
+&lt;b&gt;&lt;?Sehir?&gt;&lt;/b&gt; otelleri her zaman aracvararac.com’da bulabilirsiniz.
+&lt;br/&gt;&lt;br/&gt;
+&lt;b&gt;&lt;?Sehir?&gt;&lt;/b&gt; otellerini erken rezervasyon yaparak en hesaplı fiyatlarla ayırtabilirsiniz. Bunun yanında en düşük fiyatları 
+&lt;b&gt;&lt;?Sehir?&gt;&lt;/b&gt; otellerinde gizli oteller bölümümüzden görebilirsiniz.</value>
+  </data>
+  <data name="Cityed" xml:space="preserve">
+    <value>Şehir</value>
+  </data>
+  <data name="CityHotel" xml:space="preserve">
+    <value>Oteller</value>
+  </data>
+  <data name="CityTitle" xml:space="preserve">
+    <value>İl</value>
+  </data>
+  <data name="ClassSrc" xml:space="preserve">
+    <value>Yolculuk Sınıfı</value>
+  </data>
+  <data name="ClassTitle" xml:space="preserve">
+    <value>Sınıf</value>
+  </data>
+  <data name="CommentAccount" xml:space="preserve">
+    <value>Daha Önce Yorum Yapmışsınız.Hesabınızdan Yorumunuzu Güncelleyebilirsiniz.</value>
+  </data>
+  <data name="CommentFailed" xml:space="preserve">
+    <value>Daha önce bu otelin rezervasyonunu iptal ettiğinizden yorum yapamazsınız</value>
+  </data>
+  <data name="CommentHotel" xml:space="preserve">
+    <value>Bu Hotel için henüz yorum bulunmamaktadır.</value>
+  </data>
+  <data name="CommentLate" xml:space="preserve">
+    <value>Sipariş Tarihinizden Önce Yorum Yapamazsınız</value>
+  </data>
+  <data name="CommentPlace" xml:space="preserve">
+    <value>Yorumunuzu buraya yazabilirsiniz</value>
+  </data>
+  <data name="Comments" xml:space="preserve">
+    <value>Yorumlar</value>
+  </data>
+  <data name="CommentSubmit" xml:space="preserve">
+    <value>Yorumunuz eklenmiştir. Admin onayladıktan sonra yayınlanacaktır.</value>
+  </data>
+  <data name="CommentTag" xml:space="preserve">
+    <value>Yorum yapabilmek ve oy verebilmek için daha  önce bu hotelde kalmış olmanız gerekli</value>
+  </data>
+  <data name="CommentTitle" xml:space="preserve">
+    <value>Yorum</value>
+  </data>
+  <data name="Commitment" xml:space="preserve">
+    <value>240,000’den fazla otel seçeneği</value>
+  </data>
+  <data name="Company" xml:space="preserve">
+    <value>Firma</value>
+  </data>
+  <data name="CompanyName" xml:space="preserve">
+    <value>Firma / Şahıs Adı</value>
+  </data>
+  <data name="ComplateSell" xml:space="preserve">
+    <value>Ödemeyi Tamamla</value>
+  </data>
+  <data name="ConfirmMail" xml:space="preserve">
+    <value>E-Mail Adresi (Tekrar)</value>
+  </data>
+  <data name="ConfirmPassword" xml:space="preserve">
+    <value>Yeni Şifre Tekrar</value>
+  </data>
+  <data name="Congrats" xml:space="preserve">
+    <value>Tebrikler! Teklifiniz,kirterlerinize uyan bölge otellerine gönderildi...</value>
+  </data>
+  <data name="Contact" xml:space="preserve">
+    <value>Bize Ulaşın.</value>
+  </data>
+  <data name="ContactInfo" xml:space="preserve">
+    <value>İletişim</value>
+  </data>
+  <data name="ContactName" xml:space="preserve">
+    <value>ALICI</value>
+  </data>
+  <data name="ContainsWord" xml:space="preserve">
+    <value>Otelin adında geçen bir sözcük</value>
+  </data>
+  <data name="Continue" xml:space="preserve">
+    <value>Devam</value>
+  </data>
+  <data name="ContinueReading" xml:space="preserve">
+    <value>Devamını Oku</value>
+  </data>
+  <data name="ContractHeader" xml:space="preserve">
+    <value>SÖZLEŞMENİN KONUSU</value>
+  </data>
+  <data name="ContractTitle" xml:space="preserve">
+    <value>www.aracvararac.com üzerinden, satıcının tanımladığı ürünün/hizmetin, yine satıcının belirlediği nitelik, nicelik ve fiyatlar ile Alıcı’ya sağlanması ve belirtilen koşullar dahilinde ürün/hizmetin Alıcı’ya  eksiksiz olarak sağlanması konuları ile alakalı olarak 4077 sayılı Tüketicinin Korunması Hakkındaki Kanun ve Mesafeli Sözleşmelere dair Yönetmelik hükümleri gereğince tarafların hak ve yükümlülüklerinin tespitidir.</value>
+  </data>
+  <data name="CountryTitle" xml:space="preserve">
+    <value>Ülke</value>
+  </data>
+  <data name="CouponFirst" xml:space="preserve">
+    <value>Kuponları önce siz yakalayın!</value>
+  </data>
+  <data name="Court1" xml:space="preserve">
+    <value>İş bu Sözleşme ile ilgili çıkacak ihtilaflarda her yıl Sanayi ve Ticaret Bakanlığı tarafından ilan edilen değere kadar Alıcı'nın yerleşim yerindeki Tüketici Sorunları Hakem Heyetleri, söz konusu değerin üzerindeki ihtilaflarda ise Tüketici Mahkemeleri yetkilidir.</value>
+  </data>
+  <data name="CourtTitle" xml:space="preserve">
+    <value>YETKİLİ MAHKEME:</value>
+  </data>
+  <data name="CreditCardHotel" xml:space="preserve">
+    <value>Rezervasyon tutari kredi kartinizdan hemen cekilecektir.</value>
+  </data>
+  <data name="CreditcardValid" xml:space="preserve">
+    <value>Kredi Kartınız Geçerli Değildir.</value>
+  </data>
+  <data name="Currency" xml:space="preserve">
+    <value>Para Birimi</value>
+  </data>
+  <data name="CurrencyExchange" xml:space="preserve">
+    <value>Kur Farkı Olabilir</value>
+  </data>
+  <data name="CurrencyRate" xml:space="preserve">
+    <value>TRY</value>
+  </data>
+  <data name="CustomerDetail" xml:space="preserve">
+    <value>ALICI BİLGİLERİ</value>
+  </data>
+  <data name="CustomerMail" xml:space="preserve">
+    <value>SİPARİŞ ONAY FORMU</value>
+  </data>
+  <data name="CustomerRatings" xml:space="preserve">
+    <value>Yorumları oku</value>
+  </data>
+  <data name="CustomerRev" xml:space="preserve">
+    <value>Kullanıcı Değerlendirmeleri</value>
+  </data>
+  <data name="CustomerService" xml:space="preserve">
+    <value>Müşteri Hizmetleri</value>
+  </data>
+  <data name="CustomerTerm" xml:space="preserve">
+    <value>Tüketici, aracı trafik kurallarına uyarak kullanacaktır.</value>
+  </data>
+  <data name="CustomerTerm1" xml:space="preserve">
+    <value>Ekonomik ve Orta sınıf araçlar için Tüketici'nin 21 yaşını doldurmuş ve en az 2 yıllık ehliyete sahip olması; Prestij sınıf araçlar için Tüketici'nin 28 yaşını doldurmuş olması ve en az 5 yıllık ehliyete sahip olması zorunludur.
+&lt;br /&gt;&lt;br /&gt;</value>
+  </data>
+  <data name="CustomerTerm2" xml:space="preserve">
+    <value>Aracın, alkollü, uyuşturucunun etkisi altında kullanılmış olması; ağır ihmal, kasıt olması; araç anahtarlarının en geç 3 gün içinde teslim edilmemesi; kaza anında aracın polis veya jandarma tarafından kaza raporu ve alkol raporunun tutulmasından önce yerinden hareket ettirilmesi durumlarında sigortalar geçersiz olacak ve doğan zararlardan Tüketici sorumlu olacaktır.</value>
+  </data>
+  <data name="CustomerTerm3" xml:space="preserve">
+    <value>Özel eşyalar sigorta kapsamı dışındadır. Kaza halinde, 3. Şahısların uğrayacağı maddi ve manevi zararlardan sigorta limitini aşan kısımlarından Tüketici sorumludur.</value>
+  </data>
+  <data name="CustomerTerm4" xml:space="preserve">
+    <value>Her türlü trafik cezasından ve hukuki faizlerinden kiracı sorumludur.</value>
+  </data>
+  <data name="CustomerTerm5" xml:space="preserve">
+    <value>Kira günü 24 saat üzerinden hesaplanır. Araç teslimi 3 saati aşar ise tam gün kira ücreti tahakkuk ettirilir.</value>
+  </data>
+  <data name="CustomerTerm6" xml:space="preserve">
+    <value>ARAC TESLIM BİLGİLERİ</value>
+  </data>
+  <data name="CustomerTerm7" xml:space="preserve">
+    <value>ARAC İADE BİLGiLERi</value>
+  </data>
+  <data name="CVV2Title" xml:space="preserve">
+    <value>Nedir?</value>
+  </data>
+  <data name="Daily" xml:space="preserve">
+    <value>GÜN</value>
+  </data>
+  <data name="Daily1" xml:space="preserve">
+    <value>(KDV Dahil)</value>
+  </data>
+  <data name="DailyCar" xml:space="preserve">
+    <value>Günlük</value>
+  </data>
+  <data name="Date" xml:space="preserve">
+    <value>Tarih</value>
+  </data>
+  <data name="DateRange" xml:space="preserve">
+    <value>Girdiğiniz tarih aralığı 28 günü geçmemelidir.</value>
+  </data>
+  <data name="DayTitle" xml:space="preserve">
+    <value>Gün</value>
+  </data>
+  <data name="Dear" xml:space="preserve">
+    <value>Sayın</value>
+  </data>
+  <data name="Dec" xml:space="preserve">
+    <value>Aralık</value>
+  </data>
+  <data name="DepartingFrom" xml:space="preserve">
+    <value>Nereden</value>
+  </data>
+  <data name="DepartureDate" xml:space="preserve">
+    <value>Gidiş Tarihi</value>
+  </data>
+  <data name="DepartureFlight" xml:space="preserve">
+    <value>Gidiş Uçuşunuzu Seçiniz</value>
+  </data>
+  <data name="DepartureTime" xml:space="preserve">
+    <value>Kalkış</value>
+  </data>
+  <data name="DepTime" xml:space="preserve">
+    <value>Kalkış Saati</value>
+  </data>
+  <data name="DestinationTitle" xml:space="preserve">
+    <value>Nereye Gidiyorsunuz?</value>
+  </data>
+  <data name="Detail" xml:space="preserve">
+    <value>DETAY</value>
+  </data>
+  <data name="DetailedSrc" xml:space="preserve">
+    <value>Detaylı Arama</value>
+  </data>
+  <data name="Dinner" xml:space="preserve">
+    <value>Akşam Yemeği</value>
+  </data>
+  <data name="Direct" xml:space="preserve">
+    <value>Direk</value>
+  </data>
+  <data name="DirectFlight" xml:space="preserve">
+    <value>Aktarmasız</value>
+  </data>
+  <data name="DirectFlights" xml:space="preserve">
+    <value>Sadece Direkt</value>
+  </data>
+  <data name="Discount" xml:space="preserve">
+    <value>%40’lara varan indirimler</value>
+  </data>
+  <data name="DistanceTitle" xml:space="preserve">
+    <value>Mesafeli Satış Sözleşmesi</value>
+  </data>
+  <data name="DistrictTitle" xml:space="preserve">
+    <value>İlçe</value>
+  </data>
+  <data name="DropInfo" xml:space="preserve">
+    <value>İade Bilgileri</value>
+  </data>
+  <data name="DropOff" xml:space="preserve">
+    <value>İade</value>
+  </data>
+  <data name="DropOffDate" xml:space="preserve">
+    <value>İade Tarihi</value>
+  </data>
+  <data name="DropOffInfo" xml:space="preserve">
+    <value>Dönüş Bilgileri</value>
+  </data>
+  <data name="DropOffOffice" xml:space="preserve">
+    <value>İade Ofisi</value>
+  </data>
+  <data name="DropOffPlace" xml:space="preserve">
+    <value>İade Yeri</value>
+  </data>
+  <data name="DstGo" xml:space="preserve">
+    <value>Mesela...</value>
+  </data>
+  <data name="Economy" xml:space="preserve">
+    <value>Sınıf</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>E-mail Adresiniz.</value>
+  </data>
+  <data name="EmailInfo" xml:space="preserve">
+    <value>E-mail Adresi</value>
+  </data>
+  <data name="EnterGo" xml:space="preserve">
+    <value>GİRİŞ YAP</value>
+  </data>
+  <data name="Excluded" xml:space="preserve">
+    <value>Hariç</value>
+  </data>
+  <data name="ExpediaCardInfo" xml:space="preserve">
+    <value>Rezervasyon tutari kredi kartinizdan hemen cekilecektir.</value>
+  </data>
+  <data name="ExpediaCurrencyMessage" xml:space="preserve">
+    <value>Bu otelde rezervasyon yaptırdığınızda ödemenin tamamı kredi kartınızdan alınacaktır. Bankanızın bu ödemeyi yerel para biriminize çevirebileceğini ve döviz bozdurma hizmeti için sizden ek ücreti talep edebileceğini lütfen unutmayın. Bu durum, kredi kartı ya da banka kartı ekstrenizde göreceğiniz tutarın yerel para biriminize çevrilmiş bedel olabileceği ve dolayısıyla yukarıda gösterilen Toplam Fiyattan farklı olabileceği anlamına gelmektedir. Rezervasyonunuza uygulanan bu ücret ya da döviz bozdurma bedeli ile ilgili herhangi bir sorunuz varsa lütfen bankanızla görüşün.</value>
+  </data>
+  <data name="ExpediaCurrencyTitle" xml:space="preserve">
+    <value>Döviz Değişim Bilgileri</value>
+  </data>
+  <data name="ExpediaOriginalPrice" xml:space="preserve">
+    <value>Kartınızdan Çekilecek Tutar</value>
+  </data>
+  <data name="ExpirationDate" xml:space="preserve">
+    <value>Son Kullanma Tarihi</value>
+  </data>
+  <data name="ExpNonRef" xml:space="preserve">
+    <value>İptal edilemez fiyat kategorisi ile yapılan rezervasyonlar için iptal seçeneği mevcut değildir.</value>
+  </data>
+  <data name="ExpPay1" xml:space="preserve">
+    <value>Bu oda satışı, uluslararası bir tedarikçi tarafından gerçekleştirilmiştir.</value>
+  </data>
+  <data name="ExpPay2" xml:space="preserve">
+    <value>İşbu sipariş onay formu dışında hiçbir ödeme belgesi verilmemektedir.</value>
+  </data>
+  <data name="ExpPay3" xml:space="preserve">
+    <value>Otel tarafından size bir fatura verilmemektedir.</value>
+  </data>
+  <data name="ExpTax" xml:space="preserve">
+    <value>Vergi</value>
+  </data>
+  <data name="ExtraFee" xml:space="preserve">
+    <value>Ekstra Ücretler</value>
+  </data>
+  <data name="ExtraPerson" xml:space="preserve">
+    <value>Ekstra kişi ücreti</value>
+  </data>
+  <data name="Facility" xml:space="preserve">
+    <value>Tesis</value>
+  </data>
+  <data name="FastShop" xml:space="preserve">
+    <value>Hızlı Alışveriş!</value>
+  </data>
+  <data name="Feb" xml:space="preserve">
+    <value>Şubat</value>
+  </data>
+  <data name="Female" xml:space="preserve">
+    <value>Kadın</value>
+  </data>
+  <data name="FillAll" xml:space="preserve">
+    <value>Gerekli tüm alanları doldurmalısınız.</value>
+  </data>
+  <data name="Filter" xml:space="preserve">
+    <value>Filtrele</value>
+  </data>
+  <data name="FilterResultTitle" xml:space="preserve">
+    <value>Sonuçları filtrele</value>
+  </data>
+  <data name="FindCheap" xml:space="preserve">
+    <value>En uygununu bul</value>
+  </data>
+  <data name="FindOut" xml:space="preserve">
+    <value>Neden Mi?</value>
+  </data>
+  <data name="FirstKnow" xml:space="preserve">
+    <value>İlk Önce Sen Bil</value>
+  </data>
+  <data name="FlightAlert1" xml:space="preserve">
+    <value>Yurt dışı seyahatleri için pasaport numarası girilmeli.</value>
+  </data>
+  <data name="FlightAllResult" xml:space="preserve">
+    <value>Tüm Araçları Gör</value>
+  </data>
+  <data name="FlightArrival" xml:space="preserve">
+    <value>Varış</value>
+  </data>
+  <data name="FlightArTime" xml:space="preserve">
+    <value>Varış Tarihi</value>
+  </data>
+  <data name="FlightBack" xml:space="preserve">
+    <value>Uçuş Arama Sayfasına Dön</value>
+  </data>
+  <data name="FlightBilling" xml:space="preserve">
+    <value>Ödeme Bilgileri</value>
+  </data>
+  <data name="FlightButtonTextRsv" xml:space="preserve">
+    <value>Satın Al</value>
+  </data>
+  <data name="FlightCancelVehicle" xml:space="preserve">
+    <value>Aracı Çıkart</value>
+  </data>
+  <data name="FlightCarSearchError" xml:space="preserve">
+    <value>Arac bulunamadi saatlerinizi degisitirip tekrar deneyiniz</value>
+  </data>
+  <data name="FlightChange" xml:space="preserve">
+    <value>Uçuşu Değiştir</value>
+  </data>
+  <data name="FlightChangeVehicle" xml:space="preserve">
+    <value>Farklı Araç Seç</value>
+  </data>
+  <data name="FlightCityTitle" xml:space="preserve">
+    <value>Şehir</value>
+  </data>
+  <data name="FlightClass" xml:space="preserve">
+    <value>Uçuş Sınıfı</value>
+  </data>
+  <data name="FlightCode" xml:space="preserve">
+    <value>Uçuş Kodu</value>
+  </data>
+  <data name="FlightDeparting" xml:space="preserve">
+    <value>Kalkış Yeri</value>
+  </data>
+  <data name="FlightDeparture" xml:space="preserve">
+    <value>Kalkış</value>
+  </data>
+  <data name="FlightDepTime" xml:space="preserve">
+    <value>Kalkış Tarihi</value>
+  </data>
+  <data name="FlightError" xml:space="preserve">
+    <value>Aradığınız Kriterlere Uygun Uçuş Bulunmamaktadır.</value>
+  </data>
+  <data name="flightForeign" xml:space="preserve">
+    <value>Uyruk</value>
+  </data>
+  <data name="FlightInfo" xml:space="preserve">
+    <value>Uçuş Bilgileriniz</value>
+  </data>
+  <data name="FlightInfoTitle" xml:space="preserve">
+    <value>UÇUŞ BİLGİLERİ</value>
+  </data>
+  <data name="FlightMailSubject" xml:space="preserve">
+    <value>Rezervasyon Detaylarınız</value>
+  </data>
+  <data name="FlightMessageInfoTitle" xml:space="preserve">
+    <value>aracvararac.com’u tercih ettiğiniz için teşekürler. Bilet satış işleminiz başarılı şekilde gerçekleşmiştir. Aşağıda biletiniz ile ilgili detayları görebilirsiniz.</value>
+  </data>
+  <data name="FlightNextDayTitle" xml:space="preserve">
+    <value>Sonraki Gün</value>
+  </data>
+  <data name="FlightNo" xml:space="preserve">
+    <value>Uçuş</value>
+  </data>
+  <data name="FlightNumberTitle" xml:space="preserve">
+    <value>Uçuş Kodu</value>
+  </data>
+  <data name="FlightPasNo" xml:space="preserve">
+    <value>Pasaport No</value>
+  </data>
+  <data name="FlightPayment1" xml:space="preserve">
+    <value>Tek Çekim</value>
+  </data>
+  <data name="FlightPayment2" xml:space="preserve">
+    <value>Taksit</value>
+  </data>
+  <data name="FlightPayment3" xml:space="preserve">
+    <value>3D Ödeme</value>
+  </data>
+  <data name="FlightPnrRsvMailText" xml:space="preserve">
+    <value>&lt;b&gt;Tebrikler, rezervasyonunuz başarıyla tamamlandı.&lt;/b&gt;
+&lt;br&gt;
+Biletinizi (312) 441 40 46 no'lu telefondan bize ulaşarak kestirebilir veya &lt;a href="http://aracvararac.com/tr/ucuslar"&gt;aracvararac.com&lt;/a&gt;’dan PNR ve soyadınızı sorgulatarak kendiniz alabilirsiniz.</value>
+  </data>
+  <data name="FlightPoint" xml:space="preserve">
+    <value>Uçuş Noktası</value>
+  </data>
+  <data name="FlightPoints" xml:space="preserve">
+    <value>Uçuş Noktaları</value>
+  </data>
+  <data name="FlightPreviousDayTitle" xml:space="preserve">
+    <value>Önceki Gün</value>
+  </data>
+  <data name="FlightPriceCheckInfo" xml:space="preserve">
+    <value>Uçak biletinizin vergiler dahil toplam rakamı Kredi Kartınızdan tahsil edilmiş durumdadır.
+			&lt;br /&gt;
+			İyi yolculuklar dileriz...</value>
+  </data>
+  <data name="FlightRscContact" xml:space="preserve">
+    <value>(312) 441 40 46 Numaralı telefondan &lt;a href="http://www.aracvararac.com/" style="color: #3CB8E5;text-decoration: none;"&gt;aracvararac&lt;/a&gt; ekibine ulaşabilir, biletiniz ile alakalı her türlü işlemi arkadaşlarımızın yardımıyla gerçekleştirebilirsiniz.</value>
+  </data>
+  <data name="Flights" xml:space="preserve">
+    <value>Uçak</value>
+  </data>
+  <data name="FlightSaveFlight" xml:space="preserve">
+    <value>Rezervasyon Yap</value>
+  </data>
+  <data name="FlightSearch" xml:space="preserve">
+    <value>Uçak Ara:</value>
+  </data>
+  <data name="FlightSeatNumLast" xml:space="preserve">
+    <value>Son</value>
+  </data>
+  <data name="FlightSeatNumSeats" xml:space="preserve">
+    <value>Koltuk</value>
+  </data>
+  <data name="FlightSeatTitle" xml:space="preserve">
+    <value>Koltuk</value>
+  </data>
+  <data name="FlightSelectAlert" xml:space="preserve">
+    <value>Başlangıc hava alanını secmelisiniz.</value>
+  </data>
+  <data name="FlightSort" xml:space="preserve">
+    <value>Sırala</value>
+  </data>
+  <data name="FlightSort1" xml:space="preserve">
+    <value>Fiyat</value>
+  </data>
+  <data name="FlightSort2" xml:space="preserve">
+    <value>Havayolu</value>
+  </data>
+  <data name="FlightSort3" xml:space="preserve">
+    <value>Kalkış Saati</value>
+  </data>
+  <data name="flightTCNo" xml:space="preserve">
+    <value>TC Kimlik No</value>
+  </data>
+  <data name="flightTCNo2" xml:space="preserve">
+    <value>TC kimlik no</value>
+  </data>
+  <data name="FlightTCVatandas" xml:space="preserve">
+    <value>TC Vatandaşı</value>
+  </data>
+  <data name="FlightTerm1" xml:space="preserve">
+    <value>Biletleme yapıldığı tarihe kadar fiyatlarda yaşanan değişiklikler, rezervasyonunuza yansıtılmaktadır.</value>
+  </data>
+  <data name="FlightTerm2" xml:space="preserve">
+    <value>Belirtilen tarihe kadar bilete dönüştürülmemiş rezervasyonlar otomatik olarak iptal edilmektedir.</value>
+  </data>
+  <data name="FlightTerm3" xml:space="preserve">
+    <value>Orjinal Biletiniz, SMS mesajı ve E-Posta mesajı ile tarafınıza gönderilmiş durumdadır.</value>
+  </data>
+  <data name="FlightTime" xml:space="preserve">
+    <value>Süre</value>
+  </data>
+  <data name="FlightTitle" xml:space="preserve">
+    <value>Uçuşunuzu planlayın.</value>
+  </data>
+  <data name="flightUyruk" xml:space="preserve">
+    <value>Uyruk</value>
+  </data>
+  <data name="flightUyruk2" xml:space="preserve">
+    <value>Uyruk</value>
+  </data>
+  <data name="FlightValidPassName" xml:space="preserve">
+    <value>Yolcu isimler aynı olamaz. Lütfen Düzeltiniz.</value>
+  </data>
+  <data name="FlightVehicle" xml:space="preserve">
+    <value>Seyahatinize araç eklemek ister misiniz?</value>
+  </data>
+  <data name="FlightVehicleName" xml:space="preserve">
+    <value>Uçuş</value>
+  </data>
+  <data name="FlightVehicleRentTime" xml:space="preserve">
+    <value>Kiralama Süresi</value>
+  </data>
+  <data name="FlightVehicleVName" xml:space="preserve">
+    <value>Araba</value>
+  </data>
+  <data name="foreigner" xml:space="preserve">
+    <value>Yabancı</value>
+  </data>
+  <data name="ForgetPass" xml:space="preserve">
+    <value>Şifremi Unuttum.</value>
+  </data>
+  <data name="FormName" xml:space="preserve">
+    <value>Ad</value>
+  </data>
+  <data name="FormSurname" xml:space="preserve">
+    <value>Soyad</value>
+  </data>
+  <data name="FSBHiddenPics" xml:space="preserve">
+    <value>&lt;div class="popup"&gt;
+            Gizli otel olduğu için
+            &lt;div class="ok"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        Resimleri Gizliyoruz.&lt;br /&gt;
+        &lt;a href="javascript:void(0)" class="infoPopup"&gt;Neden mi?&lt;/a&gt;</value>
+  </data>
+  <data name="FsbMail" xml:space="preserve">
+    <value>Onaylamış olduğunuz bu siparişin fatura kopyası, e posta adresinize gönderilmiş olup, faturanızın aslı belirtmiş olduğunuz adrese gönderilebilmektedir.</value>
+  </data>
+  <data name="FsbMail1" xml:space="preserve">
+    <value>"Gizli Otel" ve/veya "Fiyatını Sen Belirle" modülleri aracılığı ile yapılan bu rezervasyon için, iptal ve tarih değişikliği seçenekleri, kullanım koşullarında ve sözleşmemizde de
+				onayladığınız üzere mevcut değildir.</value>
+  </data>
+  <data name="FSBRoomType" xml:space="preserve">
+    <value>Standard Oda -  İptal Edilemez</value>
+  </data>
+  <data name="FullFare" xml:space="preserve">
+    <value>Promosyonsuz</value>
+  </data>
+  <data name="GeneralProvision" xml:space="preserve">
+    <value>GENEL HÜKÜMLER</value>
+  </data>
+  <data name="GeneralTerm" xml:space="preserve">
+    <value>Satışa devam etmek için, Mesafeli Satış Sözleşmesini ve Ön bilgilendirme formunu kabul etmelisiniz.</value>
+  </data>
+  <data name="GeneralTerm1" xml:space="preserve">
+    <value>Satışa devam etmek için, Mesafeli Satış Sözleşmesini kabul etmelisiniz</value>
+  </data>
+  <data name="GeneralTerm2" xml:space="preserve">
+    <value>Satışa devam etmek için, Ön bilgilendirme formunu kabul etmelisiniz.</value>
+  </data>
+  <data name="GeneralTerm3" xml:space="preserve">
+    <value>Satışa devam etmek için, Mesafeli Satış Sözleşmesini, Ön bilgilendirme formunu ve Expedia Cancellation policy kabul etmelisiniz.</value>
+  </data>
+  <data name="GeneralTerm4" xml:space="preserve">
+    <value>Satışa devam etmek için, Expedia cancellation policy kabul etmelisiniz.</value>
+  </data>
+  <data name="GeneralTerm5" xml:space="preserve">
+    <value>Satışa devam etmek için, Ön bilgilendirme formunu ve Expedia Cancellation policy kabul etmelisiniz.</value>
+  </data>
+  <data name="GeneralTerm6" xml:space="preserve">
+    <value>Satışa devam etmek için, Mesafeli Satış Sözleşmesini ve Expedia Cancellation policy kabul etmelisiniz.</value>
+  </data>
+  <data name="GeneralTitle1" xml:space="preserve">
+    <value>Alıcı, Tesis’in ve/veya tedarikçinin &lt;a href="https://www.aracvararac.com"&gt;www.aracvararac.com&lt;/a&gt; üzerinde ürün/hizmet sayfasında yer verdiği her türlü açıklamasından, sözleşme konusu ürün/hizmetin eksiksiz, siparişte belirtilen niteliklere uygun olarak teslim edilmesinden sorumlu olduğunu kabul, beyan ve taahhüt eder.</value>
+  </data>
+  <data name="GeneralTitle2" xml:space="preserve">
+    <value>Alıcı bu sözleşme öncesinde, Tesis ve/veya tedarikçi tarafından ürün sayfasında yer verilen ürün/hizmetin satış fiyatı, ödeme şekli, temel niteliklerine ilişkin bilgiler dahil olmak üzere, ürün/hizmet ile ilgili her türlü bilgiyi, bu sözleşmenin 3. Madesinde belirtilen ürün/hizmete ilişkin bilgileri okuduğunu, anladığını ve işbu sözleşme akdedilmeden once gerekli teyidi verdiğini kabul ve beyan eder.</value>
+  </data>
+  <data name="GeneralTitle3" xml:space="preserve">
+    <value>Alıcı, işbu sözleşme öncesinde “Ön Bilgilendirme Formu”nu teyit ettiğini kabul, beyan ve taahhüt eder.</value>
+  </data>
+  <data name="GeneralTitle4" xml:space="preserve">
+    <value>Taraflar, bu sözleşmedeki diğer şartların yanı sıra 4077 sayılı Tüketicinin Korunması Hakkındaki Kanun ve Mesafeli Sözleşmelere dair Yönetmelik hükümlerini kabul ettiklerini ve bu hükümlere göre hareket edeceklerini kabul, beyan ve taahhüt ederler.</value>
+  </data>
+  <data name="GeneralTitle5" xml:space="preserve">
+    <value>Bu sözleşmenin tüm maddeleri, Alıcı ve Satıcı tarafından okunmuş ve kabul edilmiş olup, bu sözleşmenin yürürlüğe girmesi Alıcı tarafından elektronik olarak onaylaması ile başlar.</value>
+  </data>
+  <data name="GeneralTitle6" xml:space="preserve">
+    <value>Alıcı ve Satıcı, sözleşmeye konu olan ürün ve/veya hizmetin sunulmasından kaynaklanan bütün sorumluluğun Tesis ve/veya tedarikçi’ye  ait olduğunu, Alıcı ve Satıcı arasındaki bu sözleşmenin tarafı olmayan www.aracvararac.com sitesinin hiçbir sorumluluk ve yükümlülüğünün bulunmadığını kabul, beyan ve taahhüt ederler.</value>
+  </data>
+  <data name="GeneralTitle7" xml:space="preserve">
+    <value>aracvararac Kullanıcı Sözleşmesi ve Kullanım Koşullarından kaynaklanan yükümlülükler, Alıcı ve Satıcı tarafından bu sözleşmenin tamamlayıcı bir parçası olarak kabul, beyan ve taahhüt edilir.</value>
+  </data>
+  <data name="GeneralTotal" xml:space="preserve">
+    <value>Toplam</value>
+  </data>
+  <data name="GiveOffer" xml:space="preserve">
+    <value>Hemen Teklif Ver</value>
+  </data>
+  <data name="GoingTo" xml:space="preserve">
+    <value>Nereye</value>
+  </data>
+  <data name="GoTitle" xml:space="preserve">
+    <value>Gidiş</value>
+  </data>
+  <data name="GovermentNoTitle" xml:space="preserve">
+    <value>TC Kimlik No</value>
+  </data>
+  <data name="GuestName" xml:space="preserve">
+    <value>Misafir İsmi</value>
+  </data>
+  <data name="GzlOtel" xml:space="preserve">
+    <value>Konaklama rakamınızın toplam tutarı, kredi kartınızdan aracvararac tarafından tahsil edilmiş durumdadır.Otele, olur ise ekstra harcamalarınız haricinde herhangi bir ödeme yapmayınız.</value>
+  </data>
+  <data name="GzlOtel1" xml:space="preserve">
+    <value>Faturanız aracvararac tarafından isminize hazırlanmış durumdadır. Faturanızın başka bir isim veya şirket için hazırlanmasını isterseniz &lt;a href="mailto:bilgi@aracvararac.com"&gt;bilgi@aracvararac.com&lt;/a&gt; adresine fatura detaylarınızı göndermeniz yeterli olacaktır.</value>
+  </data>
+  <data name="GzlOtel2" xml:space="preserve">
+    <value>Gizli otel modülü ile yapmış olduğunuz bu rezervasyon için iptal ve/veya tarih değişikliği seçenekleri, kullanım koşulları ve sözleşmelerimizde onayladığınız üzere mevcut olmayıp, Tesis tarafından para iadesi yapılmamaktadır.</value>
+  </data>
+  <data name="GzlOtel3" xml:space="preserve">
+    <value>Fiyatını Sen Belirle modülü aracılığı ile yapmış olduğunuz bu rezervasyon için iptal ve/veya tarih değişikliği seçenekleri, kullanım koşulları ve sözleşmelerimizde onayladığınız üzere mevcut olmayıp, Tesis tarafından para iadesi yapılmamaktadır.</value>
+  </data>
+  <data name="HelpPhone" xml:space="preserve">
+    <value>numaralı telefonu arayın,yardımcı olalım</value>
+  </data>
+  <data name="HelpTitle" xml:space="preserve">
+    <value>Yardım mı lazım?</value>
+  </data>
+  <data name="HiddenPictures" xml:space="preserve">
+    <value>Resimleri Gizliyoruz.</value>
+  </data>
+  <data name="Hirer" xml:space="preserve">
+    <value>Kiralayan Kişi</value>
+  </data>
+  <data name="HomePage" xml:space="preserve">
+    <value>Anasayfa</value>
+  </data>
+  <data name="Hotel" xml:space="preserve">
+    <value>Otel</value>
+  </data>
+  <data name="HotelAccess" xml:space="preserve">
+    <value>Otele Ulaştığınızda</value>
+  </data>
+  <data name="HotelAddress" xml:space="preserve">
+    <value>Otel Adresi</value>
+  </data>
+  <data name="HotelAndFlight" xml:space="preserve">
+    <value>Hotel + Uçak</value>
+  </data>
+  <data name="HotelCondition" xml:space="preserve">
+    <value>Otelin Genel Durumu</value>
+  </data>
+  <data name="HotelCriteria" xml:space="preserve">
+    <value>Kriterinizi Seçin</value>
+  </data>
+  <data name="HotelDateError" xml:space="preserve">
+    <value>Lütfen tarih seçiniz.</value>
+  </data>
+  <data name="HotelDisc" xml:space="preserve">
+    <value>Otellerde %60'a varan indirimler.</value>
+  </data>
+  <data name="HotelDiscDesc" xml:space="preserve">
+    <value>Kendi fiyatınızı, bölgenizi ve yıldız kriterini belirleyin, biz en uygun ve en kaliteli bağımsız oteli bulalım!</value>
+  </data>
+  <data name="HotelDiscountNews" xml:space="preserve">
+    <value>Otellerde %60'lara varan indirimler!</value>
+  </data>
+  <data name="HotelError" xml:space="preserve">
+    <value>Aradığınız kriterlere uygun otel bulunamadı.</value>
+  </data>
+  <data name="HotelError2" xml:space="preserve">
+    <value>Aradığınız kriterlere uygun gizli otel bulunamadı.</value>
+  </data>
+  <data name="HotelFilterError" xml:space="preserve">
+    <value>-region -fiyat -star kayıt bulunamadı. Kriterinizi değiştirerek tekrar deneyin.</value>
+  </data>
+  <data name="HotelName" xml:space="preserve">
+    <value>Otel İsmi</value>
+  </data>
+  <data name="HotelNego" xml:space="preserve">
+    <value>Otellerle Pazarlık İmkanı</value>
+  </data>
+  <data name="HotelNonFound" xml:space="preserve">
+    <value>Aradiginiz kriterde otel bulunamadi. Kriterinizi değiştirerek tekrar deneyin.</value>
+  </data>
+  <data name="HotelOffer" xml:space="preserve">
+    <value>Bir Teklif Uzaklıkta</value>
+  </data>
+  <data name="HotelOfferInfo" xml:space="preserve">
+    <value>&lt;font color="#009eca" style="font-size:16pt;"&gt;&lt;b&gt;aracvararac İndirim&lt;/b&gt;&lt;br /&gt; &lt;b&gt;Garantisi&lt;/b&gt;&lt;/font&gt; &lt;font color="#009eca" style="font-size:16pt;"&gt;&lt;b&gt;Nedir?&lt;/b&gt;&lt;/font&gt;&lt;br /&gt;&lt;br /&gt;
+Sitemizde 280.000 üzerinde Otel, &lt;b&gt;En Düşük Fiyat Garantisi&lt;/b&gt; ile zaten bulunmaktadır.&lt;b&gt;aracvararac İndirim Garantisi&lt;/b&gt;, bu fiyatlardan da
+&lt;b&gt;daha düşük fiyatlar ile konaklama&lt;/b&gt; imkanı
+sağlar.İstediğiniz her otelin her odası için, normal fiyatları görür, ödemek istediğiniz fiyatı teklif edersiniz. Sistem, doğası gereği, kesinlikle bir indirim almanızı garanti altına almaktadır. Kazandığınız indirim oranı; teklif ettiğiniz fiyat ile odanın normal fiyatı arasındaki fark kadar olacaktır.</value>
+  </data>
+  <data name="HotelOfferMailHeader" xml:space="preserve">
+    <value>Vermiş olduğunuz teklif, aşağıdaki kriterler ile otele gönderilmiştir.  En geç 24 saat içerisinde size geri döneceğiz</value>
+  </data>
+  <data name="HotelPhone" xml:space="preserve">
+    <value>Otel Telefonu</value>
+  </data>
+  <data name="HotelProp" xml:space="preserve">
+    <value>Otel Özellikleri</value>
+  </data>
+  <data name="HotelRemeiningRoom" xml:space="preserve">
+    <value>Son &lt;?rCount?&gt; oda</value>
+  </data>
+  <data name="HotelRoomDimension" xml:space="preserve">
+    <value>Oda Boyutu</value>
+  </data>
+  <data name="HotelSelfPriceMailHeader" xml:space="preserve">
+    <value>teşekkürler! Secmiş olduğunuz otel ile teklifiniz paylaşılmıştır</value>
+  </data>
+  <data name="HotelStar2" xml:space="preserve">
+    <value>Yıldızlı Ekonomik</value>
+  </data>
+  <data name="HotelStar3" xml:space="preserve">
+    <value>Yıldızlı Kalite</value>
+  </data>
+  <data name="HotelStar4" xml:space="preserve">
+    <value>Yıldızlı Süper</value>
+  </data>
+  <data name="HotelStar5" xml:space="preserve">
+    <value>Yıldızlı Lüks</value>
+  </data>
+  <data name="HotelStarText" xml:space="preserve">
+    <value>Yıldızlı Otel</value>
+  </data>
+  <data name="HotelStr" xml:space="preserve">
+    <value>Otel için yıldız seviyesi belirleyin.</value>
+  </data>
+  <data name="HotelTaxes" xml:space="preserve">
+    <value>Vergiler</value>
+  </data>
+  <data name="HotelTitle" xml:space="preserve">
+    <value>Hotel</value>
+  </data>
+  <data name="HotelWant" xml:space="preserve">
+    <value>İstediğiniz Otel İstediğiniz Fiyata</value>
+  </data>
+  <data name="HotelWish" xml:space="preserve">
+    <value>Dilediğin Otel Dilediğin Fiyata</value>
+  </data>
+  <data name="IfNotOffer" xml:space="preserve">
+    <value>Teklifinizin kabul edilmemesi durumunda:</value>
+  </data>
+  <data name="IfNotOffer1" xml:space="preserve">
+    <value>Tarafınıza yeni bir teklif yapabilmenizi sağlayacak bir e posta mesajı gönderilecektir.</value>
+  </data>
+  <data name="IfOffer" xml:space="preserve">
+    <value>Teklifiniz kabul edilir edilmez;</value>
+  </data>
+  <data name="IfOffer1" xml:space="preserve">
+    <value>İptal edilemez şartlar ile toplam konaklama rakamı kredi kartınızdan tahsil edilecek</value>
+  </data>
+  <data name="IfOffer2" xml:space="preserve">
+    <value>Rezervasyon konfirmasyonunuz, Otel ismi ve diğer tüm detayları ile anında e-posta olarak tarafınıza gönderilecektir.</value>
+  </data>
+  <data name="IfOfferAccept" xml:space="preserve">
+    <value>Teklif otel tarafından kabul edilirse toplam kazancınız!</value>
+  </data>
+  <data name="IncludedPrice" xml:space="preserve">
+    <value>Fiyata Dahil</value>
+  </data>
+  <data name="IncludeTitle" xml:space="preserve">
+    <value>Dahil</value>
+  </data>
+  <data name="IncludingRent" xml:space="preserve">
+    <value>Kira Bedeli (Günlük) (KDV DAHİL)</value>
+  </data>
+  <data name="IncludingTotal" xml:space="preserve">
+    <value>Toplam Tutar (KDV DAHİL)</value>
+  </data>
+  <data name="Inclusive" xml:space="preserve">
+    <value>Dahil</value>
+  </data>
+  <data name="IncorrectPass" xml:space="preserve">
+    <value>Girmiş olduğunuz eski şifreniz yanlıştır.Lütfen tekrar deneyiniz.</value>
+  </data>
+  <data name="IncreaseChance" xml:space="preserve">
+    <value>Şansınızı arttırmak için birden fazla muhit seçin.</value>
+  </data>
+  <data name="Infant" xml:space="preserve">
+    <value>Bebek</value>
+  </data>
+  <data name="InfantNumber" xml:space="preserve">
+    <value>Bebek Yaşı</value>
+  </data>
+  <data name="Installment" xml:space="preserve">
+    <value>Taksit</value>
+  </data>
+  <data name="InstallmentCount" xml:space="preserve">
+    <value>Taksit Sayısı</value>
+  </data>
+  <data name="Installments" xml:space="preserve">
+    <value>Taksit Seçenekleri</value>
+  </data>
+  <data name="InstallmentTop" xml:space="preserve">
+    <value>Toplam</value>
+  </data>
+  <data name="InvalidChild" xml:space="preserve">
+    <value>Cocuk yasi 2-12 araliginda olmalidir. Lutfen tekrar deneyiniz.</value>
+  </data>
+  <data name="InvalidInfant" xml:space="preserve">
+    <value>Bebek yasi 2 yasindan buyuk olamaz. Lutfen tekrar deneyiniz.</value>
+  </data>
+  <data name="InvalidOlder" xml:space="preserve">
+    <value>Yasli yasi 65-100 araliginda olmalidir. Lutfen tekrar deneyiniz.</value>
+  </data>
+  <data name="InvalidStudent" xml:space="preserve">
+    <value>Ogrenci yasi 13-25 araliginda olmalidir. Lutfen tekrar deneyiniz.</value>
+  </data>
+  <data name="InvoiceAd" xml:space="preserve">
+    <value>Fatura Adresi</value>
+  </data>
+  <data name="InvoiceCit" xml:space="preserve">
+    <value>Fatura için Şehir</value>
+  </data>
+  <data name="Invoiced" xml:space="preserve">
+    <value>Fatura Bilgileri</value>
+  </data>
+  <data name="InvoiceTitle" xml:space="preserve">
+    <value>Fatura İstiyorum</value>
+  </data>
+  <data name="InvoiceTo" xml:space="preserve">
+    <value>Fatura Adi</value>
+  </data>
+  <data name="IstanbulHotels" xml:space="preserve">
+    <value>İstanbul Otelleri</value>
+  </data>
+  <data name="IzmirHotels" xml:space="preserve">
+    <value>İzmir Otelleri</value>
+  </data>
+  <data name="Jan" xml:space="preserve">
+    <value>Ocak</value>
+  </data>
+  <data name="July" xml:space="preserve">
+    <value>Temmuz</value>
+  </data>
+  <data name="Jun" xml:space="preserve">
+    <value>Haziran</value>
+  </data>
+  <data name="KnowBeforeYouGo" xml:space="preserve">
+    <value>Gitmeden Bilin</value>
+  </data>
+  <data name="LandMarkText" xml:space="preserve">
+    <value>Simgesel Yapılar</value>
+  </data>
+  <data name="LastMinDeal" xml:space="preserve">
+    <value>aracvararac Gizli Otel Fırsatları</value>
+  </data>
+  <data name="LastMinFlight" xml:space="preserve">
+    <value>aracvararac Uçak Fırsatları</value>
+  </data>
+  <data name="LastMinProm" xml:space="preserve">
+    <value>Sadece üyelerimize özel promosyonlardan ve indirimlerden yararlanmak için hemen üye olun:</value>
+  </data>
+  <data name="LastPromotion" xml:space="preserve">
+    <value>Son dakka promosyonları</value>
+  </data>
+  <data name="ListPrice" xml:space="preserve">
+    <value>Liste Fiyatları</value>
+  </data>
+  <data name="LoginAndCont" xml:space="preserve">
+    <value>GİR VE DEVAM ET</value>
+  </data>
+  <data name="LoginWithoutLogin" xml:space="preserve">
+    <value>Giriş Yapmadan Devam Et</value>
+  </data>
+  <data name="LogonAlert" xml:space="preserve">
+    <value>Girmiş olduğunuz mail adresi sistemimizde bulunmamaktadır.</value>
+  </data>
+  <data name="LogonAlert1" xml:space="preserve">
+    <value>Şifreniz mail adresinize gönderilmiştir.</value>
+  </data>
+  <data name="LongWaitError" xml:space="preserve">
+    <value>Uzun süre beklediniz. Yeni bir arama yapınız.</value>
+  </data>
+  <data name="LowMail" xml:space="preserve">
+    <value>Başarılı bir teklif için dikkat etmeniz gereken noktaları aşağıda bulabilirsiniz;</value>
+  </data>
+  <data name="LowMail1" xml:space="preserve">
+    <value>Bölge veya bölgeler ilave edin..</value>
+  </data>
+  <data name="LowMail2" xml:space="preserve">
+    <value>Seçtiğiniz yıldız kriterini değiştirin...</value>
+  </data>
+  <data name="LowMail3" xml:space="preserve">
+    <value>Tarihlerinizi değiştirin...</value>
+  </data>
+  <data name="LowMail4" xml:space="preserve">
+    <value>Bütün alternatifleri,denediğiniz ve verebileceğiniz maksimum rakamı da teklif ettiğiniz halde, teklifiniz hala kabul görmüyorsa, seçtiğiniz konaklama bölgesinde sizin tarihlerinizde boş
+						oda kalmamış olabilir.</value>
+  </data>
+  <data name="LowOfferMsg" xml:space="preserve">
+    <value>Teklifiniz çok düşük.</value>
+  </data>
+  <data name="Lunch" xml:space="preserve">
+    <value>Öğle Yemeği</value>
+  </data>
+  <data name="MailHeader" xml:space="preserve">
+    <value>&lt;a href="https://www.aracvararac.com"&gt;&lt;img src="http://aracvararac.com/Content/images/logo-email.png"/&gt;&lt;/a&gt;</value>
+  </data>
+  <data name="MailUnavaible" xml:space="preserve">
+    <value>Mail Adresleri Birbiri ile Uyuşmamaktadır.</value>
+  </data>
+  <data name="Male" xml:space="preserve">
+    <value>Erkek</value>
+  </data>
+  <data name="Map" xml:space="preserve">
+    <value>Ulaşım</value>
+  </data>
+  <data name="MapRegion" xml:space="preserve">
+    <value>Civarındaki oteller</value>
+  </data>
+  <data name="Mar" xml:space="preserve">
+    <value>Mart</value>
+  </data>
+  <data name="MaxNumber" xml:space="preserve">
+    <value>Maksimum kişi sayısı</value>
+  </data>
+  <data name="MaxPas" xml:space="preserve">
+    <value>Maksimum yolcu sayısı 7 kişi olmalıdır.</value>
+  </data>
+  <data name="May" xml:space="preserve">
+    <value>Mayıs</value>
+  </data>
+  <data name="Member" xml:space="preserve">
+    <value>Üyemiz</value>
+  </data>
+  <data name="MemberBec" xml:space="preserve">
+    <value>ÜYE OL</value>
+  </data>
+  <data name="MemberLog" xml:space="preserve">
+    <value>Üye Girişi</value>
+  </data>
+  <data name="MembershipAdv" xml:space="preserve">
+    <value>Üyelik Avantajları</value>
+  </data>
+  <data name="Message" xml:space="preserve">
+    <value>Mesaj</value>
+  </data>
+  <data name="MessageHere" xml:space="preserve">
+    <value>Mesajınızı Yazınız</value>
+  </data>
+  <data name="MessageMail" xml:space="preserve">
+    <value>Göndermiş olduğunuz mesaj aşağıdaki şekli ile tarafımıza ulaşmış durumdadır.</value>
+  </data>
+  <data name="MessageMail1" xml:space="preserve">
+    <value>Gerekli değerlendirme yapıldıktan sonra</value>
+  </data>
+  <data name="MessageMail2" xml:space="preserve">
+    <value>ekibi tarafından en kısa sürede tarafınıza geri dönüş yapılacaktır.</value>
+  </data>
+  <data name="Military" xml:space="preserve">
+    <value>Asker</value>
+  </data>
+  <data name="MinuteTitle" xml:space="preserve">
+    <value>dakika</value>
+  </data>
+  <data name="MoreInfo" xml:space="preserve">
+    <value>Daha fazla bilgi</value>
+  </data>
+  <data name="MostPopular" xml:space="preserve">
+    <value>en popüler oteller</value>
+  </data>
+  <data name="MsgSent" xml:space="preserve">
+    <value>Gönderdiğiniz mesajlar en kısa sürede aracvararac ekibi tarafından değerlendirilecektir.</value>
+  </data>
+  <data name="MyAccount" xml:space="preserve">
+    <value>Hesabım</value>
+  </data>
+  <data name="NameSurname" xml:space="preserve">
+    <value>Ad Soyad</value>
+  </data>
+  <data name="NearOtel" xml:space="preserve">
+    <value>Yakınlarında Bir Hotel</value>
+  </data>
+  <data name="NetFare" xml:space="preserve">
+    <value>Net Fiyat</value>
+  </data>
+  <data name="NewDataFSB" xml:space="preserve">
+    <value>Hesapli Ucak Biletleri</value>
+  </data>
+  <data name="NewMember" xml:space="preserve">
+    <value>Yeni Üye Olmak İçin Tıklayınız.</value>
+  </data>
+  <data name="NewMessage" xml:space="preserve">
+    <value>Yeni Mesaj</value>
+  </data>
+  <data name="NewPassword" xml:space="preserve">
+    <value>Yeni Şifre</value>
+  </data>
+  <data name="NewsLetter" xml:space="preserve">
+    <value>Kampanyalardan ve duyurulardan email yoluyla haberdar olmak istiyorum.</value>
+  </data>
+  <data name="NewsletterTitle" xml:space="preserve">
+    <value>Kampanya ve duyurulardan email yoluyla haberdar olmak istiyorum.</value>
+  </data>
+  <data name="NewsTitle" xml:space="preserve">
+    <value>Haberler</value>
+  </data>
+  <data name="Next" xml:space="preserve">
+    <value>İleri</value>
+  </data>
+  <data name="NiceTrip" xml:space="preserve">
+    <value>İyi yolculuklar dileriz..</value>
+  </data>
+  <data name="NightOffer" xml:space="preserve">
+    <value>Oda Başına Gecelik Teklif:</value>
+  </data>
+  <data name="NightPrice" xml:space="preserve">
+    <value>Oda Başına Gecelik:</value>
+  </data>
+  <data name="Nights" xml:space="preserve">
+    <value>Gece Sayısı</value>
+  </data>
+  <data name="NightTitle" xml:space="preserve">
+    <value>Gece</value>
+  </data>
+  <data name="NoFlightError" xml:space="preserve">
+    <value>Üzgünüz,seçtiğiniz tarih için dönüş uçuşu bulunamadı.Tarihinizi değiştirip tekrar deneyiniz.</value>
+  </data>
+  <data name="NonIncludePrice" xml:space="preserve">
+    <value>Fiyata Dahil Değil</value>
+  </data>
+  <data name="NonRefund" xml:space="preserve">
+    <value>İptal Edilemez</value>
+  </data>
+  <data name="NonStopTitle" xml:space="preserve">
+    <value>Direkt uçuş</value>
+  </data>
+  <data name="NoReservation" xml:space="preserve">
+    <value>Şu an herhangi bir rezervasyonunuz bulunmamaktadır.</value>
+  </data>
+  <data name="NoReviews" xml:space="preserve">
+    <value>Şu an herhangi bir otel değerlendirmeniz bulunmamaktadır.</value>
+  </data>
+  <data name="NormalPrice" xml:space="preserve">
+    <value>Otelin Normal Fiyatı</value>
+  </data>
+  <data name="NoSpec" xml:space="preserve">
+    <value>Belirtilmemiş</value>
+  </data>
+  <data name="NotAcceptOffer" xml:space="preserve">
+    <value>Kabul edilmez ise;</value>
+  </data>
+  <data name="NotAcceptOffer1" xml:space="preserve">
+    <value>Kredi kartınız ile hiçbir işlem yapılmaz.</value>
+  </data>
+  <data name="NotAcceptOffer2" xml:space="preserve">
+    <value>Durum ile alakalı bilgilendirilirsiniz.</value>
+  </data>
+  <data name="NotAcceptOffer3" xml:space="preserve">
+    <value>Aynı otele yeni bir teklif gönderebilir veya İstediğiniz başka otellere yeni teklifler gönderebilirsiniz.</value>
+  </data>
+  <data name="NotAMember" xml:space="preserve">
+    <value>Üye değil misiniz? Giriş yapmamayı mı tercih ediyorsunuz?&lt;br /&gt;
+			Buradan devam ediniz!</value>
+  </data>
+  <data name="Nov" xml:space="preserve">
+    <value>Kasım</value>
+  </data>
+  <data name="NumberDoors" xml:space="preserve">
+    <value>Kapı Sayısı</value>
+  </data>
+  <data name="Numberofnights" xml:space="preserve">
+    <value>Toplam Gün</value>
+  </data>
+  <data name="NumberPeople" xml:space="preserve">
+    <value>Kişi Sayısı</value>
+  </data>
+  <data name="NumericAlert" xml:space="preserve">
+    <value>Sadece sayısal değer giriniz. Küsürat için nokta kullanınız.</value>
+  </data>
+  <data name="Oct" xml:space="preserve">
+    <value>Ekim</value>
+  </data>
+  <data name="OfferAccept" xml:space="preserve">
+    <value>Kabul edilir ise;</value>
+  </data>
+  <data name="OfferBoxText" xml:space="preserve">
+    <value>veya &lt;br /&gt;&lt;b&gt;Fiyatı Sen Belirle:&lt;/b&gt;&lt;br /&gt;&lt;i&gt;Gece Başı&lt;/i&gt;</value>
+  </data>
+  <data name="OfferDesc" xml:space="preserve">
+    <value>Verdiğiniz kriterlere göre günlük ödemek istediğiniz miktarı girin ve biz bu teklifinizi seçmiş olduğunuz
+							bölgedeki otellere gönderelim.</value>
+  </data>
+  <data name="OfferDetail" xml:space="preserve">
+    <value>Fiyatı Sen Belirle Tüm Detayları</value>
+  </data>
+  <data name="OfferLow" xml:space="preserve">
+    <value>Teklifiniz çok düşük, oteller tarafından kabul edilmeyebilir.</value>
+  </data>
+  <data name="OfferMail" xml:space="preserve">
+    <value>Teklif No</value>
+  </data>
+  <data name="OfferSendNull" xml:space="preserve">
+    <value>Teklif girmelisiniz.</value>
+  </data>
+  <data name="OfferSent" xml:space="preserve">
+    <value>Teklifiniz seçmiş olduğunuz hotellere gönderilmiştir.</value>
+  </data>
+  <data name="OfferSent2" xml:space="preserve">
+    <value>Teklifiniz 24 saat içinde seçmiş olduğunuz bölgedeki hoteller tarafından değerlendirilip sonuç mail ile bildirilecektir.</value>
+  </data>
+  <data name="OfferSentMail" xml:space="preserve">
+    <value>Vermiş olduğunuz teklif, istemiş olduğunuz kriterlere uyan ve normal günlük fiyatı teklifinizin üzerinde olan bölge otellerine gönderilmiştir.</value>
+  </data>
+  <data name="OfferTitle" xml:space="preserve">
+    <value>Fiyat Belirleyin</value>
+  </data>
+  <data name="OfferValue" xml:space="preserve">
+    <value>Teklifiniz 0 değerinde olamaz.</value>
+  </data>
+  <data name="OfficeAuth" xml:space="preserve">
+    <value>Ofis Yetkilisi</value>
+  </data>
+  <data name="OfficeText" xml:space="preserve">
+    <value>Ofis :</value>
+  </data>
+  <data name="OldPassword" xml:space="preserve">
+    <value>Eski Şifre</value>
+  </data>
+  <data name="OldPasswordMail" xml:space="preserve">
+    <value>Eski Şifeniz:</value>
+  </data>
+  <data name="OldPasswordMail1" xml:space="preserve">
+    <value>Dilerseniz,aşağıdaki butonu tıklayarak,giriş yapıp yeni şifrenizi oluşturabilirsiniz.</value>
+  </data>
+  <data name="OneWay" xml:space="preserve">
+    <value>Tek Yön</value>
+  </data>
+  <data name="OpsionDateText" xml:space="preserve">
+    <value>Opsiyon Tarihi</value>
+  </data>
+  <data name="OpsiyonDateText" xml:space="preserve">
+    <value>Opsiyon Tarihi</value>
+  </data>
+  <data name="OpsiyonDateTitle" xml:space="preserve">
+    <value>Opsiyon Tarihi</value>
+  </data>
+  <data name="Order" xml:space="preserve">
+    <value>Sipariş Numarası</value>
+  </data>
+  <data name="OtelDetailText" xml:space="preserve">
+    <value>Otel Detayı</value>
+  </data>
+  <data name="OtelType" xml:space="preserve">
+    <value>Otel Teması</value>
+  </data>
+  <data name="OtherNews" xml:space="preserve">
+    <value>Diğer Haberler</value>
+  </data>
+  <data name="OtherRegions" xml:space="preserve">
+    <value>Semtler</value>
+  </data>
+  <data name="OtherRooms" xml:space="preserve">
+    <value>Diğer Odalar</value>
+  </data>
+  <data name="OverYears" xml:space="preserve">
+    <value>65 Yaş Üstü</value>
+  </data>
+  <data name="PackageCheckOnMap" xml:space="preserve">
+    <value>Haritada Gör</value>
+  </data>
+  <data name="PackageCVCTitle" xml:space="preserve">
+    <value>Nedir?</value>
+  </data>
+  <data name="PackageDescription" xml:space="preserve">
+    <value>Aşağıdaki fiyatlar Uçak + Hotel fiyatlarını ve vergilerini içerir, valiz bedeli ve havayoluna ait harçları içermez.</value>
+  </data>
+  <data name="PackageFlightNonFound" xml:space="preserve">
+    <value>Aradığınız bölgede havaalanı bulunamadı.</value>
+  </data>
+  <data name="PackageHotelDate" xml:space="preserve">
+    <value>Otel için farklı tarih belirt.</value>
+  </data>
+  <data name="PackageHotelEndDateError" xml:space="preserve">
+    <value>Otel için çıkış tarihi seçmelisiniz.</value>
+  </data>
+  <data name="PackageHotelStartDateError" xml:space="preserve">
+    <value>Otel için giriş tarihi seçmelisiniz.</value>
+  </data>
+  <data name="PackageInfoTitle" xml:space="preserve">
+    <value>Hotel + Uçak vergi ve harç dahil</value>
+  </data>
+  <data name="PackageInvoiceTitle" xml:space="preserve">
+    <value>Fatura İstiyorum</value>
+  </data>
+  <data name="PackageMailSept" xml:space="preserve">
+    <value>Uçak Rezervasyon Bilgileriniz</value>
+  </data>
+  <data name="PackageMailTitle" xml:space="preserve">
+    <value>aracvararac Paket (Otel + Uçak) Rezervasyonu</value>
+  </data>
+  <data name="PackageMenuTitle" xml:space="preserve">
+    <value>Otel + Uçak</value>
+  </data>
+  <data name="PackageNonFlight" xml:space="preserve">
+    <value>Arama kriterlerinize uygun uçuş bulunamadı. Arama kriterinizi değiştirerek tekrar deneyin.</value>
+  </data>
+  <data name="PackageNote" xml:space="preserve">
+    <value>adam başı &lt;br /&gt; uçak+otel, vergi ve harç dahil</value>
+  </data>
+  <data name="PackageOriginalPrice" xml:space="preserve">
+    <value>Otel için çekilecek tutar</value>
+  </data>
+  <data name="PackageResultEnd" xml:space="preserve">
+    <value>seçeneği bulundu</value>
+  </data>
+  <data name="PackageResultFront" xml:space="preserve">
+    <value>Aramanıza uygun</value>
+  </data>
+  <data name="PackageSearchResult" xml:space="preserve">
+    <value>Otel + Uçak Arama Sonuçları</value>
+  </data>
+  <data name="PackageSearchTitle" xml:space="preserve">
+    <value>Otel + Uçak Arama</value>
+  </data>
+  <data name="PackageSelect" xml:space="preserve">
+    <value>Paketi Seç</value>
+  </data>
+  <data name="PackageSelectThis" xml:space="preserve">
+    <value>BU PAKETİ SEÇ</value>
+  </data>
+  <data name="PackageUpgrade" xml:space="preserve">
+    <value>Yükselt</value>
+  </data>
+  <data name="PaketTitle" xml:space="preserve">
+    <value>Paket</value>
+  </data>
+  <data name="PartiesTitle" xml:space="preserve">
+    <value>TARAFLAR</value>
+  </data>
+  <data name="PasInfo" xml:space="preserve">
+    <value>Yolcu Bilgileri</value>
+  </data>
+  <data name="PassBtn" xml:space="preserve">
+    <value>Şifremi Yolla</value>
+  </data>
+  <data name="PassChange" xml:space="preserve">
+    <value>ŞİFRE DEĞİŞTİR</value>
+  </data>
+  <data name="PassCode" xml:space="preserve">
+    <value>Şifreniz.</value>
+  </data>
+  <data name="PassCodeAgain" xml:space="preserve">
+    <value>Şifre(tekrar)</value>
+  </data>
+  <data name="PassedTime" xml:space="preserve">
+    <value>Bu Oda İptal Edilemez.</value>
+  </data>
+  <data name="Passenger" xml:space="preserve">
+    <value>Yolcu</value>
+  </data>
+  <data name="PassengerInfo" xml:space="preserve">
+    <value>YOLCU BİLGİLERİ</value>
+  </data>
+  <data name="PassengerName" xml:space="preserve">
+    <value>Yolcu İsmi</value>
+  </data>
+  <data name="PassengerType" xml:space="preserve">
+    <value>Lütfen en az bir yolcu türü seçiniz.</value>
+  </data>
+  <data name="PassType" xml:space="preserve">
+    <value>Yolcu Türü</value>
+  </data>
+  <data name="PasswordInformation" xml:space="preserve">
+    <value>Şifre Bilginiz.</value>
+  </data>
+  <data name="PaxCount" xml:space="preserve">
+    <value>Kişi Sayısı</value>
+  </data>
+  <data name="Payment" xml:space="preserve">
+    <value>Konaklama faturanız otel tarafından hazırlanacak, çıkış esnasında verilecektir. Faturanız, girişiniz sırasında bildireceğiniz herhangi başka bir isim veya adres için otel tarafından hazırlanabilmektedir. Herhangi bir bildirimde bulunmadığınız takdirde faturanız  sipariş formundaki bilgiler ile hazırlanacaktır.</value>
+  </data>
+  <data name="Payment1" xml:space="preserve">
+    <value>Alıcı, işbu “Ön Bilgilendirme Formu”nda yer alan ürün ve/veya hizmetlerin temel nitelikleri, satış fiyatı ve  ödeme şekline ilişkin bilgileri dahil olmak üzere ürün ve hizmetler ile alakalı her türlü bilgiyi okuduğunu, anladığını ve onayladığını kabul ve beyan eder.</value>
+  </data>
+  <data name="Payment2" xml:space="preserve">
+    <value>Alıcı, mesafeli sözleşmelerde ürünü ve/veya hizmeti teslim almasından itibaren 7 gün içerisinde Cayma Hakkı’nı kullabilir. Cayma Hakkı, malın teslimine ilişkin sözleşmelerde alıcının ürünü teslim almasından itibaren, ürün haricindeki hizmete dayalı sözleşmelerde ise sözleşmenin yapıldığı tarihten itibaren başlar. Alıcının, Cayma Hakkı kullanım talebini Satıcıya bildirmesi gerekmektedir.
+
+Alıcı “Mesafeli Sözleşmelere dair Yönetmelik”’in, Cayma Hakkı’nın kullanılamayacağı halleri düzenleyen  2.3, 5, 6, 7, 8 ve 9 numaralı maddeleri Kabul etmiştir.</value>
+  </data>
+  <data name="Payment3" xml:space="preserve">
+    <value>İşbu “Ön Bilgilendirme Formu” alıcı tarafından elektronik ortamda okunarak kabul edilmiştir.</value>
+  </data>
+  <data name="Payment4" xml:space="preserve">
+    <value>İşbu “Ön Bilgilendirme Formu” na konu olan ürün ve/veya hizmet’den kaynaklanan ihtilaflarda, Sanayi ve Ticaret Bakanlığınca ilan edilen değere kadar Tüketici Hakem Heyetleri ile Alıcı’nın ikamet alanındaki Tüketici Mahkemeleri yetkilidir.</value>
+  </data>
+  <data name="Payment5" xml:space="preserve">
+    <value>“Gizli Otel” ve/veya “Fiyatını Sen Belirle” modülleri ile yapılan bu işlem için Tesis ismi, kullanım koşullarımızda onayladığınız üzere satın alma işleminiz tamamlandıktan sonra bildirelecektir.</value>
+  </data>
+  <data name="Paymented1" xml:space="preserve">
+    <value>Ödeme, otele girişiniz esnasında Kredi Kartınız ile yapılacaktır.</value>
+  </data>
+  <data name="PaymentInfo" xml:space="preserve">
+    <value>Ödeme Bilgileri</value>
+  </data>
+  <data name="PaymentTerms" xml:space="preserve">
+    <value>ÖDEME ŞEKLİ</value>
+  </data>
+  <data name="PaymentTerms1" xml:space="preserve">
+    <value>Siparişin Onayı sırasında tüketici tarafından belitilen kredi kartı ile aracvararac’ya yapılacaktır.</value>
+  </data>
+  <data name="PerNight" xml:space="preserve">
+    <value>Gecelik Fiyat</value>
+  </data>
+  <data name="PerPerson" xml:space="preserve">
+    <value>Kişibaşı</value>
+  </data>
+  <data name="PersonalInfo" xml:space="preserve">
+    <value>Kişisel Bilgileriniz</value>
+  </data>
+  <data name="PhotoSlideTitle" xml:space="preserve">
+    <value>Bu son dakka fırsatları kaçmaz!</value>
+  </data>
+  <data name="Pick" xml:space="preserve">
+    <value>Seç</value>
+  </data>
+  <data name="PickCar" xml:space="preserve">
+    <value>SEÇ</value>
+  </data>
+  <data name="PickedCar" xml:space="preserve">
+    <value>SEÇİLDİ</value>
+  </data>
+  <data name="PickHotel" xml:space="preserve">
+    <value>SEÇ</value>
+  </data>
+  <data name="PickUp" xml:space="preserve">
+    <value>Alış</value>
+  </data>
+  <data name="PickUpDate" xml:space="preserve">
+    <value>Alış Tarihi</value>
+  </data>
+  <data name="PickupOffice" xml:space="preserve">
+    <value>Alış Ofisi</value>
+  </data>
+  <data name="PickUpPlace" xml:space="preserve">
+    <value>Alış Yeri</value>
+  </data>
+  <data name="PictureTitle" xml:space="preserve">
+    <value>RESİMLER</value>
+  </data>
+  <data name="Place" xml:space="preserve">
+    <value>Yer</value>
+  </data>
+  <data name="PlainingTitle" xml:space="preserve">
+    <value>Uçuş</value>
+  </data>
+  <data name="PlaneTitle" xml:space="preserve">
+    <value>Uçak</value>
+  </data>
+  <data name="PNR" xml:space="preserve">
+    <value>PNR Kodu</value>
+  </data>
+  <data name="PNRBookRsvText" xml:space="preserve">
+    <value>Rezervasyonunuzu Tamamlayın</value>
+  </data>
+  <data name="PNRButtonText" xml:space="preserve">
+    <value>Devam</value>
+  </data>
+  <data name="PNRNumberText" xml:space="preserve">
+    <value>PNR</value>
+  </data>
+  <data name="PNRReservationText" xml:space="preserve">
+    <value>Tebrikler, &lt;b&gt;rezervasyonunuz başarıyla tamamlandı&lt;/b&gt;, rezervasyon bilgileriniz email adresinize gönderildi. Biletinizi &lt;b&gt;
+90(312) 4414046&lt;/b&gt; No'lu telefondan bize ulaşarak kestirebilir ve ya ucak anasayfasıdan PNR ve soyadınızı sorgulatarak kendiniz alabilirsiniz.</value>
+  </data>
+  <data name="PNRRsvInfo" xml:space="preserve">
+    <value />
+  </data>
+  <data name="PNRStatusText" xml:space="preserve">
+    <value>Rezervasyon</value>
+  </data>
+  <data name="PNRSurnameText" xml:space="preserve">
+    <value>Soyadınız</value>
+  </data>
+  <data name="PopulerAirlineTitle" xml:space="preserve">
+    <value>Popüler Havayollari</value>
+  </data>
+  <data name="PreNotification" xml:space="preserve">
+    <value>Ön Bilgilendirme Formu</value>
+  </data>
+  <data name="Previous" xml:space="preserve">
+    <value>Geri</value>
+  </data>
+  <data name="Price" xml:space="preserve">
+    <value>Fiyat</value>
+  </data>
+  <data name="PriceDetail" xml:space="preserve">
+    <value>Fiyat Özeti</value>
+  </data>
+  <data name="PriceDetails" xml:space="preserve">
+    <value>Fiyat Detayları</value>
+  </data>
+  <data name="PriceEach" xml:space="preserve">
+    <value>Gün Gün Fiyat</value>
+  </data>
+  <data name="PriceIndex" xml:space="preserve">
+    <value>Fiyat İçeriği</value>
+  </data>
+  <data name="PriceLine" xml:space="preserve">
+    <value>TL</value>
+  </data>
+  <data name="PriceNumber" xml:space="preserve">
+    <value>Fiyatı Sadece Rakam Olarak Girmelisiniz.</value>
+  </data>
+  <data name="PricePerNight" xml:space="preserve">
+    <value>Oda Başına, Gecelik</value>
+  </data>
+  <data name="PriceRate" xml:space="preserve">
+    <value>Fiyat (gecelik)</value>
+  </data>
+  <data name="PriceRate1" xml:space="preserve">
+    <value>50 TL ve altı</value>
+  </data>
+  <data name="PriceRate2" xml:space="preserve">
+    <value>50 TL-100 TL</value>
+  </data>
+  <data name="PriceRate3" xml:space="preserve">
+    <value>100 TL-150 TL</value>
+  </data>
+  <data name="PriceRate4" xml:space="preserve">
+    <value>150 TL-200 TL</value>
+  </data>
+  <data name="PriceRate5" xml:space="preserve">
+    <value>200 TL-250 TL</value>
+  </data>
+  <data name="PriceRate6" xml:space="preserve">
+    <value>250 TL-300 TL</value>
+  </data>
+  <data name="PriceRate7" xml:space="preserve">
+    <value>300TL ve Üzeri</value>
+  </data>
+  <data name="PriceSelf" xml:space="preserve">
+    <value>Kendi fiyatınızı belirleme imkanı</value>
+  </data>
+  <data name="PrivacyPolicy" xml:space="preserve">
+    <value>Kullanıcı Sözleşmesini ve Gizlilik Politikasını okudum ve kabul ediyorum.</value>
+  </data>
+  <data name="ProceedTitle" xml:space="preserve">
+    <value>GÜNCELLE</value>
+  </data>
+  <data name="ProductHeader" xml:space="preserve">
+    <value>ÜRÜN BİLGİLERİ</value>
+  </data>
+  <data name="ProductTitle" xml:space="preserve">
+    <value>Sözleşme konusu ürüne ve/veya hizmete; satış bedeline, ödeme şekillerine ait bilgiler aşağıdaki gibidir:</value>
+  </data>
+  <data name="Profile" xml:space="preserve">
+    <value>Profilim</value>
+  </data>
+  <data name="PromFirst" xml:space="preserve">
+    <value>aracvararac promosyonlarindan ilk siz haberdar olun!</value>
+  </data>
+  <data name="PromoTicket" xml:space="preserve">
+    <value>Bu bilet özel fiyatlı bir promosyon bilettir. Bu nedenle bilette iptal, iade ve değişiklik yapılamaz.</value>
+  </data>
+  <data name="PromotionFirst" xml:space="preserve">
+    <value>Fırsatları önce siz öğrenin!</value>
+  </data>
+  <data name="ProvideCar" xml:space="preserve">
+    <value>Bu firmalardan garantili araba:</value>
+  </data>
+  <data name="PublicErrorMessage" xml:space="preserve">
+    <value>Arama Kriterinize uygun sonuç bulunamadı. Kriterinizi değiştirip tekrar deneyin.</value>
+  </data>
+  <data name="PurchaseTitle" xml:space="preserve">
+    <value>SATIN AL</value>
+  </data>
+  <data name="Rate" xml:space="preserve">
+    <value>Fiyat</value>
+  </data>
+  <data name="RatePoint" xml:space="preserve">
+    <value>Değerlendirme puanı</value>
+  </data>
+  <data name="RatingTitle" xml:space="preserve">
+    <value>Puan</value>
+  </data>
+  <data name="RefundableTitle" xml:space="preserve">
+    <value>İptal edilebilir</value>
+  </data>
+  <data name="RefundTitle" xml:space="preserve">
+    <value>Hotel rezervasyonu İptal edilemez.</value>
+  </data>
+  <data name="Regards" xml:space="preserve">
+    <value>Saygılarımızla,</value>
+  </data>
+  <data name="Region" xml:space="preserve">
+    <value>Bölge</value>
+  </data>
+  <data name="RegionAndDate" xml:space="preserve">
+    <value>Bölge ve Tarih Seçiniz.</value>
+  </data>
+  <data name="RegionDateDesc" xml:space="preserve">
+    <value>Seyahat etmek istediğiniz şehri ve tarih aralığını seçiniz.</value>
+  </data>
+  <data name="Regioned" xml:space="preserve">
+    <value>Bölge</value>
+  </data>
+  <data name="RegionStar" xml:space="preserve">
+    <value>Muhit ve Yıldız Seçmelisiniz.</value>
+  </data>
+  <data name="Register" xml:space="preserve">
+    <value>Üye Kayıt</value>
+  </data>
+  <data name="RegisterAlert" xml:space="preserve">
+    <value>Kaydınız Alınmıştır. Teşekkürler.Hesabınızı aktif etmek için,size gönderdiğimiz maildeki aktivasyon koduna tıklayınız.</value>
+  </data>
+  <data name="RegisterButton" xml:space="preserve">
+    <value>E-posta adresinizi doğrulamak ve üyeliğinizi aktif hale getirmek için “Onay” butonuna tıklayınız…</value>
+  </data>
+  <data name="RegisterButton1" xml:space="preserve">
+    <value>Bu adres ile yaptığınız rezervasyonlarınız üyelik hesabınızın altına kayıtlı olacaktır.</value>
+  </data>
+  <data name="RemainRoom" xml:space="preserve">
+    <value>ODA kaldı</value>
+  </data>
+  <data name="RememberMe" xml:space="preserve">
+    <value>Beni Hatırla</value>
+  </data>
+  <data name="rentACarPoint" xml:space="preserve">
+    <value>Arac Kiralama Noktaları</value>
+  </data>
+  <data name="RentCar" xml:space="preserve">
+    <value>Araç Kiralayın</value>
+  </data>
+  <data name="RentCarDetails" xml:space="preserve">
+    <value>Kiralama Özeti</value>
+  </data>
+  <data name="RentPeriod" xml:space="preserve">
+    <value>Kiralama süresi:</value>
+  </data>
+  <data name="RepeatMail" xml:space="preserve">
+    <value>Mail Adresi Tekrarı İle Uyuşmamaktadır.</value>
+  </data>
+  <data name="ReplyTitle" xml:space="preserve">
+    <value>Cevapla</value>
+  </data>
+  <data name="ReqStar" xml:space="preserve">
+    <value>İşletme belgesi çeşidi</value>
+  </data>
+  <data name="ReservationCancelFirst" xml:space="preserve">
+    <value>Rezervasyonunuzla ilgili değişiklik veya iptal taleplerinizi</value>
+  </data>
+  <data name="ReservationCancelLast" xml:space="preserve">
+    <value>sayfasından gerçekleştirebilirsiniz. Bu form aracılığıyla yapılan rezervasyon değişiklik / iptal talepleri diğer taleplerle birleştirilip sıraya alınacağından, yanıtlanma süreci gecikebilir.</value>
+  </data>
+  <data name="ReservationInfo" xml:space="preserve">
+    <value>Rezervasyonlarım</value>
+  </data>
+  <data name="ReservationInfoTitle" xml:space="preserve">
+    <value>Biletinizi &lt;od&gt; saat &lt;os&gt;'e kadar (212) 441 04 46 no'lu telefondan bize ulaşarak kestirebilir veya &lt;a href="http://www.aracvararac.com/tr/ucuslar" style="color: #3CB8E5;text-decoration: none;"&gt;aracvararac.com&lt;/a&gt; üzerinden PNR ve soyadınızı sorgulatarak kendiniz alabilirsiniz.</value>
+  </data>
+  <data name="ReservationNumber" xml:space="preserve">
+    <value>Sipariş No:</value>
+  </data>
+  <data name="ReservationSuccess" xml:space="preserve">
+    <value>Tebrikler, rezervasyonunuz başarıyla tamamlandı.</value>
+  </data>
+  <data name="Return" xml:space="preserve">
+    <value>Dönüş</value>
+  </data>
+  <data name="ReturnDate" xml:space="preserve">
+    <value>Dönüş Tarihi</value>
+  </data>
+  <data name="ReturnFlight" xml:space="preserve">
+    <value>Dönüş Uçuşunuzu Seçiniz</value>
+  </data>
+  <data name="ReturnTitle" xml:space="preserve">
+    <value>Dönüş</value>
+  </data>
+  <data name="Reviews" xml:space="preserve">
+    <value>YORUMLAR</value>
+  </data>
+  <data name="ReviewTitle" xml:space="preserve">
+    <value>Değerlendirmelerim</value>
+  </data>
+  <data name="Right1" xml:space="preserve">
+    <value>Cayma hakkı süresi sona ermeden önce, Alıcı'nın onayı ile ifasına başlanan hizmetler ve/veya  kullanılmış hizmetler,</value>
+  </data>
+  <data name="Right10" xml:space="preserve">
+    <value>Alıcının cayma hakkını kullanması hâlinde Satıcı, cayma bildiriminin kendisine ulaştığı tarihten itibaren en geç on gün içerisinde almış olduğu toplam bedeli ve alıcıyı borç altına sokan her türlü belgeyi alıcıya hiçbir masraf yüklemeksizin iade etmek ve yirmi gün içerisinde de malı geri almakla yükümlüdür.</value>
+  </data>
+  <data name="Right11" xml:space="preserve">
+    <value>Alıcı tarafından sipariş edilmeyen malın teslimi veya hizmetin sunulması durumunda, ürünün kullanılması veya hizmetin tüketilmesine ilişkin durumlar saklı kalmak kaydıyla, Satıcı, Alıcı'ya karşı herhangi bir talepte bulunamaz.</value>
+  </data>
+  <data name="Right2" xml:space="preserve">
+    <value>Alıcı, işbu Sözleşme konusunun ürün olması halinde; ürünün kendisine veya gösterdiği</value>
+  </data>
+  <data name="Right3" xml:space="preserve">
+    <value>adresteki kişiye / kuruluşa tesliminden itibaren yedi (7) gün içerisinde, işbu Sözleşme konusunun ürün dışında bir hizmetin sunulmasına ilişkin olması halinde, işbu Sözleşmenin kurulduğu tarihten itibaren 7 gün içerisinde işbu Sözleşmeden cayma hakkına sahiptir. Alıcı'nın, cayma hakkını kullanabilmesi için, bu süre içinde Satıcı/Sağlayıcı'ya bildirimde bulunması şarttır.</value>
+  </data>
+  <data name="Right4" xml:space="preserve">
+    <value>Taraflarca aksi kararlaştırılmadıkça alıcı, aşağıdaki sözleşmelerde cayma hakkını kullanmayacağını  kabul, beyan ve taahhüt eder;</value>
+  </data>
+  <data name="Right5" xml:space="preserve">
+    <value>Fiyatı borsa veya teşkilatlanmış diğer piyasalarda belirlenen ürün/hizmetlere ilişkin 	sözleşmeler.</value>
+  </data>
+  <data name="Right6" xml:space="preserve">
+    <value>Alıcı'nın istekleri veya açıkça onun kişisel ihtiyaçları doğrultusunda hazırlanan ürünler,
+niteliği itibariyle geri gönderilmeye elverişli olmayan ürünler, çabuk bozulma tehlikesi olan veya 
+son kullanma tarihi geçme ihtimali olan ürünler,</value>
+  </data>
+  <data name="Right7" xml:space="preserve">
+    <value>Alıcı tarafından ambalajının açılmış olması şartıyla, ses veya görüntü kayıtlarına, yazılım programlarına ve bilgisayar sarf malzemelerine ilişkin ürünler,</value>
+  </data>
+  <data name="Right8" xml:space="preserve">
+    <value>Gazete, dergi gibi süreli yayınlarına ilişkin ürünler, Bahis ve Piyangoya ilişkin hizmetlerin 
+ifasına ilişkin sözleşmeler.</value>
+  </data>
+  <data name="Right9" xml:space="preserve">
+    <value>Elektronik ortamda anında ifa edilen hizmetler ve Alıcı'ya anında teslim edilen gayri maddi ürünler,</value>
+  </data>
+  <data name="RightsReserve" xml:space="preserve">
+    <value>Tüm Hakları Saklıdır.</value>
+  </data>
+  <data name="RightWith" xml:space="preserve">
+    <value>CAYMA HAKKI</value>
+  </data>
+  <data name="RoomCheckIn" xml:space="preserve">
+    <value>Giriş Saati</value>
+  </data>
+  <data name="RoomCheckOut" xml:space="preserve">
+    <value>Çıkış Saati</value>
+  </data>
+  <data name="RoomClean" xml:space="preserve">
+    <value>Odaların Temziliği</value>
+  </data>
+  <data name="RoomComfort" xml:space="preserve">
+    <value>Odaların Konforu</value>
+  </data>
+  <data name="RoomCount" xml:space="preserve">
+    <value>Oda Sayısı</value>
+  </data>
+  <data name="Rooms" xml:space="preserve">
+    <value>Odalar</value>
+  </data>
+  <data name="RoomTitle" xml:space="preserve">
+    <value>Oda</value>
+  </data>
+  <data name="RoomType" xml:space="preserve">
+    <value>Oda Tipi</value>
+  </data>
+  <data name="RoundTrip" xml:space="preserve">
+    <value>Çift Yön</value>
+  </data>
+  <data name="SameLanguage" xml:space="preserve">
+    <value>Aynı dili konuşuyoruz</value>
+  </data>
+  <data name="SearchAgain" xml:space="preserve">
+    <value>Yeni Arama Yapınız</value>
+  </data>
+  <data name="SearchBoxAlert" xml:space="preserve">
+    <value>Arama Kriterini Girmelisiniz</value>
+  </data>
+  <data name="SearchButton" xml:space="preserve">
+    <value>Ara</value>
+  </data>
+  <data name="SearchCar" xml:space="preserve">
+    <value>Araba Ara</value>
+  </data>
+  <data name="SearchedHotels" xml:space="preserve">
+    <value>Aramanıza uygun sonuçlar</value>
+  </data>
+  <data name="SearchFlight" xml:space="preserve">
+    <value>Uçak Ara</value>
+  </data>
+  <data name="SearchHotel" xml:space="preserve">
+    <value>Otel Ara</value>
+  </data>
+  <data name="SearchLimitInfo" xml:space="preserve">
+    <value>Aramaya başlamak için 3 karakter girmelisiniz.</value>
+  </data>
+  <data name="SearchRepeat" xml:space="preserve">
+    <value>Tekrar Ara</value>
+  </data>
+  <data name="SearchTitle" xml:space="preserve">
+    <value>En iyi otel fiyatları burada:</value>
+  </data>
+  <data name="Secret1" xml:space="preserve">
+    <value>Bu düşük fiyatları verebilmek için, otel ismini rezervasyon tamamlanana kadar gizliyoruz.</value>
+  </data>
+  <data name="Secret2" xml:space="preserve">
+    <value>Gizli Otel</value>
+  </data>
+  <data name="SecretHotel" xml:space="preserve">
+    <value>Gizli Otel</value>
+  </data>
+  <data name="SecretHotel1" xml:space="preserve">
+    <value>3+ Yıldızlı</value>
+  </data>
+  <data name="SecretHotel2" xml:space="preserve">
+    <value>Otellerde</value>
+  </data>
+  <data name="SecretHotel3" xml:space="preserve">
+    <value>%55</value>
+  </data>
+  <data name="SecretHotel4" xml:space="preserve">
+    <value>e</value>
+  </data>
+  <data name="SecretHotel5" xml:space="preserve">
+    <value>Varan İndirimler</value>
+  </data>
+  <data name="SecretHotel6" xml:space="preserve">
+    <value>Bulmanın</value>
+  </data>
+  <data name="SecretHotel7" xml:space="preserve">
+    <value>en kolay yolu!</value>
+  </data>
+  <data name="SecretHotelDesc" xml:space="preserve">
+    <value>Oteller boş kalmış odalarını satmak için aracvararac.com'a büyük indirim uyguluyorlar. Otellerin marka imajlarını zedelememek için otelin ismini, resim ve adresini rezervasyon tamamlanıncaya kadar saklıyoruz.</value>
+  </data>
+  <data name="SecretHotels" xml:space="preserve">
+    <value>Gizli Oteller</value>
+  </data>
+  <data name="SecureShop" xml:space="preserve">
+    <value>Güvenli Alışveriş</value>
+  </data>
+  <data name="SecurityCode" xml:space="preserve">
+    <value>Güvenlik Kodu</value>
+  </data>
+  <data name="SelectCardType" xml:space="preserve">
+    <value>Kart Türünü Seçmelisiniz.</value>
+  </data>
+  <data name="SelectedRegions" xml:space="preserve">
+    <value>Bölgeler</value>
+  </data>
+  <data name="SelectRegion" xml:space="preserve">
+    <value>Muhit Seçiniz</value>
+  </data>
+  <data name="SelectStarLevel" xml:space="preserve">
+    <value>Yıldız Seviyesini Seçiniz</value>
+  </data>
+  <data name="SelfPrcDesc" xml:space="preserve">
+    <value>&lt;span&gt;Bundan Sonra Ne Olacak?&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;
+						Teklifi Yolla tuşuna bastıktan sonra teklifiniz seçmiş olduğunuz özellikteki otellere iletilecek.
+						&lt;br /&gt;&lt;br /&gt;
+						&lt;b&gt;Teklifiniz kabul olur ise&lt;/b&gt; kredi kartınızdan hemen çekilecek ve rezervasyonunuz tamamlanıp size otel bilgleriniz yollanacak.
+						&lt;br /&gt;&lt;br /&gt;
+						&lt;b&gt;Teklifiniz kabul olmaz ise&lt;/b&gt; kredi kartınızdan çekilmeyecek ve bir daha teklif sunma imkanınız olacak. 
+						Lütfen unutmayın seçmiş olduğunuz kriterlere ikiden fazla teklif sunamazsınız.</value>
+  </data>
+  <data name="SelfPrice" xml:space="preserve">
+    <value>Kendi Fiyatını Belirle</value>
+  </data>
+  <data name="SelfPriceHowWorks" xml:space="preserve">
+    <value>&lt;span&gt;Nasıl Çalışır?&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;aracvararac.com diğer deyehat portallerinden farklı olarak size Oteller ve Araç Kiralama firmaları ile pazarlık yapma şansı sağlar.
+						Oteller ve araç kiralama firmaları zaman zaman ellerinde kalmış boş oda ve araçları satabilmek için büyük indirimler yaparlar.
+						Bu indirimleri yaparken marka imajını zedelememek için isimlerini saklarlar. Siz gideceğiniz şehri tarih aralığınızı kriterlerinizi 
+						ve ödemek istediğiniz fiyatı belirtiyorsunuz, bizde bunu oteller ve araç kiralam firmalarına yolluyoruz. Teklifiniz kabul olur ise 
+						kredi kartınızdan toplam miktar hemen çekiliyor ve rezervasyonunuz tamamlanıp size otel veya araç kirala firmasının bilgileri yollanıyor.</value>
+  </data>
+  <data name="SelfPriceName" xml:space="preserve">
+    <value>Fiyatını Sen Belirle</value>
+  </data>
+  <data name="SellerInformation" xml:space="preserve">
+    <value>SATIŞ BİLGİLERİ</value>
+  </data>
+  <data name="SellerTitle" xml:space="preserve">
+    <value>SATICI</value>
+  </data>
+  <data name="SendActiveMail" xml:space="preserve">
+    <value>AKTİVASYON MAİLİMİ YOLLA</value>
+  </data>
+  <data name="SendBtn" xml:space="preserve">
+    <value>Gönder</value>
+  </data>
+  <data name="SendOffer" xml:space="preserve">
+    <value>TEKLİFİ GÖNDER</value>
+  </data>
+  <data name="SendPassword" xml:space="preserve">
+    <value>ŞİFREMİ YOLLA</value>
+  </data>
+  <data name="Senior" xml:space="preserve">
+    <value>Yaşlı</value>
+  </data>
+  <data name="Sep" xml:space="preserve">
+    <value>Eylül</value>
+  </data>
+  <data name="Service" xml:space="preserve">
+    <value>Müşteri Hizmetleri</value>
+  </data>
+  <data name="ServiceFee" xml:space="preserve">
+    <value>Servis Bedeli</value>
+  </data>
+  <data name="ServiceForm" xml:space="preserve">
+    <value>İletişim Formu</value>
+  </data>
+  <data name="Services" xml:space="preserve">
+    <value>Hizmetler</value>
+  </data>
+  <data name="GenderTitle" xml:space="preserve">
+    <value>Cinsiyet</value>
+  </data>
+  <data name="Show" xml:space="preserve">
+    <value>Göster</value>
+  </data>
+  <data name="ShowCheapFlights" xml:space="preserve">
+    <value>Ucuz Uçak Biletlerini Göster</value>
+  </data>
+  <data name="ShowHide" xml:space="preserve">
+    <value>Göster / Gizle</value>
+  </data>
+  <data name="ShowHotel" xml:space="preserve">
+    <value>Oteli haritada göster</value>
+  </data>
+  <data name="ShowRates" xml:space="preserve">
+    <value>FİYATLARI GÖSTER</value>
+  </data>
+  <data name="SignIn" xml:space="preserve">
+    <value>Üye Girişi</value>
+  </data>
+  <data name="SignOut" xml:space="preserve">
+    <value>Çıkış</value>
+  </data>
+  <data name="SiteMapBestPrc" xml:space="preserve">
+    <value>Fiyatını Sen Belirle</value>
+  </data>
+  <data name="SitemapCity" xml:space="preserve">
+    <value>Türkiye Şehirleri</value>
+  </data>
+  <data name="SitemapFlight" xml:space="preserve">
+    <value>Uçak Arama</value>
+  </data>
+  <data name="SitemapHotel" xml:space="preserve">
+    <value>Otel Arama</value>
+  </data>
+  <data name="SitemapUser" xml:space="preserve">
+    <value>Kullanıcı - Üyelik</value>
+  </data>
+  <data name="SitemapUser1" xml:space="preserve">
+    <value>Kullanıcı Menüleri</value>
+  </data>
+  <data name="SitemapVehicle" xml:space="preserve">
+    <value>Araç Kiralama</value>
+  </data>
+  <data name="aracvararacHotel" xml:space="preserve">
+    <value>aracvararac Otel Rezervasyonu</value>
+  </data>
+  <data name="aracvararacPriceTitle" xml:space="preserve">
+    <value>aracvararac özel fiyatı</value>
+  </data>
+  <data name="aracvararacReservation" xml:space="preserve">
+    <value>aracvararac Sipariş Numaranız</value>
+  </data>
+  <data name="aracvararacTeam" xml:space="preserve">
+    <value>aracvararac Ekibi</value>
+  </data>
+  <data name="SonFlight" xml:space="preserve">
+    <value>aracvararac&lt;br&gt;Sipariş Numaranız#&lt;br&gt;</value>
+  </data>
+  <data name="Sort" xml:space="preserve">
+    <value>Sırala:</value>
+  </data>
+  <data name="SortBy" xml:space="preserve">
+    <value>Sırala</value>
+  </data>
+  <data name="SortCriteria" xml:space="preserve">
+    <value>Bir siralama kriteri secin</value>
+  </data>
+  <data name="SortCriteria1" xml:space="preserve">
+    <value>Fiyata Gore Sirala</value>
+  </data>
+  <data name="SortCriteria2" xml:space="preserve">
+    <value>Yildiza Gore Sirala</value>
+  </data>
+  <data name="SortCriteria3" xml:space="preserve">
+    <value>Gelen Yoruma Gore Sirala</value>
+  </data>
+  <data name="SpecialNote" xml:space="preserve">
+    <value>Özel İstek / Notlar</value>
+  </data>
+  <data name="SpecialReq" xml:space="preserve">
+    <value>Bütün özel talepleri işletmeye iletiyoruz, ancak gerçekleştirileceğini garanti edemiyoruz. Bazı talepler giriş sırasında mevcut olma durumuna bağlıdır ve ek ücrete tabi olabilir.</value>
+  </data>
+  <data name="SpecialRequests" xml:space="preserve">
+    <value>Özel İstekler</value>
+  </data>
+  <data name="Sr" xml:space="preserve">
+    <value>Süre</value>
+  </data>
+  <data name="StandartRoom" xml:space="preserve">
+    <value>Standart Oda</value>
+  </data>
+  <data name="Star" xml:space="preserve">
+    <value>Yıldız</value>
+  </data>
+  <data name="StarRate" xml:space="preserve">
+    <value>Yıldız Seviyesi</value>
+  </data>
+  <data name="StarRatings" xml:space="preserve">
+    <value>Yıldız reytingi</value>
+  </data>
+  <data name="Start" xml:space="preserve">
+    <value>Başla</value>
+  </data>
+  <data name="StarTitle" xml:space="preserve">
+    <value>Yıldız</value>
+  </data>
+  <data name="StatusText" xml:space="preserve">
+    <value>Durum</value>
+  </data>
+  <data name="Stops" xml:space="preserve">
+    <value>Aktarma</value>
+  </data>
+  <data name="StopTitle" xml:space="preserve">
+    <value>Aktarma</value>
+  </data>
+  <data name="StopTitleInterFlight" xml:space="preserve">
+    <value>Süre</value>
+  </data>
+  <data name="String1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="String2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Student" xml:space="preserve">
+    <value>Öğrenci</value>
+  </data>
+  <data name="Subject" xml:space="preserve">
+    <value>Başlık</value>
+  </data>
+  <data name="SubmitOffer" xml:space="preserve">
+    <value>Teklifi Gönder</value>
+  </data>
+  <data name="SubTotal" xml:space="preserve">
+    <value>Ara Toplam</value>
+  </data>
+  <data name="SuggestFirst" xml:space="preserve">
+    <value>aracvararac.com ile ilgili tüm görüş ve önerilerinizi</value>
+  </data>
+  <data name="SuggestLast" xml:space="preserve">
+    <value>adresine email atarak veya aşağıdaki iletişim formunu doldurarak tarafımıza iletebilirsiniz.</value>
+  </data>
+  <data name="SuperDiscount" xml:space="preserve">
+    <value>SÜPER İNDİRİM</value>
+  </data>
+  <data name="TakeInfo" xml:space="preserve">
+    <value>Alış Bilgileri</value>
+  </data>
+  <data name="TaxFee" xml:space="preserve">
+    <value>Tüm vergiler dahildir</value>
+  </data>
+  <data name="TaxFees" xml:space="preserve">
+    <value>Vergi</value>
+  </data>
+  <data name="TaxId" xml:space="preserve">
+    <value>Vergi No</value>
+  </data>
+  <data name="TaxOffice" xml:space="preserve">
+    <value>Vergi Dairesi</value>
+  </data>
+  <data name="TCNO" xml:space="preserve">
+    <value>TC Kimlik No</value>
+  </data>
+  <data name="TelephoneTitle" xml:space="preserve">
+    <value>Telefon</value>
+  </data>
+  <data name="TermForm1" xml:space="preserve">
+    <value>Mesafeli Satış Sözleşmesi'ni okudum ve kabul ediyorum.&lt;/a&gt;</value>
+  </data>
+  <data name="TermForm2" xml:space="preserve">
+    <value>Ön Bilgilendirme Formu'nu okudum ve kabul ediyorum.&lt;/a&gt;</value>
+  </data>
+  <data name="testString" xml:space="preserve">
+    <value>Şeker ne güzel şey, ne tatlı şey, önemli olan şeker değil, önemli olan tatlılığı. türkçe karakter yazacam diye ne saçmaladım he..</value>
+  </data>
+  <data name="ThanksSon" xml:space="preserve">
+    <value>aracvararac’yı seçtiğiniz için teşekkür eder iyi tatiller dileriz.</value>
+  </data>
+  <data name="ThisPrice" xml:space="preserve">
+    <value>Bu Fiyata</value>
+  </data>
+  <data name="Time" xml:space="preserve">
+    <value>Saat</value>
+  </data>
+  <data name="TimeDatePickUp" xml:space="preserve">
+    <value>Kiralama Tarihi -  Saati</value>
+  </data>
+  <data name="TimeReturnPickUp" xml:space="preserve">
+    <value>İade Tarihi -  Saati</value>
+  </data>
+  <data name="TopPrice" xml:space="preserve">
+    <value>TOPLAM FİYAT</value>
+  </data>
+  <data name="TopSecret" xml:space="preserve">
+    <value>Çok Gizli Oteller</value>
+  </data>
+  <data name="TotalGeneral" xml:space="preserve">
+    <value>Genel Toplam</value>
+  </data>
+  <data name="TotalTitle" xml:space="preserve">
+    <value>Toplam</value>
+  </data>
+  <data name="TravelArticles" xml:space="preserve">
+    <value>Gezi Yazıları</value>
+  </data>
+  <data name="TravelFirst" xml:space="preserve">
+    <value>Seyahat bilgilerinizi saklayın!</value>
+  </data>
+  <data name="TravellerDetail" xml:space="preserve">
+    <value>Yolcu Bilgileri</value>
+  </data>
+  <data name="Travelling" xml:space="preserve">
+    <value>Yolculuk ne tarafa?</value>
+  </data>
+  <data name="TravelSummary" xml:space="preserve">
+    <value>Seyehat Özeti</value>
+  </data>
+  <data name="TripAdvisorOutRaing" xml:space="preserve">
+    <value>Yorum Puanı 1</value>
+  </data>
+  <data name="TripAdvisorRating" xml:space="preserve">
+    <value>xx Yorum İçinden</value>
+  </data>
+  <data name="TripCopy" xml:space="preserve">
+    <value>Yolculuk planınız email adresinize yollanmıştır.</value>
+  </data>
+  <data name="TripSummary" xml:space="preserve">
+    <value>Seyahat Özeti</value>
+  </data>
+  <data name="TurkeyHotel" xml:space="preserve">
+    <value>Türkiye Otelleri</value>
+  </data>
+  <data name="UpdateAccount" xml:space="preserve">
+    <value>GÜNCELLE</value>
+  </data>
+  <data name="UpOfferMsg" xml:space="preserve">
+    <value>Girilen teklif oda fiyatından yüksek olamaz.</value>
+  </data>
+  <data name="ValidEmail" xml:space="preserve">
+    <value>Geçerli Bir Mail Adresi Girmelisiniz.</value>
+  </data>
+  <data name="VehicleBuy" xml:space="preserve">
+    <value>SATIN AL</value>
+  </data>
+  <data name="VehicleBuyButton" xml:space="preserve">
+    <value>Rezervasyonu Onayla</value>
+  </data>
+  <data name="VehicleCategory" xml:space="preserve">
+    <value>Araç Kategorisi</value>
+  </data>
+  <data name="VehicleClass" xml:space="preserve">
+    <value>Kiralanan Araç Sınıfı</value>
+  </data>
+  <data name="VehicleCountry" xml:space="preserve">
+    <value>Ehliyetiniz Hangi Ulkeden?</value>
+  </data>
+  <data name="VehicleDetail" xml:space="preserve">
+    <value>Araç Detay Bilgileri</value>
+  </data>
+  <data name="VehicleDovizText" xml:space="preserve">
+    <value>Kira masasında ödenecek tutar bu günün döviz kurundan alındı &lt;?Price?&gt; &lt;?Currency?&gt;: Bankanızın bu ödemeyi yerel para biriminize çevirebileceğini lütfen unutmayın. Bu durum kredi kartı ya da banka kartı ekstrenizde göreceğiniz tutarın yerelpara biriminize çevrilmiş bedel olabileceği ve dolayısıyla yukarıda gösterilen toplam fiyattan farklı olabileceği anlamına gelmektedir.
+&lt;br/&gt;
+Rezervasyonunuza uygulanan bu ücret ya da dözviz bozdurma bedeli ile ilgili herhangi bir sorunuz varsa lütfen bankanızla görüşün.</value>
+  </data>
+  <data name="VehicleGeneralTotal" xml:space="preserve">
+    <value>Tahmini Toplam</value>
+  </data>
+  <data name="VehicleHourAlertMessage1" xml:space="preserve">
+    <value>Alış Saatini Seçmelisiniz.</value>
+  </data>
+  <data name="VehicleHourAlertMessage2" xml:space="preserve">
+    <value>İade Saatini Seçmelisiniz.</value>
+  </data>
+  <data name="VehicleIncludedPrice" xml:space="preserve">
+    <value>Fiyata Dahil Özellikler</value>
+  </data>
+  <data name="VehicleInfo" xml:space="preserve">
+    <value>Araç Bilgileriniz</value>
+  </data>
+  <data name="VehicleMailInfoText" xml:space="preserve">
+    <value>Araç kiralama rezervasyonunda aracvararac.com'i tercih ettiğiniz için teşekkür ederiz. Rezervasyon referans no:</value>
+  </data>
+  <data name="VehicleMailSubject" xml:space="preserve">
+    <value>Araç Kiralama Bilgileriniz.</value>
+  </data>
+  <data name="VehicleMailTerm" xml:space="preserve">
+    <value>Araç Hasar Güvencesi, Hırsızlık Güvencesi, Sınırsız Kilometre Kullanımı</value>
+  </data>
+  <data name="VehicleMailTerm1" xml:space="preserve">
+    <value>Ferdi Kaza Sigortası, İhtiyari Mali Mesuliyet Sigortası, Mini Hasar Güvencesi, Ek Sürücü,Tek Yön Ücreti, Geç İptal Bedeli, Araç Teslim Ücreti</value>
+  </data>
+  <data name="VehicleModel" xml:space="preserve">
+    <value>Araç Marka / Modeli</value>
+  </data>
+  <data name="VehicleName" xml:space="preserve">
+    <value>Araç Adı</value>
+  </data>
+  <data name="VehicleNonCategory" xml:space="preserve">
+    <value>Diğer</value>
+  </data>
+  <data name="VehicleNonFound" xml:space="preserve">
+    <value>Araç Yok</value>
+  </data>
+  <data name="VehicleNonIncludePrice" xml:space="preserve">
+    <value>Fiyata Dahil Olmayan Özellikler</value>
+  </data>
+  <data name="VehicleNonRequired" xml:space="preserve">
+    <value>Zorunlu Değil</value>
+  </data>
+  <data name="VehicleOriginalMailPrice" xml:space="preserve">
+    <value>Çekilecek Tutar</value>
+  </data>
+  <data name="VehicleRedText" xml:space="preserve">
+    <value>KATEGORİ</value>
+  </data>
+  <data name="VehicleRentAlTerms" xml:space="preserve">
+    <value>KİRALAMA KOŞULLARI</value>
+  </data>
+  <data name="VehicleReturnResult" xml:space="preserve">
+    <value>Arama Sonuçlarına Dön</value>
+  </data>
+  <data name="VehicleRsvConditions" xml:space="preserve">
+    <value>REZERVASYON KOŞULLARI</value>
+  </data>
+  <data name="VehicleRsvInfo" xml:space="preserve">
+    <value>Gösterilen araç ve listelenen modeller araba kiralama partnerlerimizce en yaygın olanlardır. Kiralanan aracın marka ve modeli ile ilgili garanti veremiyoruz. Görüntülenen foto örnek amaçlıdır. Bagaj kapasitesinin yolcu sayısına oranla küçülebileceğini unutmayınız.</value>
+  </data>
+  <data name="VehicleRsvMessage" xml:space="preserve">
+    <value>Zaman zaman tarafımızdan özel promosyonlar ve servislerimizle ilgili bilgilendirme mesajları alabilirsiniz eğer almak istemiyorsanız lütfen kutucuğun işaretini kaldırınız</value>
+  </data>
+  <data name="VehicleRsvReq" xml:space="preserve">
+    <value>Okuyup, anladığımı ve kabul ettiğimi teyit ederim</value>
+  </data>
+  <data name="VehicleSamePrice" xml:space="preserve">
+    <value>Aynı</value>
+  </data>
+  <data name="VehicleSearchAlert" xml:space="preserve">
+    <value>Aracı almak istediğiniz bölgeyi seçmelisiniz.</value>
+  </data>
+  <data name="VehicleSearchAlert1" xml:space="preserve">
+    <value>Aracı teslim etmek istediğiniz bölgeyi seçmelisiniz.</value>
+  </data>
+  <data name="VehicleTerm" xml:space="preserve">
+    <value>Araç dönüşünde çıkabilecek; Benzin Eksiği, Kasko kapsamında olmayan hasar durumu ve ileride çıkabilecek trafik cezalarına istinaden, 
+						kiracıdan araç tesliminde kredi kartı alınmaktadır.</value>
+  </data>
+  <data name="VehicleTerm1" xml:space="preserve">
+    <value>&lt;b&gt;(*) Araç Sınıfı;&lt;/b&gt; kiralama yapilan sirketin o sinif için belirttiği araç markalarini kapsar. Kiralama sirketlerinin araç markalari ve siniflandirmalarini araç kiralama sayfasinda görebilirsiniz.</value>
+  </data>
+  <data name="VehicleTerm2" xml:space="preserve">
+    <value>ÖDEME ŞEKLİ: Siparişin onayi sirasinda tüketici tarafından belirlenen kredi kartı ile aracvararac'ya yapılacaktır.</value>
+  </data>
+  <data name="VehicleTerm3" xml:space="preserve">
+    <value>KİRALAYAN'nın TÜKETİCİ' ye vermeyi teklif ettiği, aşağıda nitelikleri ve fiyatı belirtilen hizmet ve ifası ile ilgili olarak ön bilgiler aşağıda sunulmuştur. Burada belirtilen fiyatlar, ön bilgilerin verildiği anda geçerlidir.</value>
+  </data>
+  <data name="VehicleTerm4" xml:space="preserve">
+    <value>Firma Ünvanı</value>
+  </data>
+  <data name="VehicleTerm5" xml:space="preserve">
+    <value>Firma Adresi</value>
+  </data>
+  <data name="VehicleTerm6" xml:space="preserve">
+    <value>Telefon / Fax</value>
+  </data>
+  <data name="VehicleTerm7" xml:space="preserve">
+    <value>KİRALAMA BİLGİLERİ</value>
+  </data>
+  <data name="VehicleTime" xml:space="preserve">
+    <value>Saati Seçin</value>
+  </data>
+  <data name="VehicleTitle" xml:space="preserve">
+    <value>Araç</value>
+  </data>
+  <data name="ViewHotel" xml:space="preserve">
+    <value>Otellere Haritadan Bakın</value>
+  </data>
+  <data name="ViewMap" xml:space="preserve">
+    <value>Haritada Göster</value>
+  </data>
+  <data name="WeekTitle" xml:space="preserve">
+    <value>Hafta</value>
+  </data>
+  <data name="Welcome" xml:space="preserve">
+    <value>Hoşgeldiniz!</value>
+  </data>
+  <data name="WelcomeTitle" xml:space="preserve">
+    <value>Tekrar Hoşgeldiniz.</value>
+  </data>
+  <data name="WhenArrive" xml:space="preserve">
+    <value>Otele ulaştığınızda...</value>
+  </data>
+  <data name="WhenArrive1" xml:space="preserve">
+    <value>Check in yapacak misafir en az 18 yaşında olmalı, ve yanında foroğraflı ve onaylı bir kimlik belgesi bulundurmalıdır.</value>
+  </data>
+  <data name="WhenArrive2" xml:space="preserve">
+    <value>Rezervasyonunuz, isminiz ve bu formun sağ üst köşesindeki sipariş numarası ile otele ulaşmış durumdadır. Resepsiyon görevlisinden bu bilgiler ile odanızı hemen teslim alabilirsiniz.</value>
+  </data>
+  <data name="WhyCheapCar" xml:space="preserve">
+    <value>Arac kiralama firmalar ellerinde kalmis arabalarini kiralayabilmek icin aracvararac.com’a cok ozel indirimler uygularlar. Firmalar bu indirimleri verirken marka degerlerinin zedelenmemesi icin firma isimlerinin genel kamuoyunda yayinlanmasini istemezler. Siz firma adini rezervasyon tamamlaninca ogrenirsiniz. Bu sayede hic bir yerde bulamayacaginiz fiyatlara arabanizi kiralamis olursunuz.</value>
+  </data>
+  <data name="WhyCheapStrong" xml:space="preserve">
+    <value>Nasıl bu kadar ucuz olur?</value>
+  </data>
+  <data name="WhyPrefer" xml:space="preserve">
+    <value>Neden aracvararac.com'u tercih etmeliyim?</value>
+  </data>
+  <data name="WhySon" xml:space="preserve">
+    <value>Neden Son Dakka ?</value>
+  </data>
+  <data name="WorkingHours" xml:space="preserve">
+    <value>Çalışma Saatleri</value>
+  </data>
+  <data name="WorldCount" xml:space="preserve">
+    <value>Dünya ülkelerine geri dön</value>
+  </data>
+  <data name="WorldCountries" xml:space="preserve">
+    <value>Dünya Ülkeleri</value>
+  </data>
+  <data name="WrongMail" xml:space="preserve">
+    <value>Hatalı mail adresi girdiniz. Kotrol ediniz.</value>
+  </data>
+  <data name="YourCar" xml:space="preserve">
+    <value>Arabanız</value>
+  </data>
+  <data name="YourMsg" xml:space="preserve">
+    <value>Mesajınız</value>
+  </data>
+  <data name="YourOffer" xml:space="preserve">
+    <value>Teklifiniz</value>
+  </data>
+  <data name="YourOfferText" xml:space="preserve">
+    <value>Teklifiniz</value>
+  </data>
+  <data name="ZipTitle" xml:space="preserve">
+    <value>Posta Kodu</value>
+  </data>
+  <data name="AboutUsTitle" xml:space="preserve">
+    <value>Hakkımızda</value>
+  </data>
+  <data name="AllinclusiveRentalFeeText" xml:space="preserve">
+    <value>Vergiler, Havalimanı Ücreti, Üçüncü Şahıs Yükümlülük Koruması, CDW ve Temel Sigorta,Sınırsız Kilometre* ve arıza Desteği</value>
+  </data>
+  <data name="AllinclusiveRentalFeeTitle" xml:space="preserve">
+    <value>Her şey dahil kiralama ücreti</value>
+  </data>
+  <data name="AmountPaid" xml:space="preserve">
+    <value>Ödenen Miktar</value>
+  </data>
+  <data name="BestPriceGuaranteeText" xml:space="preserve">
+    <value>Maksimum indirimle özel fiyatlar teklif ediyoruz. Fiyatlarımız en kazançlı fiyatlar olup otomobil kiralama şirketleri tarafından sunulan perakende fiyatlarından daima daha düşüktür.</value>
+  </data>
+  <data name="BestPriceGuaranteeTitle" xml:space="preserve">
+    <value>En İyi Fiyat Garantisi</value>
+  </data>
+  <data name="CancelReservation" xml:space="preserve">
+    <value>Rezervasyon İptal</value>
+  </data>
+  <data name="CarBetweenYearsOld" xml:space="preserve">
+    <value>25-70 yaş arası sürücü</value>
+  </data>
+  <data name="CarDeliverDate" xml:space="preserve">
+    <value>Teslim Etme Tarihi</value>
+  </data>
+  <data name="CarDifferentCheckboxText" xml:space="preserve">
+    <value>Farklı bir araç teslim yeri</value>
+  </data>
+  <data name="CarModel" xml:space="preserve">
+    <value>Model</value>
+  </data>
+  <data name="CarReceiveDate" xml:space="preserve">
+    <value>Teslim alınma tarihi</value>
+  </data>
+  <data name="CarSearchButton" xml:space="preserve">
+    <value>Ara &gt;&gt;</value>
+  </data>
+  <data name="CopyRight" xml:space="preserve">
+    <value>Copyright 2020, AracVarArac Tüm hakları Saklıdır.</value>
+  </data>
+  <data name="CustomerSupportTitle" xml:space="preserve">
+    <value>7/24 Müşteri Desteği</value>
+  </data>
+  <data name="DeleteButtonText" xml:space="preserve">
+    <value>Sil</value>
+  </data>
+  <data name="EmptyOrderHistory" xml:space="preserve">
+    <value>Henüz Kiraladığınız araç bulunmamaktadır.</value>
+  </data>
+  <data name="FreeCancellationText" xml:space="preserve">
+    <value>Teslim almadan 24 saat öncesine kadar ücretsiz iptal ve değişiklik 24 saatten az kaldığında 50 EUR değerinde iptal ücreti uygulanır.</value>
+  </data>
+  <data name="FreeCancellationTitle" xml:space="preserve">
+    <value>Ücretsiz İptal</value>
+  </data>
+  <data name="FrequentlyAskedQuestionsTitle" xml:space="preserve">
+    <value>S.S.S</value>
+  </data>
+  <data name="IndexSearchTitle" xml:space="preserve">
+    <value>Araç kiralamak için arama yap</value>
+  </data>
+  <data name="PasswordUpdated" xml:space="preserve">
+    <value>Şifre başaryla güncellendi.</value>
+  </data>
+  <data name="PrivacyPolicyTitle" xml:space="preserve">
+    <value>Gizlilik Sözleşmesi</value>
+  </data>
+  <data name="ProfileInfoText" xml:space="preserve">
+    <value>Profil Bilgilerim</value>
+  </data>
+  <data name="F" xml:space="preserve">
+    <value>Giriş Yap</value>
+  </data>
+  <data name="ProfileLogOut" xml:space="preserve">
+    <value>Çıkış Yap</value>
+  </data>
+  <data name="ProfileOrderHistoryButton" xml:space="preserve">
+    <value>Kiraladıklarım</value>
+  </data>
+  <data name="RepeatButtonText" xml:space="preserve">
+    <value>Tekrarla</value>
+  </data>
+  <data name="Reservation" xml:space="preserve">
+    <value>Rezervasyon</value>
+  </data>
+  <data name="ViewReceipt" xml:space="preserve">
+    <value>Makbuzu Görüntüle</value>
+  </data>
+  <data name="ChangePasswordTitle" xml:space="preserve">
+    <value>Şifre Değiştir</value>
+  </data>
+  <data name="CurrentPassword" xml:space="preserve">
+    <value>Mevcut Şifre</value>
+  </data>
+  <data name="NewPasswordTitle" xml:space="preserve">
+    <value>Yeni Şifre</value>
+  </data>
+  <data name="AvatarImage" xml:space="preserve">
+    <value>Profil Resmi</value>
+  </data>
+  <data name="EditBtnText" xml:space="preserve">
+    <value>Güncelle</value>
+  </data>
+  <data name="FAQText" xml:space="preserve">
+    <value>Sık Sorulan Sorular</value>
+  </data>
+  <data name="ForgotPassword" xml:space="preserve">
+    <value>Şifremi Unuttum</value>
+  </data>
+  <data name="LogInText" xml:space="preserve">
+    <value>Giriş Yap</value>
+  </data>
+  <data name="NewPasswordAgain" xml:space="preserve">
+    <value>Yeni Şifre Tekrar</value>
+  </data>
+  <data name="PasswordAgain" xml:space="preserve">
+    <value>Şifre Tekrar</value>
+  </data>
+  <data name="PasswordText" xml:space="preserve">
+    <value>Şifre</value>
+  </data>
+  <data name="RegisterText" xml:space="preserve">
+    <value>Kayıt Ol</value>
+  </data>
+  <data name="RenewPassword" xml:space="preserve">
+    <value>Şifremi Yenile</value>
+  </data>
+  <data name="AverageWaitingTime" xml:space="preserve">
+    <value>Ortalama Bekleme Süresi</value>
+  </data>
+  <data name="CarRentalDeliveryProcess" xml:space="preserve">
+    <value>Araç kiralama teslimat süreci</value>
+  </data>
+  <data name="Confirmation" xml:space="preserve">
+    <value>Onay</value>
+  </data>
+  <data name="CustomerEvaluation" xml:space="preserve">
+    <value>Müşteri Değerlendirmesi</value>
+  </data>
+  <data name="DamageAndTheftProtection" xml:space="preserve">
+    <value>Hasar ve Hırsızlık Koruması</value>
+  </data>
+  <data name="DamageAndTheftProtectionText" xml:space="preserve">
+    <value>Kaza Hasarından Feragat ve Hırsızlık Koruması bu araca dahildir. Lastiklere, ön cama, yan camlara ve şasiye yönelik hasar veya kayıp hariç olmak üzere araç hasarını ve aracın çalınmasını kapsar.</value>
+  </data>
+  <data name="Deposit" xml:space="preserve">
+    <value>Depozito</value>
+  </data>
+  <data name="DepositText" xml:space="preserve">
+    <value>Tedarikçi teslim alım esnasında TRY 500.0 miktarında bir depozitoyu zorunlu kılacaktır. Aracın hasar görmesi veya çalınması durumunda, kredi kartında bloke edilen bir garantidir. Bu, kiralama döneminde hiçbir hırsızlık veya hasar olmadığı takdirde otomatik olarak serbest bırakılacaktır.</value>
+  </data>
+  <data name="Details" xml:space="preserve">
+    <value>Ayrıntılar</value>
+  </data>
+  <data name="EmailOffer" xml:space="preserve">
+    <value>E-Posta Teklifi</value>
+  </data>
+  <data name="Exemption" xml:space="preserve">
+    <value>Muafiyet</value>
+  </data>
+  <data name="ExemptionText" xml:space="preserve">
+    <value>Araç EUR 500.0 (Vergi Dahil) miktarında bir hasar muafiyetine ve EUR 500.0 (Vergi Dahil) miktarda bir hırsızlık muafiyetine sahiptir. Aracı teslim aldığınızda lütfen kartınızda muafiyet miktarının mevcut olduğundan emin olun.</value>
+  </data>
+  <data name="FaultAid" xml:space="preserve">
+    <value>Arıza Yarımı</value>
+  </data>
+  <data name="FaultAidText" xml:space="preserve">
+    <value>18% Vergi Dahil</value>
+  </data>
+  <data name="FuelPolicy" xml:space="preserve">
+    <value>Yakıt Politikası</value>
+  </data>
+  <data name="ImportantInformationText" xml:space="preserve">
+    <value>Önemli Bilgiler</value>
+  </data>
+  <data name="IncludedForFree" xml:space="preserve">
+    <value>Ücretsiz Olarak Dahil Edilmiştir</value>
+  </data>
+  <data name="Insurance" xml:space="preserve">
+    <value>Sigorta</value>
+  </data>
+  <data name="InsuranceCoverage" xml:space="preserve">
+    <value>Sigorta Kapsamı</value>
+  </data>
+  <data name="InsuranceCoverageText" xml:space="preserve">
+    <value>Hasar sorumluluk (KASKO) sigortası(CDW): 18% Vergi Dahil; Geniş Kapsam 500 EUR</value>
+  </data>
+  <data name="InsuranceCoverageText2" xml:space="preserve">
+    <value>Komple kapsam paketi: 50 TRY günlük 18% Vergi Dahil</value>
+  </data>
+  <data name="InsuranceCoverageText3" xml:space="preserve">
+    <value>Hırsızlık koruma: 18% Vergi Dahil; Geniş Kapsam 500 EUR</value>
+  </data>
+  <data name="InsuranceCoverageText4" xml:space="preserve">
+    <value>Üçüncü Parti Kapsama: 18% Vergi Dahil</value>
+  </data>
+  <data name="InsuranceCoverageText5" xml:space="preserve">
+    <value>Muafiyet Yükümlülüğü, aracın hasar görmesi/çalınması durumunda yükümlü tutulabileceğiniz araç kiralama tedarikçiniz tarafından belirlenen maksimum tutardır. Lastiklere, ön camlara, cama veya şasiye yönelik hasar veya kayıp CDW (Kaza Hasarından Feragat) tarafından karşılanmayabilir. Lütfen ofiste kiralama acentesi ile görüşün.</value>
+  </data>
+  <data name="InsuranceCoverageText6" xml:space="preserve">
+    <value>Üçüncü bir taraftan Muafiyet Ödeme Sigortasını satın aldıysanız, araç kiralama acentesinin depozitoyu onaylaması için ana sürücünün kredi kartını kiralama ofisinde sunması gerekir.</value>
+  </data>
+  <data name="Kilometers" xml:space="preserve">
+    <value>Kilometre</value>
+  </data>
+  <data name="Options" xml:space="preserve">
+    <value>Seçenekler</value>
+  </data>
+  <data name="OrSimilarTools" xml:space="preserve">
+    <value>ve ya benzeri araçlar</value>
+  </data>
+  <data name="PickUpPoint" xml:space="preserve">
+    <value>Teslim Alma Noktası</value>
+  </data>
+  <data name="PointButtonMid" xml:space="preserve">
+    <value>Orta</value>
+  </data>
+  <data name="PointButtonNice" xml:space="preserve">
+    <value>İyi</value>
+  </data>
+  <data name="PointButtonVeryBad" xml:space="preserve">
+    <value>Kötü</value>
+  </data>
+  <data name="PointButtonVeryNice" xml:space="preserve">
+    <value>Çok İyi</value>
+  </data>
+  <data name="Popular" xml:space="preserve">
+    <value>Popüler</value>
+  </data>
+  <data name="Ratings" xml:space="preserve">
+    <value>Puanlandırma</value>
+  </data>
+  <data name="ReceivedForMoney" xml:space="preserve">
+    <value>Para karşılığında alınan tüm değer</value>
+  </data>
+  <data name="SearchResults" xml:space="preserve">
+    <value>Arama Sonuçları</value>
+  </data>
+  <data name="ServiceAtTheRentalOffice" xml:space="preserve">
+    <value>Kiralama ofisinde servis</value>
+  </data>
+  <data name="ToBeInformed" xml:space="preserve">
+    <value>Özel teklifleri ve seyahat ürünü bilgisini içeren e-postaları almak istiyorum.</value>
+  </data>
+  <data name="ToBeInformedText" xml:space="preserve">
+    <value>Müşteriler herhangi bir anda seçim dışı bırakabilir.</value>
+  </data>
+  <data name="TotalText" xml:space="preserve">
+    <value>Toplam:</value>
+  </data>
+  <data name="VehicleCleaning" xml:space="preserve">
+    <value>Aracın Temizliği</value>
+  </data>
+  <data name="VehicleReturnProcess" xml:space="preserve">
+    <value>Araç kiralama bırakma süreci</value>
+  </data>
+  <data name="ManagementPanel" xml:space="preserve">
+    <value>Yönetim Paneli</value>
+  </data>
+  <data name="AirConditionIng" xml:space="preserve">
+    <value>Klima</value>
+  </data>
+  <data name="Automatic" xml:space="preserve">
+    <value>Otomatik</value>
+  </data>
+  <data name="Clock" xml:space="preserve">
+    <value>Saat</value>
+  </data>
+  <data name="DeliveryDate" xml:space="preserve">
+    <value>Teslim edildiği saat</value>
+  </data>
+  <data name="DeliveryPlace" xml:space="preserve">
+    <value>Teslim edildiği yer</value>
+  </data>
+  <data name="Diesel" xml:space="preserve">
+    <value>Dizel</value>
+  </data>
+  <data name="ExtraMaterial" xml:space="preserve">
+    <value>Ekstra Materyal</value>
+  </data>
+  <data name="Gasoline" xml:space="preserve">
+    <value>Benzin</value>
+  </data>
+  <data name="Gear" xml:space="preserve">
+    <value>Vites</value>
+  </data>
+  <data name="Hybrid" xml:space="preserve">
+    <value>Hibrit</value>
+  </data>
+  <data name="Manual" xml:space="preserve">
+    <value>Manuel</value>
+  </data>
+  <data name="OrderHistoryDetailTitle" xml:space="preserve">
+    <value>Önceki Siparişlerim</value>
+  </data>
+  <data name="OrderNumber" xml:space="preserve">
+    <value>Sipariş Numaranız</value>
+  </data>
+  <data name="RentedDate" xml:space="preserve">
+    <value>Kiralandığı Tarih</value>
+  </data>
+  <data name="RentedPlace" xml:space="preserve">
+    <value>Kiralandığı Yer</value>
+  </data>
+  <data name="ReturnToOrderList" xml:space="preserve">
+    <value>Sipariş Listesine Geri Dön</value>
+  </data>
+  <data name="Suppliers" xml:space="preserve">
+    <value>Tedarikçi</value>
+  </data>
+  <data name="VehicleFeatures" xml:space="preserve">
+    <value>Araç Özellikleri</value>
+  </data>
+  <data name="AdditionalDriver" xml:space="preserve">
+    <value>Ek Sürücü (Varışta rezervasyon gerçekleştirilebilir)</value>
+  </data>
+  <data name="AdditionalDriverText" xml:space="preserve">
+    <value>Ek sürücüler 7 EUR günlük Maksimum 105 EUR 18% Vergi Dahil ücret karşılığında kiralamanıza eklenebilir. Aracınızı aldığınızda, lütfen kiralama ofisinde ek sürücüler için ödeme yapın.</value>
+  </data>
+  <data name="BestPricesText" xml:space="preserve">
+    <value>Size pazardaki en iyi fiyatları buluyoruz</value>
+  </data>
+  <data name="Cancellation" xml:space="preserve">
+    <value>İptal ve rezervasyonu kullanmama politikası</value>
+  </data>
+  <data name="CancellationText1" xml:space="preserve">
+    <value>Tam ön ödemeli veya kısmı ödemeli rezervasyonlar için iptal politikanız nedir? 1 - Aracı teslim almanızdan 48 saat öncesine kadar iptal ederseniz, tam tutar size iade edilecektir. 2 - teslim almadan 48 saatten daha kısa bir süre önce iptal ederseniz, TRY388 tutarı düşüldükten sonra bir iade alacaksınız. Çevrimiçi ödemeniz TRY388 miktarından daha az ise, araç kiralama rezervasyonunuz için hiçbir iade yapılmayacaktır. 3 - Rezervasyonunuz aracı teslim almadan 48 saatten daha kısa bir süre öncesinde yapılırsa, iptal politikası otomatik olarak rezervasyonunuza uygulanacaktır. 4 - Tüm iptaller araç kiralama acentesi yoluyla değil, çevrimiçi portalımız yoluyla yapılmalıdır. Varışta doğrudan araç kiralama acentesi ile iptal konusunda anlaşırsanız, bizi rezervasyonunuz ile ilgili bu değişiklik hakkında da bilgilendirmelisiniz. 5 - Aracı teslim almadan 48 saatten daha kısa bir süre içinde rezervasyonunuzu değiştirmek veya isteğe bağlı ekstraları iptal etmek mümkün olmayabilir. Hasar İade Sigortası ürünümüzü satın almışsanız ve ondan sonra kiralık araç rezervasyonunuzu iptal etmeye karar vermişseniz, Hasar İade Sigortası otomatik olarak iptal edilecektir. Rezervasyonunuzu değiştirmek veya yeniden düzenlemek isterseniz, Hasar İade Sigortası başlangıçta iptal edilecektir. Ancak, yeni rezervasyonunuz için yeni bir poliçeyi otomatik olarak oluşturacağız. Her iki durumda, iptali doğrulamak için, çevrimiçi rezervasyon işlemi esnasında vermiş olduğunuz e-posta adresinize gönderilmiş bir e-posta alacaksınız. Araç kiralama anlaşmanızın başlamasından 24 saatten daha kısa bir süre içinde sigorta poliçenizi iptal ederseniz, sigortanız için hiçbir iadenin yapılmayacağını lütfen dikkate alın.. Rezervasyonu kullanmama nedir? Bir 'rezervasyonu kullanmama' aşağıdaki nedenlerle oluşur: 1 - Teslim alma zamanınızdan önce iptaliniz hakkında bizi bilgilendirmediniz. 2 - Belirlenen saat ve tarihte aracı teslim alamadınız. 3 - Aracı teslim almak için gereken dokümantasyonu sağlayamadınız. 4 - Yeterli bakiyeye sahip ana sürücü adına düzenlenmiş bir kredi kartı sağlayamadınız. Yukarıdakilerden herhangi biri durumunda size hiçbir iade yapılmayacaktır. Araç kiralama şirketi tüm gerekli dokümantasyon ve aracın teminat depozitosu için yeterli bakiyeye sahip bir kredi kartı ile zamanında gelmediğiniz takdirde, bir araç vermeyi reddetme hakkını saklı tutar. Bu tür bir durumda, araç kiralaması en az 48 saat önce iptal edilmemişse, bir iade alma hakkınız olmayacaktır.</value>
+  </data>
+  <data name="Car" xml:space="preserve">
+    <value>Araç</value>
+  </data>
+  <data name="CarRentalFee" xml:space="preserve">
+    <value>Araba kiralama ücreti</value>
+  </data>
+  <data name="Changes" xml:space="preserve">
+    <value>Değişiklikler</value>
+  </data>
+  <data name="ChoosingUs" xml:space="preserve">
+    <value>Bizi tercih ettiğiniz için teşekkür ederiz</value>
+  </data>
+  <data name="DepositAndCreditCardInformation" xml:space="preserve">
+    <value>Depozito ve Kredi Kartı Bilgisi</value>
+  </data>
+  <data name="DepositAndCreditCardInformationText1" xml:space="preserve">
+    <value>BUNLAR KABUL EDİLİR American Express, Diners Club, MasterCard (banka veya ön ödemeli kart değil), Visa (ön ödemeli değil). Aşağıda aksi belirtilmedikçe, banka kartı kabul edilmez.</value>
+  </data>
+  <data name="DepositAndCreditCardInformationText2" xml:space="preserve">
+    <value>Minimum EUR 200.0 ila maksimum EUR 600.0 miktarındaki bir depozito kiralamanın süresi boyunca kredi kartınızda alıkonacaktır. Depozitonuz hasar/hırsızlık durumunda tutulan bir garantidir. Bu tutar, kiralama döneminde hiçbir hırsızlık veya hasar olmadığı takdirde otomatik olarak serbest bırakılacaktır. Bunun Sigorta Kapsamı bölümünüzde bulunabilecek toplam muafiyet yükümlülüğünüzü temsil etmediğini dikkate alın.</value>
+  </data>
+  <data name="DepositAndCreditCardInformationText3" xml:space="preserve">
+    <value>Kiralama acentası tarafından yapılacak Findeks kredi notu değerlendirmesini geçmeniz gerekecektir. Bu değerlendirmeyi geçememeniz durumunda, araç kiralama acentası aracı teslim etmeyebilir. Bu durumlarda ödenen tutarlar geri iade edilmeyecektir. Kredi notunuzu kontrol etmek için lütfen www.findeks.com web sayfasını ziyaret ediniz veya kiralama ofisi ile telefon yoluyla iletişime geçiniz.</value>
+  </data>
+  <data name="DepositAndCreditCardInformationText4" xml:space="preserve">
+    <value>BUNLAR KABUL EDİLMEZ: Diğer hiçbir ödeme türü kabul edilmeyecektir.</value>
+  </data>
+  <data name="DepositAndCreditCardInformationText5" xml:space="preserve">
+    <value>Ana sürücünün adına geçerli bir kredi kartı, bir depozitoya ön provizyon almak/ücretlendirmek amacıyla kiralama ofisinde sunulmalıdır. Kredi kart(lar)ı kabartmalı olmalı ve bir PIN numarası gerekli olabilir.</value>
+  </data>
+  <data name="DepositAndCreditCardInformationText6" xml:space="preserve">
+    <value>Geçerli bir kredi kartı sunamamanız veya kredi kartınızda yeterli bakiye olmaması veya kredi kartının asıl sürücünün adına olmaması durumunda, araç kiralama acentesi aracı teslim etmeyebilir. Bu durumlarda ödenen tutarlar geri iade edilmeyecektir.</value>
+  </data>
+  <data name="Driver" xml:space="preserve">
+    <value>Sürücü</value>
+  </data>
+  <data name="DriverLicense" xml:space="preserve">
+    <value>Sürücü Belgesi</value>
+  </data>
+  <data name="DriverLicenseText1" xml:space="preserve">
+    <value>Büyük trafik ihlalleri kaydı olmayan en az 1 yıl boyunca sahip olunan tam sürücü belgesi. Birleşik Krallık sürücü belgesi sahipleri, fotoğraflı kartlarını ibraz etmelidirler.</value>
+  </data>
+  <data name="DriverLicenseText2" xml:space="preserve">
+    <value>Sürücü belgeniz Latin alfabesi ile yazılmamışsa, (örneğin, Arapça, Yunanca, Rusça veya Çince) Uluslararası bir Sürücü Belgenizi ve yerel sürücü belgenizi getirmeniz gerekecektir. Uluslararası sürücü belgenizin parçası olmayan ülkelerden sürücü belgeleri için, belgenin resmi bir çevirisi, orijinal bir belge ile birlikte verilmelidir. AB içinde kiralandığında, AB dışındaki ülkelerden gelen müşteriler yerel belgeleri ile birlikte bir Uluslararası Sürücü Belgesini de ibraz etmeli.</value>
+  </data>
+  <data name="DriverYearsOld" xml:space="preserve">
+    <value>Sürücü Yaşı</value>
+  </data>
+  <data name="DriverYearsOldText1" xml:space="preserve">
+    <value>Yaş sınırlamaları dışında kalan müşteriler, bu bölümde belirtilen genç veya yaşlı sürücü ücreti olmadıkça bir araç kiralayamayacaktır. Lütfen, geçerli olduğu durumda bu ücretin, kiralama fiyatına dahil olacağını ve varışta kiralama ofisinde yerel para biriminden ödeneceğini dikkate alın.</value>
+  </data>
+  <data name="Extras" xml:space="preserve">
+    <value>Ekstralar</value>
+  </data>
+  <data name="ExtrasText" xml:space="preserve">
+    <value>Tüm ekstralar, teslim alım esnasında araç kiralama sağlayıcısının ofisinde ödenir. Bu ekstraların bulunabilirliğinin her zaman garanti edilmediğini ve fiyatların değişikliğe tâbi olduğunu dikkate alın. Çoğu ülkede, çocuk oto koltukları 12 yaş veya boyu 135 cm’in altındaki çocuklar için zorunludur.</value>
+  </data>
+  <data name="Fees" xml:space="preserve">
+    <value>Ücretler</value>
+  </data>
+  <data name="FeesText1" xml:space="preserve">
+    <value>Lütfen kredi kartı ücretlerinin uygulandığını dikkate alın. Ücretler kart türüne göre değişir, lütfen ofiste tedarikçiye danışın.</value>
+  </data>
+  <data name="FuelPolicyText1" xml:space="preserve">
+    <value>Depo dolu alım ve teslim</value>
+  </data>
+  <data name="FuelPolicyText2" xml:space="preserve">
+    <value>Aracınız size tümüyle dolu bir depoyla teslim edilecektir. Yakıt ücreti ödememek için aracı tümüyle dolu depoyla teslim etmeniz gereklidir. Aracı deposu dolu olarak teslim ettiğinizde iptal edilmek veya iade edilmek üzere, kredi kartınızdan yakıt depozitosu vermeniz gerekebilir. Eksik yakıt aracı teslim ettiğinizde ücretlendirilecektir. Kiralama acentesi tarafından alınan litre yakıt ücreti, yerel benzin istasyonundaki fiyattan önemli ölçüde yüksek olabilir. Yeniden yakıt alma ücreti de uygulanabilir.</value>
+  </data>
+  <data name="FuelPolicyText3" xml:space="preserve">
+    <value>Fiyat bilgilerinde aksi belirtilmemişse, yakıt ücretleri kiralama ofisinde ödenebilir.</value>
+  </data>
+  <data name="Identities" xml:space="preserve">
+    <value>Kimlikler</value>
+  </data>
+  <data name="IdentitiesText" xml:space="preserve">
+    <value>Geçerli bir fotoğraflı kimlik (Pasaport veya Nüfus cüzdanı).</value>
+  </data>
+  <data name="IncludesFreeUnlimitedMileage" xml:space="preserve">
+    <value>Ücretsiz sınırsız kilometreyi içerir</value>
+  </data>
+  <data name="KilometersPolicy" xml:space="preserve">
+    <value>Kilometre Poliitikası</value>
+  </data>
+  <data name="KilometersPolicyText1" xml:space="preserve">
+    <value>Limitli</value>
+  </data>
+  <data name="KilometersPolicyText2" xml:space="preserve">
+    <value>Ücret: 0.15 EUR Kilometre başına (Vergi Dahil)</value>
+  </data>
+  <data name="KilometersPolicyText3" xml:space="preserve">
+    <value>Kiralama başına katedilecek kilometre sayısı: 400</value>
+  </data>
+  <data name="OptionalExtraTerms" xml:space="preserve">
+    <value>İsteğe Bağlı Ekstra Şartları</value>
+  </data>
+  <data name="OptionalExtraTermsText1" xml:space="preserve">
+    <value>Lütfen aşağıdakileri dikkate alın: İsteğe bağlı ekstraların fiyatı bildirim yapılmadan değişikliğe tabidir. İsteğe bağlı ekstralar bulunabilirliğe tabidir. Ofiste yapılan değişiklikler yerel ek ücretlere tabi olabilir.</value>
+  </data>
+  <data name="OurMostPopularFuelPolicy" xml:space="preserve">
+    <value>En popüler yakıt politikamız</value>
+  </data>
+  <data name="Pay" xml:space="preserve">
+    <value>Ödeme</value>
+  </data>
+  <data name="PriceSummary" xml:space="preserve">
+    <value>Fiyat Özeti</value>
+  </data>
+  <data name="Receipt" xml:space="preserve">
+    <value>Makbuz</value>
+  </data>
+  <data name="ReceiptText1" xml:space="preserve">
+    <value>Varış sırasında onay belgeniz, kiralama ofisinde yazdırılmış olarak bulunmalıdır. Onay belgesinin gösterilememesi kiralama acentesinin yerel fiyatlarla ücretlendirebileceği anlamına gelir. Lütfen unutmayın: Onay belgesinin araç teslimi sırasında yerel acentede gösterilememesi durumunda kiralamada uygulanabilecek fazla fiyatlandırmalardan sorumlu değiliz. Eğer gerekli belgeleri gösteremezseniz, belgeler geçerli değilse veya kredi kartınızda yeterli bakiye yoksa, araç kiralama acentesi aracı teslim etmeyi kabul etmeyebilir ve hiçbir ücret geri ödenmez.</value>
+  </data>
+  <data name="ReservationTakesOnly2Minutes" xml:space="preserve">
+    <value>Rezervasyon sadece 2 dakika sürer!</value>
+  </data>
+  <data name="SpecialCustomerService" xml:space="preserve">
+    <value>Özel müşteri hizmeti</value>
+  </data>
+  <data name="SpecialEquipment" xml:space="preserve">
+    <value>Özel Ekipman / İsteğe Bağlı Ekstralar</value>
+  </data>
+  <data name="SpecialEquipmentText1" xml:space="preserve">
+    <value>Bebek koltuǧu: 5 EUR günlük (Vergi Hariç); İstek Üzerine</value>
+  </data>
+  <data name="SpecialEquipmentText2" xml:space="preserve">
+    <value>Çocuk koltuǧu: 5 EUR günlük Maksimum 35 EUR (Vergi Hariç); İstek Üzerine</value>
+  </data>
+  <data name="SpecialEquipmentText3" xml:space="preserve">
+    <value>GPS: 7 EUR günlük (Vergi Hariç); İstek Üzerine
+
+                                    Özel Ekipman/ İsteğe bağlı diğer talepler rezervasyon sırasında belirtilebilir, ancak bunlar kiralama fiyatına dahil edilmez. Ücretler, kiralama ofisinde yerel para birimi ile ödenir.</value>
+  </data>
+  <data name="TaxFree" xml:space="preserve">
+    <value>Vergi Ücreti</value>
+  </data>
+  <data name="TaxFreeText1" xml:space="preserve">
+    <value>Kiralama fiyatına dahildir.</value>
+  </data>
+  <data name="TransactionApproved" xml:space="preserve">
+    <value>İşleminiz Onaylanmıştır</value>
+  </data>
+  <data name="TravelRestrictions" xml:space="preserve">
+    <value>Seyahat Kısıtlamaları</value>
+  </data>
+  <data name="TravelRestrictionsText1" xml:space="preserve">
+    <value>Hiçbir uluslararası, eyalet ve ada geçişine izin verilmemektedir.</value>
+  </data>
+  <data name="VehicleTypes" xml:space="preserve">
+    <value>Araç Türleri</value>
+  </data>
+  <data name="VehicleTypesText1" xml:space="preserve">
+    <value>Görüntülenen araç ve listelenen modeller araç kiralama ortaklarımız tarafından kullanılan en yaygın araçlardır. Kiralanan aracın marka veya modelinin, web sitemizde görüntülenen araçla aynı olacağının garantisini vermiyoruz.</value>
+  </data>
+  <data name="WonderfulChoice" xml:space="preserve">
+    <value>Harika Seçim !</value>
+  </data>
+  <data name="Years" xml:space="preserve">
+    <value>Yaş</value>
+  </data>
+  <data name="YourOrderNumver" xml:space="preserve">
+    <value>Sipariş Numaranız:</value>
+  </data>
+  <data name="FuelType" xml:space="preserve">
+    <value>Yakıt Tipi</value>
+  </data>
+  <data name="TransmissionType" xml:space="preserve">
+    <value>Transmisyon Tipi</value>
+  </data>
+  <data name="And" xml:space="preserve">
+    <value>Ve</value>
+  </data>
+  <data name="CarRentalTermsAndConditions" xml:space="preserve">
+    <value>Araç Kiralama Şartları ve Koşulları</value>
+  </data>
+  <data name="IAcceptOurCoverage" xml:space="preserve">
+    <value>kapsamımızı kabul ediyorum.</value>
+  </data>
+  <data name="MainDriverInformation" xml:space="preserve">
+    <value>Ana sürücü bilgileri</value>
+  </data>
+  <data name="Month" xml:space="preserve">
+    <value>Ay</value>
+  </data>
+  <data name="MoreThan10MillionCustomersTrust" xml:space="preserve">
+    <value>10 milyondan fazla müşteri güveniyor</value>
+  </data>
+  <data name="NoCardFee" xml:space="preserve">
+    <value>Kart Ücreti Yok</value>
+  </data>
+  <data name="Password128BitSSL" xml:space="preserve">
+    <value>Tüm ödeme işlemleri 128-bit SSL şifrelidir</value>
+  </data>
+  <data name="PleaseEnterTheNameOfTheMainDriver" xml:space="preserve">
+    <value>Lütfen ana sürücünün adını girin</value>
+  </data>
+  <data name="PostCode" xml:space="preserve">
+    <value>Posta Kodu</value>
+  </data>
+  <data name="ReceiveMailMessage" xml:space="preserve">
+    <value>Özel teklifleri ve seyahat ürünü bilgisini içeren e-postaları almak istiyorum. Müşteriler herhangi bir anda seçim dışı bırakabilir.</value>
+  </data>
+  <data name="ReservationTermsAndConditions" xml:space="preserve">
+    <value>Rezervasyon Şartları ve Koşulları</value>
+  </data>
+  <data name="SecurePaymentDetails" xml:space="preserve">
+    <value>Güvenli Ödeme Detayları</value>
+  </data>
+  <data name="UnLimited" xml:space="preserve">
+    <value>Limitsiz</value>
+  </data>
+  <data name="Year" xml:space="preserve">
+    <value>Yıl</value>
+  </data>
+  <data name="IncreasingPrice" xml:space="preserve">
+    <value>Fiyat Azalan</value>
+  </data>
+  <data name="NextBtnText" xml:space="preserve">
+    <value>İleri</value>
+  </data>
+  <data name="Only" xml:space="preserve">
+    <value>Sadece</value>
+  </data>
+  <data name="PickupTime" xml:space="preserve">
+    <value>Alım zamanınız yaklaştı. Araçlar çabucak kiralanıyor!</value>
+  </data>
+  <data name="PriceDecreasing" xml:space="preserve">
+    <value>Fiyat Artan</value>
+  </data>
+  <data name="SortingType" xml:space="preserve">
+    <value>Sıralama Türü</value>
+  </data>
+  <data name="Suggested" xml:space="preserve">
+    <value>Önerilen</value>
+  </data>
+  <data name="VehiclesAreAvailableAt" xml:space="preserve">
+    <value>araçlar şu adresten temin edilebilir:</value>
+  </data>
+  <data name="CardHolderValid" xml:space="preserve">
+    <value>Kart sahibi boş olamaz</value>
+  </data>
+  <data name="SearchInfoText" xml:space="preserve">
+    <value>Arama Bilgileri</value>
+  </data>
+  <data name="June" xml:space="preserve">
+    <value>Haziran</value>
+  </data>
+  <data name="Blog" xml:space="preserve">
+    <value>Blog</value>
+  </data>
+  <data name="OrderManegment" xml:space="preserve">
+    <value>Sipariş Takibi</value>
+  </data>
+  <data name="PassengerCounts" xml:space="preserve">
+    <value>Araç kapasitesi</value>
+  </data>
+</root>

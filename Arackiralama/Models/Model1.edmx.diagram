@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="67410a44cef240fcb391a6987901ebbe" Name="Diagram1" ZoomLevel="77">
+        <EntityTypeShape EntityType="AracKiralamaModel.Accounts" Width="1.5" PointX="1.5" PointY="0.75" />
+        <EntityTypeShape EntityType="AracKiralamaModel.Blog" Width="1.5" PointX="8.25" PointY="29.125" />
+        <EntityTypeShape EntityType="AracKiralamaModel.Car" Width="1.5" PointX="6" PointY="4.625" />
+        <EntityTypeShape EntityType="AracKiralamaModel.CarLocation" Width="1.5" PointX="8.25" PointY="5.75" />
+        <EntityTypeShape EntityType="AracKiralamaModel.CarPointScale" Width="1.5" PointX="3.75" PointY="2.625" />
+        <EntityTypeShape EntityType="AracKiralamaModel.Cities" Width="1.5" PointX="6.75" PointY="39.5" />
+        <EntityTypeShape EntityType="AracKiralamaModel.CityTranslations" Width="1.5" PointX="8.25" PointY="34.5" />
+        <EntityTypeShape EntityType="AracKiralamaModel.Company" Width="1.5" PointX="3.75" PointY="5.5" />
+        <EntityTypeShape EntityType="AracKiralamaModel.ContactInfo" Width="1.5" PointX="3" PointY="14.375" />
+        <EntityTypeShape EntityType="AracKiralamaModel.ContactInfoTranslation" Width="1.5" PointX="5.25" PointY="25.75" />
+        <EntityTypeShape EntityType="AracKiralamaModel.Contacts" Width="1.5" PointX="1.5" PointY="9.125" />
+        <EntityTypeShape EntityType="AracKiralamaModel.Countries" Width="1.5" PointX="6" PointY="17" />
+        <EntityTypeShape EntityType="AracKiralamaModel.CountryTranslations" Width="1.5" PointX="8.25" PointY="26" />
+        <EntityTypeShape EntityType="AracKiralamaModel.Cultures" Width="1.5" PointX="3" PointY="29.125" />
+        <EntityTypeShape EntityType="AracKiralamaModel.Currencies" Width="1.5" PointX="0.75" PointY="21.25" />
+        <EntityTypeShape EntityType="AracKiralamaModel.ExtraMaterial" Width="1.5" PointX="3.75" PointY="45.25" />
+        <EntityTypeShape EntityType="AracKiralamaModel.FAQ" Width="1.5" PointX="3" PointY="38" />
+        <EntityTypeShape EntityType="AracKiralamaModel.FAQTranslation" Width="1.5" PointX="5.25" PointY="29.75" />
+        <EntityTypeShape EntityType="AracKiralamaModel.Language" Width="1.5" PointX="3" PointY="34.5" />
+        <EntityTypeShape EntityType="AracKiralamaModel.OrderHistory" Width="1.5" PointX="13.5" PointY="6.25" />
+        <EntityTypeShape EntityType="AracKiralamaModel.OrderHistoryDetail" Width="1.5" PointX="10.5" PointY="6" />
+        <EntityTypeShape EntityType="AracKiralamaModel.Orders" Width="1.5" PointX="0.75" PointY="14.875" />
+        <EntityTypeShape EntityType="AracKiralamaModel.PrivacyPolicy" Width="1.5" PointX="3" PointY="42" />
+        <EntityTypeShape EntityType="AracKiralamaModel.PrivacyPolicyTranslation" Width="1.5" PointX="5.25" PointY="33.75" />
+        <EntityTypeShape EntityType="AracKiralamaModel.Regions" Width="1.5" PointX="9" PointY="39.375" />
+        <EntityTypeShape EntityType="AracKiralamaModel.RegionTranslations" Width="1.5" PointX="11.25" PointY="30" />
+        <EntityTypeShape EntityType="AracKiralamaModel.Rol" Width="1.5" PointX="3.75" PointY="51.75" />
+        <EntityTypeShape EntityType="AracKiralamaModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="11.875" />
+        <EntityTypeShape EntityType="AracKiralamaModel.User" Width="1.5" PointX="6" PointY="50" />
+        <EntityTypeShape EntityType="AracKiralamaModel.UserSearchLogs" Width="1.5" PointX="8.75" PointY="10.875" />
+        <EntityTypeShape EntityType="AracKiralamaModel.VehicleOrders" Width="1.5" PointX="3" PointY="18.5" />
+        <EntityTypeShape EntityType="AracKiralamaModel.VehicleOtherPassengers" Width="1.5" PointX="3" PointY="55" />
+        <AssociationConnector Association="AracKiralamaModel.FK_Contacts_Accounts_AccountID" />
+        <AssociationConnector Association="AracKiralamaModel.FK_Blog_Cultures" />
+        <AssociationConnector Association="AracKiralamaModel.FK_Blog_Language1" />
+        <AssociationConnector Association="AracKiralamaModel.FK_Car_CarPointScale1" />
+        <AssociationConnector Association="AracKiralamaModel.FK_Car_Company" />
+        <AssociationConnector Association="AracKiralamaModel.FK_Car_ExtraMaterial1" />
+        <AssociationConnector Association="AracKiralamaModel.FK_CarLocation_Car" />
+        <AssociationConnector Association="AracKiralamaModel.FK_OrderHistory_Car" />
+        <AssociationConnector Association="AracKiralamaModel.FK_OrderHistoryDetail_Car" />
+        <AssociationConnector Association="AracKiralamaModel.FK_CarLocation_User" />
+        <AssociationConnector Association="AracKiralamaModel.FK_OrderHistory_CarLocation" />
+        <AssociationConnector Association="AracKiralamaModel.FK_OrderHistoryDetail_CarLocation" />
+        <AssociationConnector Association="AracKiralamaModel.FK_OrderHistoryDetail_CarPointScale" />
+        <AssociationConnector Association="AracKiralamaModel.FK_Cities_Countries_CountryID" />
+        <AssociationConnector Association="AracKiralamaModel.FK_CityTranslations_Cities_CityID" />
+        <AssociationConnector Association="AracKiralamaModel.FK_Regions_Cities_CityID" />
+        <AssociationConnector Association="AracKiralamaModel.FK_CityTranslations_Cultures_CultureID" />
+        <AssociationConnector Association="AracKiralamaModel.FK_OrderHistory_Company" />
+        <AssociationConnector Association="AracKiralamaModel.FK_OrderHistoryDetail_Company" />
+        <AssociationConnector Association="AracKiralamaModel.FK_ContactInfoTranslation_ContactInfo" />
+        <AssociationConnector Association="AracKiralamaModel.FK_ContactInfoTranslation_Cultures" />
+        <AssociationConnector Association="AracKiralamaModel.FK_ContactInfoTranslation_Language" />
+        <AssociationConnector Association="AracKiralamaModel.FK_Orders_Contacts_ContactID" />
+        <AssociationConnector Association="AracKiralamaModel.FK_CountryTranslations_Countries_CountryID" />
+        <AssociationConnector Association="AracKiralamaModel.FK_CountryTranslations_Cultures_CultureID" />
+        <AssociationConnector Association="AracKiralamaModel.FK_Cultures_Currencies_CurrencyID" />
+        <AssociationConnector Association="AracKiralamaModel.FK_FAQTranslation_Cultures" />
+        <AssociationConnector Association="AracKiralamaModel.FK_PrivacyPolicyTranslation_Cultures" />
+        <AssociationConnector Association="AracKiralamaModel.FK_RegionTranslations_Cultures_CultureID" />
+        <AssociationConnector Association="AracKiralamaModel.FK_VehicleOrders_Currencies_CurrencyID" />
+        <AssociationConnector Association="AracKiralamaModel.FK_FAQTranslation_FAQ" />
+        <AssociationConnector Association="AracKiralamaModel.FK_FAQTranslation_Language" />
+        <AssociationConnector Association="AracKiralamaModel.FK_PrivacyPolicyTranslation_Language" />
+        <AssociationConnector Association="AracKiralamaModel.FK_OrderHistory_User" />
+        <AssociationConnector Association="AracKiralamaModel.FK_OrderHistoryDetail_User1" />
+        <AssociationConnector Association="AracKiralamaModel.FK_VehicleOrders_Orders_OrderID" />
+        <AssociationConnector Association="AracKiralamaModel.FK_VehicleOtherPassengers_Orders_OrderID" />
+        <AssociationConnector Association="AracKiralamaModel.FK_PrivacyPolicyTranslation_PrivacyPolicy" />
+        <AssociationConnector Association="AracKiralamaModel.FK_RegionTranslations_Regions_RegionID" />
+        <AssociationConnector Association="AracKiralamaModel.FK_User_Rol" />
+        <EntityTypeShape EntityType="AracKiralamaModel.VehicleInfo" Width="1.5" PointX="5.25" PointY="20" />
+        <AssociationConnector Association="AracKiralamaModel.FK_Vehicle_VehicleOrders" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

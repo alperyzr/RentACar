@@ -1,0 +1,65 @@
+﻿@model IEnumerable<Arackiralama.Models.ExtraMaterial>
+@{
+    ViewBag.Title = "Ekstra Materyal Listesi";
+}
+
+<div class="row">
+    @if (ViewBag.Message!=null)
+    {
+        <div class="col-12 mb-3">
+            <div class="alert alert-success">
+                @ViewBag.Message
+            </div>
+        </div>
+    }
+    <div class="col-12">
+        <section class="card">
+            <header class="card-header">
+                <h2 class="card-title">Ekstra Materyal Listesi</h2>
+            </header>
+            <div class="card-body">
+                <table class="table table-responsive-md table-striped mb-0 table-bordered">
+                    <thead>
+                        <tr>
+                            <th>İcon</th>
+                            <th>Materyal</th>
+                            <th>Açıklama</th>
+                            <th>Minumum Değer</th>
+                            <th>Maksimum Değer</th>
+                            <th>Aktif mi ?</th>
+                            <th>Düzenle</th>
+                            
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    
+                                    <img src="@item.Icon" class="panel-upload-img" />
+                                </td>
+                                <td>@item.Materyal</td>
+                                <td>
+                                   @item.Aciklama
+                                </td>
+                                <td>@item.MinDeger</td>
+                                <td>@item.MaxDeger</td>
+                                <td>@item.IsActive</td>
+                                <td>
+                                    <a href="@Url.Action("ExtraMaterialEdit","Car",new { id = item.ID })" class="btn btn-info">Düzenle</a>
+                                </td>
+
+
+                            </tr>
+                        }
+                        
+                        
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+</div>
+

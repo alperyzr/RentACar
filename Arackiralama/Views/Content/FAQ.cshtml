@@ -1,0 +1,57 @@
+﻿
+@model IEnumerable<Arackiralama.Models.FAQTranslation>
+@{
+    ViewBag.Title = "FAQ";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var sayac = 0;
+}
+
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="faq-box" style="width:100%;">
+            <div class="col-12 mt-3 mb-3">
+                <center>
+                    <h1 class="info-box-h1">
+                        @Html.Raw(Arackiralama.Resources.LanguageFields.FAQText)
+                    </h1>
+                </center>
+            </div>
+
+            @foreach (var item in Model)
+            {
+                <div class="col-12 mb-2">
+                        <div class="row">
+                            <div class="col-2">
+                                <i class="fas fa-question float-right mt-1"></i>
+                            </div>
+                            <div class="col-10">
+                                <div class="row">
+
+                                    <div class="col-12">
+                                        <strong>
+                                            @item.Question
+                                        </strong>
+                                    </div>
+                                    <div class="col-12">
+                                        <span>
+                                            @item.Answer
+                                        </span>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+              
+
+     }
+
+
+        </div>
+    </div>
+</div>
+
+

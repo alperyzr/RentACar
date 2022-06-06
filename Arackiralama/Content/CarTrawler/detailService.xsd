@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OTA_VehAvailRateRQ xmlns="http://www.opentravel.org/OTA/2003/05" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opentravel.org/OTA/2003/05 OTA_VehAvailRateRQ.xsd" Target="Test" Version="1.005" PrimaryLangID="<?Culture?>">
+	<POS>
+		<Source ISOCurrency="<?Currency?>">
+			<RequestorID Type="16" ID="644999" ID_Context="CARTRAWLER" />
+		</Source>
+	</POS>
+	<VehAvailRQCore Status="Available">
+		<VehRentalCore PickUpDateTime="<?StartDate?>" ReturnDateTime="<?EndDate?>">
+			<PickUpLocation CodeContext="CARTRAWLER" LocationCode="<?StartLocation?>" />
+			<ReturnLocation CodeContext="CARTRAWLER" LocationCode="<?ReturnLocation?>" />
+		</VehRentalCore>
+		<DriverType Age='30'/>
+	</VehAvailRQCore>
+	<VehAvailRQInfo PassengerQty="3">
+		<Customer>
+			<Primary>
+				<CitizenCountryName Code="<?Country?>" />
+			</Primary>
+		</Customer>
+		<TPA_Extensions>
+				<ConsumerIP><?ClientIP?></ConsumerIP>
+			</TPA_Extensions>
+	</VehAvailRQInfo>
+</OTA_VehAvailRateRQ>

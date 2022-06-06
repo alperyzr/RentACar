@@ -1,0 +1,166 @@
+﻿@{
+    Layout = null;
+}
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="~/Contents/Style.css" />
+    <style type="text/css">
+        body {
+            max-width: 100%;
+        }
+
+        .conainer {
+            z-index: 1 !important;
+        }
+
+        .background-image {
+            background-image: url(/Contents/img/OrderManegmentBackgroundImage.jpg) !important;
+            background-color: #f7f7f7 !important;
+            -webkit-background-size: cover !important;
+            -moz-background-size: cover !important;
+            -o-background-size: cover !important;
+            background-size: cover !important;
+            height: 100% !important;
+            width: 100% !important;
+            position: fixed !important;
+            z-index: -1 !important;
+            background-attachment: fixed !important;
+            background-position: center center !important;
+            background-repeat: no-repeat !important;
+        }
+
+        #card {
+            width: 40%;
+            height: 300px;
+            padding: 20px;
+            position: relative;
+            margin: auto;
+        }
+
+        #back-index-btn {
+            color: #fff;
+            font-size: 14pt;
+            margin: 10px;
+            font-weight: bold;
+        }
+
+            #back-index-btn:hover {
+                font-weight: bold;
+                color: #000;
+                transition: 0.75s;
+            }
+
+        @@media(max-width:600px) {
+            #card {
+                width: 100% !important;
+            }
+        }
+    </style>
+</head>
+<div class="background-image">&nbsp;</div>
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <a href="~/Car/Index" class="float-right" id="back-index-btn">
+                Anasayfaya geri Dön
+            </a>
+        </div>
+    </div>
+
+    <div class="row">
+        <div id="card" class="card-absorbe">
+            @if (ViewBag.Message != null)
+            {
+                <div class="col-12">
+                    <div class="alert alert-danger">
+                        @ViewBag.Message
+                    </div>
+                </div>
+            }
+            @if (ViewBag.SuccessMessage != null)
+            {
+                <div class="col-12">
+                    <div class="alert alert-success">
+                        @ViewBag.SuccessMessage
+                    </div>
+                </div>
+            }
+            <div class="col-12 mt-5">
+                @using (Html.BeginForm("OrderManegment", "Content", FormMethod.Post))
+                {
+                    <div class="card p-3">
+                        <div class="row">
+                            <div class="col-12">
+                                <center class="mt-3 mb-3">
+                                    <img src="~/Contents/img/arac_var_arac_logo2.png" />
+                                </center>
+                            </div>
+                            <div class="col-12 mt-3">
+                                <center>
+                                    <a href="~/Content/FAQ" class="btn btn-lg btn-block btn-save">Sıkça Sorulan Sorular</a>
+                                </center>
+
+                            </div>
+                            <div class="col-12 mt-3">
+                                <strong>
+                                    Rezervasyonu Yönet
+                                </strong>
+                            </div>
+                            <div class="col-12 mt-3">
+                                <span>
+                                    Lütfen e-posta adresinizi ve Rezervasyon Numarasını VEYA teslim alma tarihini girin
+                                </span>
+                            </div>
+                            <div class="col-12 mt-3">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <span>
+                                            E-posta
+                                        </span>
+                                    </div>
+                                    <div class="col-12">
+                                        <input name="EPosta" type="text" class="form-control" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 mt-3">
+                                <strong>
+                                    Rezervasyon numaranızı VEYA teslim alma tarihinizi girin:
+                                </strong>
+                            </div>
+                            <div class="col-12 mt-3">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <span>
+                                            Rezervasyon numarası
+                                        </span>
+                                    </div>
+                                    <div class="col-12">
+                                        <input name="RezervasyonNo" type="text" class="form-control" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 mt-3">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <span>
+                                            Teslim Alma Tarihi
+
+                                        </span>
+                                    </div>
+                                    <div class="col-12">
+                                        <input name="TeslimAlmaTarihi" type="date" class="form-control" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 mt-3 mb-3">
+                                <input type="submit" class="btn btn-lg btn-block btn-save" value="Rezervasyonu Bul" />
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,52 @@
+﻿<body onload="OnLoadFunction()">
+    <div class="row">
+        <div class="col-md-3 mb-1">
+            <button id="active-button1" style="width:100%;" class="btn btn-step btn-save" type="button" data-toggle="collapse" data-target="#edit-step1">
+                <span style="color:#fff;">1.</span> @Html.Raw(Arackiralama.Resources.LanguageFields.SearchResults)
+            </button>
+        </div>
+        <div class="col-md-3 mb-1">
+            <button id="active-button2" style="width:100%;" class="btn btn-step btn-save collapsed" type="button" data-toggle="collapse" data-target="#edit-step2">
+                <span style="color:#fff;">2.</span> @Html.Raw(Arackiralama.Resources.LanguageFields.Options)
+            </button>
+        </div>
+        <div class="col-md-3 mb-1">
+            <button id="active-button3" style="width:100%;" class="btn btn-step btn-save collapsed" type="button" data-toggle="collapse" data-target="#edit-step3">
+                <span style="color:#fff;">3.</span>
+                @Html.Raw(Arackiralama.Resources.LanguageFields.Details)
+            </button>
+        </div>
+        <div class="col-md-3 mb-1">
+            <button id="active-button4" style="width:100%;" class="btn btn-step btn-save collapsed" type="button" data-toggle="collapse" data-target="#edit-step4"><span style="color:#fff;">4.</span>
+            @Html.Raw(Arackiralama.Resources.LanguageFields.Confirmation)</button>
+        </div>
+    </div>
+</body>
+
+<script>
+    function OnLoadFunction() {
+        document.getElementById("active-button2").disabled = true;
+        document.getElementById("active-button3").disabled = true;
+        document.getElementById("active-button4").disabled = true;
+
+    }
+    function DisabledFunction1() {
+        alert("tetiklendimi");
+        document.getElementById("active-button1").disabled = true;
+        document.getElementById("active-button2").disabled = false;
+        document.getElementById("active-button3").disabled = true;
+        document.getElementById("active-button4").disabled = true;
+    }
+    function DisabledFunction2() {
+        document.getElementById("active-button1").disabled = true;
+        document.getElementById("active-button2").disabled = true;
+        document.getElementById("active-button3").disabled = false;
+        document.getElementById("active-button4").disabled = true;
+    }
+    function DisabledFunction3() {
+        document.getElementById("active-button1").disabled = true;
+        document.getElementById("active-button2").disabled = true;
+        document.getElementById("active-button3").disabled = true;
+        document.getElementById("active-button4").disabled = false;
+    }
+</script>

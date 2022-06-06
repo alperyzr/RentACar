@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OTA_InsuranceQuoteRQ
+xmlns="http://www.opentravel.org/OTA/2003/05"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.opentravel.org/OTA/2003/05 OTA_InsuranceQuoteRQ.xsd"
+Target="Test"
+Version="1.002"
+PrimaryLangID="tr">
+	<POS>
+		<Source ISOCurrency="<?Currency?>">
+			<RequestorID Type="16" ID="576761" ID_Context="CARTRAWLER" />
+		</Source>
+	</POS>
+	<PlanForQuoteRQ PlanID="ACME" Type="Protection">
+		<CoveredTravelers>
+			<CoveredTraveler>
+				<CoveredPerson Relation="Traveler 1">
+					<GivenName><?FirstName?></GivenName>
+					<Surname><?LastName?></Surname>
+				</CoveredPerson>
+				<CitizenCountryName Code="<?Country?>" />
+			</CoveredTraveler>
+		</CoveredTravelers>
+		<InsCoverageDetail Type="SingleTrip">
+			<TotalTripCost CurrencyCode="<?Currency?>" Amount="<?Amount?>"/>
+			<CoveredTrips>
+				<CoveredTrip Start="<?StartDate?>" End="<?EndDate?>">
+				<Destinations>
+					<Destination>
+						<CountryName>NO</CountryName>
+					</Destination>
+				</Destinations>
+				</CoveredTrip>
+			</CoveredTrips>
+		</InsCoverageDetail>
+	</PlanForQuoteRQ>
+</OTA_InsuranceQuoteRQ>

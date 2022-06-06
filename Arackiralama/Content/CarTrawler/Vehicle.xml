@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<VehAvailCore Status="Available">
+  <Vehicle AirConditionInd="true" TransmissionType="Manual" FuelType="Petrol" DriveType="Unspecified" PassengerQuantity="4" BaggageQuantity="2" Code="ESMR" CodeContext="CARTRAWLER">
+    <VehType VehicleCategory="13" DoorCount="3-5"/>
+    <VehClass Size="33"/>
+    <VehMakeModel Name="Mini Classic or similar" Code="ESMR"/>
+    <PictureURL>https://cdn.cartrawler.com/otaimages/mini/one_nologo.jpg</PictureURL>
+    <VehIdentity VehicleAssetNumber="21289"/>
+  </Vehicle>
+</VehAvailCore>

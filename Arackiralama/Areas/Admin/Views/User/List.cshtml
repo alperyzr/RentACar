@@ -1,0 +1,88 @@
+﻿@model IEnumerable<Arackiralama.Models.Accounts>
+@{
+    ViewBag.Title = "Kullanıcı Listesi";
+}
+
+<div class="row">
+    @if (ViewBag.Message != null)
+    {
+
+        <div class="col-12 mb-3">
+            <div class="alert alert-success">
+                @ViewBag.Message
+            </div>
+
+        </div>
+
+    }
+    <div class="col-12">
+        <section class="card">
+            <header class="card-header">
+                <h2 class="card-title">Kullanıcı Listesi</h2>
+            </header>
+
+            <div class="card-body">
+                <table id="UserList" class="table table-responsive-md table-striped mb-0 table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Ad</th>
+                            <th>Soyad</th>
+                            @*<th>Doğum tarihi</th>*@
+                            <th>Kayıt Tarihi</th>
+                            @*<th>Cinsiyet</th>*@
+                            <th>Düzenle</th>
+                            <th>Detay</th>
+                            <th>Siparişleri</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            @Html.HiddenFor(list => item.ID)
+                            <tr>
+                                <td>@item.FirstName</td>
+                                <td>@item.LastName</td>
+                                @*<td>
+                                        @if (item.BirthDate != null)
+                                        {
+                                            @item.BirthDate.Value.ToString("dd.MM.yyyy");
+                                        }
+
+                                    </td>*@
+                                <td>
+                                    @if (item.CreatedAt != null)
+                                    {
+                                        @item.CreatedAt.Value.ToString("dd.MM.yyyy")
+                                    }
+
+                                </td>
+                                @*<td>@item.Gender</td>*@
+                                <td><a href="@Url.Action("Edit", "User", new { ID = item.ID })" class="btn btn-info">Düzenle</a></td>
+                                <td><a href="@Url.Action("Detail", "User", new { ID = item.ID })" class="btn btn-info">Detay</a></td>
+                                <td><a href="@Url.Action("OrderHistory", "User", new { ID = item.ID })" class="btn btn-info">Siparişleri</a></td>
+
+                            </tr>
+
+                        }
+
+
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+</div>
+@section scripts{
+
+    <script src="~/DataTables/DataTables.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#UserList').DataTable();
+        });
+    </script>
+
+}
+
+
+
+

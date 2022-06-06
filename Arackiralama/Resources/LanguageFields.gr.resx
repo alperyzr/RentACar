@@ -1,0 +1,3153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AboutMore" xml:space="preserve">
+    <value>More on</value>
+  </data>
+  <data name="AboutOffer" xml:space="preserve">
+    <value>About Your Offer</value>
+  </data>
+  <data name="AcceptOffer" xml:space="preserve">
+    <value>Send My Offer</value>
+  </data>
+  <data name="AcceptOffer3" xml:space="preserve">
+    <value>You will be receiving an e-mail with all the pertinent information regarding your purchase.</value>
+  </data>
+  <data name="AcceptOfferMail3" xml:space="preserve">
+    <value>Your reservation details including all other relevant details will be e-mailed to you immediately.</value>
+  </data>
+  <data name="AcceptTerm" xml:space="preserve">
+    <value>Please accept the terms &amp; conditions</value>
+  </data>
+  <data name="Accommodation" xml:space="preserve">
+    <value>Accommodation</value>
+  </data>
+  <data name="Account" xml:space="preserve">
+    <value>My Account</value>
+  </data>
+  <data name="AccountAndTravel" xml:space="preserve">
+    <value>My Account and Itineraries</value>
+  </data>
+  <data name="AccountInfo" xml:space="preserve">
+    <value>My Account Information</value>
+  </data>
+  <data name="AceeptOffer1" xml:space="preserve">
+    <value>The total cost based on your offer will be charged to your credit card,</value>
+  </data>
+  <data name="AceeptOffer2" xml:space="preserve">
+    <value>Your reservation will be confirmed under our &lt;b&gt;no cancellation policy&lt;/b&gt;</value>
+  </data>
+  <data name="ActivationAlert" xml:space="preserve">
+    <value>Please activate your account.</value>
+  </data>
+  <data name="ActivationAlert2" xml:space="preserve">
+    <value>Your email or password are incorrect! Please try again</value>
+  </data>
+  <data name="ActivationMail" xml:space="preserve">
+    <value>Resend activation mail</value>
+  </data>
+  <data name="AddressTitle" xml:space="preserve">
+    <value>Address</value>
+  </data>
+  <data name="AdultCount" xml:space="preserve">
+    <value>Number of Guests</value>
+  </data>
+  <data name="AdultCountText" xml:space="preserve">
+    <value>Number of Guests</value>
+  </data>
+  <data name="AdultNumber" xml:space="preserve">
+    <value>Adult(s)</value>
+  </data>
+  <data name="Affordable" xml:space="preserve">
+    <value>The Most Affordable Choice</value>
+  </data>
+  <data name="Agu" xml:space="preserve">
+    <value>August</value>
+  </data>
+  <data name="AirlinePoint" xml:space="preserve">
+    <value>Airline Point</value>
+  </data>
+  <data name="AirlinePoints" xml:space="preserve">
+    <value>Airline Points</value>
+  </data>
+  <data name="AirlinesTitle" xml:space="preserve">
+    <value>Airlines</value>
+  </data>
+  <data name="AirLineTitle" xml:space="preserve">
+    <value>Airline</value>
+  </data>
+  <data name="AirportTitle" xml:space="preserve">
+    <value>Airlines</value>
+  </data>
+  <data name="AjaxPass" xml:space="preserve">
+    <value>Username or password is incorrect.</value>
+  </data>
+  <data name="AjaxValidation" xml:space="preserve">
+    <value>Login details are missing.</value>
+  </data>
+  <data name="AllairlinesTitle" xml:space="preserve">
+    <value>All Airlines</value>
+  </data>
+  <data name="AllinclusivePrice" xml:space="preserve">
+    <value>All Inclusive Price</value>
+  </data>
+  <data name="AllNews" xml:space="preserve">
+    <value>All News</value>
+  </data>
+  <data name="AllPriceRates" xml:space="preserve">
+    <value>All rates</value>
+  </data>
+  <data name="AllTitle" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="Amendment" xml:space="preserve">
+    <value>Amendments</value>
+  </data>
+  <data name="AnkaraHotels" xml:space="preserve">
+    <value>Ankara Hotels</value>
+  </data>
+  <data name="Apr" xml:space="preserve">
+    <value>April</value>
+  </data>
+  <data name="ArrivalTime" xml:space="preserve">
+    <value>Arrival Time</value>
+  </data>
+  <data name="ArrTime" xml:space="preserve">
+    <value>Arrival Time</value>
+  </data>
+  <data name="AtMap" xml:space="preserve">
+    <value>Haritada</value>
+  </data>
+  <data name="AverageRate" xml:space="preserve">
+    <value>Daily Average Rate</value>
+  </data>
+  <data name="BaggageAllowance" xml:space="preserve">
+    <value>Baggage Allowance</value>
+  </data>
+  <data name="BannerTopSecret" xml:space="preserve">
+    <value>Top Secret Hotels.</value>
+  </data>
+  <data name="BannerTopSecret1" xml:space="preserve">
+    <value>Find The</value>
+  </data>
+  <data name="BannerTopSecret2" xml:space="preserve">
+    <value>Best Deals</value>
+  </data>
+  <data name="BannerTopSecret3" xml:space="preserve">
+    <value>Per Night</value>
+  </data>
+  <data name="BeforeYouGo" xml:space="preserve">
+    <value>.       Primary guest must be 21 years of age.&lt;/br&gt;
+
+·        Your account will be charged at the time of booking for the full hotel room amount, including all tax recovery charges and fees.&lt;/br&gt;
+
+·        Bringing you rock-bottom prices on hotel rooms means bookings are final (no refunds, no changes).&lt;/br&gt;</value>
+  </data>
+  <data name="BestPrcTitle" xml:space="preserve">
+    <value>Best Prices</value>
+  </data>
+  <data name="BestPriceDescription" xml:space="preserve">
+    <value>&lt;b&gt;aracvararac.com's Call Your Own Price feature&lt;/b&gt; is unique in that it allows you to directly negotiate with the hotels for your nightly rate. All hotels, whether they be 5 star international brands or simple B&amp;Bs with 5 rooms, wish for a 100% occupancy rate. At aracvararac.com, we act as intermiedaries between hotels who wish to fulfil this objective and our customers who are seeking for the lowest prices available, by getting a daily rate list of their &lt;b&gt;unoccupied rooms&lt;/b&gt; from the hotels we work with. Hotels, wary of their reputations, do not advertise those special prices publicly. If and when your propsed rate is accepted by one or more of our member hotels, you receive a notification bearing the hotel's name and details. With aracvararac.com's Call Your Own Price, you get the lowest rate not available anywhere else.</value>
+  </data>
+  <data name="BestPriceGuaranteed" xml:space="preserve">
+    <value>BEST PRICE GUARANTEE</value>
+  </data>
+  <data name="BestPricePerNight" xml:space="preserve">
+    <value>Per room, nightly</value>
+  </data>
+  <data name="BestPriceTitle" xml:space="preserve">
+    <value>Here, you may designate your preferred location, star rating, and the rate you wish to pay for your stay, and we will work to negotiate with the hotels to find you the most suitable alternatives.</value>
+  </data>
+  <data name="BillingInfo" xml:space="preserve">
+    <value>Billing Info</value>
+  </data>
+  <data name="BirthDate" xml:space="preserve">
+    <value>Date of Birth</value>
+  </data>
+  <data name="BornDate" xml:space="preserve">
+    <value>Birthday</value>
+  </data>
+  <data name="Breakfast" xml:space="preserve">
+    <value>Breakfast</value>
+  </data>
+  <data name="BreakFastInc" xml:space="preserve">
+    <value>Breakfast included</value>
+  </data>
+  <data name="ButtonShow" xml:space="preserve">
+    <value>If you cannot see the password reset button above, you may click on the link below instead.</value>
+  </data>
+  <data name="ButtonShowMessage" xml:space="preserve">
+    <value>If you cannot see the password reset button above, please click on the link below instead.</value>
+  </data>
+  <data name="BuyTitle" xml:space="preserve">
+    <value>BUY</value>
+  </data>
+  <data name="CallCenter" xml:space="preserve">
+    <value>Our live customer service phone line is open weekdays between 9AM - 9PM. If you want to reach us outside these hours, please send your inquiry to bilgi@aracvararac.com or fill in the ccustomer service form below.</value>
+  </data>
+  <data name="CallYourBestPrice" xml:space="preserve">
+    <value>&lt;b&gt;Call your own price and get the best deals&lt;/b&gt;</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Cancel1" xml:space="preserve">
+    <value>Please note that cancellation requests that are made after the date and time as required by the hotel will not be accepted, and no refunds will be made.</value>
+  </data>
+  <data name="Cancel2" xml:space="preserve">
+    <value>If your reservation is not fulfilled and your inquiry is made after the cancellation cut-off date and time, the first night's rate will be charged to your credit card.</value>
+  </data>
+  <data name="CancelActive" xml:space="preserve">
+    <value>Reservation cancellation request is active.</value>
+  </data>
+  <data name="Cancelled" xml:space="preserve">
+    <value>Reservation canceled.</value>
+  </data>
+  <data name="CancelOwner" xml:space="preserve">
+    <value>Your</value>
+  </data>
+  <data name="CancelPolicy" xml:space="preserve">
+    <value>Cancellation Policy</value>
+  </data>
+  <data name="CancelReq" xml:space="preserve">
+    <value>Do you want to send a cancellation request?</value>
+  </data>
+  <data name="CancelTitle" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="CarAfterRes" xml:space="preserve">
+    <value>You will be notified of your rental car company when you complete your reservation. This method allows us to offer the lowest car rental rates available anywhere.</value>
+  </data>
+  <data name="CardHolder" xml:space="preserve">
+    <value>Cardholder Name</value>
+  </data>
+  <data name="CardNo" xml:space="preserve">
+    <value>Card Number</value>
+  </data>
+  <data name="CardType" xml:space="preserve">
+    <value>Card Type</value>
+  </data>
+  <data name="Cars" xml:space="preserve">
+    <value>Cars</value>
+  </data>
+  <data name="CarSearchResult" xml:space="preserve">
+    <value>Search Results</value>
+  </data>
+  <data name="CCType" xml:space="preserve">
+    <value>CC Type</value>
+  </data>
+  <data name="CCV2" xml:space="preserve">
+    <value>CCV2</value>
+  </data>
+  <data name="CellPhoneTitle" xml:space="preserve">
+    <value>Cell Phone</value>
+  </data>
+  <data name="Chckin" xml:space="preserve">
+    <value>Check-In</value>
+  </data>
+  <data name="Chckout" xml:space="preserve">
+    <value>Check-Out</value>
+  </data>
+  <data name="CheapPrice" xml:space="preserve">
+    <value>Lowest price guarantee</value>
+  </data>
+  <data name="CheapRentCar" xml:space="preserve">
+    <value>En Hesaplı Araç Kiralama</value>
+  </data>
+  <data name="CheapRentCarText" xml:space="preserve">
+    <value>Büyük firmaları tek bir yerde sorgulatın, karşılaştırın, en hesaplı aracı kiralayın.</value>
+  </data>
+  <data name="CheckInDate" xml:space="preserve">
+    <value>Check-In</value>
+  </data>
+  <data name="CheckOutDate" xml:space="preserve">
+    <value>Check-Out</value>
+  </data>
+  <data name="CheckOutIn" xml:space="preserve">
+    <value>Check In / Check Out</value>
+  </data>
+  <data name="ChildAge" xml:space="preserve">
+    <value>Child Age</value>
+  </data>
+  <data name="ChildAges" xml:space="preserve">
+    <value>Child Age(s)</value>
+  </data>
+  <data name="ChildCount" xml:space="preserve">
+    <value>Number of Child</value>
+  </data>
+  <data name="ChildNumber" xml:space="preserve">
+    <value>Children</value>
+  </data>
+  <data name="ChildRateText" xml:space="preserve">
+    <value>Child Fee</value>
+  </data>
+  <data name="ChooseCardType" xml:space="preserve">
+    <value>Select Card Type</value>
+  </data>
+  <data name="ChooseDate" xml:space="preserve">
+    <value>Choose Date</value>
+  </data>
+  <data name="ChooseDest" xml:space="preserve">
+    <value>Choose a destination</value>
+  </data>
+  <data name="Citybycity" xml:space="preserve">
+    <value>City By City Turkey</value>
+  </data>
+  <data name="CityCityInfo" xml:space="preserve">
+    <value>aracvararac.com offers &lt;b&gt;&lt;?Sehir?&gt;&lt;/b&gt; hotels at the best prices possible. In order to find &lt;b&gt;&lt;?Sehir?&gt;&lt;/b&gt; hotels, you may go into our &lt;b&gt;&lt;?Sehir?&gt;&lt;/b&gt; hotels page and type the city of your choice in the search box. All &lt;b&gt;&lt;?Sehir?&gt;&lt;/b&gt; hotels will be listed under both regular early reservation and aracvararac special prices.
+ &lt;br&gt;&lt;br&gt;
+You may then access &lt;b&gt;&lt;?Sehir?&gt;&lt;/b&gt; hotels via the map that appears next to listings. You have the option to filter the &lt;b&gt;&lt;?Sehir?&gt;&lt;/b&gt; hotels by star rating by 5 star &lt;b&gt;&lt;?Sehir?&gt;&lt;/b&gt; hotels , 4 star &lt;b&gt;&lt;?Sehir?&gt;&lt;/b&gt; hotels, 3 star &lt;b&gt;&lt;?Sehir?&gt;&lt;/b&gt; hotels and 2 star &lt;b&gt;&lt;?Sehir?&gt;&lt;/b&gt; hotels. 
+  &lt;br&gt;&lt;br&gt;
+aracvararac.com offers its customers a best price guarantee. If you find availability of the same &lt;b&gt;&lt;?Sehir?&gt;&lt;/b&gt;  hotels at lower prices on the same dates, aracvararac.com will reimburse you for the difference. aracvararac.com's top priority is 100% customer satisfaction. You will always find the best hotel deals at the lowest prices at aracvararac.com
+  &lt;br&gt;&lt;br&gt;
+You may also book&lt;b&gt;&lt;?Sehir?&gt;&lt;/b&gt;  hotel rooms at the best prices through our early reservation system. You may also catch even better deals with our &lt;b&gt;&lt;?Sehir?&gt;&lt;/b&gt; Secret Hotels feature.</value>
+  </data>
+  <data name="Cityed" xml:space="preserve">
+    <value>City</value>
+  </data>
+  <data name="CityHotel" xml:space="preserve">
+    <value>Hotels</value>
+  </data>
+  <data name="CityTitle" xml:space="preserve">
+    <value>City</value>
+  </data>
+  <data name="ClassSrc" xml:space="preserve">
+    <value>Class</value>
+  </data>
+  <data name="ClassTitle" xml:space="preserve">
+    <value>Class</value>
+  </data>
+  <data name="CommentAccount" xml:space="preserve">
+    <value>You sent a review before. You can edit your review at your account.</value>
+  </data>
+  <data name="CommentFailed" xml:space="preserve">
+    <value>Reviews are not allowed on canceled reservation</value>
+  </data>
+  <data name="CommentLate" xml:space="preserve">
+    <value>Reviews are not allowed until the booking date</value>
+  </data>
+  <data name="CommentPlace" xml:space="preserve">
+    <value>Write a review</value>
+  </data>
+  <data name="Comments" xml:space="preserve">
+    <value>Reviews</value>
+  </data>
+  <data name="CommentSubmit" xml:space="preserve">
+    <value>Thank you for your review.</value>
+  </data>
+  <data name="CommentTag" xml:space="preserve">
+    <value>In order to write a review you need to stay at this hotel</value>
+  </data>
+  <data name="CommentTitle" xml:space="preserve">
+    <value>reviews</value>
+  </data>
+  <data name="Commitment" xml:space="preserve">
+    <value>Choose from 240,000+ hotels</value>
+  </data>
+  <data name="Company" xml:space="preserve">
+    <value>Company</value>
+  </data>
+  <data name="CompanyName" xml:space="preserve">
+    <value>Company Name</value>
+  </data>
+  <data name="ComplateSell" xml:space="preserve">
+    <value>Complete Payment</value>
+  </data>
+  <data name="ConfirmMail" xml:space="preserve">
+    <value>Confirm E-Mail</value>
+  </data>
+  <data name="ConfirmPassword" xml:space="preserve">
+    <value>Confirm New Password</value>
+  </data>
+  <data name="Congrats" xml:space="preserve">
+    <value>Thank you for using aracvararac.com. We have sent your offer to the hotels that meet your criteria.</value>
+  </data>
+  <data name="Contact" xml:space="preserve">
+    <value>Contact Us</value>
+  </data>
+  <data name="ContactInfo" xml:space="preserve">
+    <value>Contact Info</value>
+  </data>
+  <data name="ContactName" xml:space="preserve">
+    <value>Contact Name</value>
+  </data>
+  <data name="ContainsWord" xml:space="preserve">
+    <value>Enter a keyword</value>
+  </data>
+  <data name="Continue" xml:space="preserve">
+    <value>Continue</value>
+  </data>
+  <data name="ContinueReading" xml:space="preserve">
+    <value>Read More</value>
+  </data>
+  <data name="ContractHeader" xml:space="preserve">
+    <value>CONTRACT DETAILS</value>
+  </data>
+  <data name="ContractTitle" xml:space="preserve">
+    <value>This contract covers the rights and responsibilities of the aforementioned parties with regards to the seller’s detailing of its products/services, their quantitative and qualitative properties as well as their pricing and means of delivery to the buyer in accordance with Consumer Protection Legislation No: 4077.</value>
+  </data>
+  <data name="CountryTitle" xml:space="preserve">
+    <value>Country</value>
+  </data>
+  <data name="CouponFirst" xml:space="preserve">
+    <value>Receive aracvararac.com discount coupons</value>
+  </data>
+  <data name="Court1" xml:space="preserve">
+    <value>All conflicts, disputes and disagreements arising from the facilitation of this agreement that are within the fiscal limits set by the Ministry of Trade will be under the jurisdiction of the Consumer Arbitration Courts located at the buyer’s location. For disputes that exceed the financial scope of this agreement, Consumer Courts will hold all jurisdiction.</value>
+  </data>
+  <data name="CourtTitle" xml:space="preserve">
+    <value>AUTHORIZED COURT</value>
+  </data>
+  <data name="CreditCardHotel" xml:space="preserve">
+    <value>Your creditcard will be charged immediately for the full amount of the reservation</value>
+  </data>
+  <data name="CreditcardValid" xml:space="preserve">
+    <value>Your Creditcard is not valid</value>
+  </data>
+  <data name="Currency" xml:space="preserve">
+    <value>Currency</value>
+  </data>
+  <data name="CurrencyExchange" xml:space="preserve">
+    <value>Exchange Rates</value>
+  </data>
+  <data name="CurrencyRate" xml:space="preserve">
+    <value>EUR</value>
+  </data>
+  <data name="CustomerDetail" xml:space="preserve">
+    <value>CUSTOMER DETAILS</value>
+  </data>
+  <data name="CustomerMail" xml:space="preserve">
+    <value>ORDER DETAILS</value>
+  </data>
+  <data name="CustomerRatings" xml:space="preserve">
+    <value>Read reviews</value>
+  </data>
+  <data name="CustomerRev" xml:space="preserve">
+    <value>Customer Reviews</value>
+  </data>
+  <data name="CustomerService" xml:space="preserve">
+    <value>Customer Service</value>
+  </data>
+  <data name="CustomerTerm" xml:space="preserve">
+    <value>The hirer agrees to drive the rented vehicle in full compliance with traffic laws and regulations.</value>
+  </data>
+  <data name="CustomerTerm1" xml:space="preserve">
+    <value>The hirer must be over 21 years of age with a valid driving license that has been issued at least two years prior for Economy and Mid-size vehicles. The hirer must be over 28 years of age, carrying a valid driving license obtained at least five years prior for Prestige class vehicles.</value>
+  </data>
+  <data name="CustomerTerm2" xml:space="preserve">
+    <value>In cases of: the vehicle being determined to be driven under the influence (alcohol, drugs, and any other substance that affects the hirer’s mental capacity; gross negligence with intent; the keys to the vehicle not being returned after three days; the vehicle being moved from the place of accident before the police and/or other official bodies are notified and official reports are filled, all insurances purchased at the pickup will be invalid, and all costs and expenses resulting from such incidents will be paid by the hirer.</value>
+  </data>
+  <data name="CustomerTerm3" xml:space="preserve">
+    <value>Private property and personal belongings kept in the car are outside of the scope of insurance. The hirer is responsible for charges resulting from damage to third persons that are not covered by the insurance.</value>
+  </data>
+  <data name="CustomerTerm4" xml:space="preserve">
+    <value>The hirer is responsible for all traffic related fees, penalties, and charges as well as interest charges resulting from legal proceedings</value>
+  </data>
+  <data name="CustomerTerm5" xml:space="preserve">
+    <value>Day of rental is calculated on a 24 hr renting period. For returns that exceed three hours after the agreed return date/time, an additional full day charge is applied.</value>
+  </data>
+  <data name="CustomerTerm6" xml:space="preserve">
+    <value>VEHICLE PICKUP INFORMATION</value>
+  </data>
+  <data name="CustomerTerm7" xml:space="preserve">
+    <value>VEHICLE RETURN INFORMATION</value>
+  </data>
+  <data name="CVV2Title" xml:space="preserve">
+    <value>What Is It?</value>
+  </data>
+  <data name="Daily" xml:space="preserve">
+    <value>Day(s)</value>
+  </data>
+  <data name="Daily1" xml:space="preserve">
+    <value>(Including VAT)</value>
+  </data>
+  <data name="DailyCar" xml:space="preserve">
+    <value>Daily Rate</value>
+  </data>
+  <data name="Date" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="DateRange" xml:space="preserve">
+    <value>Your date range should not be above  28 days</value>
+  </data>
+  <data name="DayTitle" xml:space="preserve">
+    <value>Day(s)</value>
+  </data>
+  <data name="Dear" xml:space="preserve">
+    <value>Dear</value>
+  </data>
+  <data name="Dec" xml:space="preserve">
+    <value>December</value>
+  </data>
+  <data name="DepartingFrom" xml:space="preserve">
+    <value>Departing From</value>
+  </data>
+  <data name="DepartureDate" xml:space="preserve">
+    <value>Departing</value>
+  </data>
+  <data name="DepartureFlight" xml:space="preserve">
+    <value>Choose Your Departure Flight</value>
+  </data>
+  <data name="DepartureTime" xml:space="preserve">
+    <value>Departure Time</value>
+  </data>
+  <data name="DepTime" xml:space="preserve">
+    <value>Departure Time</value>
+  </data>
+  <data name="DestinationTitle" xml:space="preserve">
+    <value>Where are you traveling?</value>
+  </data>
+  <data name="Detail" xml:space="preserve">
+    <value>DETAILS</value>
+  </data>
+  <data name="DetailedSrc" xml:space="preserve">
+    <value>Detailed Search</value>
+  </data>
+  <data name="Dinner" xml:space="preserve">
+    <value>Dinner</value>
+  </data>
+  <data name="Direct" xml:space="preserve">
+    <value>Direct</value>
+  </data>
+  <data name="DirectFlight" xml:space="preserve">
+    <value>Nonstop</value>
+  </data>
+  <data name="DirectFlights" xml:space="preserve">
+    <value>Direct Flights Only</value>
+  </data>
+  <data name="Discount" xml:space="preserve">
+    <value>Up to 40% Discounts</value>
+  </data>
+  <data name="DistanceTitle" xml:space="preserve">
+    <value>Distance Selling Contract</value>
+  </data>
+  <data name="DistrictTitle" xml:space="preserve">
+    <value>District</value>
+  </data>
+  <data name="DropOff" xml:space="preserve">
+    <value>Drop-off At</value>
+  </data>
+  <data name="DropOffDate" xml:space="preserve">
+    <value>Drop-off Date</value>
+  </data>
+  <data name="DropOffInfo" xml:space="preserve">
+    <value>Drop-off information</value>
+  </data>
+  <data name="DropOffOffice" xml:space="preserve">
+    <value>Dropoff Office</value>
+  </data>
+  <data name="DropOffPlace" xml:space="preserve">
+    <value>Drop Off</value>
+  </data>
+  <data name="DstGo" xml:space="preserve">
+    <value>Choose a destination</value>
+  </data>
+  <data name="Economy" xml:space="preserve">
+    <value>Class</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>E-Mail</value>
+  </data>
+  <data name="EmailInfo" xml:space="preserve">
+    <value>E-Mail Address</value>
+  </data>
+  <data name="EnterGo" xml:space="preserve">
+    <value>LOGIN</value>
+  </data>
+  <data name="Excluded" xml:space="preserve">
+    <value>Excluded</value>
+  </data>
+  <data name="ExpediaCardInfo" xml:space="preserve">
+    <value>Your credit card will be charged immediately for the full amount of the reservation</value>
+  </data>
+  <data name="ExpediaCurrencyMessage" xml:space="preserve">
+    <value>Full payment will be charged to your credit card when you book this hotel. Please be aware that your bank may convert the payment to your local currency and charge you an additional conversion fee. This means that the amount you see on your credit or bank card statement may be in your local currency and therefore a different figure than the Total Price shown above. If you have any questions about this fee or the exchange rate applied to your booking, please contact your bank.</value>
+  </data>
+  <data name="ExpediaCurrencyTitle" xml:space="preserve">
+    <value>Currency Rate Info</value>
+  </data>
+  <data name="ExpediaOriginalPrice" xml:space="preserve">
+    <value>Credit card will be charged</value>
+  </data>
+  <data name="ExpirationDate" xml:space="preserve">
+    <value>Expiration Date</value>
+  </data>
+  <data name="ExpNonRef" xml:space="preserve">
+    <value>Please note that reservations that are marked with "no-cancellation" cannot be cancelled.</value>
+  </data>
+  <data name="ExpPay1" xml:space="preserve">
+    <value>This booking has been made via an international partner.</value>
+  </data>
+  <data name="ExpPay2" xml:space="preserve">
+    <value>Other than this confirmation email no other form of invoice is provided.</value>
+  </data>
+  <data name="ExpPay3" xml:space="preserve">
+    <value>The hotel do not provide any invoices.</value>
+  </data>
+  <data name="ExpTax" xml:space="preserve">
+    <value>Tax Recovery Charges&lt;br /&gt;And Service Fees</value>
+  </data>
+  <data name="ExtraFee" xml:space="preserve">
+    <value>Extra Fee(s)</value>
+  </data>
+  <data name="ExtraPerson" xml:space="preserve">
+    <value>Extra Person Fee</value>
+  </data>
+  <data name="Facility" xml:space="preserve">
+    <value>Facility</value>
+  </data>
+  <data name="FastShop" xml:space="preserve">
+    <value>Fast and easy transactions</value>
+  </data>
+  <data name="Feb" xml:space="preserve">
+    <value>February</value>
+  </data>
+  <data name="Female" xml:space="preserve">
+    <value>Female</value>
+  </data>
+  <data name="FillAll" xml:space="preserve">
+    <value>Fill out the required sections</value>
+  </data>
+  <data name="Filter" xml:space="preserve">
+    <value>Filter</value>
+  </data>
+  <data name="FilterResultTitle" xml:space="preserve">
+    <value>Filter results</value>
+  </data>
+  <data name="FindCheap" xml:space="preserve">
+    <value>Find Best Deals</value>
+  </data>
+  <data name="FindOut" xml:space="preserve">
+    <value>Click to find out why</value>
+  </data>
+  <data name="FirstKnow" xml:space="preserve">
+    <value>Be the first to know</value>
+  </data>
+  <data name="FlightAlert1" xml:space="preserve">
+    <value>For international travel, passport number must be entered.</value>
+  </data>
+  <data name="FlightAllResult" xml:space="preserve">
+    <value>View All Cars</value>
+  </data>
+  <data name="FlightArrival" xml:space="preserve">
+    <value>Arrival</value>
+  </data>
+  <data name="FlightArTime" xml:space="preserve">
+    <value>Arrival Time</value>
+  </data>
+  <data name="FlightBack" xml:space="preserve">
+    <value>Back to Search Results</value>
+  </data>
+  <data name="FlightBilling" xml:space="preserve">
+    <value>Billing Details</value>
+  </data>
+  <data name="FlightButtonTextRsv" xml:space="preserve">
+    <value>Book</value>
+  </data>
+  <data name="FlightCancelVehicle" xml:space="preserve">
+    <value>Exlude Car</value>
+  </data>
+  <data name="FlightChange" xml:space="preserve">
+    <value>Change Flight</value>
+  </data>
+  <data name="FlightChangeVehicle" xml:space="preserve">
+    <value>Choose a different car</value>
+  </data>
+  <data name="FlightCityTitle" xml:space="preserve">
+    <value>City</value>
+  </data>
+  <data name="FlightClass" xml:space="preserve">
+    <value>Flight Class</value>
+  </data>
+  <data name="FlightCode" xml:space="preserve">
+    <value>Flight Code</value>
+  </data>
+  <data name="FlightDeparting" xml:space="preserve">
+    <value>Departing From</value>
+  </data>
+  <data name="FlightDeparture" xml:space="preserve">
+    <value>Departure</value>
+  </data>
+  <data name="FlightDepTime" xml:space="preserve">
+    <value>Departing Time</value>
+  </data>
+  <data name="FlightError" xml:space="preserve">
+    <value>We couldn't find any flights matching your search criteria.</value>
+  </data>
+  <data name="flightForeign" xml:space="preserve">
+    <value>Foreign</value>
+  </data>
+  <data name="FlightInfo" xml:space="preserve">
+    <value>Flight Info</value>
+  </data>
+  <data name="FlightInfoTitle" xml:space="preserve">
+    <value>FLIGHT INFO</value>
+  </data>
+  <data name="FlightMailSubject" xml:space="preserve">
+    <value>Your Flight Reservation</value>
+  </data>
+  <data name="FlightMessageInfoTitle" xml:space="preserve">
+    <value>Thank you for choosing www.aracvararac.com The total amount has been charged to your credit card and your flight is ready with the details below.</value>
+  </data>
+  <data name="FlightNextDayTitle" xml:space="preserve">
+    <value>Next Day</value>
+  </data>
+  <data name="FlightNo" xml:space="preserve">
+    <value>Flight No</value>
+  </data>
+  <data name="FlightNumberTitle" xml:space="preserve">
+    <value>Flight No</value>
+  </data>
+  <data name="FlightPasNo" xml:space="preserve">
+    <value>Pasaport Number</value>
+  </data>
+  <data name="FlightPayment1" xml:space="preserve">
+    <value>Foreign Credit Cards</value>
+  </data>
+  <data name="FlightPayment2" xml:space="preserve">
+    <value>Installments</value>
+  </data>
+  <data name="FlightPayment3" xml:space="preserve">
+    <value>3D Payment</value>
+  </data>
+  <data name="FlightPnrRsvMailText" xml:space="preserve">
+    <value>Your reservation is complete. Please call our Customer Support at 212-441 04 46 to buy your ticket or Buy it yourself with your PNR at the &lt;a href="http://www.aracvararac.com/en/flights"&gt;website&lt;/a&gt;.</value>
+  </data>
+  <data name="FlightPoint" xml:space="preserve">
+    <value>Airline Point</value>
+  </data>
+  <data name="FlightPoints" xml:space="preserve">
+    <value>Airline Points</value>
+  </data>
+  <data name="FlightPreviousDayTitle" xml:space="preserve">
+    <value>Previous Day</value>
+  </data>
+  <data name="FlightPriceCheckInfo" xml:space="preserve">
+    <value>The total number, including your plane tickets verigi be charged to your credit card states. 
+&lt;br/&gt;
+We wish you a good trip ...</value>
+  </data>
+  <data name="FlightRscContact" xml:space="preserve">
+    <value>Please do not hesitate to call our Customer Support at (312) 441 40 46.</value>
+  </data>
+  <data name="Flights" xml:space="preserve">
+    <value>Flights</value>
+  </data>
+  <data name="FlightSaveFlight" xml:space="preserve">
+    <value>Make Reservation</value>
+  </data>
+  <data name="FlightSearch" xml:space="preserve">
+    <value>Search for Flights:</value>
+  </data>
+  <data name="FlightSeatNumLast" xml:space="preserve">
+    <value>Last</value>
+  </data>
+  <data name="FlightSeatNumSeats" xml:space="preserve">
+    <value>Seats</value>
+  </data>
+  <data name="FlightSeatTitle" xml:space="preserve">
+    <value>Seats</value>
+  </data>
+  <data name="FlightSelectAlert" xml:space="preserve">
+    <value>Select a departure airport.</value>
+  </data>
+  <data name="FlightSelectAlert2" xml:space="preserve">
+    <value>Select an arrival airport.</value>
+  </data>
+  <data name="FlightSort" xml:space="preserve">
+    <value>Sort results by</value>
+  </data>
+  <data name="FlightSort1" xml:space="preserve">
+    <value>Price</value>
+  </data>
+  <data name="FlightSort2" xml:space="preserve">
+    <value>Airline</value>
+  </data>
+  <data name="FlightSort3" xml:space="preserve">
+    <value>Departure Time</value>
+  </data>
+  <data name="flightTCNo" xml:space="preserve">
+    <value>Turkish Citizen</value>
+  </data>
+  <data name="flightTCNo2" xml:space="preserve">
+    <value>Turkish ID</value>
+  </data>
+  <data name="FlightTCVatandas" xml:space="preserve">
+    <value>Turkish Citizen</value>
+  </data>
+  <data name="FlightTerm1" xml:space="preserve">
+    <value>All price changes until purchase will be reflected on your open reservation.</value>
+  </data>
+  <data name="FlightTerm2" xml:space="preserve">
+    <value>Reservations not completed by the cut off date will be automatically cancelled.</value>
+  </data>
+  <data name="FlightTerm3" xml:space="preserve">
+    <value>A copy of your original ticket is sent to you via e-mail and SMS.</value>
+  </data>
+  <data name="FlightTime" xml:space="preserve">
+    <value>Flight Time</value>
+  </data>
+  <data name="FlightTitle" xml:space="preserve">
+    <value>Plan your itinerary</value>
+  </data>
+  <data name="flightUyruk" xml:space="preserve">
+    <value>Nationality</value>
+  </data>
+  <data name="flightUyruk2" xml:space="preserve">
+    <value>Nationality</value>
+  </data>
+  <data name="FlightValidPassName" xml:space="preserve">
+    <value>Passenger names cannot be same. Please change it.</value>
+  </data>
+  <data name="FlightVehicle" xml:space="preserve">
+    <value>Add a car to your trip?</value>
+  </data>
+  <data name="FlightVehicleName" xml:space="preserve">
+    <value>Flight</value>
+  </data>
+  <data name="FlightVehicleRentTime" xml:space="preserve">
+    <value>Rental Date</value>
+  </data>
+  <data name="FlightVehicleVName" xml:space="preserve">
+    <value>Car</value>
+  </data>
+  <data name="foreigner" xml:space="preserve">
+    <value>Foreigner</value>
+  </data>
+  <data name="ForgetPass" xml:space="preserve">
+    <value>Forgot your password?</value>
+  </data>
+  <data name="FormName" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="FormSurname" xml:space="preserve">
+    <value>Last Name</value>
+  </data>
+  <data name="FSBHiddenPics" xml:space="preserve">
+    <value>&lt;div class="popup"&gt;
+            Gizli otel olduğu için
+            &lt;div class="ok"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        Pictures are hidden&lt;br /&gt;
+        &lt;a href="javascript:void(0)" class="infoPopup"&gt;Find out why?&lt;/a&gt;</value>
+  </data>
+  <data name="FsbMail" xml:space="preserve">
+    <value>A copy of this purchase has been emailed to you.</value>
+  </data>
+  <data name="FsbMail1" xml:space="preserve">
+    <value>Top secret hotels and Call your own price purchases are nonrefundable.</value>
+  </data>
+  <data name="FSBRoomType" xml:space="preserve">
+    <value>Standard Room - Non Refundable</value>
+  </data>
+  <data name="FullFare" xml:space="preserve">
+    <value>Full Fare</value>
+  </data>
+  <data name="GeneralProvision" xml:space="preserve">
+    <value>GENERAL PROVISIONS</value>
+  </data>
+  <data name="GeneralTerm" xml:space="preserve">
+    <value>You must accept the terms and conditions in aracvararac.com Sales Agreement and Information Form to proceed</value>
+  </data>
+  <data name="GeneralTerm1" xml:space="preserve">
+    <value>You must accept the terms and conditions in aracvararac.com Sales Agreement to proceed</value>
+  </data>
+  <data name="GeneralTerm2" xml:space="preserve">
+    <value>You must accept the terms and conditions in aracvararac.com Information Form to proceed</value>
+  </data>
+  <data name="GeneralTerm3" xml:space="preserve">
+    <value>You must accept the terms and conditions in aracvararac.com Sales Agreement, Information Form and Expedia Cancellation Policy to proceed.</value>
+  </data>
+  <data name="GeneralTerm4" xml:space="preserve">
+    <value>You must accept the terms and conditions in Expedia Cancellation Policy to proceed.</value>
+  </data>
+  <data name="GeneralTerm5" xml:space="preserve">
+    <value>You must accept the terms and conditions in aracvararac.com Information Form and Expedia Cancellation Policy to proceed.</value>
+  </data>
+  <data name="GeneralTerm6" xml:space="preserve">
+    <value>You must accept the terms and conditions in aracvararac.com Sales Agreement and Expedia Cancellation Policy to proceed.</value>
+  </data>
+  <data name="GeneralTitle1" xml:space="preserve">
+    <value>The buyer understands and accepts that the buyer is fully responsible for all the information listed by the Facility and/or The Supplier per its sale as well as its implementation within the stated qualifications and its delivery.</value>
+  </data>
+  <data name="GeneralTitle2" xml:space="preserve">
+    <value>The buyer understands and accepts that the buyer, prior to facilitating this agreement, has read and understood all the information regarding the products/services intended, including but not limited to, price, payment terms, and basic attributes as described in the product/service information page as per article number 3 of this agreement.</value>
+  </data>
+  <data name="GeneralTitle3" xml:space="preserve">
+    <value>The buyer understands and accepts that the buyer has read and consents to the Pre-Notification Agreement.</value>
+  </data>
+  <data name="GeneralTitle4" xml:space="preserve">
+    <value>All parties pertinent to this agreement agree that they will abide by the rules and regulations of this agreement as well as the Consumer Protection Legislation No:4077, and that they will act in accordance with both statutes.</value>
+  </data>
+  <data name="GeneralTitle5" xml:space="preserve">
+    <value>All parties pertinent to this agreement agree that they have read and understood all the articles in this agreement, and that this agreement comes into force when the buyer electronically accepts the agreement.</value>
+  </data>
+  <data name="GeneralTitle6" xml:space="preserve">
+    <value>Both the buyer and the seller understand that the Facilities/Service providers are solely responsible for the implementation of products/services resulting from the facilitation of this agreement and that www.aracvararac.com acting in agent capacity, will not and cannot be held responsible.</value>
+  </data>
+  <data name="GeneralTitle7" xml:space="preserve">
+    <value>aracvararac User Agreement is a complimentary part of this agreement, and is it accepted as such by both the buyer and the seller.</value>
+  </data>
+  <data name="GeneralTotal" xml:space="preserve">
+    <value>Total</value>
+  </data>
+  <data name="GiveOffer" xml:space="preserve">
+    <value>Hemen Teklif Ver</value>
+  </data>
+  <data name="GoingTo" xml:space="preserve">
+    <value>Going To</value>
+  </data>
+  <data name="GoTitle" xml:space="preserve">
+    <value>Departing</value>
+  </data>
+  <data name="GovermentNoTitle" xml:space="preserve">
+    <value>Republic of Turkey ID Number</value>
+  </data>
+  <data name="GuestName" xml:space="preserve">
+    <value>Guest Name</value>
+  </data>
+  <data name="GzlOtel" xml:space="preserve">
+    <value>Total cost of your lodging has been charged to your credit card by aracvararac.Please note that the additional payment you will make to the hotel should be limited to your room surcharges if there are any.</value>
+  </data>
+  <data name="GzlOtel1" xml:space="preserve">
+    <value>Your invoice has been prepared by aracvararac in your name. If you need the invoice to address another name and/or company please send your invoice details to &lt;a href="mailto:bilgi@aracvararac.com"&gt;bilgi@aracvararac.com&lt;/a&gt;</value>
+  </data>
+  <data name="GzlOtel2" xml:space="preserve">
+    <value>This reservation made thorough our proprietary Secret Hotel feature has a no-cancellation / no-alteration policy as described in the terms of use and agreement and therefore the facility will not cater to refund requests.</value>
+  </data>
+  <data name="GzlOtel3" xml:space="preserve">
+    <value>This reservation made thorough our proprietary call your own price feature has a no-cancellation / no-alteration policy as described in the terms of use and agreement and therefore the facility will not cater to refund requests.</value>
+  </data>
+  <data name="HelpPhone" xml:space="preserve">
+    <value />
+  </data>
+  <data name="HelpTitle" xml:space="preserve">
+    <value>Need help? Call</value>
+  </data>
+  <data name="HiddenPictures" xml:space="preserve">
+    <value>Pictures are hidden.</value>
+  </data>
+  <data name="Hirer" xml:space="preserve">
+    <value>Hirer</value>
+  </data>
+  <data name="HomePage" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="Hotel" xml:space="preserve">
+    <value>Hotels</value>
+  </data>
+  <data name="HotelAccess" xml:space="preserve">
+    <value>Access Hotel</value>
+  </data>
+  <data name="HotelAddress" xml:space="preserve">
+    <value>Hotel Address</value>
+  </data>
+  <data name="HotelAndFlight" xml:space="preserve">
+    <value>Otel + Flight</value>
+  </data>
+  <data name="HotelCondition" xml:space="preserve">
+    <value>Hotel Condition</value>
+  </data>
+  <data name="HotelCriteria" xml:space="preserve">
+    <value>Criteria</value>
+  </data>
+  <data name="HotelDateError" xml:space="preserve">
+    <value>Please select a date.</value>
+  </data>
+  <data name="HotelDisc" xml:space="preserve">
+    <value>Hotels up to 60% off.</value>
+  </data>
+  <data name="HotelDiscDesc" xml:space="preserve">
+    <value>Choose your own price, destination and star rating, and let aracvararac.com find you the best hotel that matches your criteria</value>
+  </data>
+  <data name="HotelDiscountNews" xml:space="preserve">
+    <value>Hotels up to 60% off</value>
+  </data>
+  <data name="HotelError" xml:space="preserve">
+    <value>We couldn't find any hotels matching your search criteria.</value>
+  </data>
+  <data name="HotelError2" xml:space="preserve">
+    <value>We couldn't find any secret hotels matching your search criteria.</value>
+  </data>
+  <data name="HotelFilterError" xml:space="preserve">
+    <value>There are no -star hotels between -fiyat -region. Please change your criteria and try again.</value>
+  </data>
+  <data name="HotelName" xml:space="preserve">
+    <value>Hotel Name</value>
+  </data>
+  <data name="HotelNego" xml:space="preserve">
+    <value>Negotiate with  hotels</value>
+  </data>
+  <data name="HotelNonFound" xml:space="preserve">
+    <value>We were unable to find what you're looking for. Try searching by city name.</value>
+  </data>
+  <data name="HotelOffer" xml:space="preserve">
+    <value>Bir Teklif Uzaklıkta</value>
+  </data>
+  <data name="HotelOfferInfo" xml:space="preserve">
+    <value>aracvararac.com's &lt;b&gt;Call Your Own Price&lt;/b&gt; feature is unique in that it allows you to directly &lt;b&gt;negotiate with the hotels&lt;/b&gt; for your nightly rate. 
+&lt;br/&gt;&lt;br/&gt;
+All hotels, whether they be 5 star international brands or simple B&amp;B’s with 5 rooms, wish for a 100% occupancy rate. 
+&lt;br/&gt;&lt;br/&gt;
+At aracvararac.com, we act as intermediaries between hotels who wish to fulfil this objective and our customers who are seeking for the lowest prices available, 
+by getting a daily rate list of their &lt;b&gt;unoccupied rooms&lt;/b&gt; from the hotels we work with. 
+&lt;br/&gt;&lt;br/&gt;
+Hotels, wary of their reputations, do not advertise those special prices publicly. If and when your proposed rate is accepted by one or more of our member 
+hotels, you receive a notification bearing the details of your stay. 
+&lt;br/&gt;&lt;br/&gt;
+With aracvararac.com's Call Your Own Price, you get the lowest rate not available anywhere else.</value>
+  </data>
+  <data name="HotelOfferMailHeader" xml:space="preserve">
+    <value>We have submitted your offer to the hotel. We will let you know as soon as we hear from them.</value>
+  </data>
+  <data name="HotelPhone" xml:space="preserve">
+    <value>Hotel Phone</value>
+  </data>
+  <data name="HotelProp" xml:space="preserve">
+    <value>Hotel Ammenities</value>
+  </data>
+  <data name="HotelRemeiningRoom" xml:space="preserve">
+    <value>Last &lt;?rCount?&gt; room</value>
+  </data>
+  <data name="HotelRoomDimension" xml:space="preserve">
+    <value>Room Size</value>
+  </data>
+  <data name="HotelSelfPriceMailHeader" xml:space="preserve">
+    <value>teşekkürler! Secmiş olduğunuz otel ile teklifiniz paylaşılmıştır</value>
+  </data>
+  <data name="HotelStar2" xml:space="preserve">
+    <value>Star Budget</value>
+  </data>
+  <data name="HotelStar3" xml:space="preserve">
+    <value>Star Quality</value>
+  </data>
+  <data name="HotelStar4" xml:space="preserve">
+    <value>Star Super</value>
+  </data>
+  <data name="HotelStar5" xml:space="preserve">
+    <value>Star Luxury</value>
+  </data>
+  <data name="HotelStarText1" xml:space="preserve">
+    <value>Star Hotel</value>
+  </data>
+  <data name="HotelStr" xml:space="preserve">
+    <value>Choose your hotel star rating preference</value>
+  </data>
+  <data name="HotelTaxes" xml:space="preserve">
+    <value>Tax Recovery Charges and Service Fees</value>
+  </data>
+  <data name="HotelTitle" xml:space="preserve">
+    <value>Hotels</value>
+  </data>
+  <data name="HotelWant" xml:space="preserve">
+    <value>İstediğiniz Otel İstediğiniz Fiyata</value>
+  </data>
+  <data name="HotelWish" xml:space="preserve">
+    <value>Dilediğin Otel Dilediğin Fiyata</value>
+  </data>
+  <data name="IfNotOffer" xml:space="preserve">
+    <value>If your offer is NOT accepted:</value>
+  </data>
+  <data name="IfNotOffer1" xml:space="preserve">
+    <value>You will receive an e-mail with instructions on how to make a renewed offer.</value>
+  </data>
+  <data name="IfOffer" xml:space="preserve">
+    <value>If your offer is accepted;</value>
+  </data>
+  <data name="IfOffer1" xml:space="preserve">
+    <value>All accommodation and other irrevocable charges will be billed to your credit card</value>
+  </data>
+  <data name="IfOffer2" xml:space="preserve">
+    <value>Your reservation details including the hotel’s name and all other relevant details will be e-mailed to you immediately.</value>
+  </data>
+  <data name="IfOfferAccept" xml:space="preserve">
+    <value>If the hotel accepts your offer you will save.</value>
+  </data>
+  <data name="IncludedPrice" xml:space="preserve">
+    <value>Price Included</value>
+  </data>
+  <data name="IncludeTitle" xml:space="preserve">
+    <value>Included</value>
+  </data>
+  <data name="IncludingRent" xml:space="preserve">
+    <value>Daily Rate (including VAT)</value>
+  </data>
+  <data name="IncludingTotal" xml:space="preserve">
+    <value>Total Amount (including VAT)</value>
+  </data>
+  <data name="Inclusive" xml:space="preserve">
+    <value>Inclusive</value>
+  </data>
+  <data name="IncorrectPass" xml:space="preserve">
+    <value>Incorrect password, please try again</value>
+  </data>
+  <data name="IncreaseChance" xml:space="preserve">
+    <value>We recommend that you choose multiple locations to increase your chances of finding a hotel that meets your criteria</value>
+  </data>
+  <data name="Infant" xml:space="preserve">
+    <value>Infant(s)</value>
+  </data>
+  <data name="InfantNumber" xml:space="preserve">
+    <value>Infant Age</value>
+  </data>
+  <data name="Installment" xml:space="preserve">
+    <value>Installment</value>
+  </data>
+  <data name="InstallmentCount" xml:space="preserve">
+    <value>Installment Count</value>
+  </data>
+  <data name="Installments" xml:space="preserve">
+    <value>Installments</value>
+  </data>
+  <data name="InstallmentTop" xml:space="preserve">
+    <value>Total</value>
+  </data>
+  <data name="InvalidChild" xml:space="preserve">
+    <value>Children aged 2-12 should be in the range. Please try again.</value>
+  </data>
+  <data name="InvalidInfant" xml:space="preserve">
+    <value>Babies can not be older than age 2. Please try again.</value>
+  </data>
+  <data name="InvalidOlder" xml:space="preserve">
+    <value>Older should be in the range of 65-100 years old. Please try again.</value>
+  </data>
+  <data name="InvalidStudent" xml:space="preserve">
+    <value>Student must be in the range of 13-25 years. Please try again.</value>
+  </data>
+  <data name="InvoiceAd" xml:space="preserve">
+    <value>Invoice Address</value>
+  </data>
+  <data name="InvoiceCit" xml:space="preserve">
+    <value>Invoice City</value>
+  </data>
+  <data name="Invoiced" xml:space="preserve">
+    <value>Invoice Info</value>
+  </data>
+  <data name="InvoiceTitle" xml:space="preserve">
+    <value>Request Invoice</value>
+  </data>
+  <data name="InvoiceTo" xml:space="preserve">
+    <value>Invoice To</value>
+  </data>
+  <data name="IstanbulHotels" xml:space="preserve">
+    <value>Istanbul Hotels</value>
+  </data>
+  <data name="IzmırHotels" xml:space="preserve">
+    <value>Izmır Hotels</value>
+  </data>
+  <data name="Jan" xml:space="preserve">
+    <value>January</value>
+  </data>
+  <data name="July" xml:space="preserve">
+    <value>July</value>
+  </data>
+  <data name="Jun" xml:space="preserve">
+    <value>June</value>
+  </data>
+  <data name="KnowBeforeYouGo" xml:space="preserve">
+    <value>Know Before You Go</value>
+  </data>
+  <data name="LandMarkText" xml:space="preserve">
+    <value>Landmark</value>
+  </data>
+  <data name="LastMinDeal" xml:space="preserve">
+    <value>aracvararac Secret Hotel Deals</value>
+  </data>
+  <data name="LastMinFlight" xml:space="preserve">
+    <value>aracvararac Best Details On Flight</value>
+  </data>
+  <data name="LastMinProm" xml:space="preserve">
+    <value>Register now to receive our members only promotions, deals and discounts.</value>
+  </data>
+  <data name="LastPromotion" xml:space="preserve">
+    <value>Last minute deals</value>
+  </data>
+  <data name="ListPrice" xml:space="preserve">
+    <value>Listed Rates</value>
+  </data>
+  <data name="LoginAndCont" xml:space="preserve">
+    <value>LOGIN AND CONTINUE</value>
+  </data>
+  <data name="LoginWithoutLogin" xml:space="preserve">
+    <value>Continue Without Sign-In</value>
+  </data>
+  <data name="LogonAlert" xml:space="preserve">
+    <value>Your email could not be found in our database, you may not be registered with us.</value>
+  </data>
+  <data name="LogonAlert1" xml:space="preserve">
+    <value>A link to reset your password was sent.</value>
+  </data>
+  <data name="LongWaitError" xml:space="preserve">
+    <value>If you waited too long. Please search again.</value>
+  </data>
+  <data name="LowMail" xml:space="preserve">
+    <value>Here are a few tips for increasing the chances for your offer to be accepted:</value>
+  </data>
+  <data name="LowMail1" xml:space="preserve">
+    <value>Include more areas</value>
+  </data>
+  <data name="LowMail2" xml:space="preserve">
+    <value>Change your preferred star rating</value>
+  </data>
+  <data name="LowMail3" xml:space="preserve">
+    <value>Modify your accommodation dates</value>
+  </data>
+  <data name="LowMail4" xml:space="preserve">
+    <value>If you have tried all the alternatives, and your offer has not been accepted by any of our partner hotels even though you have already offered the maximum rate you want to pay, there nay not be any vacancy left.</value>
+  </data>
+  <data name="LowOfferMsg" xml:space="preserve">
+    <value>Your Offer is too low.</value>
+  </data>
+  <data name="Lunch" xml:space="preserve">
+    <value>Lunch</value>
+  </data>
+  <data name="MailHeader" xml:space="preserve">
+    <value>&lt;a href="http://www.aracvararac.com"&gt;&lt;img src="http://aracvararac.com/Content/images/logo-alt.png"/&gt;&lt;/a&gt;</value>
+  </data>
+  <data name="MailUnavaible" xml:space="preserve">
+    <value>Please make sure your e-mail address entries match</value>
+  </data>
+  <data name="Male" xml:space="preserve">
+    <value>Male</value>
+  </data>
+  <data name="Map" xml:space="preserve">
+    <value>Map</value>
+  </data>
+  <data name="MapRegion" xml:space="preserve">
+    <value>Hotels Near</value>
+  </data>
+  <data name="Mar" xml:space="preserve">
+    <value>March</value>
+  </data>
+  <data name="MaxNumber" xml:space="preserve">
+    <value>Maximum Number of People</value>
+  </data>
+  <data name="MaxPas" xml:space="preserve">
+    <value>Maximum passenger number can not exceed  4.</value>
+  </data>
+  <data name="May" xml:space="preserve">
+    <value>May</value>
+  </data>
+  <data name="Member" xml:space="preserve">
+    <value>Member</value>
+  </data>
+  <data name="MemberBec" xml:space="preserve">
+    <value>LOGIN</value>
+  </data>
+  <data name="MemberLog" xml:space="preserve">
+    <value>Member Sign In</value>
+  </data>
+  <data name="MembershipAdv" xml:space="preserve">
+    <value>Membership benefits</value>
+  </data>
+  <data name="Message" xml:space="preserve">
+    <value>Message</value>
+  </data>
+  <data name="MessageHere" xml:space="preserve">
+    <value>Type Your Message</value>
+  </data>
+  <data name="MessageMail" xml:space="preserve">
+    <value>This message is to notify you that we have your message as below:</value>
+  </data>
+  <data name="MessageMail1" xml:space="preserve">
+    <value>You will be contacted by</value>
+  </data>
+  <data name="MessageMail2" xml:space="preserve">
+    <value>as soon as possible once your message is processed.</value>
+  </data>
+  <data name="Military" xml:space="preserve">
+    <value>Military</value>
+  </data>
+  <data name="MinuteTitle" xml:space="preserve">
+    <value>mins</value>
+  </data>
+  <data name="MoreInfo" xml:space="preserve">
+    <value>More Details</value>
+  </data>
+  <data name="MostPopular" xml:space="preserve">
+    <value>most popular hotels</value>
+  </data>
+  <data name="MsgSent" xml:space="preserve">
+    <value>Thank you for your request. One of our represantative wil get in touch with you shortly</value>
+  </data>
+  <data name="MyAccount" xml:space="preserve">
+    <value>My Account</value>
+  </data>
+  <data name="NameSurname" xml:space="preserve">
+    <value>Name Surname</value>
+  </data>
+  <data name="NearOtel" xml:space="preserve">
+    <value>Hotel Near</value>
+  </data>
+  <data name="NetFare" xml:space="preserve">
+    <value>Net Fiyat</value>
+  </data>
+  <data name="NewDataFSB" xml:space="preserve">
+    <value>Compare &amp; Save</value>
+  </data>
+  <data name="NewMember" xml:space="preserve">
+    <value>Click to register</value>
+  </data>
+  <data name="NewMessage" xml:space="preserve">
+    <value>New Message</value>
+  </data>
+  <data name="NewPassword" xml:space="preserve">
+    <value>New Password</value>
+  </data>
+  <data name="NewsLetter" xml:space="preserve">
+    <value>I want to receive promotional newsletters and updates from sandakka.com</value>
+  </data>
+  <data name="NewsletterTitle" xml:space="preserve">
+    <value>I Want to be notified of aracvararac.com promotions and announcements</value>
+  </data>
+  <data name="NewsTitle" xml:space="preserve">
+    <value>News</value>
+  </data>
+  <data name="Next" xml:space="preserve">
+    <value>Next</value>
+  </data>
+  <data name="NiceTrip" xml:space="preserve">
+    <value>Have a nice trip..</value>
+  </data>
+  <data name="NightOffer" xml:space="preserve">
+    <value>Your Offer Per Night:</value>
+  </data>
+  <data name="NightPrice" xml:space="preserve">
+    <value>Per Night:</value>
+  </data>
+  <data name="Nights" xml:space="preserve">
+    <value>Night(s)</value>
+  </data>
+  <data name="NightTitle" xml:space="preserve">
+    <value>Night</value>
+  </data>
+  <data name="NoFlightError" xml:space="preserve">
+    <value>Sorry, We couldn’t find any flights for the selected date. Please change your dates and try again.</value>
+  </data>
+  <data name="NonIncludePrice" xml:space="preserve">
+    <value>Paid Features</value>
+  </data>
+  <data name="NonRefund" xml:space="preserve">
+    <value>Non-Refundable</value>
+  </data>
+  <data name="NonStopTitle" xml:space="preserve">
+    <value>Nonstop</value>
+  </data>
+  <data name="NoReservation" xml:space="preserve">
+    <value>There are no reservations</value>
+  </data>
+  <data name="NoReviews" xml:space="preserve">
+    <value>There are no reviews</value>
+  </data>
+  <data name="NormalPrice" xml:space="preserve">
+    <value>Hotel’s Current Rate</value>
+  </data>
+  <data name="NoSpec" xml:space="preserve">
+    <value>None</value>
+  </data>
+  <data name="NotAcceptOffer" xml:space="preserve">
+    <value>If your offer is NOT accepted:</value>
+  </data>
+  <data name="NotAcceptOffer1" xml:space="preserve">
+    <value>No credit card charge or transaction will be applied to your account,</value>
+  </data>
+  <data name="NotAcceptOffer2" xml:space="preserve">
+    <value>You will be receiving an e-mail with all the pertinent information regarding your offer</value>
+  </data>
+  <data name="NotAcceptOffer3" xml:space="preserve">
+    <value>You may submit a new offer to the hotels.</value>
+  </data>
+  <data name="NotAMember" xml:space="preserve">
+    <value>Not a member yet?
+I prefer not to log in
+Please click here to continue</value>
+  </data>
+  <data name="Nov" xml:space="preserve">
+    <value>November</value>
+  </data>
+  <data name="NumberDoors" xml:space="preserve">
+    <value>Number of doors</value>
+  </data>
+  <data name="Numberofnights" xml:space="preserve">
+    <value>Number of Nights</value>
+  </data>
+  <data name="NumberPeople" xml:space="preserve">
+    <value>Number of people</value>
+  </data>
+  <data name="NumericAlert" xml:space="preserve">
+    <value>Please enter only numeric values.</value>
+  </data>
+  <data name="Oct" xml:space="preserve">
+    <value>October</value>
+  </data>
+  <data name="OferTitle" xml:space="preserve">
+    <value>Call Your Own Price</value>
+  </data>
+  <data name="OfferAccept" xml:space="preserve">
+    <value>If your offer is accepted:</value>
+  </data>
+  <data name="OfferBoxText" xml:space="preserve">
+    <value>Or &lt;br /&gt;&lt;b&gt;Call Your own price&lt;/b&gt;&lt;br/&gt;&lt;i&gt;Per Night&lt;/i&gt;</value>
+  </data>
+  <data name="OfferDesc" xml:space="preserve">
+    <value>Enter the amount you wish to pay per night based on the criteria you have given, and we will transmit your offer to the hotels at the destination.</value>
+  </data>
+  <data name="OfferDetail" xml:space="preserve">
+    <value>Fiyatı Sen Belirle Tüm Detayları</value>
+  </data>
+  <data name="OfferLow" xml:space="preserve">
+    <value>Your offer is too low. It has almost no chance of being accepted.</value>
+  </data>
+  <data name="OfferMail" xml:space="preserve">
+    <value>Offer No</value>
+  </data>
+  <data name="OfferSendNull" xml:space="preserve">
+    <value>Offer is not null.</value>
+  </data>
+  <data name="OfferSent" xml:space="preserve">
+    <value>Your offer has been sent to the hotels in your criteria.</value>
+  </data>
+  <data name="OfferSent2" xml:space="preserve">
+    <value>We will let you know if an hotel accepts your offer in 24 hours.</value>
+  </data>
+  <data name="OfferSentMail" xml:space="preserve">
+    <value>Your offer has been submitted to all our partner area hotels that match your criteria.</value>
+  </data>
+  <data name="OfferValue" xml:space="preserve">
+    <value>Your offer can not be 0 EUR.</value>
+  </data>
+  <data name="OfficeAuth" xml:space="preserve">
+    <value>Pick-up location associate</value>
+  </data>
+  <data name="OfficeText" xml:space="preserve">
+    <value>Office :</value>
+  </data>
+  <data name="OldPassword" xml:space="preserve">
+    <value>Old Password</value>
+  </data>
+  <data name="OldPasswordMail" xml:space="preserve">
+    <value>Your Old Password Is:</value>
+  </data>
+  <data name="OldPasswordMail1" xml:space="preserve">
+    <value>You can easily reset your password by clicking on the button below</value>
+  </data>
+  <data name="OneWay" xml:space="preserve">
+    <value>One Way</value>
+  </data>
+  <data name="OpsionDateText" xml:space="preserve">
+    <value>Book Until</value>
+  </data>
+  <data name="OpsiyonDateText" xml:space="preserve">
+    <value>Opsiyon Date</value>
+  </data>
+  <data name="OpsiyonDateTitle" xml:space="preserve">
+    <value>Opsion Date</value>
+  </data>
+  <data name="Order" xml:space="preserve">
+    <value>Order No</value>
+  </data>
+  <data name="OtelDetailText" xml:space="preserve">
+    <value>Hotel Detail</value>
+  </data>
+  <data name="OtelType" xml:space="preserve">
+    <value>Accommodation Type</value>
+  </data>
+  <data name="OtherNews" xml:space="preserve">
+    <value>Other News</value>
+  </data>
+  <data name="OtherRegions" xml:space="preserve">
+    <value>Neighborhood</value>
+  </data>
+  <data name="OtherRooms" xml:space="preserve">
+    <value>Other Rooms</value>
+  </data>
+  <data name="OverYears" xml:space="preserve">
+    <value>Over 65 Years</value>
+  </data>
+  <data name="PackageCheckOnMap" xml:space="preserve">
+    <value>Check On Map</value>
+  </data>
+  <data name="PackageCVCTitle" xml:space="preserve">
+    <value>What is this?</value>
+  </data>
+  <data name="PackageDescription" xml:space="preserve">
+    <value>list below includes Flight +Hotel prices and taxes, excludes baggage price and fee belongs the airport.</value>
+  </data>
+  <data name="PackageFlightNonFound" xml:space="preserve">
+    <value>Airport non found in selected region.</value>
+  </data>
+  <data name="PackageHotelDate" xml:space="preserve">
+    <value>I only need a hotel for part of my trip.</value>
+  </data>
+  <data name="PackageHotelEndDateError" xml:space="preserve">
+    <value>Hotel end date select please.</value>
+  </data>
+  <data name="PackageHotelStartDateError" xml:space="preserve">
+    <value>Hotel start date select please.</value>
+  </data>
+  <data name="PackageInfoTitle" xml:space="preserve">
+    <value>Hotel + Flight Included.</value>
+  </data>
+  <data name="PackageInvoiceTitle" xml:space="preserve">
+    <value>I Want Invoice.</value>
+  </data>
+  <data name="PackageMailSept" xml:space="preserve">
+    <value>Flight Reservation Information</value>
+  </data>
+  <data name="PackageMailTitle" xml:space="preserve">
+    <value>aracvararac Package (Hotel + Flight) Reservation</value>
+  </data>
+  <data name="PackageMenuTitle" xml:space="preserve">
+    <value>Hotel + Flight</value>
+  </data>
+  <data name="PackageNonFlight" xml:space="preserve">
+    <value>Arama kriterlerinize uygun uçuş bulunamadı. Arama kriterinizi değiştirerek tekrar deneyin.</value>
+  </data>
+  <data name="PackageNote" xml:space="preserve">
+    <value>included flight + hotel, tax and fee per person</value>
+  </data>
+  <data name="PackageOriginalPrice" xml:space="preserve">
+    <value>Credit card will be charged</value>
+  </data>
+  <data name="PackageResultEnd" xml:space="preserve">
+    <value>search results found</value>
+  </data>
+  <data name="PackageResultFront" xml:space="preserve">
+    <value />
+  </data>
+  <data name="PackageSearchResult" xml:space="preserve">
+    <value>Otel + Uçak Arama Sonuçları</value>
+  </data>
+  <data name="PackageSearchTitle" xml:space="preserve">
+    <value>Hotel + Flight Seacrh</value>
+  </data>
+  <data name="PackageSelect" xml:space="preserve">
+    <value>Select Package</value>
+  </data>
+  <data name="PackageSelectThis" xml:space="preserve">
+    <value>SELECT THIS PACKAGE</value>
+  </data>
+  <data name="PackageUpgrade" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="PaketTitle" xml:space="preserve">
+    <value>Package</value>
+  </data>
+  <data name="PartiesTitle" xml:space="preserve">
+    <value>PARTIES</value>
+  </data>
+  <data name="PasInfo" xml:space="preserve">
+    <value>Passenger Info</value>
+  </data>
+  <data name="PassBtn" xml:space="preserve">
+    <value>Send Password</value>
+  </data>
+  <data name="PassChange" xml:space="preserve">
+    <value>CHANGE PASSWORD</value>
+  </data>
+  <data name="PassCode" xml:space="preserve">
+    <value>Password.</value>
+  </data>
+  <data name="PassCodeAgain" xml:space="preserve">
+    <value>Verify Password</value>
+  </data>
+  <data name="PassedTime" xml:space="preserve">
+    <value>This reservation cannot be canceled.</value>
+  </data>
+  <data name="Passenger" xml:space="preserve">
+    <value>Passenger</value>
+  </data>
+  <data name="PassengerInfo" xml:space="preserve">
+    <value>PASSENGER INFO</value>
+  </data>
+  <data name="PassengerName" xml:space="preserve">
+    <value>Passanger Name</value>
+  </data>
+  <data name="PassengerType" xml:space="preserve">
+    <value>Please select at least one passenger type.</value>
+  </data>
+  <data name="PassType" xml:space="preserve">
+    <value>Passanger Type</value>
+  </data>
+  <data name="PasswordInformation" xml:space="preserve">
+    <value>Your Password Information.</value>
+  </data>
+  <data name="PaxCount" xml:space="preserve">
+    <value>Passenger Count</value>
+  </data>
+  <data name="Payment" xml:space="preserve">
+    <value>Your invoice will be prepared and presented to you by the hotel upon check-out. Please note that your invoice may be addressed to the name and address that you provide to the reception desk. If you do not inform the hotel, your invoice will be printed according to the information on your reservation.</value>
+  </data>
+  <data name="Payment1" xml:space="preserve">
+    <value>Buyer understands and agrees that the buyer has read and understood all the principal attributes of the products/services under this Pre-Notification Form, including but not limited to the sale price and payment terms.</value>
+  </data>
+  <data name="Payment2" xml:space="preserve">
+    <value>The buyer has the right to exercise Right to Withdrawal after taking delivery of the products/services subject to the Distance Selling Agreement. Right to Withdrawal starts on the day of physical delivery for products, and the day of the facilitation of the agreement for services. The buyer accepts that the buyer waives the right ti withdrawal for articles that fall under nos: 2, 3, 5, 6, 7, 8 and 9.</value>
+  </data>
+  <data name="Payment3" xml:space="preserve">
+    <value>This Pre-Notification Form has been accepted by the buyer in an electronic environment.</value>
+  </data>
+  <data name="Payment4" xml:space="preserve">
+    <value>All conflicts, disputes and disagreements arising from the facilitation of this Pre-Notification Form that are within the fiscal limits set by the Ministry of Trade will be under the jurisdiction of the Consumer Arbitration Courts and Consumer Courts located at the buyer’s location.</value>
+  </data>
+  <data name="Payment5" xml:space="preserve">
+    <value>For transactions that involve aracvararac.com’s ‘Secret Hotel’ and ‘Set Your Own Price’ modules, the name of the Facility that will act as the service provider will be sent to the buyer AFTER the sale</value>
+  </data>
+  <data name="Paymented1" xml:space="preserve">
+    <value>The payment will be done through your credit card when you check in.</value>
+  </data>
+  <data name="PaymentInfo" xml:space="preserve">
+    <value>Payment Information</value>
+  </data>
+  <data name="PaymentTerms" xml:space="preserve">
+    <value>PAYMENT TERMS</value>
+  </data>
+  <data name="PaymentTerms1" xml:space="preserve">
+    <value>The hirer will pay with credit card to aracvararac for car rental services during order confirmation.</value>
+  </data>
+  <data name="PerNight" xml:space="preserve">
+    <value>Gecelik Fiyat</value>
+  </data>
+  <data name="PerPerson" xml:space="preserve">
+    <value>Per Person</value>
+  </data>
+  <data name="PersonalInfo" xml:space="preserve">
+    <value>Personal Information</value>
+  </data>
+  <data name="PhotoSlideTitle" xml:space="preserve">
+    <value>Don't miss out on these aracvararac deals</value>
+  </data>
+  <data name="Pick" xml:space="preserve">
+    <value>Pick</value>
+  </data>
+  <data name="PickCar" xml:space="preserve">
+    <value>PICK</value>
+  </data>
+  <data name="PickedCar" xml:space="preserve">
+    <value>PICKED</value>
+  </data>
+  <data name="PickHotel" xml:space="preserve">
+    <value>CHOOSE</value>
+  </data>
+  <data name="PickUp" xml:space="preserve">
+    <value>Pick-up From</value>
+  </data>
+  <data name="PickUpDate" xml:space="preserve">
+    <value>Pick-up Date</value>
+  </data>
+  <data name="PickupOffice" xml:space="preserve">
+    <value>Pickup Office</value>
+  </data>
+  <data name="PickUpPlace" xml:space="preserve">
+    <value>Pick-up From</value>
+  </data>
+  <data name="PictureTitle" xml:space="preserve">
+    <value>PHOTOS</value>
+  </data>
+  <data name="PlainingTitle" xml:space="preserve">
+    <value>Flight</value>
+  </data>
+  <data name="PlaneTitle" xml:space="preserve">
+    <value>Flights</value>
+  </data>
+  <data name="PNR" xml:space="preserve">
+    <value>PNR Code</value>
+  </data>
+  <data name="PNRBookRsvText" xml:space="preserve">
+    <value>Book Your Reservation</value>
+  </data>
+  <data name="PNRButtonText" xml:space="preserve">
+    <value>Book</value>
+  </data>
+  <data name="PNRNumberText" xml:space="preserve">
+    <value>PNR</value>
+  </data>
+  <data name="PNRReservationText" xml:space="preserve">
+    <value>Your reservation is complete. Please call our Customer Support at 90(312) 4414046 to book your flight or Book it yourself with your PNR at the website.</value>
+  </data>
+  <data name="PNRRsvInfo" xml:space="preserve">
+    <value>Please enter your PNR and Last Name to book your flight.</value>
+  </data>
+  <data name="PNRStatusText" xml:space="preserve">
+    <value>Reservation</value>
+  </data>
+  <data name="PNRSurnameText" xml:space="preserve">
+    <value>Last Name</value>
+  </data>
+  <data name="PopulerAirlineTitle" xml:space="preserve">
+    <value>Popular Airlines</value>
+  </data>
+  <data name="PreNotification" xml:space="preserve">
+    <value>Pre-notification Form</value>
+  </data>
+  <data name="Previous" xml:space="preserve">
+    <value>Previous</value>
+  </data>
+  <data name="Price" xml:space="preserve">
+    <value>Price</value>
+  </data>
+  <data name="PriceDetail" xml:space="preserve">
+    <value>Price Details</value>
+  </data>
+  <data name="PriceDetails" xml:space="preserve">
+    <value>Price Details</value>
+  </data>
+  <data name="PriceEach" xml:space="preserve">
+    <value>Rate / Night</value>
+  </data>
+  <data name="PriceIndex" xml:space="preserve">
+    <value>Price Index</value>
+  </data>
+  <data name="PriceLine" xml:space="preserve">
+    <value>EUR</value>
+  </data>
+  <data name="PriceNumber" xml:space="preserve">
+    <value>Price should be only numeric values.</value>
+  </data>
+  <data name="PricePerNight" xml:space="preserve">
+    <value>Per room, per night</value>
+  </data>
+  <data name="PriceRate" xml:space="preserve">
+    <value>Rate (per night)</value>
+  </data>
+  <data name="PriceRate1" xml:space="preserve">
+    <value>50 EUR and under</value>
+  </data>
+  <data name="PriceRate2" xml:space="preserve">
+    <value>50 EUR-100 EUR</value>
+  </data>
+  <data name="PriceRate3" xml:space="preserve">
+    <value>100 EUR-150 EUR</value>
+  </data>
+  <data name="PriceRate4" xml:space="preserve">
+    <value>150 EUR-200 EUR</value>
+  </data>
+  <data name="PriceRate5" xml:space="preserve">
+    <value>200 EUR-250 EUR</value>
+  </data>
+  <data name="PriceRate6" xml:space="preserve">
+    <value>250 EUR-300 EUR</value>
+  </data>
+  <data name="PriceRate7" xml:space="preserve">
+    <value>300 EUR and over</value>
+  </data>
+  <data name="PriceSelf" xml:space="preserve">
+    <value>Call your own price</value>
+  </data>
+  <data name="PrivacyPolicy" xml:space="preserve">
+    <value>I have read and accepted  the terms of aracvararac.com's use and privacy policies</value>
+  </data>
+  <data name="ProceedTitle" xml:space="preserve">
+    <value>PROCEED</value>
+  </data>
+  <data name="ProductHeader" xml:space="preserve">
+    <value>PRODUCT INFORMATION</value>
+  </data>
+  <data name="ProductTitle" xml:space="preserve">
+    <value>Information regarding the products/services provided, and their pricing and payment structure is as follows:</value>
+  </data>
+  <data name="Profile" xml:space="preserve">
+    <value>My Profile</value>
+  </data>
+  <data name="PromFirst" xml:space="preserve">
+    <value>Get aracvararac.com promotions before anyone else!</value>
+  </data>
+  <data name="PromoTicket" xml:space="preserve">
+    <value>This Ticket is non refundable and cannot be changed.</value>
+  </data>
+  <data name="PromotionFirst" xml:space="preserve">
+    <value>Be the first to know our promotions</value>
+  </data>
+  <data name="ProvideCar" xml:space="preserve">
+    <value>Your rental car will be provided by one of these companies:</value>
+  </data>
+  <data name="PublicErrorMessage" xml:space="preserve">
+    <value>No results were found for your search. Change your criteria and try again.</value>
+  </data>
+  <data name="PurchaseTitle" xml:space="preserve">
+    <value>BOOK</value>
+  </data>
+  <data name="Rate" xml:space="preserve">
+    <value>Rate</value>
+  </data>
+  <data name="RatePoint" xml:space="preserve">
+    <value>Rate point</value>
+  </data>
+  <data name="RatingTitle" xml:space="preserve">
+    <value>RATING</value>
+  </data>
+  <data name="RefundableTitle" xml:space="preserve">
+    <value>Refundable</value>
+  </data>
+  <data name="RefundTitle" xml:space="preserve">
+    <value>This reservation CANNOT be cancelled.</value>
+  </data>
+  <data name="Regards" xml:space="preserve">
+    <value>Regards,</value>
+  </data>
+  <data name="Region" xml:space="preserve">
+    <value>Region</value>
+  </data>
+  <data name="RegionAndDate" xml:space="preserve">
+    <value>Destination and Date information</value>
+  </data>
+  <data name="RegionDateDesc" xml:space="preserve">
+    <value>Choose your destination and your travel dates</value>
+  </data>
+  <data name="Regioned" xml:space="preserve">
+    <value>Area(s)</value>
+  </data>
+  <data name="RegionStar" xml:space="preserve">
+    <value>Please select a region and hotel star.</value>
+  </data>
+  <data name="Register" xml:space="preserve">
+    <value>Register</value>
+  </data>
+  <data name="RegisterAlert" xml:space="preserve">
+    <value>Thank you for registering with us. Please check your email and click the activation link.</value>
+  </data>
+  <data name="RegisterButton" xml:space="preserve">
+    <value>Please click on the Confirm button below to verify your e-mail and activate your account. </value>
+  </data>
+  <data name="RegisterButton1" xml:space="preserve">
+    <value> All reservations made with this e-mail will be saved in your account.</value>
+  </data>
+  <data name="RemainRoom" xml:space="preserve">
+    <value>ROOMS left at this price</value>
+  </data>
+  <data name="RememberMe" xml:space="preserve">
+    <value>Remember me</value>
+  </data>
+  <data name="rentACarPoint" xml:space="preserve">
+    <value>rent A Car Point</value>
+  </data>
+  <data name="RentCar" xml:space="preserve">
+    <value>Rent A Car</value>
+  </data>
+  <data name="RentCarDetails" xml:space="preserve">
+    <value>Your Rental Car Details</value>
+  </data>
+  <data name="RentPeriod" xml:space="preserve">
+    <value>Rental period:</value>
+  </data>
+  <data name="RepeatMail" xml:space="preserve">
+    <value>Mail address does not match</value>
+  </data>
+  <data name="ReplyTitle" xml:space="preserve">
+    <value>Reply</value>
+  </data>
+  <data name="ReservationNumber" xml:space="preserve">
+    <value>Order No:</value>
+  </data>
+  <data name="Return" xml:space="preserve">
+    <value>Return</value>
+  </data>
+  <data name="ReturnDate" xml:space="preserve">
+    <value>Returning</value>
+  </data>
+  <data name="ReturnTitle" xml:space="preserve">
+    <value>Return</value>
+  </data>
+  <data name="Reviews" xml:space="preserve">
+    <value>REVIEWS</value>
+  </data>
+  <data name="ReviewTitle" xml:space="preserve">
+    <value>My Reviews</value>
+  </data>
+  <data name="Right1" xml:space="preserve">
+    <value>Services rendered with the buyer’s approval prior to the expiration of Right of Withdrawal</value>
+  </data>
+  <data name="Right10" xml:space="preserve">
+    <value>The seller accepts that the seller has the responsibility to return the total proceeds from the buyer as well as any financial document that lists the buyer as a debtor without inflicting any cost to the buyer within 10 (ten) days provided that the seller has received the buyer’s notification for Right to Withdrawal.</value>
+  </data>
+  <data name="Right11" xml:space="preserve">
+    <value>In cases where products/services that were not purchased by the buyer are delivered to the buyer, the seller will not hold any claims for payment, with the conditions pertaining to the usage of such products/services withheld</value>
+  </data>
+  <data name="Right2" xml:space="preserve">
+    <value>In cases where this agreement’s subject is a physical product, the buyer has the right to recant</value>
+  </data>
+  <data name="Right3" xml:space="preserve">
+    <value>if the product delivered differs from that is materially different from the advertised product. In cases where this agreement’s subject is a service, the buyer has the right to recant if the service
+
+provided is materially different than that of the advertised service. With regards to a physical product the time limit for withdrawal is 7 (seven) days from delivery. With regards to a service provided, the time limit for withdrawal is 7 (seven) days from the facilitation of this agreement. In both cases, the buyer has to notify the seller of such intention.</value>
+  </data>
+  <data name="Right4" xml:space="preserve">
+    <value>The buyer agrees that the buyer waives the right to withdrawal in the following cases, except when agreed upon by both parties:</value>
+  </data>
+  <data name="Right5" xml:space="preserve">
+    <value>Agreements and contracts regarding goods and services whose prices are determined outside of this agreement and by an organized marketplace or market.</value>
+  </data>
+  <data name="Right6" xml:space="preserve">
+    <value>Products that have been custom designed as per the buyer’s wishes whose return is not serviceable, products with short expiration dates or else those which are close to expire.</value>
+  </data>
+  <data name="Right7" xml:space="preserve">
+    <value>Products that relate to audio and video recordings, software and computer hardware which have been taken out of their protective packaging.</value>
+  </data>
+  <data name="Right8" xml:space="preserve">
+    <value>Products that relate to periodicals such as newspapers and magazines; products covered by agreements and contracts of wager, lottery, sweepstakes and raffles.</value>
+  </data>
+  <data name="Right9" xml:space="preserve">
+    <value>Services that are provided instantly and intangibles that are delivered instantly.</value>
+  </data>
+  <data name="RightsReserve" xml:space="preserve">
+    <value>All rights reserved.</value>
+  </data>
+  <data name="RightWith" xml:space="preserve">
+    <value>RIGHT OF WITHDRAWAL</value>
+  </data>
+  <data name="RoomCheckIn" xml:space="preserve">
+    <value>Check-In</value>
+  </data>
+  <data name="RoomCheckOut" xml:space="preserve">
+    <value>Check-Out</value>
+  </data>
+  <data name="RoomClean" xml:space="preserve">
+    <value>Room Cleanliness</value>
+  </data>
+  <data name="RoomComfort" xml:space="preserve">
+    <value>Room Comfort</value>
+  </data>
+  <data name="RoomCount" xml:space="preserve">
+    <value>Number of Rooms</value>
+  </data>
+  <data name="Rooms" xml:space="preserve">
+    <value>Rooms</value>
+  </data>
+  <data name="RoomTitle" xml:space="preserve">
+    <value>Room</value>
+  </data>
+  <data name="RoomType" xml:space="preserve">
+    <value>Room Type</value>
+  </data>
+  <data name="RoundTrip" xml:space="preserve">
+    <value>Round Trip</value>
+  </data>
+  <data name="SameLanguage" xml:space="preserve">
+    <value>We speak your language</value>
+  </data>
+  <data name="SearchAgain" xml:space="preserve">
+    <value>Search Again</value>
+  </data>
+  <data name="SearchBoxAlert" xml:space="preserve">
+    <value>Enter a Search Term</value>
+  </data>
+  <data name="SearchButton" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="SearchCar" xml:space="preserve">
+    <value>Search Car</value>
+  </data>
+  <data name="SearchedHotels" xml:space="preserve">
+    <value>We have search results for you</value>
+  </data>
+  <data name="SearchFlight" xml:space="preserve">
+    <value>Search Flight</value>
+  </data>
+  <data name="SearchHotel" xml:space="preserve">
+    <value>Search Hotels</value>
+  </data>
+  <data name="SearchLimitInfo" xml:space="preserve">
+    <value>Please Enter 3 More Characters.</value>
+  </data>
+  <data name="SearchRepeat" xml:space="preserve">
+    <value>Search Again</value>
+  </data>
+  <data name="SearchTitle" xml:space="preserve">
+    <value>We've Got The Best Hotel Deals</value>
+  </data>
+  <data name="Secret1" xml:space="preserve">
+    <value>In order to provide these low prices, we hide hotel name until after booking.</value>
+  </data>
+  <data name="Secret2" xml:space="preserve">
+    <value>Top Secret Hotel</value>
+  </data>
+  <data name="SecretHotel" xml:space="preserve">
+    <value>Secret Hotel</value>
+  </data>
+  <data name="SecretHotel1" xml:space="preserve">
+    <value>Easiest way to</value>
+  </data>
+  <data name="SecretHotel2" xml:space="preserve">
+    <value>Catch Up To</value>
+  </data>
+  <data name="SecretHotel3" xml:space="preserve">
+    <value>%55</value>
+  </data>
+  <data name="SecretHotel4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="SecretHotel5" xml:space="preserve">
+    <value>discounts on</value>
+  </data>
+  <data name="SecureShop" xml:space="preserve">
+    <value>Safe and secure transactions</value>
+  </data>
+  <data name="SecurityCode" xml:space="preserve">
+    <value>Security Code</value>
+  </data>
+  <data name="SelectCardType" xml:space="preserve">
+    <value>Please Select A Card Type</value>
+  </data>
+  <data name="SelectedRegions" xml:space="preserve">
+    <value>Selected Regions</value>
+  </data>
+  <data name="SelectRegion" xml:space="preserve">
+    <value>Choose the location you want to stay</value>
+  </data>
+  <data name="SelectStarLevel" xml:space="preserve">
+    <value>Choose your preferred star rating</value>
+  </data>
+  <data name="SendActiveMail" xml:space="preserve">
+    <value>SEND MY ACTIVATION MAIL</value>
+  </data>
+  <data name="SendBtn" xml:space="preserve">
+    <value>Send</value>
+  </data>
+  <data name="SendOffer" xml:space="preserve">
+    <value>Bid</value>
+  </data>
+  <data name="SendPassword" xml:space="preserve">
+    <value>SEND MY PASSWORD</value>
+  </data>
+  <data name="Senior" xml:space="preserve">
+    <value>Senior</value>
+  </data>
+  <data name="Sep" xml:space="preserve">
+    <value>September</value>
+  </data>
+  <data name="Service" xml:space="preserve">
+    <value>Service &amp; Staff</value>
+  </data>
+  <data name="ServiceFee" xml:space="preserve">
+    <value>Service Fee</value>
+  </data>
+  <data name="ServiceForm" xml:space="preserve">
+    <value>Customer Service Form</value>
+  </data>
+  <data name="Services" xml:space="preserve">
+    <value>Services</value>
+  </data>
+  <data name="GenderTitle" xml:space="preserve">
+    <value>Gender</value>
+  </data>
+  <data name="Show" xml:space="preserve">
+    <value>Show</value>
+  </data>
+  <data name="ShowCheapFlights" xml:space="preserve">
+    <value>Show the cheapest flights</value>
+  </data>
+  <data name="ShowHide" xml:space="preserve">
+    <value>Show / Hide</value>
+  </data>
+  <data name="ShowHotel" xml:space="preserve">
+    <value>Show hotel in map</value>
+  </data>
+  <data name="ShowRates" xml:space="preserve">
+    <value>SHOW RATES</value>
+  </data>
+  <data name="SignIn" xml:space="preserve">
+    <value>Sign In</value>
+  </data>
+  <data name="SignOut" xml:space="preserve">
+    <value>Sign Out</value>
+  </data>
+  <data name="SiteMapBestPrc" xml:space="preserve">
+    <value>Call Your Own Price</value>
+  </data>
+  <data name="SitemapCity" xml:space="preserve">
+    <value>Cities of Turkey</value>
+  </data>
+  <data name="SitemapFlight" xml:space="preserve">
+    <value>Search Flight</value>
+  </data>
+  <data name="SitemapHotel" xml:space="preserve">
+    <value>Hotel Search</value>
+  </data>
+  <data name="SitemapUser" xml:space="preserve">
+    <value>User - Membership</value>
+  </data>
+  <data name="SitemapUser1" xml:space="preserve">
+    <value>User Menus</value>
+  </data>
+  <data name="SitemapVehicle" xml:space="preserve">
+    <value>Car Rental</value>
+  </data>
+  <data name="aracvararacHotel" xml:space="preserve">
+    <value>aracvararac Hotel Reservation</value>
+  </data>
+  <data name="aracvararacPriceTitle" xml:space="preserve">
+    <value>Special aracvararac rate!</value>
+  </data>
+  <data name="aracvararacReservation" xml:space="preserve">
+    <value>aracvararac Reservation No</value>
+  </data>
+  <data name="aracvararacTeam" xml:space="preserve">
+    <value>aracvararac Team</value>
+  </data>
+  <data name="SonFlight" xml:space="preserve">
+    <value>aracvararac&lt;br&gt;Reservation No#&lt;br&gt;</value>
+  </data>
+  <data name="Sort" xml:space="preserve">
+    <value>Sort:</value>
+  </data>
+  <data name="SortBy" xml:space="preserve">
+    <value>Sort By</value>
+  </data>
+  <data name="SortCriteria" xml:space="preserve">
+    <value>Choose a sorting criteria</value>
+  </data>
+  <data name="SortCriteria1" xml:space="preserve">
+    <value>Sort by Price</value>
+  </data>
+  <data name="SortCriteria2" xml:space="preserve">
+    <value>Sort by Star Rating</value>
+  </data>
+  <data name="SortCriteria3" xml:space="preserve">
+    <value>Sort by User Rating</value>
+  </data>
+  <data name="SpecialNote" xml:space="preserve">
+    <value>Requests / Notes</value>
+  </data>
+  <data name="SpecialReq" xml:space="preserve">
+    <value>We pass on all special requests to the property, but cannot guarantee they can be&lt;br /&gt; accommodated. Some requests are subject to availability at check-in, and may incur&lt;br /&gt; additional charges.</value>
+  </data>
+  <data name="SpecialRequests" xml:space="preserve">
+    <value>Special Requests</value>
+  </data>
+  <data name="Sr" xml:space="preserve">
+    <value>Time</value>
+  </data>
+  <data name="StandartRoom" xml:space="preserve">
+    <value>Standart Room</value>
+  </data>
+  <data name="Star" xml:space="preserve">
+    <value>Star</value>
+  </data>
+  <data name="StarRate" xml:space="preserve">
+    <value>Star Rate</value>
+  </data>
+  <data name="StarRatings" xml:space="preserve">
+    <value>Star rating</value>
+  </data>
+  <data name="Start" xml:space="preserve">
+    <value>Begin</value>
+  </data>
+  <data name="StarTitle" xml:space="preserve">
+    <value>Stars</value>
+  </data>
+  <data name="StatusText" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="StopTitle" xml:space="preserve">
+    <value>Stops</value>
+  </data>
+  <data name="StopTitleInterFlight" xml:space="preserve">
+    <value>Time</value>
+  </data>
+  <data name="Student" xml:space="preserve">
+    <value>Student</value>
+  </data>
+  <data name="Subject" xml:space="preserve">
+    <value>Subject</value>
+  </data>
+  <data name="SubmitOffer" xml:space="preserve">
+    <value>Submit Your Offer</value>
+  </data>
+  <data name="SubTotal" xml:space="preserve">
+    <value>Sub Total</value>
+  </data>
+  <data name="SuggestFirst" xml:space="preserve">
+    <value>Please send your questions and suggestions related to this website to</value>
+  </data>
+  <data name="SuggestLast" xml:space="preserve">
+    <value>, or fill in the form below.</value>
+  </data>
+  <data name="SuperDiscount" xml:space="preserve">
+    <value>SUPER DISCOUNT</value>
+  </data>
+  <data name="TakeInfo" xml:space="preserve">
+    <value>Pick-up information</value>
+  </data>
+  <data name="TaxFee" xml:space="preserve">
+    <value>Tax &amp; fees included</value>
+  </data>
+  <data name="TaxFees" xml:space="preserve">
+    <value>Tax</value>
+  </data>
+  <data name="TaxId" xml:space="preserve">
+    <value>Tax Id #</value>
+  </data>
+  <data name="TaxOffice" xml:space="preserve">
+    <value>Tax Office</value>
+  </data>
+  <data name="TCNO" xml:space="preserve">
+    <value>TC Number</value>
+  </data>
+  <data name="TelephoneTitle" xml:space="preserve">
+    <value>Phone</value>
+  </data>
+  <data name="TermForm1" xml:space="preserve">
+    <value>I have read and agreed to aracvararac.com Sales Agreement&lt;/a&gt;</value>
+  </data>
+  <data name="TermForm2" xml:space="preserve">
+    <value>I have read and agreed to aracvararac.com Initial Notification Form&lt;/a&gt;</value>
+  </data>
+  <data name="testString" xml:space="preserve">
+    <value>Şeker ne güzel şey, ne tatlı şey, önemli olan şeker değil, önemli olan tatlılığı. türkçe karakter yazacam diye ne saçmaladım he..</value>
+  </data>
+  <data name="ThanksSon" xml:space="preserve">
+    <value>Thank you for choosing aracvararac.com. Have a nice trip.</value>
+  </data>
+  <data name="ThisPrice" xml:space="preserve">
+    <value>Only</value>
+  </data>
+  <data name="Time" xml:space="preserve">
+    <value>Time</value>
+  </data>
+  <data name="TimeDatePickUp" xml:space="preserve">
+    <value>Time/Date of Pick-up:</value>
+  </data>
+  <data name="TimeReturnPickUp" xml:space="preserve">
+    <value>Time/Date of Return:</value>
+  </data>
+  <data name="TopPrice" xml:space="preserve">
+    <value>TOTAL PRICE</value>
+  </data>
+  <data name="TopSecret" xml:space="preserve">
+    <value>Top Secret Hotels</value>
+  </data>
+  <data name="TotalGeneral" xml:space="preserve">
+    <value>General Total</value>
+  </data>
+  <data name="TotalTitle" xml:space="preserve">
+    <value>Total</value>
+  </data>
+  <data name="TravelArticles" xml:space="preserve">
+    <value>Travel Articles</value>
+  </data>
+  <data name="TravelFirst" xml:space="preserve">
+    <value>Store your travel information and itineraries</value>
+  </data>
+  <data name="TravellerDetail" xml:space="preserve">
+    <value>Traveller Details</value>
+  </data>
+  <data name="Travelling" xml:space="preserve">
+    <value>Where are you traveling?</value>
+  </data>
+  <data name="TravelSummary" xml:space="preserve">
+    <value>Travel Summary</value>
+  </data>
+  <data name="TripAdvisorOutRaing" xml:space="preserve">
+    <value>Rating from 1 reviews</value>
+  </data>
+  <data name="TripAdvisorRating" xml:space="preserve">
+    <value>Based  on xx Reviews</value>
+  </data>
+  <data name="TripCopy" xml:space="preserve">
+    <value>A copy of your trip plan has been emailed to you.</value>
+  </data>
+  <data name="TripSummary" xml:space="preserve">
+    <value>Trip Summary</value>
+  </data>
+  <data name="TurkeyHotel" xml:space="preserve">
+    <value>Hotels in Turkey</value>
+  </data>
+  <data name="UpdateAccount" xml:space="preserve">
+    <value>UPDATE MY ACCOUNT</value>
+  </data>
+  <data name="UpOfferMsg" xml:space="preserve">
+    <value>Your offer cannot be higher than the current rate.</value>
+  </data>
+  <data name="ValidEmail" xml:space="preserve">
+    <value>Please enter a valid E-Mail Address</value>
+  </data>
+  <data name="VehicleBuy" xml:space="preserve">
+    <value>BOOK</value>
+  </data>
+  <data name="VehicleBuyButton" xml:space="preserve">
+    <value>Book Reservation</value>
+  </data>
+  <data name="VehicleCategory" xml:space="preserve">
+    <value>Vehicle Category</value>
+  </data>
+  <data name="VehicleClass" xml:space="preserve">
+    <value>Vehicle Class/Type</value>
+  </data>
+  <data name="VehicleCountry" xml:space="preserve">
+    <value>I Live In</value>
+  </data>
+  <data name="VehicleDetail" xml:space="preserve">
+    <value>Vehicle Detail Info</value>
+  </data>
+  <data name="VehicleDovizText" xml:space="preserve">
+    <value>The amount payable today will be processed in &lt;?Currency?&gt; at today's exchange rate: &lt;?Price?&gt; &lt;?Currency?&gt; Exchange rates used by your credit card company may vary.</value>
+  </data>
+  <data name="VehicleGeneralTotal" xml:space="preserve">
+    <value>Estimated Amount</value>
+  </data>
+  <data name="VehicleHourAlertMessage1" xml:space="preserve">
+    <value>Please select time.</value>
+  </data>
+  <data name="VehicleHourAlertMessage2" xml:space="preserve">
+    <value>Please select time.</value>
+  </data>
+  <data name="VehicleIncludedPrice" xml:space="preserve">
+    <value>Price Included Features</value>
+  </data>
+  <data name="VehicleInfo" xml:space="preserve">
+    <value>Car Info</value>
+  </data>
+  <data name="VehicleMailInfoText" xml:space="preserve">
+    <value>Araç kiralama rezervasyonunda aracvararac.com'i tercih ettiğiniz için teşekkür ederiz. Rezervasyon referans no:</value>
+  </data>
+  <data name="VehicleMailSubject" xml:space="preserve">
+    <value>Your Car Rental Reservation</value>
+  </data>
+  <data name="VehicleMailTerm" xml:space="preserve">
+    <value>Vehicle Damage Insurance, Theft Insurance, Unlimited Mileage</value>
+  </data>
+  <data name="VehicleMailTerm1" xml:space="preserve">
+    <value>Individual Accident Coverage, Arbitrary Financial Liability Coverage, Small Damages Coverage, Additional Driver, One Way Surcharge, Late Return Charge, Vehicle Pickup charge</value>
+  </data>
+  <data name="VehicleMailTerm2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="VehicleModel" xml:space="preserve">
+    <value>Vehicle Name / Model</value>
+  </data>
+  <data name="VehicleName" xml:space="preserve">
+    <value>Vehicle Name</value>
+  </data>
+  <data name="VehicleNonCategory" xml:space="preserve">
+    <value>Other</value>
+  </data>
+  <data name="VehicleNonFound" xml:space="preserve">
+    <value>No Results</value>
+  </data>
+  <data name="VehicleNonIncludePrice" xml:space="preserve">
+    <value>Paid Features</value>
+  </data>
+  <data name="VehicleNonRequired" xml:space="preserve">
+    <value>Optional</value>
+  </data>
+  <data name="VehicleOriginalMailPrice" xml:space="preserve">
+    <value>Original Price</value>
+  </data>
+  <data name="VehicleRedText" xml:space="preserve">
+    <value>Categories</value>
+  </data>
+  <data name="VehicleRentAlTerms" xml:space="preserve">
+    <value>RENTAL TERMS</value>
+  </data>
+  <data name="VehicleReturnResult" xml:space="preserve">
+    <value>Back to Results</value>
+  </data>
+  <data name="VehicleRsvConditions" xml:space="preserve">
+    <value>BOOKING CONDITIONS</value>
+  </data>
+  <data name="VehicleRsvInfo" xml:space="preserve">
+    <value>The car displayed and models listed are the most common car used by our car rental partners. We cannot guarantee the make or model of the rental car. The purpose of the image and list is to provide a sample only. Please note the luggage capacity varies from make and model and may be reduced once the vehicle is at its full seating capacity.</value>
+  </data>
+  <data name="VehicleRsvMessage" xml:space="preserve">
+    <value>From time to time, we may contact you with news of our latest special offers and services. Please uncheck this box if you do not wish to receive this confirmation</value>
+  </data>
+  <data name="VehicleRsvReq" xml:space="preserve">
+    <value>I confirm that I have read, understood and agree with the provied.</value>
+  </data>
+  <data name="VehicleSamePrice" xml:space="preserve">
+    <value>Same</value>
+  </data>
+  <data name="VehicleSearchAlert" xml:space="preserve">
+    <value>Pick up airport or city</value>
+  </data>
+  <data name="VehicleSearchAlert1" xml:space="preserve">
+    <value>Drop Off airport or city</value>
+  </data>
+  <data name="VehicleTerm" xml:space="preserve">
+    <value>Customer’s credit card is required for incidental charges that relate to deficient fuel on return, damages to the vehicle not covered by insurance, and traffic charges.</value>
+  </data>
+  <data name="VehicleTerm1" xml:space="preserve">
+    <value>&lt;b&gt;Vehicle class/type&lt;/b&gt; concerns the Car Rental Company’s fleet of vehicles that are under their proprietary classification system. You may see the companies’ brands and categories on the Car Rental web page.</value>
+  </data>
+  <data name="VehicleTerm2" xml:space="preserve">
+    <value>METHOD OF PAYMENT: The hirer will pay with credit card to aracvararac for car rental services during order confirmation. </value>
+  </data>
+  <data name="VehicleTerm3" xml:space="preserve">
+    <value>Below are the preliminary information and details about the services the OWNER pledges to provide for the HIRER where the qualities and pricing are already agreed upon. The prices given here are valid at the time of this information.</value>
+  </data>
+  <data name="VehicleTerm4" xml:space="preserve">
+    <value>Company Name</value>
+  </data>
+  <data name="VehicleTerm5" xml:space="preserve">
+    <value>Company Address</value>
+  </data>
+  <data name="VehicleTerm6" xml:space="preserve">
+    <value>Telephone / Fax</value>
+  </data>
+  <data name="VehicleTerm7" xml:space="preserve">
+    <value>RENTING INFORMATION</value>
+  </data>
+  <data name="VehicleTime" xml:space="preserve">
+    <value>Time</value>
+  </data>
+  <data name="VehicleTitle" xml:space="preserve">
+    <value>Car Rentals</value>
+  </data>
+  <data name="ViewHotel" xml:space="preserve">
+    <value>View Map</value>
+  </data>
+  <data name="ViewMap" xml:space="preserve">
+    <value>View On Map</value>
+  </data>
+  <data name="WeekTitle" xml:space="preserve">
+    <value>Week</value>
+  </data>
+  <data name="Welcome" xml:space="preserve">
+    <value>Welcome!</value>
+  </data>
+  <data name="WelcomeTitle" xml:space="preserve">
+    <value>Welcome Back..</value>
+  </data>
+  <data name="WhenArrive" xml:space="preserve">
+    <value>When you arrive at the hotel...</value>
+  </data>
+  <data name="WhenArrive1" xml:space="preserve">
+    <value>Hotel guest must be at least 18 years old, and must be carrying a valid photo ID when checking in.</value>
+  </data>
+  <data name="WhenArrive2" xml:space="preserve">
+    <value>Your reservation, along with your name and the order number that is on the upper right corner of this confirmation has been submitted to your hotel. Please present this information at the concierge desk for quick check-in.</value>
+  </data>
+  <data name="WhyCheapCar" xml:space="preserve">
+    <value>Our deal with Rent-A-Car companies allow us to advertise prices that these companies offer for the vehicles they still have available. These special rates are not publicly announced. When you complete your reservation process, you are notified of the rental car company and are then able to rent your car at the lowest price available anywhere.</value>
+  </data>
+  <data name="WhyCheapStrong" xml:space="preserve">
+    <value>Why so cheap?</value>
+  </data>
+  <data name="WhyPrefer" xml:space="preserve">
+    <value>Neden aracvararac.com'u tercih etmeliyim?</value>
+  </data>
+  <data name="WhySon" xml:space="preserve">
+    <value>Why aracvararac ?</value>
+  </data>
+  <data name="WorkingHours" xml:space="preserve">
+    <value>Working Hours</value>
+  </data>
+  <data name="WorldCount" xml:space="preserve">
+    <value>Back to world countries</value>
+  </data>
+  <data name="WorldCountries" xml:space="preserve">
+    <value>World Countries</value>
+  </data>
+  <data name="WrongMail" xml:space="preserve">
+    <value>Incorrect email, please try again</value>
+  </data>
+  <data name="YourCar" xml:space="preserve">
+    <value>Your Rental Car</value>
+  </data>
+  <data name="YourMsg" xml:space="preserve">
+    <value>Your Message</value>
+  </data>
+  <data name="YourOffer" xml:space="preserve">
+    <value>Call Your Own Price</value>
+  </data>
+  <data name="YourOfferText" xml:space="preserve">
+    <value>Call Your Own Price</value>
+  </data>
+  <data name="ZipTitle" xml:space="preserve">
+    <value>Zip Code</value>
+  </data>
+  <data name="AboutUsTitle" xml:space="preserve">
+    <value>About Us</value>
+  </data>
+  <data name="AllinclusiveRentalFeeText" xml:space="preserve">
+    <value>Taxes, Airport Fare, Third Party Liability Protection, CDW and Basic Insurance, Unlimited Mileage * and Breakdown Support</value>
+  </data>
+  <data name="AllinclusiveRentalFeeTitle" xml:space="preserve">
+    <value>All inclusive rental fee</value>
+  </data>
+  <data name="AmountPaid" xml:space="preserve">
+    <value>Amount Paid</value>
+  </data>
+  <data name="BestPriceGuaranteeText" xml:space="preserve">
+    <value>We offer special prices with maximum discount. Our prices are the most profitable prices and always lower than the retail prices offered by car rental companies.</value>
+  </data>
+  <data name="BestPriceGuaranteeTitle" xml:space="preserve">
+    <value>Best Price Guarantee</value>
+  </data>
+  <data name="CancelReservation" xml:space="preserve">
+    <value>Cancel Reservation</value>
+  </data>
+  <data name="CarBetweenYearsOld" xml:space="preserve">
+    <value>Driver between the ages of 25-70</value>
+  </data>
+  <data name="CarDeliverDate" xml:space="preserve">
+    <value>Delivery date</value>
+  </data>
+  <data name="CarDifferentCheckboxText" xml:space="preserve">
+    <value>A different vehicle delivery place</value>
+  </data>
+  <data name="CarModel" xml:space="preserve">
+    <value>Model</value>
+  </data>
+  <data name="CarReceiveDate" xml:space="preserve">
+    <value>Receive Date</value>
+  </data>
+  <data name="CarSearchButton" xml:space="preserve">
+    <value>Search &gt;&gt;</value>
+  </data>
+  <data name="CopyRight" xml:space="preserve">
+    <value>Copyright 2020, AracVarArac All Rights Reserved.</value>
+  </data>
+  <data name="CustomerSupportTitle" xml:space="preserve">
+    <value>7/24 Customer support</value>
+  </data>
+  <data name="DeleteButtonText" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="EmptyOrderHistory" xml:space="preserve">
+    <value>There are no vehicles you have rented yet.</value>
+  </data>
+  <data name="FreeCancellationText" xml:space="preserve">
+    <value>Free cancellation up to 24 hours before delivery and a cancellation fee of 50 EUR is applied when the change is less than 24 hours.</value>
+  </data>
+  <data name="FreeCancellationTitle" xml:space="preserve">
+    <value>Free Cancellation</value>
+  </data>
+  <data name="FrequentlyAskedQuestionsTitle" xml:space="preserve">
+    <value>F.A.Q</value>
+  </data>
+  <data name="IndexSearchTitle" xml:space="preserve">
+    <value>Search to rent a car</value>
+  </data>
+  <data name="PasswordUpdated" xml:space="preserve">
+    <value>Password has been successfully updated.</value>
+  </data>
+  <data name="PrivacyPolicyTitle" xml:space="preserve">
+    <value>Privacy Policy</value>
+  </data>
+  <data name="ProfileInfoText" xml:space="preserve">
+    <value>Profile Info</value>
+  </data>
+  <data name="ProfileLogin" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="ProfileLogOut" xml:space="preserve">
+    <value>Exit</value>
+  </data>
+  <data name="ProfileOrderHistoryButton" xml:space="preserve">
+    <value>Order History</value>
+  </data>
+  <data name="RepeatButtonText" xml:space="preserve">
+    <value>Repeat</value>
+  </data>
+  <data name="Reservation" xml:space="preserve">
+    <value>Reservation</value>
+  </data>
+  <data name="ViewReceipt" xml:space="preserve">
+    <value>View Receipt</value>
+  </data>
+  <data name="ChangePasswordTitle" xml:space="preserve">
+    <value>Change Password</value>
+  </data>
+  <data name="NewPasswordTitle" xml:space="preserve">
+    <value>Current Password</value>
+  </data>
+  <data name="String1" xml:space="preserve">
+    <value>New Password</value>
+  </data>
+  <data name="AvatarImage" xml:space="preserve">
+    <value>Avatar Image</value>
+  </data>
+  <data name="EditBtnText" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="FAQText" xml:space="preserve">
+    <value>F.A.Q</value>
+  </data>
+  <data name="ForgotPassword" xml:space="preserve">
+    <value>Forgot Password</value>
+  </data>
+  <data name="LogInText" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="NewPasswordAgain" xml:space="preserve">
+    <value>New Password Again</value>
+  </data>
+  <data name="PasswordAgain" xml:space="preserve">
+    <value>Password Again</value>
+  </data>
+  <data name="PasswordText" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="RegisterText" xml:space="preserve">
+    <value>Register</value>
+  </data>
+  <data name="RenewPassword" xml:space="preserve">
+    <value>Renew Password</value>
+  </data>
+  <data name="AverageWaitingTime" xml:space="preserve">
+    <value>Average Waiting Time</value>
+  </data>
+  <data name="CarRentalDeliveryProcess" xml:space="preserve">
+    <value>Car Rental Delivery Process</value>
+  </data>
+  <data name="Confirmation" xml:space="preserve">
+    <value>Confirmation</value>
+  </data>
+  <data name="CustomerEvaluation" xml:space="preserve">
+    <value>Customer Evaluation</value>
+  </data>
+  <data name="DamageAndTheftProtection" xml:space="preserve">
+    <value>Damage and Theft Protection</value>
+  </data>
+  <data name="DamageAndTheftProtectionText" xml:space="preserve">
+    <value>Waiver and Theft Protection from Accident Damage is included in this vehicle. It covers vehicle damage and vehicle theft, except for damage to or loss from tires, windshield, side windows and chassis.</value>
+  </data>
+  <data name="Deposit" xml:space="preserve">
+    <value>Deposit</value>
+  </data>
+  <data name="DepositText" xml:space="preserve">
+    <value>Supplier will require a deposit of TRY 500.0 at the time of receipt. It is a guarantee blocked on the credit card in case the vehicle is damaged or stolen. This will be released automatically if there is no theft or damage during the rental period.</value>
+  </data>
+  <data name="Details" xml:space="preserve">
+    <value>Details</value>
+  </data>
+  <data name="EmailOffer" xml:space="preserve">
+    <value>Email Offer</value>
+  </data>
+  <data name="Exemption" xml:space="preserve">
+    <value>Exemption</value>
+  </data>
+  <data name="ExemptionText" xml:space="preserve">
+    <value>The vehicle has a damage exemption of EUR 500.0 (Tax Included) and a theft exemption of EUR 500.0 (Including Tax). When you receive the vehicle, please make sure that there is an exemption amount on your card.</value>
+  </data>
+  <data name="FaultAid" xml:space="preserve">
+    <value>Fault Aid</value>
+  </data>
+  <data name="FaultAidText" xml:space="preserve">
+    <value>18% Tax Included</value>
+  </data>
+  <data name="FuelPolicy" xml:space="preserve">
+    <value>Fuel Policy</value>
+  </data>
+  <data name="ImportantInformationText" xml:space="preserve">
+    <value>Important Information </value>
+  </data>
+  <data name="IncludedForFree" xml:space="preserve">
+    <value>Included For Free</value>
+  </data>
+  <data name="Insurance" xml:space="preserve">
+    <value>Insurance</value>
+  </data>
+  <data name="InsuranceCoverage" xml:space="preserve">
+    <value>Insurance Coverage</value>
+  </data>
+  <data name="InsuranceCoverageText" xml:space="preserve">
+    <value>Damage Liability (CASCO) Insurance (CDW): 18% Tax Included; Wide Coverage 500 EUR</value>
+  </data>
+  <data name="InsuranceCoverageText2" xml:space="preserve">
+    <value>Complete scope package: 50 TRY daily 18% Tax Included</value>
+  </data>
+  <data name="InsuranceCoverageText3" xml:space="preserve">
+    <value>Theft protection: 18% Tax Included; Wide Coverage 500 EUR</value>
+  </data>
+  <data name="InsuranceCoverageText4" xml:space="preserve">
+    <value>Third Party Coverage: 18% Tax Included</value>
+  </data>
+  <data name="InsuranceCoverageText5" xml:space="preserve">
+    <value>The Exemption Obligation is the maximum amount determined by your car rental supplier, where you can be held liable in case the vehicle is damaged / stolen. Damage or loss to tires, windshields, glass or chassis may not be covered by CDW (Disclaimer of Accident Damage). Please contact the rental agency at the office.</value>
+  </data>
+  <data name="InsuranceCoverageText6" xml:space="preserve">
+    <value>If you purchased Exemption Payment Insurance from a third party, the main driver must present the credit card at the rental office for the car rental agency to approve the deposit.</value>
+  </data>
+  <data name="Kilometers" xml:space="preserve">
+    <value>Kilometers</value>
+  </data>
+  <data name="Options" xml:space="preserve">
+    <value>Options</value>
+  </data>
+  <data name="OrSimilarTools" xml:space="preserve">
+    <value>or similar tools</value>
+  </data>
+  <data name="PickUpPoint" xml:space="preserve">
+    <value>Pick Up Point</value>
+  </data>
+  <data name="PointButtonBad" xml:space="preserve">
+    <value>Bad</value>
+  </data>
+  <data name="PointButtonMid" xml:space="preserve">
+    <value>middle</value>
+  </data>
+  <data name="PointButtonNice" xml:space="preserve">
+    <value>Nice</value>
+  </data>
+  <data name="PointButtonVeryNice" xml:space="preserve">
+    <value>Very Nice</value>
+  </data>
+  <data name="Popular" xml:space="preserve">
+    <value>Popular</value>
+  </data>
+  <data name="Ratings" xml:space="preserve">
+    <value>Ratings</value>
+  </data>
+  <data name="ReceivedForMoney" xml:space="preserve">
+    <value>All value received for money</value>
+  </data>
+  <data name="SearchResults" xml:space="preserve">
+    <value>Search Results</value>
+  </data>
+  <data name="ServiceAtTheRentalOffice" xml:space="preserve">
+    <value>Service At The Renta Office</value>
+  </data>
+  <data name="ToBeInformed" xml:space="preserve">
+    <value>I want to receive emails with special offers and travel product information.</value>
+  </data>
+  <data name="ToBeInformedText" xml:space="preserve">
+    <value>Customers can opt out at any time.</value>
+  </data>
+  <data name="TotalText" xml:space="preserve">
+    <value>Total:</value>
+  </data>
+  <data name="VehicleCleaning" xml:space="preserve">
+    <value>Vehicle Cleaning</value>
+  </data>
+  <data name="VehicleReturnProcess" xml:space="preserve">
+    <value>Vehicle Return Process</value>
+  </data>
+  <data name="ManagementPanel" xml:space="preserve">
+    <value>Management Panel</value>
+  </data>
+  <data name="AirConditionIng" xml:space="preserve">
+    <value>Air ConditionIng</value>
+  </data>
+  <data name="Automatic" xml:space="preserve">
+    <value>Automatic</value>
+  </data>
+  <data name="Clock" xml:space="preserve">
+    <value>Clock</value>
+  </data>
+  <data name="DeliveryDate" xml:space="preserve">
+    <value>Delivery Date</value>
+  </data>
+  <data name="DeliveryPlace" xml:space="preserve">
+    <value>Delivery Place</value>
+  </data>
+  <data name="Diesel" xml:space="preserve">
+    <value>Diesel</value>
+  </data>
+  <data name="ExtraMaterial" xml:space="preserve">
+    <value>Extra Material</value>
+  </data>
+  <data name="Gasoline" xml:space="preserve">
+    <value>Gasoline</value>
+  </data>
+  <data name="Gear" xml:space="preserve">
+    <value>Gear</value>
+  </data>
+  <data name="Hybrid" xml:space="preserve">
+    <value>Hybrid</value>
+  </data>
+  <data name="Manual" xml:space="preserve">
+    <value>Manual</value>
+  </data>
+  <data name="OrderHistoryDetailTitle" xml:space="preserve">
+    <value>Order History</value>
+  </data>
+  <data name="OrderNumber" xml:space="preserve">
+    <value>Order Number</value>
+  </data>
+  <data name="RentedDate" xml:space="preserve">
+    <value>Rented Date</value>
+  </data>
+  <data name="RentedPlace" xml:space="preserve">
+    <value>Rented Place</value>
+  </data>
+  <data name="ReturnToOrderList" xml:space="preserve">
+    <value>Return To Order List</value>
+  </data>
+  <data name="Suppliers" xml:space="preserve">
+    <value>Suppliers</value>
+  </data>
+  <data name="VehicleFeatures" xml:space="preserve">
+    <value>Vehicle Features</value>
+  </data>
+  <data name="AdditionalDriver" xml:space="preserve">
+    <value>Additional Driver (Bookable on arrival)</value>
+  </data>
+  <data name="AdditionalDriverText" xml:space="preserve">
+    <value>Additional drivers can be added to your rental for a fee of 7 EUR per day Maximum 105 EUR 18% Tax Included. When you pick up your car, please pay for additional drivers at the rental office.</value>
+  </data>
+  <data name="BestPricesText" xml:space="preserve">
+    <value>We find you the best prices in the market</value>
+  </data>
+  <data name="Cancellation" xml:space="preserve">
+    <value>Cancellation and non-reservation policy</value>
+  </data>
+  <data name="CancellationText1" xml:space="preserve">
+    <value>What is your cancellation policy for full prepaid or partial payments? 1 - If you cancel the vehicle up to 48 hours before you receive it, the full amount will be refunded to you. 2 - If you cancel less than 48 hours before receiving, you will receive a refund after deducting TRY388. If your online payment is less than TRY388, no refund will be given for your car rental reservation. 3 - If your reservation is made less than 48 hours before receiving the car, the cancellation policy will be automatically applied to your reservation. 4 - All cancellations must be made through our online portal, not through the car rental agency. If you agree to cancel directly with the car rental agency on arrival, you must also inform us about this change regarding your reservation. 5 - It may not be possible to change your reservation or cancel optional extras in less than 48 hours before receiving the vehicle. If you purchased our Damage Return Insurance product and then decided to cancel your rental car reservation, Damage Return Insurance will be canceled automatically. If you want to change or rearrange your reservation, the Damage Return Insurance will be canceled at the beginning. However, we will automatically create a new policy for your new reservation. In either case, you will receive an e-mail sent to your e-mail address provided during the online booking process to confirm the cancellation. Please note that if you cancel your insurance policy in less than 24 hours after the start of your car rental agreement, no refund will be made for your insurance. What is my reservation? The 'failure to use a reservation' is for the following reasons: 1 - You did not inform us about your cancellation before your checkout time. 2 - You could not receive the vehicle at the specified time and date. 3 - You could not provide the necessary documentation to receive the vehicle.4 - You could not provide a credit card issued on behalf of the main driver with sufficient balance. No refunds will be given to you in any of the above. The car rental company reserves the right to refuse to provide a vehicle if you do not arrive on time with a sufficient credit card for all the necessary documentation and the deposit of the vehicle. In this case, you will not be entitled to a refund if the car rental has not been canceled at least 48 hours ago.</value>
+  </data>
+  <data name="Car" xml:space="preserve">
+    <value>Car</value>
+  </data>
+  <data name="CarRentalFee" xml:space="preserve">
+    <value>Car rental fee</value>
+  </data>
+  <data name="Changes" xml:space="preserve">
+    <value>Changes</value>
+  </data>
+  <data name="ChoosingUs" xml:space="preserve">
+    <value>Thank you for choosing us</value>
+  </data>
+  <data name="DepositAndCreditCardInformation" xml:space="preserve">
+    <value>Deposit and Credit Card Information</value>
+  </data>
+  <data name="DepositAndCreditCardInformationText1" xml:space="preserve">
+    <value>IT IS ACCEPTED American Express, Diners Club, MasterCard (no debit or prepaid card), Visa (not prepaid). Unless otherwise stated below, debit cards are not accepted.</value>
+  </data>
+  <data name="DepositAndCreditCardInformationText2" xml:space="preserve">
+    <value>A deposit of minimum EUR 200.0 to maximum EUR 600.0 will be retained on your credit card for the duration of the lease. Your deposit is a guarantee kept in case of damage / theft. This amount will be released automatically if there is no theft or damage during the rental period. Note that this does not represent your total exemption liability, which can be found in your Insurance Coverage section.</value>
+  </data>
+  <data name="DepositAndCreditCardInformationText3" xml:space="preserve">
+    <value>You will need to pass the Findeks credit score assessment by the rental agency. If you fail this assessment, the car rental agency may not deliver the vehicle. In these cases, the amounts paid will not be refunded. To check your credit rating, please visit www.findeks.com or contact the rental office by phone.</value>
+  </data>
+  <data name="DepositAndCreditCardInformationText4" xml:space="preserve">
+    <value>THESE ARE NOT ACCEPTED: No other form of payment will be accepted.</value>
+  </data>
+  <data name="DepositAndCreditCardInformationText5" xml:space="preserve">
+    <value>A valid credit card on behalf of the main driver must be presented at the rental office to pre-authorize / charge a deposit. The credit card (s) must be embossed and a PIN number may be required.</value>
+  </data>
+  <data name="DepositAndCreditCardInformationText6" xml:space="preserve">
+    <value>The car rental agency may not deliver the vehicle if you are unable to offer a valid credit card or if your credit card does not have sufficient funds or if the credit card is not on behalf of the original driver. In these cases, the amounts paid will not be refunded.</value>
+  </data>
+  <data name="Driver" xml:space="preserve">
+    <value>Driver</value>
+  </data>
+  <data name="DriverLicense" xml:space="preserve">
+    <value>Driver License</value>
+  </data>
+  <data name="DriverLicenseText1" xml:space="preserve">
+    <value>Full driver's license for at least 1 year with no major traffic violations record. UK driving license holders must present their photo cards.</value>
+  </data>
+  <data name="DriverLicenseText2" xml:space="preserve">
+    <value>If your driver's license is not written in Latin alphabet (for example, Arabic, Greek, Russian or Chinese) you will need to bring in an International Driver's License and your local driver's license. For driver licenses from countries that are not part of your international driver's license, an official translation of the document must be accompanied by an original document. When hired within the EU, customers from non-EU countries must present an International Driving License along with their local documents.</value>
+  </data>
+  <data name="DriverYearsOld" xml:space="preserve">
+    <value>Driver Years Old</value>
+  </data>
+  <data name="DriverYearsOldText1" xml:space="preserve">
+    <value>Customers outside the age restrictions will not be able to rent a car unless there is a young or old driver's fee specified in this section. Please note that, if applicable, this fee will be included in the rental price and will be paid in local currency at the rental office upon arrival.</value>
+  </data>
+  <data name="Extras" xml:space="preserve">
+    <value>Extras</value>
+  </data>
+  <data name="ExtrasText" xml:space="preserve">
+    <value>All extras are paid at the car rental provider's office upon receipt. Note that the availability of these extras is not always guaranteed and prices are subject to change. In most countries, child car seats are compulsory for children 12 years old or under 135 cm tall.</value>
+  </data>
+  <data name="Fees" xml:space="preserve">
+    <value>Fees</value>
+  </data>
+  <data name="FeesText1" xml:space="preserve">
+    <value>Please note that credit card fees apply. Fees vary by card type, please consult the supplier at the office.</value>
+  </data>
+  <data name="FuelPolicyText1" xml:space="preserve">
+    <value>Warehouse full pick-up and delivery</value>
+  </data>
+  <data name="FuelPolicyText2" xml:space="preserve">
+    <value>Your vehicle will be delivered to you with a full tank. To avoid paying fuel costs, you must deliver the vehicle with a full tank. When you deliver the vehicle with the tank full, you may need to provide a fuel deposit on your credit card to be canceled or returned. The missing fuel will be charged when you deliver the vehicle. The liter fuel charge received by the rental agency may be significantly higher than the price at the local gas station. Refueling fees may also apply.</value>
+  </data>
+  <data name="FuelPolicyText3" xml:space="preserve">
+    <value>Unless otherwise stated in the price information, fuel fees can be paid at the rental office.</value>
+  </data>
+  <data name="Identities" xml:space="preserve">
+    <value>Identities</value>
+  </data>
+  <data name="IdentitiesText" xml:space="preserve">
+    <value>A valid photo ID (Passport or Identity Card).</value>
+  </data>
+  <data name="IncludesFreeUnlimitedMileage" xml:space="preserve">
+    <value>Includes free unlimited mileage</value>
+  </data>
+  <data name="KilometersPolicy" xml:space="preserve">
+    <value>Kilometers Policy</value>
+  </data>
+  <data name="KilometersPolicyText1" xml:space="preserve">
+    <value>Limited</value>
+  </data>
+  <data name="KilometersPolicyText2" xml:space="preserve">
+    <value>Fee: 0.15 EUR per kilometer (tax included)</value>
+  </data>
+  <data name="KilometersPolicyText3" xml:space="preserve">
+    <value>Number of kilometers to be rented: 400</value>
+  </data>
+  <data name="OptionalExtraTerms" xml:space="preserve">
+    <value>Optional Extra Terms</value>
+  </data>
+  <data name="OptionalExtraTermsText1" xml:space="preserve">
+    <value>Please note the following: The price of optional extras is subject to change without notice. Optional extras are subject to availability. Changes made in the office may be subject to local surcharges.</value>
+  </data>
+  <data name="OurMostPopularFuelPolicy" xml:space="preserve">
+    <value>Our most popular fuel policy</value>
+  </data>
+  <data name="Pay" xml:space="preserve">
+    <value>Pay</value>
+  </data>
+  <data name="PriceSummary" xml:space="preserve">
+    <value>Price Summary</value>
+  </data>
+  <data name="Receipt" xml:space="preserve">
+    <value>Receipt</value>
+  </data>
+  <data name="ReceiptText1" xml:space="preserve">
+    <value>On arrival, your confirmation document must be printed in the rental office. Failure to show the certification indicates that the rental agency may charge local prices. Please note: We are not responsible for excessive pricing that may be applied to the rental if the certification cannot be shown at the local agency during vehicle delivery. If you cannot show the required documents, if the documents are not valid or if your credit card does not have sufficient funds, the car rental agent may refuse to deliver the vehicle and no fee will be refunded.</value>
+  </data>
+  <data name="ReservationTakesOnly2Minutes" xml:space="preserve">
+    <value>Reservation takes only 2 minutes</value>
+  </data>
+  <data name="SpecialCustomerService" xml:space="preserve">
+    <value>Special customer service</value>
+  </data>
+  <data name="SpecialEquipment" xml:space="preserve">
+    <value>Special Equipment / Optional Extras</value>
+  </data>
+  <data name="SpecialEquipmentText1" xml:space="preserve">
+    <value>Baby seat: EUR 5 per day (Ex Tax); On request</value>
+  </data>
+  <data name="SpecialEquipmentText2" xml:space="preserve">
+    <value>Child seat: EUR 5 per day Maximum EUR 35 (Excluding Tax); On request</value>
+  </data>
+  <data name="SpecialEquipmentText3" xml:space="preserve">
+    <value>GPS: 7 EUR per day (Excluding Tax); On request
+
+                                    Other Special Equipment / Optional requests can be specified at the time of booking, but these are not included in the rental price. Fees are paid in the local currency at the rental office.</value>
+  </data>
+  <data name="TaxFree" xml:space="preserve">
+    <value>Tax Free</value>
+  </data>
+  <data name="TaxFreeText1" xml:space="preserve">
+    <value>Included in the rental price.</value>
+  </data>
+  <data name="TransactionApproved" xml:space="preserve">
+    <value>Your Transaction Approved</value>
+  </data>
+  <data name="TravelRestrictions" xml:space="preserve">
+    <value>Travel Restrictions</value>
+  </data>
+  <data name="TravelRestrictionsText1" xml:space="preserve">
+    <value>No international, state and island crossings are allowed.</value>
+  </data>
+  <data name="VehicleTypes" xml:space="preserve">
+    <value>Vehicle Types</value>
+  </data>
+  <data name="VehicleTypesText1" xml:space="preserve">
+    <value>The vehicle displayed and the models listed are the most common vehicles used by our car rental partners. We do not guarantee that the brand or model of the rental vehicle will be the same as the vehicle displayed on our website.</value>
+  </data>
+  <data name="WonderfulChoice" xml:space="preserve">
+    <value>Wonderful choice !</value>
+  </data>
+  <data name="Years" xml:space="preserve">
+    <value>Years</value>
+  </data>
+  <data name="YourOrderNumver" xml:space="preserve">
+    <value>Your Order Numver:</value>
+  </data>
+  <data name="PrivacyPolictTitle" xml:space="preserve">
+    <value>Privacy Policy</value>
+  </data>
+  <data name="And" xml:space="preserve">
+    <value>And</value>
+  </data>
+  <data name="CarRentalTermsAndConditions" xml:space="preserve">
+    <value>Car Rental Terms and Conditions</value>
+  </data>
+  <data name="IAcceptOurCoverage" xml:space="preserve">
+    <value>I accept our coverage.</value>
+  </data>
+  <data name="MainDriverInformation" xml:space="preserve">
+    <value>Main driver information</value>
+  </data>
+  <data name="Month" xml:space="preserve">
+    <value>Month</value>
+  </data>
+  <data name="MoreThan10MillionCustomersTrust" xml:space="preserve">
+    <value>More than 10 million customers trust</value>
+  </data>
+  <data name="NoCardFee" xml:space="preserve">
+    <value>No Card Fee</value>
+  </data>
+  <data name="Password128BitSSL" xml:space="preserve">
+    <value>All payment transactions are 128-bit SSL encrypted</value>
+  </data>
+  <data name="PleaseEnterTheNameOfTheMainDriver" xml:space="preserve">
+    <value>Please enter the name of the main driver</value>
+  </data>
+  <data name="PostCode" xml:space="preserve">
+    <value>Post Code</value>
+  </data>
+  <data name="ReceiveMailMessage" xml:space="preserve">
+    <value>I want to receive emails with special offers and travel product information. Customers can opt out at any time.</value>
+  </data>
+  <data name="ReservationTermsAndConditions" xml:space="preserve">
+    <value>Reservation Terms and Conditions</value>
+  </data>
+  <data name="SecurePaymentDetails" xml:space="preserve">
+    <value>Secure Payment Details</value>
+  </data>
+  <data name="UnLimited" xml:space="preserve">
+    <value>UnLimited</value>
+  </data>
+  <data name="Year" xml:space="preserve">
+    <value>Year</value>
+  </data>
+  <data name="IncreasingPrice" xml:space="preserve">
+    <value>Increasing Price</value>
+  </data>
+  <data name="NextBtnText" xml:space="preserve">
+    <value>Next</value>
+  </data>
+  <data name="Only" xml:space="preserve">
+    <value>Only</value>
+  </data>
+  <data name="PickupTime" xml:space="preserve">
+    <value>Your pickup time is near. Vehicles are rented quickly!</value>
+  </data>
+  <data name="PriceDecreasing" xml:space="preserve">
+    <value>Price Decreasing</value>
+  </data>
+  <data name="SortingType" xml:space="preserve">
+    <value>Sorting Type</value>
+  </data>
+  <data name="Suggested" xml:space="preserve">
+    <value>Suggested</value>
+  </data>
+  <data name="VehiclesAreAvailableAt" xml:space="preserve">
+    <value>vehicles are available at:</value>
+  </data>
+  <data name="CurrentPassword" xml:space="preserve">
+    <value>Current Password</value>
+  </data>
+  <data name="CardHolderValid" xml:space="preserve">
+    <value>Card Holder input can not be empty</value>
+  </data>
+  <data name="SearchInfoText" xml:space="preserve">
+    <value>Search Info</value>
+  </data>
+  <data name="PassengerCounts" xml:space="preserve">
+    <value>Passenger Counts</value>
+  </data>
+</root>

@@ -1,0 +1,56 @@
+﻿@model Arackiralama.Models.CarPointScale
+@{
+    ViewBag.Title = "Araç Puanı ekle";
+}
+
+<div class="col">
+    <div class="row">
+        @if (ViewBag.Message!=null)
+        {
+            <div class="col-12 mb-3">
+                <div class="alert alert-success">
+                    @ViewBag.Message
+                </div>
+            </div>
+        }
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">Araç Puanı Ekle / Düzenle</h2>
+                </div>
+            </div>
+            <div class="card-body p-3">
+                @using (Html.BeginForm("CarPointCreate", "Car", FormMethod.Post))
+                {
+                <div class="row mb-3">
+                    <div class="col-12 col-md-3">
+                        <span style="float:right;" class="float-right-absorbe">
+                           Puan Aralığı
+                        </span>
+                    </div>
+                    <div class="col-12 col-md-6">
+                       @Html.TextBoxFor(m => m.PuanAraligi, null, new { @class = "form-control" })
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-12 col-md-3">
+                        <span style="float:right;" class="float-right-absorbe">
+                            Puan Karşılığı
+                        </span>
+                    </div>
+                    <div class="col-12 col-md-6">
+                       @Html.TextBoxFor(m => m.PuanIfadesi, null, new { @class = "form-control" })
+                    </div>
+                </div>
+
+                <center>
+                    <div class="col-12 mb-3">
+                        <input type="submit" class="btn btn-success" value="Kaydet" />
+                    </div>
+                </center>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,136 @@
+﻿@model Arackiralama.Models.Accounts
+@{
+    ViewBag.Title = "Profile";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container-fluid">
+    <div class="row faq-box">
+        <div class="col-12">
+            @using (Html.BeginForm("Profile", "Member", FormMethod.Post, new { @enctype = "multipart/form-data" }))
+            {
+                
+                <div class="pt-0">
+                    <div class="row">
+                        <div class="col-md-6" style="background-color:#f2f2f2;">
+
+                            <div class="profile-bg-img">
+
+                                <div class="col-12">
+                                    <center>
+                                       
+                                        @*<label for="upload-photo" class="profile-upload-i"><i class="fas fa-user-edit profile-avatar-i"></i></label>
+                                        <input type="file" name="photo" id="upload-photo" />*@
+                                       <img class="profile-avatar-img" src="~/Contents/img/avatar-icon.jpg"/>
+                                    </center>
+                                </div>
+                                <div class="col-12 mt-3">
+                                    <center>
+                                        <div>
+                                            <span class="profile-avatar-span">
+                                                @Model.FirstName @Model.LastName
+                                            </span>
+                                        </div>
+                                    </center>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-md-6 p-3">
+                            <div class="col-12 mt-3 mb-3">
+                                <center>
+                                    <h1 class="info-box-h1">
+                                       @Html.Raw(Arackiralama.Resources.LanguageFields.ProfileInfoText)
+                                    </h1>
+                                </center>
+                            </div>
+                            <div class="col-12">
+                                <span>@Html.Raw(Arackiralama.Resources.LanguageFields.FormName)</span>
+                            </div>
+                            <div class="col-12 mb-3">
+                                @Html.TextBoxFor(m => m.FirstName, new { @class = "form-control" })
+                            </div>
+
+
+                            <div class="col-12">
+                                <span>@Html.Raw(Arackiralama.Resources.LanguageFields.FormSurname)</span>
+                            </div>
+                            <div class="col-12 mb-3">
+                                @Html.TextBoxFor(m => m.LastName, new { @class = "form-control" })
+                            </div>
+                            <div class="col-12">
+                                <span>@Html.Raw(Arackiralama.Resources.LanguageFields.BirthDate)</span>
+                            </div>
+                            <div class="col-12 mb-3">
+                                @if (ViewBag.DogumTarihi != null)
+                                {
+                                    <input type="date" class="form-control" name="BirthDate" value="@ViewBag.DogumTarihi" />
+                                }
+                                else
+                                {
+                                    @Html.TextBoxFor(m => m.BirthDate, new { @class = "form-control", @type = "date", @value = Model.BirthDate })
+                                    @Html.ValidationMessageFor(m => m.BirthDate, "", new { style = "color:red;font-size:12px" })
+                                }
+                               
+                            </div>
+                            <div class="col-12">
+                                <span>@Html.Raw(Arackiralama.Resources.LanguageFields.GenderTitle)</span>
+                            </div>
+                            <div class="col-12 mb-3">
+                               <div class="row">
+                                   <div class="col-3">
+                                       @Html.RadioButtonFor(m => m.Gender, "Erkek")<span>@Html.Raw(Arackiralama.Resources.LanguageFields.Male)</span>
+                                   </div>
+                                   <div class="col-3">
+                                       @Html.RadioButtonFor(m => m.Gender, "Kadın")<span>@Html.Raw(Arackiralama.Resources.LanguageFields.Female)</span>
+                                   </div>
+                               </div>
+                                
+                            </div>
+
+                            <div class="col-12">
+                                <span>@Html.Raw(Arackiralama.Resources.LanguageFields.Email)</span>
+                            </div>
+                            <div class="col-12 mb-3">
+                                @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+                            </div>
+
+
+                            <div class="col-12">
+                                <span>@Html.Raw(Arackiralama.Resources.LanguageFields.TelephoneTitle)</span>
+                            </div>
+                            <div class="col-12 mb-3">
+                                @Html.TextBoxFor(m => m.Phone, new { @class = "form-control" })
+                            </div>
+
+
+                            <div class="col-12">
+                                <span>@Html.Raw(Arackiralama.Resources.LanguageFields.AddressTitle)</span>
+                            </div>
+                            <div class="col-12 mb-3">
+                                @Html.TextBoxFor(m => m.Address, new { @class = "form-control" })
+                            </div>
+
+
+
+                            <div class="col-12 mt-3 mt-3">
+                                <center>
+                                    <div>
+                                        <input type="hidden" name="ID" value="@Session["ID"].ToString()" />
+                                        <input type="submit" class="btn btn-save" id="@Session["ID"]" value="@Html.Raw(Arackiralama.Resources.LanguageFields.EditBtnText)" />
+                                       
+                                        <a href="~/Member/SifreDegistir" id="@Session["ID"]" class="btn btn-save">@Html.Raw(Arackiralama.Resources.LanguageFields.ChangePasswordTitle)</a>
+                                    </div>
+                                    
+                                </center>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+

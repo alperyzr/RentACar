@@ -1,0 +1,905 @@
+﻿@model Arackiralama.Models.VehicleSearchModel
+@{
+    var lat = Model.Vehicle.StartOfficeLatitude.ToString();
+    var lng = Model.Vehicle.StartOfficeLongitude.ToString();
+    if (Session["culture"].ToString()=="tr-TR")
+    {
+        lat= lat.Replace(',', '.');
+        lng= lng.Replace(',', '.');
+    }
+
+    //var lat = Model.Vehicle.StartOfficeLatitude.ToString().Replace(',', '.');
+    //var lng = Model.Vehicle.StartOfficeLongitude.ToString().Replace(',', '.');
+
+
+
+}
+<script>
+    $(document).ready(function () {
+        //alert('document');
+        //myMap();
+        initialize();
+        $('input[name=extraFee]').click(function () {
+            if ($(this).is(':checked')) {
+                $('#fiyatBox').text((parseFloat($('#fiyatBox').text().replace(',', '.')) + parseFloat($(this).attr("price-data").replace(',', '.'))).toFixed(2));
+                $('#generalTotal').text((parseFloat($('#generalTotal').text().replace(',', '.')) + parseFloat($(this).attr("price-data").replace(',', '.'))).toFixed(2));
+                $('#TotalAll').val((parseFloat($('#TotalAll').val().replace(',', '.')) + parseFloat($(this).attr("price-data").replace(',', '.'))).toFixed(2));
+                $('input[name=TotalAll]').val($('#fiyatBox').text());
+  
+                $('input[name=extraFeeHdn]').val($('input[name=extraFeeHdn]').val() + $(this).val() + ",");
+                //localStorage.setItem("fees" + $(this).val(), $(this).val());
+               
+            } else {
+                $('#fiyatBox').text((parseFloat($('#fiyatBox').text().replace(',', '.')) - parseFloat($(this).attr("price-data").replace(',', '.'))).toFixed(2));
+                $('#generalTotal').text((parseFloat($('#generalTotal').text().replace(',', '.')) - parseFloat($(this).attr("price-data").replace(',', '.'))).toFixed(2));
+                $('#TotalAll').val((parseFloat($('#TotalAll').val().replace(',', '.')) - parseFloat($(this).attr("price-data").replace(',', '.'))).toFixed(2));
+                $('input[name=extraFeeHdn]').val($('input[name=extraFeeHdn]').val().replace(($(this).val() + ","), ''));
+                //localStorage.removeItem("fees" + $(this).val());
+                $('input[name=TotalAll]').val($('#fiyatBox').text());
+             
+
+            }
+        });
+    });
+</script>
+<body>
+    <div class="row">
+        <div class="col-md-3 mb-1">
+            <button id="active-button1" style="width:100%;" disabled="disabled" class="btn btn-step btn-save" type="button" data-toggle="collapse" data-target="#edit-step1"><span style="color:#fff;">1.</span> @Html.Raw(Arackiralama.Resources.LanguageFields.SearchResults)</button>
+        </div>
+        <div class="col-md-3 mb-1">
+            <button id="active-button2" style="width:100%;" class="btn btn-step btn-save collapsed" type="button" data-toggle="collapse" data-target="#edit-step2"><span style="color:#fff;">2.</span> @Html.Raw(Arackiralama.Resources.LanguageFields.Options)</button>
+        </div>
+        <div class="col-md-3 mb-1">
+            <button id="active-button3" style="width:100%;" disabled="disabled" class="btn btn-step btn-save collapsed" type="button" data-toggle="collapse" data-target="#edit-step3"><span style="color:#fff;">3.</span> @Html.Raw(Arackiralama.Resources.LanguageFields.Details)</button>
+        </div>
+        <div class="col-md-3 mb-1">
+            <button id="active-button4" style="width:100%;" disabled="disabled" class="btn btn-step btn-save collapsed" type="button" data-toggle="collapse" data-target="#edit-step4"><span style="color:#fff;">4.</span>@Html.Raw(Arackiralama.Resources.LanguageFields.Confirmation)</button>
+        </div>
+    </div>
+</body>
+
+
+
+
+
+
+<div id="edit-step2" @*class="collapse" aria-labelledby="headingTwo" data-parent="#steps*@>
+    <div>
+        <div style="border:1px solid #b7b7b7;">
+            <div class="row">
+                <div class="col-lg-8 p-4">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <span><strong>@Model.Vehicle.Name</strong></span></span>
+
+                        </div>
+                        <div class="col-lg-12">
+                            <span>
+                                @if (Model.Vehicle.CategoryID == 1)
+                                {
+                                    @("Mini");
+                                }
+                                else if (Model.Vehicle.CategoryID == 3)
+                                {
+                                    @("Economy");
+                                }
+                                else if (Model.Vehicle.CategoryID == 4)
+                                {
+                                    @("Compact");
+                                }
+                                else if (Model.Vehicle.CategoryID == 6)
+                                {
+                                    @("Intermediate");
+                                }
+                                else if (Model.Vehicle.CategoryID == 7)
+                                {
+                                    @("Standard");
+                                }
+                                else if (Model.Vehicle.CategoryID == 8)
+                                {
+                                    @("Fullsize");
+                                }
+                                else if (Model.Vehicle.CategoryID == 9)
+                                {
+                                    @("Luxury");
+                                }
+                                else if (Model.Vehicle.CategoryID == 10)
+                                {
+                                    @("Premium");
+                                }
+                                else if (Model.Vehicle.CategoryID == 11)
+                                {
+                                    @("Minivan");
+                                }
+                                else if (Model.Vehicle.CategoryID == 12)
+                                {
+                                    @("12 passenger van");
+                                }
+                                else if (Model.Vehicle.CategoryID == 24)
+                                {
+                                    @("Exotic");
+                                }
+                                else
+                                {
+                                    @(Arackiralama.Resources.LanguageFields.VehicleNonCategory)
+                                }
+
+                            </span>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="row">
+                                <!-- #region Araç Bilgisi Sol Kısım -->
+                                <div class="col-lg-4">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <img src="@Model.Vehicle.ThumImage" />
+                                        </div>
+                                        <div class="col-12 mt-2">
+                                            <div class="row">
+                                                <div class="col-4 col-lg-4">
+                                                    <span>@Model.Vehicle.PassengerCount</span>
+                                                    <i class="fa fa-user"></i>
+                                                </div>
+                                                <div class="col-4 col-lg-4">
+                                                    <span>@Model.Vehicle.BaggageCount</span>
+                                                    <i class="fas fa-briefcase"></i>
+                                                </div>
+                                                <div class="col-4 col-lg-4">
+                                                    <span>@Model.Vehicle.DoorCount</span>
+                                                    <img src="~/Contents/img/car-door.jpg" />
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        @foreach (var ChargesItem in Model.Vehicle.VehicleCharges.Where(t => t != null))
+                                        {
+                                            <div class="col-lg-12 mt-2">
+                                                <span>
+                                                    <i class="far fa-check-circle mr-1"></i><span>@ChargesItem</span>
+                                                </span>
+                                            </div>
+                                        }
+
+                                        @*<div class="col-lg-12 mt-2">
+                                                <span>
+                                                    <i class="far fa-check-circle mr-1"></i><span>Manuel Şanzıman</span>
+                                                </span>
+                                            </div>
+                                            <div class="col-lg-12 mt-2">
+                                                <span>
+                                                    <i class="far fa-check-circle mr-1"></i><span>Klima</span>
+                                                </span>
+                                            </div>
+                                            <div class="col-lg-12 mt-2">
+                                                <span>
+                                                    <i class="far fa-check-circle mr-1"></i><span>Dizel</span>
+                                                </span>
+                                            </div>*@
+                                    </div>
+
+                                </div>
+                                <!-- #endregion Araç Bilgisi Sol kısım -->
+                                <!-- #region Araç bilgisi Orta Kısım-->
+                                <div class="col-lg-4">
+                                    <div class="row">
+                                        <div class="col-12 mt-2">
+                                            <span>
+                                                <i class="fas fa-map-marker-alt mr-1"></i>
+                                                <span>
+                                                   @Html.Raw(Arackiralama.Resources.LanguageFields.RentedPlace):
+                                                    <strong>@Model.StartRegion.Name</strong>
+                                                </span>
+                                            </span>
+                                        </div>
+                                        <div class="col-12 mt-2">
+                                            <span>
+                                                <i class="fas fa-gas-pump mr-1"></i>
+
+                                                <span>
+                                                    @Html.Raw(Arackiralama.Resources.LanguageFields.FuelPolicy):<strong>@Model.Vehicle.FuelPolicy</strong>
+                                                </span>
+                                            </span>
+                                        </div>
+                                        <div class="col-12 mt-2">
+                                            <span>
+                                                <i class="fas fa-tachometer-alt"></i>
+
+                                                <span>
+                                                    @Html.Raw(Arackiralama.Resources.LanguageFields.Kilometers):<strong>Limitsiz</strong>
+                                                </span>
+                                            </span>
+                                        </div>
+                                        <div class="col-12 mt-2">
+                                            <div class="row">
+                                                <div class="col-lg-4">
+                                                    @*<img src="@Model.Vehicle.CompanyImage" />*@
+                                                    <img src="@Model.Vehicle.CompanyImage" onerror="this.onerror=null;this.src='~/Contents/images/no-image.jpg';" />
+                                                </div>
+                                                @*<div class="col-lg-4">
+                                                    <span><a href="#" data-toggle="modal" data-target="#PointScale">@Html.Raw(Arackiralama.Resources.LanguageFields.PointButtonVeryNice)</a></span>
+                                                    @{ Html.RenderAction("_PointScale", "Car");}
+                                                </div>*@
+
+                                                @*<div class="col-lg-4">
+                                                    <a href="#" class="btn btn-save btn-sm btn-block">7.1</a>
+                                                </div>*@
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- #endregion Areaç Bilgisi Orta Kısım-->
+                                <!-- #region Araç Bilgisi Sol-->
+                                <div class="col-lg-4">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <strong>@Html.Raw(Arackiralama.Resources.LanguageFields.IncludedForFree)</strong>
+                                        </div>
+                                        @foreach (var CoveragesItem in Model.Vehicle.PricedCoverages)
+                                        {
+                                            <div class="col-12">
+                                                <span>
+                                                    <i class="far fa-check-circle mr-1"></i>
+
+                                                    @CoveragesItem
+                                                </span>
+                                            </div>
+                                        }
+
+                                        <div class="col-12">
+                                            <span>
+                                                <i class="far fa-check-circle mr-1"></i>
+
+                                                @Html.Raw(Arackiralama.Resources.LanguageFields.Changes)
+                                            </span>
+                                        </div>
+                                        <div class="col-12 mt-3">
+
+                                            <a href="#" data-toggle="modal" data-target="#ImportantInformation" class="carinfo-a"> @Html.Raw(Arackiralama.Resources.LanguageFields.ImportantInformationText)</a>
+                                            @{ Html.RenderAction("_ImportantInformations", "Car");}
+                                        </div>
+                                        <div class="col-12 mt-3">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <strong>
+                                                        @Html.Raw(Arackiralama.Resources.LanguageFields.CarRentalFee)
+                                                    </strong>
+                                                </div>
+                                                <div class="col-12">
+                                                    <h1 style="color:#707070;">
+                                                        <span id="fiyatBox" style="margin:-6px;">@((Model.Vehicle.TotalRate).ToString("#.##"))</span>&nbsp;&nbsp;<span> @Model.Currency</span>
+
+
+                                                    </h1>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- #endregion Araç Bilgisi Sol -->
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                    <div class="col-12">
+                                        <div class="alert alert-info">
+                                            <strong>Kiralık Araç Güvencesi</strong>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="mt-3">
+                                            <span>
+                                                Bu kiralamaya dahil olan kaza hasarından feragat, olası bir hasar veya çalınma durumunda size tam kapsamlı koruma sağlamaz. Araç zarar gördüğünde, çalındığında veya anahtarlarını kaybettiğinizde, hala belirli bir bedele kadar bir ödemenin sorumluluğu altında olursunuz. Aşağıda belirtilen şartlar ve koşullara tabi olarak, Orient Sigorta A.Ş.'den Araç Kiralama Koruması satın alarak bu riski karşılayabilirsiniz.
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 mt-3">
+                                        <div class="alert alert-info">
+                                            <span>
+                                                <input type="checkbox" />
+                                                <span>
+                                                    Evet, hasar aşımına karşı kendimi sadece 29,00 TRY ödeyerek sigortalatmak istiyorum ve “
+                                                </span>
+                                                <strong>
+                                                    <a href="http://assets.hepstar.com/documents/20140904-ORIENT-CHE-TERMS-TURKISH.pdf" target="_blank">Şart ve Koşulları</a>
+                                                </strong>
+                                                <span>
+                                                    ” okudum.
+                                                </span>
+                                            </span>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <strong>T.C. Kimlik Numarası*</strong>
+                                    </div>
+                                    <div class="col-12 mb-3">
+                                        <input type="text" class="form-control" style="border:1px solid red;" />
+                                    </div>
+                                    <div class="col-12">
+                                        <strong>
+                                            Eğer olası hasar aşımına karşı sigortalanmak isterseniz, yukarıdaki kutucuğu işaretlediğinize emin olun.
+                                        </strong>
+                                    </div>
+                                    <div class="col-12">
+                                        <span>
+                                            <i class="far fa-check-circle"></i>
+                                            <span class="ml-3">
+                                                – 29,00 TRY karşılığında TRY 7000 bedele kadar zarar aşımının geri ödemesi.
+                                            </span>
+                                        </span>
+                                    </div>
+                                    <div class="col-12">
+                                        <span>
+                                            <i class="far fa-check-circle"></i>
+                                            <span class="ml-3">
+                                                – Zarar aşımı ödemeniz durumunda, TRY 7000 bedele kadar geri ödeme.
+                                            </span>
+                                        </span>
+                                    </div>
+                                    <div class="col-12">
+                                        <span>
+                                            <i class="far fa-check-circle"></i>
+                                            <span class="ml-3">
+                                                – Beklenmeyen zarar aşımına karşı koruma
+                                            </span>
+                                        </span>
+                                    </div>
+                                    <div class="col-12">
+                                        <span>
+                                            <i class="far fa-check-circle"></i>
+                                            <span class="ml-3">
+                                                – Vefat veya tam ve daimi maluliyet durumunda, TRY 100.000 bedele kadar Ferdi Kaza Sigortası ve kişisel eşyalarınızın çalınmasına karşı TRY 3.000 bedele kadar kapsam, bu sigortaya dahildir!
+                                            </span>
+                                        </span>
+                                    </div>
+                                    <div class="col-12 mt-3">
+                                        <span>
+                                            <i class="far fa-question-circle mr-1"></i>
+                                            <strong>
+                                              
+                                                <a href="#" data-toggle="modal" data-target="#Insurance">
+                                                    Bu sigorta kiralama esnasında ve sonrasında nasıl çalışır?
+                                                </a>
+                                                @{ Html.RenderAction("InsuranceModal", "Car");}
+                                            </strong>
+                                        </span>
+                                    </div>
+                                    <div class="col-12 mt-3">
+                                        <span>
+                                            <a href="#">
+                                                Şart ve Koşulları
+                                            </a>
+                                        </span>
+                                    </div>
+                                    <div class="col-12 mt-3">
+                                        <span>
+                                            Bu poliçe, Orient Sigorta A.Ş. (sicil numarası T14113-CEM9) tarafından sigortalanır ve yetkili acente Hepstar Sigorta Aracılık Hizmetleri Ltd. Şti. tarafından dağıtılır. Bu ürünü seçerek, kişisel verilerinizin 6698 sayılı Türk kanunu ve ilgili mevzuat doğrultusunda gerekli üçüncü taraflara gönderilmesine, işlenmesine, kaydedilmesine, depolanmasına, sınıflandırılmasına, güncellenmesine ve dağıtılmasına ve bununla birlikte yurtdışında depolanmasına onay veriyorsunuz.
+                                        </span>
+                                    </div>
+                                </div>
+
+                            <div class="row mt-3 mb-3">
+                                <div class="col-12">
+                                    <div class="carinfo-steptwo-rightbox-header">
+                                        <strong>@Html.Raw(Arackiralama.Resources.LanguageFields.Extras)</strong>
+                                    </div>
+                                </div>
+                                <div class="col-12 mt-3">
+                                    <span>
+                                        @Html.Raw(Arackiralama.Resources.LanguageFields.ExtrasText)
+                                    </span>
+                                </div>
+                                <div class="col-12 mt-3">
+                                    @if (Model.Vehicle.IncludePrice != null)
+                                    {
+                                        if (Model.Vehicle.IncludePrice.Count() > 0)
+                                        {
+                                            <div class="araba_sepet_k_satir">
+                                                @*<h1 class="seyahat-ozeti-yazi" style="padding-left:0 !important;padding-top: 0;">@(Html.Raw(Arackiralama.Resources.LanguageFields.NonIncludePrice))</h1>*@
+
+                                                @*<ul style="margin:5px 0 0 0; list-style-type:none; padding:0;">
+                                                        @foreach (var item in Model.Vehicle.IncludePrice)
+                                                        {
+                                                            if (item.Item2 > 0)
+                                                            {
+
+                                                                    <li style="padding:1px 0;">
+
+                                                                        <input type="checkbox" name="extraFee" price-data="@item.Item2.ToString("#,##")" value="@item.Item4" /> @item.Item1 &nbsp; +@item.Item2.ToString("#,##") @Model.Currency
+                                                                    </li>
+
+
+                                                            }
+                                                        }
+                                                    </ul>*@
+                                                <div class="row">
+                                                    @foreach (var item in Model.Vehicle.IncludePrice)
+                                                    {
+                                                        if (item.Item2 > 0)
+                                                        {
+
+                                                            <div class="col-12 col-lg-4 mt-3">
+
+                                                                <input type="checkbox" name="extraFee" price-data="@item.Item2.ToString("#,##")" value="@item.Item4" /> @item.Item1 &nbsp; +@item.Item2.ToString("#,##") @Model.Currency
+                                                            </div>
+
+
+                                                        }
+                                                    }
+                                                </div>
+                                            </div>
+                                        }
+                                    }
+
+
+                                    <!--#region Extra Materyal-->
+                                    @*<div class="row">
+                                            <div class="col-4 col-md-2">
+                                                <!--#region SVG-->
+                                                <svg class="Accordion-svg" id="ct-snow-chains" viewBox="0 0 20 20">
+                                                    <path class="cls-1" d="M7.68 5.88a6.44 6.44 0 0 1 2.57.52 6.67 6.67 0 0 1 2.1 1.42 6.79 6.79 0 0 1 1.42 2.1 6.55 6.55 0 0 1 0 5.15 6.72 6.72 0 0 1-3.53 3.52 6.34 6.34 0 0 1-2.57.53 6.35 6.35 0 0 1-2.58-.53A6.77 6.77 0 0 1 3 17.16a6.67 6.67 0 0 1-1.42-2.1 6.67 6.67 0 0 1 0-5.15A6.63 6.63 0 0 1 5.1 6.4a6.45 6.45 0 0 1 2.58-.52zm4.5 6.61v-.12a4.29 4.29 0 0 0-.38-1.7 4.48 4.48 0 0 0-1-1.39 4.57 4.57 0 0 0-1.4-.93 4.52 4.52 0 0 0-3.47 0 4.46 4.46 0 0 0-2.38 2.38 4.53 4.53 0 0 0 0 3.5 4.51 4.51 0 0 0 1 1.42 4.64 4.64 0 0 0 1.42 1 4.29 4.29 0 0 0 1.71.35 4.37 4.37 0 0 0 1.72-.34 4.49 4.49 0 0 0 1.41-.94 4.62 4.62 0 0 0 1-1.39 4.27 4.27 0 0 0 .38-1.71zm-1.79-2.71a3.88 3.88 0 0 1 .82 1.22 3.72 3.72 0 0 1 .3 1.49 3.78 3.78 0 0 1-.3 1.49 3.94 3.94 0 0 1-2 2 3.78 3.78 0 0 1-1.49.3A3.72 3.72 0 0 1 6.19 16 3.88 3.88 0 0 1 5 15.2a3.92 3.92 0 0 1-.85-1.2 3.69 3.69 0 0 1-.31-1.49A3.62 3.62 0 0 1 4.15 11 4.18 4.18 0 0 1 5 9.78 4.17 4.17 0 0 1 6.19 9a3.74 3.74 0 0 1 3 0 4.18 4.18 0 0 1 1.2.78zm-5.84 2.71a3.17 3.17 0 0 0 .15 1 3 3 0 0 0 .43.85L6.48 13v-.28l-1.85-.51a.85.85 0 0 0 0 .17zM6.4 9.62a3.25 3.25 0 0 0-1.59 1.58l1.86.49.11-.11.11-.1zM5.85 15a3.17 3.17 0 0 0 .85.44 3 3 0 0 0 1 .16H8l-.5-1.85h-.16l-.14-.05zm3.66-5.1a3 3 0 0 0-.85-.43 3.17 3.17 0 0 0-1-.15h-.3l.51 1.85h.28zM9 15.35a3.33 3.33 0 0 0 .91-.65 3.25 3.25 0 0 0 .65-.93l-1.86-.49-.11.12a.47.47 0 0 1-.12.09zm1.85-2.87a3 3 0 0 0-.16-1 3.18 3.18 0 0 0-.44-.85L8.88 12a1.29 1.29 0 0 0 0 .14.45.45 0 0 1 0 .16l1.86.49a1.35 1.35 0 0 1 0-.15 1.51 1.51 0 0 0 .09-.15zm2.77-10.1a.56.56 0 0 0-.52-.14 1 1 0 0 0-.55.28 1.08 1.08 0 0 0-.28.57.55.55 0 0 0 .12.5l2 2a1.84 1.84 0 0 1-.94.11 1.45 1.45 0 0 1-.83-.42l-.95-.95A1.51 1.51 0 0 1 11.2 3a2 2 0 0 1 .59-1.27 2 2 0 0 1 1.28-.61 1.48 1.48 0 0 1 1.23.43l.95.95a1.47 1.47 0 0 1 .34.54 1.64 1.64 0 0 1 .1.66v.29a1.23 1.23 0 0 1-.08.27zm2.57 4.27a.45.45 0 0 0 .18 0 .53.53 0 0 0 .26-.25.92.92 0 0 0 .05-.15.45.45 0 0 0 0-.16.34.34 0 0 0-.08-.12L14.34 3.7a.17.17 0 0 0-.11-.07h-.12a.52.52 0 0 0-.19 0 .48.48 0 0 0-.3.44.33.33 0 0 0 0 .13.22.22 0 0 0 .08.1L16 6.56l.1.06zm2.39-.77A1.47 1.47 0 0 1 19 7.1 2 2 0 0 1 17.12 9a1.53 1.53 0 0 1-1.23-.42l-.95-.95a1.5 1.5 0 0 1-.43-.83 1.67 1.67 0 0 1 .12-.94l1.93 1.93a.56.56 0 0 0 .52.14 1 1 0 0 0 .55-.28 1 1 0 0 0 .3-.57.52.52 0 0 0-.14-.5l-2-2 .28-.09a1.23 1.23 0 0 1 .3 0 1.63 1.63 0 0 1 .66.1 1.48 1.48 0 0 1 .54.34z">
+                                                    </path>
+                                                </svg>
+                                                <!--#endregion-->
+                                            </div>
+                                            <div class="col-8 col-md-7">
+                                                <div class="mt-2">
+                                                    <strong>
+                                                        Kar Zinciri Seti
+                                                    </strong><br />
+                                                    <span>Kış koşullarında sürüş için tavsiye edilir. Kiralama başına 34,22 ₺</span>
+                                                </div>
+
+                                            </div>
+                                            <div class="col-12 col-md-3">
+                                                <span style="display:flex;">
+                                                    <input onclick="azalt1()" type="button" value="-" class="btn btn-save" />
+                                                    <input id="sonuc1" value="0" min="1" max="1" type="text" class="form-control" />
+                                                    <input onclick="arttir1()" type="button" value="+" class="btn btn-save" />
+                                                </span>
+
+                                            </div>
+                                            <div class="col-12 ml-1 mr-1">
+                                                <hr />
+                                            </div>
+
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-4 col-md-2">
+                                                <!--#region SVG-->
+                                                <svg class="Accordion-svg" id="ct-snow-tyres" viewBox="0 0 20 20">
+                                                    <path class="cls-1" d="M7.68 5.88a6.44 6.44 0 0 1 2.57.52 6.67 6.67 0 0 1 2.1 1.42 6.79 6.79 0 0 1 1.42 2.1 6.55 6.55 0 0 1 0 5.15 6.72 6.72 0 0 1-3.53 3.52 6.34 6.34 0 0 1-2.57.53 6.35 6.35 0 0 1-2.58-.53A6.77 6.77 0 0 1 3 17.16a6.67 6.67 0 0 1-1.42-2.1 6.67 6.67 0 0 1 0-5.15A6.63 6.63 0 0 1 5.1 6.4a6.45 6.45 0 0 1 2.58-.52zm4.5 6.61v-.12a4.29 4.29 0 0 0-.38-1.7 4.48 4.48 0 0 0-1-1.39 4.57 4.57 0 0 0-1.4-.93 4.52 4.52 0 0 0-3.47 0 4.46 4.46 0 0 0-2.38 2.38 4.53 4.53 0 0 0 0 3.5 4.51 4.51 0 0 0 1 1.42 4.64 4.64 0 0 0 1.42 1 4.29 4.29 0 0 0 1.71.35 4.37 4.37 0 0 0 1.72-.34 4.49 4.49 0 0 0 1.41-.94 4.62 4.62 0 0 0 1-1.39 4.27 4.27 0 0 0 .38-1.71zm-1.79-2.71a3.88 3.88 0 0 1 .82 1.22 3.72 3.72 0 0 1 .3 1.49 3.78 3.78 0 0 1-.3 1.49 3.94 3.94 0 0 1-2 2 3.78 3.78 0 0 1-1.49.3A3.72 3.72 0 0 1 6.19 16 3.88 3.88 0 0 1 5 15.2a3.92 3.92 0 0 1-.85-1.2 3.69 3.69 0 0 1-.31-1.49A3.62 3.62 0 0 1 4.15 11 4.18 4.18 0 0 1 5 9.78 4.17 4.17 0 0 1 6.19 9a3.74 3.74 0 0 1 3 0 4.18 4.18 0 0 1 1.2.78zm-5.84 2.71a3.17 3.17 0 0 0 .15 1 3 3 0 0 0 .43.85L6.48 13v-.28l-1.85-.51a.85.85 0 0 0 0 .17zM6.4 9.62a3.25 3.25 0 0 0-1.59 1.58l1.86.49.11-.11.11-.1zM5.85 15a3.17 3.17 0 0 0 .85.44 3 3 0 0 0 1 .16H8l-.5-1.85h-.16l-.14-.05zm3.66-5.1a3 3 0 0 0-.85-.43 3.17 3.17 0 0 0-1-.15h-.3l.51 1.85h.28zM9 15.35a3.33 3.33 0 0 0 .91-.65 3.25 3.25 0 0 0 .65-.93l-1.86-.49-.11.12a.47.47 0 0 1-.12.09zm1.85-2.87a3 3 0 0 0-.16-1 3.18 3.18 0 0 0-.44-.85L8.88 12a1.29 1.29 0 0 0 0 .14.45.45 0 0 1 0 .16l1.86.49a1.35 1.35 0 0 1 0-.15 1.51 1.51 0 0 0 .09-.15zm4.58-10.35l-.67-.62-.35.37 1 .93v.91l-.19.11L15 4l-.81-.46L14 2.17l-.49.11.19.88-.83-.47-.32.53.84.49-.91.29.16.47 1.3-.47.79.46v.46l-.79.46-1.3-.38-.16.49.88.26-.84.49.32.53.83-.47-.19.9.49.09.28-1.34.75-.48.19.12.19.11v.91l-1 .93.35.37.67-.62v1h.6v-1l.67.62.35-.37-1-.93V5.7l.19-.11.21-.12.79.46.28 1.34.51-.09-.19-.9.83.47.36-.52-.84-.49.84-.27-.16-.47-1.3.42-.79-.46v-.47l.79-.49 1.3.42L19 4l-.88-.28.88-.51-.32-.53-.83.47.15-.87-.49-.11-.28 1.34-.78.49-.45-.27v-.91l1-.93-.35-.37-.65.61v-1h-.62z">
+                                                    </path>
+                                                </svg>
+                                                <!--#endregion-->
+                                            </div>
+                                            <div class="col-8 col-md-7">
+                                                <div class="mt-2">
+                                                    <strong>
+                                                        Kar Lastiği Seti
+                                                    </strong><br />
+                                                    <span>Kış koşullarında sürüş için tavsiye edilir. Kiralama başına 34,22 ₺</span>
+                                                </div>
+
+                                            </div>
+                                            <div class="col-12 col-md-3">
+                                                <span style="display:flex;">
+                                                    <input onclick="azalt2()" type="button" value="-" class="btn btn-save" />
+                                                    <input id="sonuc2" value="1" min="0" max="1" type="text" class="form-control" />
+                                                    <input onclick="arttir2()" type="button" value="+" class="btn btn-save" />
+                                                </span>
+
+                                            </div>
+                                            <div class="col-12 ml-1 mr-1">
+                                                <hr />
+                                            </div>
+
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-4 col-md-2">
+                                                <!--#region SVG-->
+                                                <i class="fas fa-location-arrow Accordion-icon"></i>
+                                                <!--#endregion-->
+                                            </div>
+                                            <div class="col-8 col-md-7">
+                                                <div class="mt-2">
+                                                    <strong>
+                                                        GPS
+                                                    </strong><br />
+                                                    <span>Uydu navigasyon sistemi. Kiralama başına 36,58 ₺</span>
+                                                </div>
+
+                                            </div>
+                                            <div class="col-12 col-md-3">
+                                                <span style="display:flex;">
+                                                    <input onclick="azalt3()" type="button" value="-" class="btn btn-save" />
+                                                    <input id="sonuc3" value="0" min="0" max="1" type="text" class="form-control" />
+                                                    <input onclick="arttir3()" type="button" value="+" class="btn btn-save" />
+                                                </span>
+
+                                            </div>
+                                            <div class="col-12 ml-1 mr-1">
+                                                <hr />
+                                            </div>
+
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-4 col-md-2">
+                                                <!--#region SVG-->
+                                                <svg class="Accordion-svg" id="ct-toddler-seat" viewBox="0 0 20 20"><path class="cls-1" d="M13.94 16.78c-1 .2-4 .51-4 .51a13.44 13.44 0 0 1-3.26-.47C6 16.45 5.35 19 5.35 19h10.16s-.57-2.43-1.57-2.22z"></path><path class="cls-1" d="M6.08 15.63c2.16 1.84 6.26.7 8.29 0a1.08 1.08 0 0 0 .44.48c.94.4 1.12-.91 1-2.67A4.7 4.7 0 0 0 13 9.93c-1.33-.45-3.86.25-3.91-.64s.56-.84.83-4.06S4.63.4 4.35 1.21a.31.31 0 0 0 .09.31C4.29 2.95 3.35 13.3 6.08 15.63zm1.83-10.2c-.08 2.72-.48 2.92-.48 4.45s3.17 1.39 4.6 1.63c1 .18 1.52 2.21 2.06 3.51-2.2.79-5.45 1.54-7.33-.06C4.44 13 4.71 5.32 5 1.92c1 .66 3 1.56 3 3.51z"></path></svg>
+                                                <!--#endregion-->
+                                            </div>
+                                            <div class="col-8 col-md-7">
+                                                <div class="mt-2">
+                                                    <strong>
+                                                        Bebek Koltuǧu
+                                                    </strong><br />
+                                                    <span>9 ay ile 4 yaş arası veya 8-18 kilo ağırlığında (20-40 pound) çocuklar için uygundur. Kiralama başına 42,48 ₺</span>
+                                                </div>
+
+                                            </div>
+                                            <div class="col-12 col-md-3">
+                                                <span style="display:flex;">
+                                                    <input onclick="azalt4()" type="button" value="-" class="btn btn-save" />
+                                                    <input id="sonuc4" value="0" min="0" max="4" type="text" class="form-control" />
+                                                    <input onclick="arttir4()" type="button" value="+" class="btn btn-save" />
+                                                </span>
+
+                                            </div>
+                                            <div class="col-12 ml-1 mr-1">
+                                                <hr />
+                                            </div>
+
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-4 col-md-2">
+                                                <!--#region SVG-->
+                                                <svg class="Accordion-svg" id="ct-booster-seat" viewBox="0 0 20 20"><path class="cls-1" d="M15.7 15.4v.7a4.62 4.62 0 0 1-.14 1.25 1.57 1.57 0 0 1-.32.8 1.72 1.72 0 0 1-.3.21 5.66 5.66 0 0 1-1 .2A1.86 1.86 0 0 0 14 19s0 .08-.12.14h-.76l-.82-.45-2 .08-2-.08-.82.45h-.8c-.08-.05-.12-.1-.12-.14a1.76 1.76 0 0 0 0-.41 5.44 5.44 0 0 1-1-.2 1.65 1.65 0 0 1-.3-.21 1.54 1.54 0 0 1-.32-.8 4.47 4.47 0 0 1-.14-1.28v-.7c0-.05.1-.1.29-.16a.24.24 0 0 1-.09-.11 1 1 0 0 1 0-.3v-.52a3.75 3.75 0 0 1 .76-1.39l-.45-.43a2.66 2.66 0 0 1-.12-.64q-.06-.53-.07-1.18a8.66 8.66 0 0 1 .08-1.31 2.41 2.41 0 0 1 .32-1 17.35 17.35 0 0 0 1.33 1.48 14.2 14.2 0 0 0 1.26 1.26 13.48 13.48 0 0 0 1.32 1 15.38 15.38 0 0 0 1.36.83h-.34a14.57 14.57 0 0 0-1.9.12l-1.71.23v-.14l-.7 1.78h.94v-.29q.53-.16 1.63-.4a10.24 10.24 0 0 1 1.9-.26 8.77 8.77 0 0 1 1.38.11q.67.11 1.4.26l-.1.59h.92l-.43-1c0-.13-.06-.27-.11-.41a.68.68 0 0 1 0-.31h-.61a3.55 3.55 0 0 1-1.1-.66 16.42 16.42 0 0 1-1.39-1.27Q9.73 10.46 9 9.59T7.66 7.86h.59V6l-.74.2a2.1 2.1 0 0 1-.66 0 6.93 6.93 0 0 1-.74-.35 2 2 0 0 1-.86-1.27 4.56 4.56 0 0 1-.16-.86c0-.36.21-.72.74-1.05l.48-.24a5.4 5.4 0 0 1 1.4-.3c.17 0 .5-.14 1-.3a5 5 0 0 1 1.57-.24 5 5 0 0 1 1.59.24q.73.24 1 .3a5.43 5.43 0 0 1 1.4.3l.48.24q.8.51.73 1.05a5.34 5.34 0 0 1-.17.86 2 2 0 0 1-.87 1.27 6.19 6.19 0 0 1-.77.35 1.4 1.4 0 0 1-.55 0l-.78-.2v1.86l1.89.06a1.63 1.63 0 0 1 .78.43 2.41 2.41 0 0 1 .32 1 8.17 8.17 0 0 1 .07 1.31q0 .65-.09 1.18a2.89 2.89 0 0 1-.13.64l-.45.43a4.33 4.33 0 0 1 .76 1.39v.52a1.29 1.29 0 0 1 0 .3.26.26 0 0 1-.12.12c.24.06.33.11.33.16z"></path></svg>
+
+                                                <!--#endregion-->
+                                            </div>
+                                            <div class="col-8 col-md-7">
+                                                <div class="mt-2">
+                                                    <strong>
+                                                        Yükseltici Koltuk
+
+                                                    </strong><br />
+                                                    <span>4 yaş ve üzeri veya 18-45 kilo ağırlığında (40-100 pound) çocuklar için uygundur. Kiralama başına 42,48 ₺</span>
+                                                </div>
+
+                                            </div>
+                                            <div class="col-12 col-md-3">
+                                                <span style="display:flex;">
+                                                    <input onclick="azalt5()" type="button" value="-" class="btn btn-save" />
+                                                    <input id="sonuc5" value="0" type="text" class="form-control" />
+                                                    <input onclick="arttir5()" type="button" value="+" class="btn btn-save" />
+                                                </span>
+
+                                            </div>
+                                            <div class="col-12 ml-1 mr-1">
+                                                <hr />
+                                            </div>
+
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-4 col-md-2">
+                                                <!--#region SVG-->
+                                                <svg class="Accordion-svg" id="ct-booster-seat" viewBox="0 0 20 20"><path class="cls-1" d="M15.7 15.4v.7a4.62 4.62 0 0 1-.14 1.25 1.57 1.57 0 0 1-.32.8 1.72 1.72 0 0 1-.3.21 5.66 5.66 0 0 1-1 .2A1.86 1.86 0 0 0 14 19s0 .08-.12.14h-.76l-.82-.45-2 .08-2-.08-.82.45h-.8c-.08-.05-.12-.1-.12-.14a1.76 1.76 0 0 0 0-.41 5.44 5.44 0 0 1-1-.2 1.65 1.65 0 0 1-.3-.21 1.54 1.54 0 0 1-.32-.8 4.47 4.47 0 0 1-.14-1.28v-.7c0-.05.1-.1.29-.16a.24.24 0 0 1-.09-.11 1 1 0 0 1 0-.3v-.52a3.75 3.75 0 0 1 .76-1.39l-.45-.43a2.66 2.66 0 0 1-.12-.64q-.06-.53-.07-1.18a8.66 8.66 0 0 1 .08-1.31 2.41 2.41 0 0 1 .32-1 17.35 17.35 0 0 0 1.33 1.48 14.2 14.2 0 0 0 1.26 1.26 13.48 13.48 0 0 0 1.32 1 15.38 15.38 0 0 0 1.36.83h-.34a14.57 14.57 0 0 0-1.9.12l-1.71.23v-.14l-.7 1.78h.94v-.29q.53-.16 1.63-.4a10.24 10.24 0 0 1 1.9-.26 8.77 8.77 0 0 1 1.38.11q.67.11 1.4.26l-.1.59h.92l-.43-1c0-.13-.06-.27-.11-.41a.68.68 0 0 1 0-.31h-.61a3.55 3.55 0 0 1-1.1-.66 16.42 16.42 0 0 1-1.39-1.27Q9.73 10.46 9 9.59T7.66 7.86h.59V6l-.74.2a2.1 2.1 0 0 1-.66 0 6.93 6.93 0 0 1-.74-.35 2 2 0 0 1-.86-1.27 4.56 4.56 0 0 1-.16-.86c0-.36.21-.72.74-1.05l.48-.24a5.4 5.4 0 0 1 1.4-.3c.17 0 .5-.14 1-.3a5 5 0 0 1 1.57-.24 5 5 0 0 1 1.59.24q.73.24 1 .3a5.43 5.43 0 0 1 1.4.3l.48.24q.8.51.73 1.05a5.34 5.34 0 0 1-.17.86 2 2 0 0 1-.87 1.27 6.19 6.19 0 0 1-.77.35 1.4 1.4 0 0 1-.55 0l-.78-.2v1.86l1.89.06a1.63 1.63 0 0 1 .78.43 2.41 2.41 0 0 1 .32 1 8.17 8.17 0 0 1 .07 1.31q0 .65-.09 1.18a2.89 2.89 0 0 1-.13.64l-.45.43a4.33 4.33 0 0 1 .76 1.39v.52a1.29 1.29 0 0 1 0 .3.26.26 0 0 1-.12.12c.24.06.33.11.33.16z"></path></svg>
+
+                                                <!--#endregion-->
+                                            </div>
+                                            <div class="col-8 col-md-7">
+                                                <div class="mt-2">
+                                                    <strong>
+                                                        Çocuk Koltuǧu
+                                                    </strong><br />
+                                                    <span>9 aya kadar olan veya 9 kilonun altındaki (20 pound) bebekler için. Kiralama başına 42,48 ₺</span>
+                                                </div>
+
+                                            </div>
+                                            <div class="col-12 col-md-3">
+                                                <span style="display:flex;">
+                                                    <input onclick="azalt6()" type="button" value="-" class="btn btn-save" />
+                                                    <input id="sonuc6" value="0" type="text" class="form-control" />
+                                                    <input onclick="arttir6()" type="button" value="+" class="btn btn-save" />
+                                                </span>
+
+                                            </div>
+                                            <div class="col-12 ml-1 mr-1">
+                                                <hr />
+                                            </div>
+
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-4 col-lg-2">
+                                                <!--#region SVG-->
+
+                                                <i class="fas fa-wifi Accordion-icon"></i>
+
+                                                <!--#endregion-->
+                                            </div>
+                                            <div class="col-8 col-lg-7">
+                                                <div class="mt-2">
+                                                    <strong>
+                                                        WiFi Erişimi
+                                                    </strong><br />
+                                                    <span>Dizüstü bilgisayarlar, akıllı telefonlar, tabletler ve diğer Wi-Fi etkin cihazlar için kablosuz İnternet erişimi. Kiralama başına 66,08 ₺</span>
+                                                </div>
+
+                                            </div>
+                                            <div class="col-12 col-md-3">
+                                                <span style="display:flex;">
+                                                    <input onclick="azalt7()" type="button" value="-" class="btn btn-save" />
+                                                    <input id="sonuc7" value="0" type="text" class="form-control" />
+                                                    <input onclick="arttir7()" type="button" value="+" class="btn btn-save" />
+                                                </span>
+
+                                            </div>
+                                            <div class="col-12 ml-1 mr-1">
+                                                <hr />
+                                            </div>
+
+                                        </div>*@
+                                    <!--#endregion-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--#region Fiyat Alanı-->
+                <div class="col-lg-4">
+                    <div class="mt-3">
+                        <div class="row mr-1">
+                            <div class="col-12">
+                                <div class="carinfo-steptwo-rightbox-header">
+                                    <strong>
+                                        @Html.Raw(Arackiralama.Resources.LanguageFields.PriceSummary)
+                                    </strong>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="carinfo-steptwo-rightbox-content p-2">
+                                    <div class="row mt-3">
+                                        <div class="col-6">
+                                            <span>
+                                                @Html.Raw(Arackiralama.Resources.LanguageFields.CarRentalFee)
+
+                                            </span>
+                                        </div>
+                                        <div class="col-6">
+                                            <span>@Model.Vehicle.TotalRate @Model.Currency</span>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-3">
+                                        <div class="col-6">
+                                            <strong>@Html.Raw(Arackiralama.Resources.LanguageFields.GeneralTotal)</strong>
+                                        </div>
+                                        <div class="col-6">
+                                            <strong><span id="generalTotal"> @Model.Vehicle.TotalRate @Model.Currency</span></strong>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-3 mr-1">
+                            <div class="col-12">
+                                <div class="carinfo-steptwo-rightbox-header">
+                                    <strong>
+                                       @Html.Raw(Arackiralama.Resources.LanguageFields.WonderfulChoice)
+                                    </strong>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="carinfo-steptwo-rightbox-content p-2">
+                                    <div class="row">
+                                        <div class="col-12 mt-3">
+                                            <span>
+                                                <i class="fa fa-star mr-1"></i>
+                                                <span><strong>@Model.Vehicle.CompanyName</strong>,@Model.StartRegion.Name </span>
+                                                <span>
+                                                    @(Model.Vehicle.OfficeAddress.ToLower())
+                                                    @Html.Raw(Model.Vehicle.OfficeTel.Replace("/", "<br/>"))
+                                                </span>
+                                            </span>
+                                        </div>
+                                        <div class="col-12 mt-3">
+                                            <span>
+                                                <i class="fa fa-star mr-1"></i>
+                                                <span><strong>@Model.Vehicle.CompanyName</strong>,@Model.EndRegion.Name </span>
+                                                <span>
+
+                                                    @(Model.Vehicle.EndOfficeAddress.ToLower())
+                                                    @Html.Raw(Model.Vehicle.EndOfficeTel.Replace("/", "<br/>"))
+                                                </span>
+                                            </span>
+                                        </div>
+                                        <div class="col-12 mt-3">
+                                            <span>
+                                                <i class="fa fa-star mr-1"></i>
+                                                <span>@Html.Raw(Arackiralama.Resources.LanguageFields.OurMostPopularFuelPolicy):@Model.Vehicle.FuelPolicy</span>
+
+                                            </span>
+                                        </div>
+                                        <div class="col-12 mt-3">
+                                            <span>
+                                                <i class="fa fa-star mr-1"></i>
+                                                <span>@Html.Raw(Arackiralama.Resources.LanguageFields.IncludesFreeUnlimitedMileage)</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-3 mr-1">
+                            <div class="col-12 mb-3">
+
+
+                                <div id="googleMap" style="width:100%;height:400px;"></div>
+
+
+                            </div>
+                            <div class="col-12">
+                                <div class="carinfo-steptwo-rightbox-content mb-3">
+                                    <div class="col-12">
+                                        <spna>
+                                            <i class="far fa-clock mr-1"></i>
+                                            <span>@Html.Raw(Arackiralama.Resources.LanguageFields.ReservationTakesOnly2Minutes)</span>
+                                        </spna>
+                                    </div>
+                                    <div class="col-12">
+                                        <spna>
+                                            <i class="fas fa-medal mr-1"></i>
+                                            <span>@Html.Raw(Arackiralama.Resources.LanguageFields.BestPricesText)</span>
+                                        </spna>
+                                    </div>
+                                    <div class="col-12">
+                                        <spna>
+                                            <i class="far fa-comments mr-1"></i>
+                                            <span>@Html.Raw(Arackiralama.Resources.LanguageFields.SpecialCustomerService)</span>
+                                        </spna>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--#endregion-->
+            </div>
+        </div>
+    </div>
+    <!--#region NextButton-->
+    <div class="bg-light mb-3 mt-3">
+        <div class="row">
+            <div class="col-3"></div>
+            <div class="col-3"></div>
+            <div class="col-3"></div>
+            <div class="col-3">
+                @using (Html.BeginForm("PaymentPage", "Car", FormMethod.Post))
+                {
+                    <input type="hidden" name="extraFeeHdn" value="" />
+                    <input type="hidden" id="TotalAll" name="TotalAll" value="" />
+                    <input type="hidden" name="UniqueKey" value="@Model.UniqueKey" />
+                    <input type="hidden" name="vehicleID" value="@Model.Vehicle.ID" />
+
+                    <input type="submit" value="@Html.Raw(Arackiralama.Resources.LanguageFields.NextBtnText)" class="btn btn-primary btn-block scroll-to" />
+                }
+                @*<button onclick="DisabledFunction2()" class="btn btn-primary btn-block scroll-to" type="button" data-toggle="collapse" data-target="#edit-step3">İleri</button>
+        @Html.ActionLink("İleri", "PaymentPage", "Car", new { @class = "btn btn-primary btn-block scroll-to", @type = "button" })*@
+            </div>
+        </div>
+    </div>
+   <!--#endregion-->
+</div>
+
+@*<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDAp62v2UgyYIZzZpm0KL8-TGYLAZbh15k&sensor=false"></script>*@
+@*<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDAp62v2UgyYIZzZpm0KL8-TGYLAZbh15k&callback=myMap"></script>*@
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCKniT0uNGbdRlxoS6DtWNqE1LaRsgg_LQ"></script>
+<script>
+    var map;
+    function initialize() {
+
+            var lat = '@lat.ToString()';
+            var lot = '@lng.ToString()';
+          
+        var mapOptions = {
+            zoom: 15,
+                                center: new google.maps.LatLng(lat, lot)
+               
+            };
+        map = new google.maps.Map(document.getElementById("googleMap"), mapOptions);
+        var marker = new google.maps.Marker({
+            // The below line is equivalent to writing:
+            position: new google.maps.LatLng(lat,lot),
+            map: map
+        });
+                    }
+</script>
+
+
+<script>
+    function arttir1() {
+
+        var sonuc = document.getElementById("sonuc1");
+        sonuc.value = Number(sonuc1.value) + 1;
+    }
+
+    function azalt1() {
+
+        var sonuc1 = document.getElementById("sonuc1");
+        sonuc1.value = Number(sonuc1.value) - 1;
+    }
+
+    function arttir2() {
+
+        var sonuc2 = document.getElementById("sonuc2");
+        sonuc2.value = Number(sonuc2.value) + 1;
+    }
+
+    function azalt2() {
+
+        var sonuc2 = document.getElementById("sonuc2");
+        sonuc2.value = Number(sonuc2.value) - 1;
+    }
+
+
+    function arttir3() {
+
+        var sonuc3 = document.getElementById("sonuc3");
+        sonuc3.value = Number(sonuc3.value) + 1;
+    }
+
+    function azalt3() {
+
+        var sonuc3 = document.getElementById("sonuc3");
+        sonuc3.value = Number(sonuc3.value) - 1;
+    }
+    function arttir4() {
+
+        var sonuc4 = document.getElementById("sonuc4");
+        sonuc4.value = Number(sonuc4.value) + 1;
+    }
+
+    function azalt4() {
+
+        var sonuc4 = document.getElementById("sonuc4");
+        sonuc4.value = Number(sonuc4.value) - 1;
+    }
+    function arttir5() {
+
+        var sonuc5 = document.getElementById("sonuc5");
+        sonuc5.value = Number(sonuc5.value) + 1;
+    }
+
+    function azalt5() {
+
+        var sonuc5 = document.getElementById("sonuc5");
+        sonuc5.value = Number(sonuc5.value) - 1;
+    }
+    function arttir6() {
+
+        var sonuc6 = document.getElementById("sonuc6");
+        sonuc6.value = Number(sonuc6.value) + 1;
+    }
+
+    function azalt6() {
+
+        var sonuc6 = document.getElementById("sonuc6");
+        sonuc6.value = Number(sonuc6.value) - 1;
+    }
+    function arttir7() {
+
+        var sonuc7 = document.getElementById("sonuc7");
+        sonuc7.value = Number(sonuc7.value) + 1;
+    }
+
+    function azalt7() {
+
+        var sonuc7 = document.getElementById("sonuc7");
+        sonuc7.value = Number(sonuc7.value) - 1;
+    }
+</script>
+
+
+<!-- #endregion Adım 2 Bitiş-->

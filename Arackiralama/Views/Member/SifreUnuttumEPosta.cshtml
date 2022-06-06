@@ -1,0 +1,49 @@
+﻿@model Arackiralama.ViewModels.User.UserViewModel
+@{
+    ViewBag.Title = "SifreUnuttum";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-3 mb-3">
+    <center>
+        @if (ViewBag.Success == true)
+        {
+        <div class="row">
+            <div class="col-12">
+                <div class="alert alert-success">
+                    Mail Gönderimi başarıyla Gerçekleşti
+                </div>
+            </div>
+        </div>
+        }
+        <div class="row Loginbox">
+            <div class="col-12">
+
+                @using (Html.BeginForm("SifreUnuttumEPosta", "Member", FormMethod.Post))
+                {
+
+                    <div class="faq-box">
+                        <div class="col-12">
+                            <h1 class="info-box-h1">
+                                @Html.Raw(Arackiralama.Resources.LanguageFields.ForgotPassword)
+                            </h1>
+                        </div>
+                        <div class="col-12">
+                            <span class="float-left">@Html.Raw(Arackiralama.Resources.LanguageFields.EmailInfo)</span>
+                        </div>
+                        <div class="col-12 mb-3">
+                            @Html.TextBoxFor(m => m.EPosta, new { @class = "form-control" })
+                        </div>
+                        <div class="col-12 mb-3">
+                            <input type="submit" class="btn btn-save" value="@Html.Raw(Arackiralama.Resources.LanguageFields.ChangePasswordTitle)" />
+                        </div>
+                    </div>
+
+                }
+
+            </div>
+        </div>
+    </center>
+
+</div>
+

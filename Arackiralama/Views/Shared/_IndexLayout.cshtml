@@ -1,0 +1,433 @@
+﻿@{
+
+}
+<!DOCTYPE html>
+<html>
+<head>
+    @RenderSection("css1",false)
+   
+    <link rel="icon" type="image/png" href="~/Contents/img/AVAIcon.png" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Araç Kiralama</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="~/Contents/Style.css" />
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+    @*<script src="~/scripts/jquery-1.10.2.js"></script>
+        <script src="~/scripts/jquery-1.10.2.min.js"></script>*@
+    @*<script src="~/scripts/bootstrap.js"></script>
+        <script src="~/scripts/bootstrap.min.js"></script>*@
+    @*<script src="~/scripts/AutocompleteJS/application.js"></script>
+        <script src="~/scripts/AutocompleteJS/jsPlugin.js"></script>*@
+    <script src="https://kit.fontawesome.com/a62ea1d4fd.js" crossorigin="anonymous"></script>
+
+    <script src="~/scripts/AutocompleteJS/jquery-1.8.1.js"></script>
+    @*<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>*@
+    @*<script src="~/scripts/AutocompleteJS/$.fn.autocomplete.js"></script>*@
+    <script src="~/scripts/AutocompleteJS/jsPlugin.js"></script>
+    @if (Session["culture"].ToString() == "tr-TR")
+    {
+        ViewBag.Culture = "tr";
+    }
+    else if (Session["culture"].ToString() == "en-GB")
+    {
+        ViewBag.Culture = "en";
+    }
+    else if (Session["culture"].ToString() == "ru-RU")
+    {
+        ViewBag.Culture = "ru";
+    }
+    else
+    {
+        ViewBag.Culture = "tr";
+    }
+    @if (Session["culture"] != "null")
+    {
+        if (Session["culture"].ToString() == "en-GB")
+        {
+            <script src="~/scripts/datepicker/zebra_datepicker_en.js"></script>
+
+
+        }
+        else
+        {
+            <script src="~/scripts/datepicker/zebra_datepicker.js"></script>
+
+        }
+    }
+    else
+    {
+        <script src="~/scripts/datepicker/zebra_datepicker.js"></script>
+    }
+    @*<script src="~/scripts/datepicker/zebra_datepicker.src.js"></script>
+        <script src="~/scripts/datepicker/zebra_datepicker_en.js"></script>*@
+    <link href="~/Content/css/datepicker/zebra_datepicker_metallic.css" rel="stylesheet" />
+    <link href="~/Content/css/datepicker/zebra_datepicker.css" rel="stylesheet" />
+
+    @*<script src="~/scripts/AutocompleteJS/script.js"></script>*@
+
+    @*<script type="text/javascript">
+
+        $(document).ready(function () {
+            $('#autocomplete').autoComplate({
+                url:'@Url.Action("VehicleComplateRegion", "Ajax")',
+                culture:'tr',
+                icon:'vehicleCarLogo.png'
+            });
+
+
+        });
+        </script>*@
+
+    <script>
+        function CultureIDOnChangeHandler() {
+
+            var select = document.getElementById('cultureID');
+            var index = select.selectedIndex;
+            location.href = '/Car/CultureChange?Culture=' + select.options[index].value;
+        }
+
+        function CurrencyIDOnChangeHandler() {
+
+            var select = document.getElementById('currencyID');
+            var index = select.selectedIndex;
+            location.href = '/Car/CurrencyChange?Currency=' + select.options[index].value;
+        }
+
+
+    </script>
+
+
+</head>
+<body>
+
+    @*------- Header --------------*@
+
+    @Html.Action("LayoutNavbar", "Home")
+    
+
+    @*------- Header Bitiş  --------------*@
+
+
+    @*--------- Logo Alanları ---------*@
+
+    <div class="company_logos desktop">
+        <ul>
+            <li class="aracvararac1_1 mr-3"></li>
+            <li class="aracvararac1_2 mr-3"></li>
+            <li class="aracvararac1_3 mr-3"></li>
+            <li class="aracvararac1_4 mr-3"></li>
+            <li class="aracvararac1_5 mr-3"></li>
+            <li class="aracvararac1_6 mr-3"></li>
+            <li class="aracvararac1_7 mr-3"></li>
+            <li class="aracvararac1_8 mr-3"></li>
+            <li class="aracvararac1_9 mr-3"></li>
+            <li class="aracvararac1_10 mr-3"></li>
+            <li class="aracvararac1_11 mr-3"></li>
+            <li class="aracvararac1_12 mr-3"></li>
+            <li class="aracvararac1_13 mr-3"></li>
+            <li class="aracvararac1_14 mr-3"></li>
+        </ul>
+    </div>
+    @*--------- Logo Alanları ---------*@
+
+
+    <div class="container-fluid">
+        @RenderBody()
+
+    </div>
+    @*--------- İnfo Buttonlar ------------*@
+    @*<div class="mt-3">
+            <div class="row mt-3">
+                <div class="col-12 col-md-4 col-lg-4 mb-1">
+                    <a href="#" class="btn btn-save btn-block"><i class="fas fa-pencil-alt index-icon mr-3"></i> @Html.Raw(Arackiralama.Resources.LanguageFields.Reservation)</a>
+                </div>
+                <div class="col-12 col-md-4 col-lg-4 mb-1">
+                    <a href="#" class="btn btn-save btn-block"><i class="far fa-eye index-icon mr-3"></i>@Html.Raw(Arackiralama.Resources.LanguageFields.ViewReceipt)</a>
+                </div>
+                <div class="col-12 col-md-4 col-lg-4 mb-1">
+                    <a href="#" class="btn btn-save btn-block"><i class="far fa-times-circle index-icon mr-3"></i>@Html.Raw(Arackiralama.Resources.LanguageFields.CancelReservation)</a>
+                </div>
+            </div>
+        </div>*@
+    @*--------- İnfo Buttonlar Bitiş ------------*@
+
+    @*----------------- İnfoBox lar*@
+    <div class="container-fluid">
+        <div class="row mt-3">
+            <div class="col-12 col-md-6 col-lg-3 mb-1">
+                <div class="jumbotron jumbotron-bg info-box">
+                    <div class="row">
+                        <div class="col-2">
+                            <i class="far fa-check-circle info-box-i"></i>
+
+                        </div>
+                        <div class="col-10">
+                            <h1 class="info-box-h1">@Html.Raw(Arackiralama.Resources.LanguageFields.FreeCancellationTitle)</h1>
+                        </div>
+                        <div class="col-12">
+                            <center>
+                                <hr />
+                            </center>
+
+                        </div>
+                        <div class="col-12">
+                            <span>
+                                @Html.Raw(Arackiralama.Resources.LanguageFields.FreeCancellationText)
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 mb-1">
+                <div class="jumbotron jumbotron-bg info-box">
+                    <div class="row">
+                        <div class="col-2">
+                            <i class="far fa-check-circle info-box-i"></i>
+
+                        </div>
+                        <div class="col-10">
+                            <h1 class="info-box-h1">@Html.Raw(Arackiralama.Resources.LanguageFields.BestPriceGuaranteeTitle)</h1>
+                        </div>
+                        <div class="col-12">
+                            <center>
+                                <hr />
+                            </center>
+
+                        </div>
+                        <div class="col-12">
+                            <span>
+                                @Html.Raw(Arackiralama.Resources.LanguageFields.BestPriceGuaranteeText)
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 mb-1">
+                <div class="jumbotron jumbotron-bg info-box">
+                    <div class="row">
+                        <div class="col-2">
+                            <i class="far fa-check-circle info-box-i"></i>
+
+                        </div>
+                        <div class="col-10">
+                            <h1 class="info-box-h1">@Html.Raw(Arackiralama.Resources.LanguageFields.AllinclusiveRentalFeeTitle)</h1>
+                        </div>
+                        <div class="col-12">
+                            <center>
+                                <hr />
+                            </center>
+
+                        </div>
+                        <div class="col-12">
+                            <span>
+                                @Html.Raw(Arackiralama.Resources.LanguageFields.AllinclusiveRentalFeeText)
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 mb-1">
+                <div class="jumbotron jumbotron-bg info-box">
+                    <div class="row">
+                        <div class="col-2">
+                            <i class="far fa-check-circle info-box-i"></i>
+
+                        </div>
+                        <div class="col-10">
+                            <h1 class="info-box-h1">@Html.Raw(Arackiralama.Resources.LanguageFields.CustomerSupportTitle)</h1>
+                        </div>
+                        <div class="col-12">
+                            <center>
+                                <hr />
+                            </center>
+
+                        </div>
+                        <div class="col-12">
+                            <span>
+                                UK.....44 2036422248
+                                USA...1 3128435785
+                                FR.....33 184884679
+                                DE.....0800 1818415
+                                ES.....34 912768456
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @*--------- İnfoBox lar Bitiş ------------*@
+
+    @*-------- Footer -----------*@
+    <div class="mt-3">
+
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-6">
+
+                        <ul class="m-1 pl-0">
+                            <li class="m-1 p-1">
+                                <a href="https://wwww.facebook.com/AracVarArac/" target="_blank">
+                                    <i class="fab fa-facebook facebook-icon"></i>
+                                </a>
+                            </li>
+                            <li class="m-1 p-1">
+                                <a href="#">
+                                    <i class="fab fa-twitter twitter-icon"></i>
+                                </a>
+                            </li>
+                            <li class="m-1 p-1">
+                                <a href="#">
+                                    <i class="fab fa-youtube youtube-icon"></i>
+                                </a>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <div class="col-12 col-md-6">
+                        @*<div class="float-right">
+                                <ul class="m-1">
+                                    <li class="mr-2 p-1">
+                                        <a href="~/Car/Index">@Html.Raw(Arackiralama.Resources.LanguageFields.HomePage)</a>
+                                    </li>
+
+                                    <li class="mr-2 p-1">
+                                        <a href="~/Content/Contact">@Html.Raw(Arackiralama.Resources.LanguageFields.ContactInfo)</a>
+                                    </li>
+
+                                </ul>
+                            </div>*@
+                        @*<div class="row mt-3">
+                                <div class="col-12 col-md-2 text-align-center">
+                                    <a href="~/Car/Index">@Html.Raw(Arackiralama.Resources.LanguageFields.HomePage)</a>
+                                </div>
+                                <div class="col-12 col-md-2 text-align-center">
+                                    <a href="~/Content/FAQ">@Html.Raw(Arackiralama.Resources.LanguageFields.FrequentlyAskedQuestionsTitle)</a>
+                                </div>
+
+                                <div class="col-12 col-md-2 text-align-center">
+                                    <a href="~/Content/Contact">@Html.Raw(Arackiralama.Resources.LanguageFields.ContactInfo)</a>
+                                </div>
+                                <div class="col-12 col-md-2 text-align-center">
+                                    <a href="~/Content/Blog">@Html.Raw(Arackiralama.Resources.LanguageFields.Blog)</a>
+                                </div>
+                                <div class="col-12 col-md-3" text-align-center>
+                                    <a href="~/Content/PrivacyPolicy">@Html.Raw(Arackiralama.Resources.LanguageFields.PrivacyPolicyTitle)</a>
+                                </div>
+
+                            </div>*@
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-4">
+
+                        <div class="row">
+                            <div class="col-12" style="">
+                                <img src="~/Contents/img/tursab-vector-logo.png" style="width:120px; height:70px;" />
+                            </div>
+                            <div class="col-12" style="text-">
+                                <span style="margin-left:8%;">
+                                    8349
+                                </span>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-12 col-md-4">
+
+                        <div class="row mt-3">
+                            <div class="col-12 col-md-12 text-align-center">
+                                <a href="~/Content/OrderManegment">@Html.Raw(Arackiralama.Resources.LanguageFields.OrderManegment)</a>
+                            </div>
+                            <div class="col-12 col-md-12 text-align-center">
+                                <a href="~/Car/Index">@Html.Raw(Arackiralama.Resources.LanguageFields.HomePage)</a>
+                            </div>
+                            <div class="col-12 col-md-12 text-align-center">
+                                <a href="~/Content/FAQ">@Html.Raw(Arackiralama.Resources.LanguageFields.FrequentlyAskedQuestionsTitle)</a>
+                            </div>
+
+                            <div class="col-12 col-md-12 text-align-center">
+                                <a href="~/Content/Contact">@Html.Raw(Arackiralama.Resources.LanguageFields.ContactInfo)</a>
+                            </div>
+                            <div class="col-12 col-md-12 text-align-center">
+                                <a href="~/Content/Blog">@Html.Raw(Arackiralama.Resources.LanguageFields.Blog)</a>
+                            </div>
+                            <div class="col-12 col-md-12 text-align-center">
+                                <a href="~/Content/PrivacyPolicy">@Html.Raw(Arackiralama.Resources.LanguageFields.PrivacyPolicyTitle)</a>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+
+                        <div class="row">
+                            <div class="col-12 mt-3">
+                                <img src="~/Contents/img/IATA-vector-logo.png" class="float-right-absorbe" style="width:100px; height:70px;" />
+                            </div>
+                            <div class="col-12 mt-2">
+                                <span class="mt-3 mr-4 float-right-absorbe">
+                                    8822415
+                                </span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-6 col-lg-6">
+                        <a href="~/Car/Index">
+                            <img src="~/Contents/img/arac_var_arac_logo2.png" class="logo mt-4" />
+                        </a>
+
+
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-6">
+                        <img src="~/Contents/img/creditcard.png" class="float-right-absorbe" />
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <center>
+                            <p>&copy; @Html.Raw(Arackiralama.Resources.LanguageFields.CopyRight)</p>
+                        </center>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    @*-------- Footer Bitiş  -----------*@
+
+    @*<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <script src="../js/holder.min.js" type="text/jscript"></script>
+        <script src="https://kit.fontawesome.com/a62ea1d4fd.js" crossorigin="anonymous"></script>*@
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+        (function () {
+            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/5eeb2b669e5f69442290cfe5/default';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
+        })();
+    </script>
+    <!--End of Tawk.to Script-->
+    @RenderSection("script1", false)
+</body>
+</html>

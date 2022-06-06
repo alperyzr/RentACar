@@ -1,0 +1,153 @@
+﻿@model Arackiralama.ViewModels.Content.BlogViewModel
+@{
+    ViewBag.Title = "Blog Ekle";
+
+}
+
+<div class="col">
+    <div class="row">
+        @if (ViewBag.Message != null)
+        {
+            <div class="col-12 mb-3">
+                <div class="alert alert-success">
+                    @ViewBag.Message;
+                </div>
+            </div>
+        }
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">Blog Ekle / Düzenle</h2>
+                </div>
+            </div>
+            @using (Html.BeginForm("BlogCreate", "Content", FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
+
+            <div class="card-body p-3">
+                <div class="row mb-3">
+                    <div class="col-12 col-md-3">
+                        <span style="float:right;" class="float-right-absorbe">
+                            Dil
+                        </span>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        @Html.DropDownListFor(m => m.CultureID,
+      Model.cultureList.Select(d => new SelectListItem()
+      {
+          Value = d.ID.ToString(),
+          Text = d.Name
+      }),new {@name="CultureID", @class = "form-control" })
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-12 col-md-3">
+                        <span style="float:right;" class="float-right-absorbe">
+                            Avatar Resim
+                        </span>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        @if (!String.IsNullOrEmpty(Model.ImageURLPath))
+                        {
+                            <img src="@Model.ImageURLPath" class="panel-upload-img" />
+                        }
+                        @Html.TextBoxFor(m => m.ImageURL, new { type = "file" })
+                        @Html.ValidationMessageFor(m => m.ImageURL, "", new { style = "color:red;font-size:12px" })
+
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-12 col-md-3">
+                        <span style="float:right;" class="float-right-absorbe">
+                            Resim Başlığı
+                        </span>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        @Html.TextBoxFor(m => m.ImageTitle, new { @class = "form-control" })
+                    </div>
+                </div>
+
+
+                <div class="row mb-3">
+                    <div class="col-12 col-md-3">
+                        <span style="float:right;" class="float-right-absorbe">
+                            Blog Başlığı
+                        </span>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        @Html.TextBoxFor(m => m.Title, new { @class = "form-control" })
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-12 col-md-3">
+                        <span style="float:right;" class="float-right-absorbe">
+                            Vitrin Yazısı
+                        </span>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        @Html.TextAreaFor(m => m.ShowCaseDescription, new { @class = "form-control" })
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-12 col-md-3">
+                        <span style="float:right;" class="float-right-absorbe">
+                            Blog Tarihi
+                        </span>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        @Html.TextBoxFor(m => m.Date, new { @class = "form-control", type = "date" })
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-12 col-md-3">
+                        <span style="float:right;" class="float-right-absorbe">
+                            Blog Rankı
+                        </span>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        @Html.TextBoxFor(m => m.Rank, new { @class = "form-control" })
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-12 col-md-3">
+                        <span style="float:right;" class="float-right-absorbe">
+                            Blog İçeriği
+                        </span>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        @Html.TextAreaFor(m => m.DescriptionCK)
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-12 col-md-3">
+                        <span style="float:right;" class="float-right-absorbe">
+                            Aktif mi ?
+                        </span>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        @Html.RadioButtonFor(m => m.IsActive, "Aktif")<span>Aktif</span>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        @Html.RadioButtonFor(m => m.IsActive, "Aktif Değil")<span>Aktif Değil</span>
+                    </div>
+                </div>
+
+                <center>
+                    <div class="col-12 mb-3">
+                        <input type="submit" class="btn btn-success" value="Kaydet" />
+                    </div>
+                </center>
+
+            </div>
+            }
+        </div>
+    </div>
+</div>
+
+@section scripts{
+    <script src="~/scripts/ckeditor/ckeditor.js"></script>
+    <script src="~/ckfinder/ckfinder.js"></script>
+    <script>
+        CKEDITOR.replace('DescriptionCK');
+        CKFinder.setupCKEditor(null, '/ckfinder/');
+    </script>
+}

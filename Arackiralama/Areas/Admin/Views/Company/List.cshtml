@@ -1,0 +1,59 @@
+﻿@model IEnumerable<Arackiralama.Models.Company>
+@{
+    ViewBag.Title = "Şirket Listesi";
+}
+
+<div class="row">
+    @if (ViewBag.Message != null)
+    {
+        <div class="col-12 mb-3">
+            <div class="alert alert-success">
+                @ViewBag.Message
+            </div>
+        </div>
+    }
+    <div class="col-12">
+        <section class="card">
+            <header class="card-header">
+                <h2 class="card-title">Şirket Listesi</h2>
+            </header>
+            <div class="card-body">
+                <table class="table table-responsive-md table-striped mb-0 table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Logo</th>
+                            <th>Şirket Adı</th>
+                            <th>Ticari Ünvanı</th>
+                            <th>Düzenle</th>
+                            <th>Detay</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    <img src="@item.Logo" class="panel-upload-img" />
+                                </td>
+                                <td>@item.SirketAdi</td>
+                                <td>
+                                   @item.TicariUnvani
+                                </td>
+                                <td>
+                                    <a href="@Url.Action("Edit","Company",new { @id = item.ID})" class = "btn btn-info">Düzenle</a>
+                                </td>
+                                <td>
+                                    <a href="@Url.Action("Detail","Company",new { @id = item.ID})" class = "btn btn-info">Detay</a>
+                                </td>
+
+                            </tr>
+                        }
+                        
+                        
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+</div>

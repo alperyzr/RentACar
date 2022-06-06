@@ -1,0 +1,74 @@
+﻿@model IEnumerable<Arackiralama.Models.FAQTranslation>
+@{
+    ViewBag.Title = "SSS Listesi";
+}
+
+<div class="row">
+    @if (ViewBag.Message != null)
+    {
+        <div class="col-12 mb-3">
+            <div class="alert alert-success">
+                @ViewBag.Message
+            </div>
+        </div>
+    }
+    <div class="col-12">
+        <section class="card">
+            <header class="card-header">
+                <h2 class="card-title">SSS Listesi</h2>
+            </header>
+            <div class="card-body">
+                <table id="FAQList" class="table table-responsive-md table-striped mb-0 table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Dil</th>
+                            <th>Soru</th>
+                            <th>Cevap</th>
+
+                            <th>Aktif mi ?</th>
+                            <th>Düzenle</th>
+
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    @item.Cultures.Name
+                                </td>
+                                <td>
+                                    @item.Question
+                                </td>
+                                <td>
+                                    @item.Answer
+                                </td>
+                                <td>
+                                    @item.IsActiive
+                                </td>
+
+                                <td>
+                                    <a href="@Url.Action("FAQEdit","Content",new { id = item.ID })" class="btn btn-info">Düzenle</a>
+                                </td>
+
+                            </tr>
+                        }
+
+
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+</div>
+@section scripts{
+
+    <script src="~/DataTables/DataTables.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#FAQList').DataTable();
+        });
+    </script>
+
+}

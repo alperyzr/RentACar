@@ -1,0 +1,469 @@
+﻿@model Arackiralama.Models.VehicleSearchModel
+
+
+<div class="col-lg-12 mb-3">
+        @foreach (var item in Model.VehicleList)
+        {
+            <div style="border:1px solid #b7b7b7;" class="mb-3">
+                <div class="col-12 p-2">
+
+                    <div class="row">
+                        <div class="col-12">
+
+                            <span><strong>@item.Name</strong></span>
+                        </div>
+                        <div class="col-12">
+                            <span>
+                                @if (item.CategoryID == 1)
+                                {
+                                    @("Mini");
+                                }
+                                else if (item.CategoryID == 3)
+                                {
+                                    @("Economy");
+                                }
+                                else if (item.CategoryID == 4)
+                                {
+                                    @("Compact");
+                                }
+                                else if (item.CategoryID == 6)
+                                {
+                                    @("Intermediate");
+                                }
+                                else if (item.CategoryID == 7)
+                                {
+                                    @("Standard");
+                                }
+                                else if (item.CategoryID == 8)
+                                {
+                                    @("Fullsize");
+                                }
+                                else if (item.CategoryID == 9)
+                                {
+                                    @("Luxury");
+                                }
+                                else if (item.CategoryID == 10)
+                                {
+                                    @("Premium");
+                                }
+                                else if (item.CategoryID == 11)
+                                {
+                                    @("Minivan");
+                                }
+                                else if (item.CategoryID == 12)
+                                {
+                                    @("12 passenger van");
+                                }
+                                else if (item.CategoryID == 24)
+                                {
+                                    @("Exotic");
+                                }
+                                else
+                                {
+                                    @(Arackiralama.Resources.LanguageFields.VehicleNonCategory)
+                                }
+
+                            </span>
+                        </div>
+                    </div>
+
+
+
+                    <div class="row">
+                        <div class="col-md-9">
+                            <div class="row">
+                                <!-- #region Araç Bilgisi Sol Kısım -->
+                                <div class="col-12 col-md-4">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <img src="@item.ThumImage" alt="@item.Name" title="@item.Name" />
+
+
+                                        </div>
+                                        <div class="col-12 mt-2">
+                                            <div class="row">
+                                                <div class="col-4">
+                                                    <span>@item.PassengerCount</span>
+                                                    <i class="fa fa-user"></i>
+                                                </div>
+                                                <div class="col-4">
+                                                    <span>@item.BaggageCount</span>
+                                                    <i class="fas fa-briefcase"></i>
+                                                </div>
+                                                <div class="col-4">
+                                                    <span>@item.DoorCount</span>
+                                                    <img src="~/Contents/img/car-door.jpg" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        @foreach (var ChargesItem in item.VehicleCharges.Where(t => t != null))
+                                        {
+                                            <div class="col-lg-12 mt-2">
+                                                <span>
+                                                    <i class="far fa-check-circle mr-1"></i><span>@ChargesItem</span>
+                                                </span>
+                                            </div>
+                                        }
+
+                                    </div>
+
+                                </div>
+                                <!-- #endregion Araç Bilgisi Sol kısım -->
+                                <!-- #region Araç bilgisi Orta Kısım-->
+                                <div class="col-12 col-md-4">
+                                    <div class="row">
+                                        <div class="col-12 mt-2">
+                                            <span>
+                                                <i class="fas fa-map-marker-alt mr-1"></i>
+                                                <span>
+                                                    @Html.Raw(Arackiralama.Resources.LanguageFields.PickUpPoint)
+                                                    <strong>@Model.StartRegion.Name</strong>
+                                                </span>
+                                            </span>
+                                        </div>
+                                        <div class="col-12 mt-2">
+                                            <span>
+                                                <i class="fas fa-gas-pump mr-1"></i>
+
+                                                <span>
+                                                    @Html.Raw(Arackiralama.Resources.LanguageFields.FuelPolicy)
+                                                    <strong>@item.FuelPolicy</strong>
+                                                </span>
+                                            </span>
+                                        </div>
+
+                                        <div class="col-12 mt-2">
+                                            <span>
+                                                <i class="fas fa-gas-pump mr-1"></i>
+
+                                                <span>
+                                                    @Html.Raw(Arackiralama.Resources.LanguageFields.TransmissionType)
+                                                    <strong>@item.TransmissionType</strong>
+                                                </span>
+                                            </span>
+                                        </div>
+                                        <div class="col-12 mt-2">
+                                            <span>
+                                                <i class="fas fa-gas-pump mr-1"></i>
+
+                                                <span>
+                                                    @Html.Raw(Arackiralama.Resources.LanguageFields.FuelType)
+                                                    <strong>@item.FuelType</strong>
+                                                </span>
+                                            </span>
+                                        </div>
+
+                                        <div class="col-12 mt-2">
+                                            <span>
+                                                <i class="fas fa-tachometer-alt"></i>
+
+                                                <span>
+                                                    @Html.Raw(Arackiralama.Resources.LanguageFields.Kilometers)
+                                                    <strong> @Html.Raw(Arackiralama.Resources.LanguageFields.UnLimited)</strong>
+                                                </span>
+                                            </span>
+                                        </div>
+                                        @if (item.AirConditionInd)
+                                        {
+                                            <div class="col-lg-12 mt-2">
+                                                <span>
+                                                    <i class="far fa-check-circle mr-1" aria-hidden="true"></i><span>@Html.Raw(Arackiralama.Resources.LanguageFields.AirConditionIng)</span>
+                                                </span>
+                                            </div>
+                                        }
+                                        <div class="col-12 mt-2">
+                                            <div class="row mb-3">
+                                                <div class="col-lg-4">
+                                                    @*<img src="@item.CompanyImage" title="@item.CompanyName" />*@
+                                                    <img src="@item.CompanyImage" title="@item.CompanyName" onerror="this.onerror=null;this.src='~/Contents/images/no-image.jpg';" />
+                                                </div>
+                                                @*<div class="col-lg-4">
+                                                        <span>
+                                                            <a href="#" type="button" data-toggle="modal" data-target="#PointScale">@Html.Raw(Arackiralama.Resources.LanguageFields.PointButtonVeryNice)</a>
+
+                                                        </span>
+
+                                                        @{ Html.RenderAction("_PointScale", "Car");}
+
+
+                                                    </div>*@
+                                                @*<div class="col-lg-4">
+                                                        <a href="#" data-toggle="modal" data-target="#PointScale" class="btn btn-save btn-sm btn-block">7.1</a>
+                                                    </div>*@
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- #endregion Areaç Bilgisi Orta Kısım-->
+                                <!-- #region Araç Bilgisi Sol-->
+                                <div class="col-12 col-md-4">
+                                    <div class="row">
+                                        <div class="col-12 mt-3 mb-3">
+
+                                            <div class="text-align-center" style="background-color:#fff9ee;">
+                                                <i class="fas fa-shower mr-1"></i>
+
+                                                <a href="#" data-title="Bu araç kiralama markası tarafından COVID-19 yönergelerine göre temizleme önlemlerini sürdürmeyi tahhüt etmektedir.">Temizlenmiş Araç</a>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <strong class="strong-absorbe">@Html.Raw(Arackiralama.Resources.LanguageFields.IncludedForFree)</strong>
+                                        </div>
+                                        @foreach (var CoveragesItem in item.PricedCoverages)
+                                        {
+                                            <div class="col-12">
+                                                <span class="span-absorbe">
+                                                    <i class="far fa-check-circle mr-1 span-absorbe"></i>
+
+                                                    @CoveragesItem
+                                                </span>
+                                            </div>
+                                        }
+
+                                        <div class="col-12">
+                                            <span class="span-absorbe">
+                                                <i class="far fa-check-circle mr-1 span-absorbe"></i>
+
+                                                @(Html.Raw(Arackiralama.Resources.LanguageFields.Cancel))
+                                            </span>
+                                        </div>
+                                        <div class="col-12">
+                                            <span class="span-absorbe">
+                                                <i class="far fa-check-circle mr-1 span-absorbe"></i>
+                                                @(Html.Raw(Arackiralama.Resources.LanguageFields.Amendment))
+
+                                            </span>
+                                        </div>
+                                        <div class="col-12 mt-3">
+                                            <a href="#" class="carinfo-a" data-toggle="modal" data-target="#ImportantInformation">
+                                                @Html.Raw(Arackiralama.Resources.LanguageFields.ImportantInformationText)
+                                            </a>
+                                            @{ Html.RenderAction("_ImportantInformations", "Car");}
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- #endregion Araç Bilgisi Sol -->
+
+
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="carinfo-rightbox">
+                                <div class="row">
+                                    <div class="carinfo-rightbox-content carinfo-rightbox-content-absorbe">
+                                        <div class="col-12 mt-2">
+                                            <h1 class="">@Html.Raw(Arackiralama.Resources.LanguageFields.TotalText) @item.TotalRate @Model.Currency</h1>
+                                        </div>
+                                        <div class="col-12">
+                                            <strong>
+                                                @Model.TotalDays @Html.Raw(Arackiralama.Resources.LanguageFields.DayTitle)
+                                            </strong>
+                                        </div>
+                                        <div class="col-12 mt-2">
+
+                                            <input class="btn btn-save btn-block" type="button" value="@(Html.Raw(Arackiralama.Resources.LanguageFields.PickCar))" onclick="window.location='@Url.Action("Choose", "Car", new { UniqueKey = Model.UniqueKey, vehicleID = item.ID })'" />
+                                        </div>
+                                        <div class="col-12 mt-2">
+                                            <a href="#" data-toggle="modal" data-target="#SteepOneEmailModal-@item.ID" class="carinfo-a"><i class="far fa-envelope mr-1"></i>@Html.Raw(Arackiralama.Resources.LanguageFields.EmailOffer)</a>
+
+                                            @*email pop up*@
+
+                                            <div class="modal fade" id="SteepOneEmailModal-@item.ID" role="dialog">
+                                                @*<form action="/Car/SteepOneEmailModal">*@
+                                                @using (Html.BeginForm("SteepOneEmailModal", "Car", FormMethod.Post))
+                                                {
+                                                    <div class="modal-dialog">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h5 class="modal-title" id="exampleModalLabel">@Html.Raw(Arackiralama.Resources.LanguageFields.EmailOffer)</h5>
+                                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                    <span aria-hidden="true">&times;</span>
+                                                                </button>
+                                                            </div>
+                                                            <div class="modal-body">
+
+                                                                <div style="border:1px solid #b7b7b7;">
+                                                                    <div class="col-md-12">
+                                                                        <span><strong>@item.Name</strong><span></span></span>
+
+                                                                    </div>
+                                                                    @*<div class="col-md-12">
+                                                                            <span>Ekonomi</span>
+                                                                        </div>*@
+                                                                    <div class="col-md-12">
+                                                                        <div class="row">
+                                                                            <!-- #region Araç Bilgisi Sol Kısım -->
+                                                                            <div class="col-6 col-md-4">
+                                                                                <div class="row">
+                                                                                    <div class="col-12">
+                                                                                        <img src="@item.ThumImage" style="width:160px;" />
+                                                                                    </div>
+                                                                                    <div class="col-12 mt-2">
+                                                                                        <div class="row">
+                                                                                            <div class="col-lg-4">
+                                                                                                <span>@item.PassengerCount</span>
+                                                                                                <i class="fa fa-user"></i>
+                                                                                            </div>
+                                                                                            <div class="col-lg-4">
+                                                                                                <span>@item.BaggageCount</span>
+                                                                                                <i class="fas fa-briefcase"></i>
+                                                                                            </div>
+                                                                                            <div class="col-lg-4">
+                                                                                                <span>@item.DoorCount</span>
+                                                                                                <img src="~/Contents/img/car-door.jpg" />
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    @foreach (var ChargesItem in item.VehicleCharges.Where(t => t != null))
+                                                                                    {
+                                                                                        <div class="col-lg-12 mt-2">
+                                                                                            <span>
+                                                                                                <i class="far fa-check-circle mr-1"></i><span>@ChargesItem</span>
+                                                                                            </span>
+                                                                                        </div>
+                                                                                    }
+                                                                                    @*<div class="col-lg-12 mt-2">
+                                                                                            <span>
+                                                                                                <i class="far fa-check-circle mr-1"></i><span>Klima</span>
+                                                                                            </span>
+                                                                                        </div>
+                                                                                        <div class="col-lg-12 mt-2">
+                                                                                            <span>
+                                                                                                <i class="far fa-check-circle mr-1"></i><span>Dizel</span>
+                                                                                            </span>
+                                                                                        </div>*@
+                                                                                </div>
+
+                                                                            </div>
+                                                                            <!-- #endregion Araç Bilgisi Sol kısım -->
+                                                                            <!-- #region Araç bilgisi Orta Kısım-->
+                                                                            <div class="col-6 col-md-4">
+                                                                                <div class="row">
+                                                                                    <div class="col-12 mt-2">
+                                                                                        <span>
+                                                                                            <i class="fas fa-map-marker-alt mr-1"></i>
+                                                                                            <span>
+                                                                                                @Html.Raw(Arackiralama.Resources.LanguageFields.PickUpPoint)
+                                                                                                <strong>@Model.StartRegion.Name</strong>
+                                                                                            </span>
+                                                                                        </span>
+                                                                                    </div>
+                                                                                    <div class="col-12 mt-2">
+                                                                                        <span>
+                                                                                            <i class="fas fa-gas-pump mr-1"></i>
+
+                                                                                            <span>
+                                                                                                @Html.Raw(Arackiralama.Resources.LanguageFields.FuelPolicy)
+                                                                                                <strong>@item.FuelPolicy</strong>
+                                                                                            </span>
+                                                                                        </span>
+                                                                                    </div>
+                                                                                    <div class="col-12 mt-2">
+                                                                                        <span>
+                                                                                            <i class="fas fa-tachometer-alt"></i>
+
+                                                                                            <span>
+                                                                                                @Html.Raw(Arackiralama.Resources.LanguageFields.Kilometers)<strong>Limitsiz</strong>
+                                                                                            </span>
+                                                                                        </span>
+                                                                                    </div>
+                                                                                    <div class="col-12 mt-2">
+                                                                                        <div class="row mb-3">
+                                                                                            <div class="col-12">
+                                                                                                <img src="@item.CompanyImage" title="@item.CompanyName" />
+                                                                                            </div>
+                                                                                            @*<div class="col-12">
+                                                                                                    <span>
+                                                                                                        <a href="#" data-toggle="modal" data-target="#PointScale">@Html.Raw(Arackiralama.Resources.LanguageFields.PointButtonVeryNice)</a>
+                                                                                                    </span>
+
+
+                                                                                                    @{ Html.RenderAction("_PointScale", "Car");}
+                                                                                                </div>
+                                                                                                <div class="col-12">
+                                                                                                    <a href="#" class="btn btn-save btn-sm btn-block">7.1</a>
+                                                                                                </div>*@
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <!-- #endregion Areaç Bilgisi Orta Kısım-->
+                                                                            <!-- #region Araç Bilgisi Sol-->
+                                                                            <div class="col-12 col-md-4">
+                                                                                <div class="row">
+                                                                                    <div class="col-12">
+                                                                                        <strong>@Html.Raw(Arackiralama.Resources.LanguageFields.IncludedForFree)</strong>
+                                                                                    </div>
+                                                                                    @foreach (var CoveragesItem in item.PricedCoverages)
+                                                                                    {
+                                                                                        <div class="col-12">
+                                                                                            <span>
+                                                                                                <i class="far fa-check-circle mr-1"></i>
+
+                                                                                                @CoveragesItem
+                                                                                            </span>
+                                                                                        </div>
+                                                                                    }
+
+
+                                                                                    <div class="col-12 mt-2">
+                                                                                        <h1 class="">@Html.Raw(Arackiralama.Resources.LanguageFields.TotalText) @item.TotalRate @Model.Currency</h1>
+                                                                                    </div>
+
+
+                                                                                </div>
+                                                                            </div>
+                                                                            <!-- #endregion Araç Bilgisi Sol -->
+
+
+                                                                        </div>
+                                                                    </div>
+
+                                                                </div>
+                                                                <hr />
+                                                                <div class="col-12">
+                                                                    <div class="row">
+
+                                                                        <div class="col-12 col-md-9">
+
+                                                                            <div class="row">
+
+
+                                                                                <div class="col-12">
+                                                                                    <span>E-Posta</span>
+                                                                                    <input type="text" name="Email" class="form-control" required />
+                                                                                </div>
+
+
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-12 col-md-3">
+                                                                            <button type="submit" class="btn btn-save mt-3"> @Html.Raw(Arackiralama.Resources.LanguageFields.SendBtn)</button>
+                                                                        </div>
+
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+
+                                                        </div>
+                                                    </div>
+                                                    @*</form>*@
+                                                }
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        }
+    </div>
+
+
+
+

@@ -1,0 +1,313 @@
+﻿
+<!doctype html>
+<html class="fixed">
+<head>
+    <meta charset="UTF-8">
+    <title>AraçvarAraç Admin Paneli</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Shadows+Into+Light" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="~/Areas/Admin/vendor/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="~/Areas/Admin/vendor/animate/animate.css">
+
+    <link rel="stylesheet" href="~/Areas/Admin/vendor/font-awesome/css/all.min.css">
+    <link rel="stylesheet" href="~/Areas/Admin/css/theme.css">
+    <link href="~/Areas/Admin/css/AdminStyle.css" rel="stylesheet" />
+    <link href="~/DataTables/DataTables.css" rel="stylesheet" />
+    @*<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/autofill/2.3.5/css/autoFill.dataTables.min.css">
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/autofill/2.3.5/js/dataTables.autoFill.min.js"></script>*@
+
+
+    <script src="~/Areas/Admin/vendor/modernizr/modernizr.js"></script>
+
+</head>
+<body>
+    <section class="body">
+        <header class="header">
+            <div class="logo-container">
+                <a href="~/Admin/User/List" class="logo">
+                    <img src="~/Contents/img/arac_var_arac_logo2.png" class="ml-2 mt-1">
+                </a>
+                <div class="d-md-none toggle-sidebar-left" data-toggle-class="sidebar-left-opened" data-target="html" data-fire-event="sidebar-left-opened">
+                    <i class="fas fa-bars" aria-label="Toggle sidebar"></i>
+                </div>
+            </div>
+
+            <div class="header-right">
+                <div id="userbox" class="userbox dropdown">
+                    <a href="#" data-toggle="dropdown" class="dropbtn">
+                        <figure class="profile-picture">
+                            <img src="~/Areas/Admin/img/!logged-user.jpg" alt="Joseph Doe" class="rounded-circle" data-lock-picture="img/!logged-user.jpg">
+                        </figure>
+                        <div class="profile-info" data-lock-name="John Doe" data-lock-email="johndoe@okler.com">
+                            <span class="name">@(Session["Admin"] != null ? Session["Admin"]: "")</span>
+                            <span class="role">Yönetici</span>
+                        </div>
+
+                        <i class="fa custom-caret"></i>
+                    </a>
+
+                    <div class="dropdown-menu dropdown-content">
+                        <ul class="list-unstyled mb-2">
+                            <li>
+                                <a role="menuitem" tabindex="-1" href="~/Admin/Admin/AdminProfile"><i class="fas fa-user"></i> Profil</a>
+                            </li>
+                            <li>
+                                <a role="menuitem" tabindex="-1" href="~/Admin/Admin/Login"><i class="fas fa-power-off"></i> Çıkış Yap</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="inner-wrapper">
+            <aside id="sidebar-left" class="sidebar-left">
+
+                <div class="sidebar-header">
+                    <div class="sidebar-title">
+                        Navigation
+                    </div>
+                    <div class="sidebar-toggle d-none d-md-block" data-toggle-class="sidebar-left-collapsed" data-target="html" data-fire-event="sidebar-left-toggle">
+                        <i class="fas fa-bars" aria-label="Toggle sidebar"></i>
+                    </div>
+                </div>
+
+                <div class="nano">
+                    <div class="nano-content">
+                        <nav id="menu" class="nav-main" role="navigation">
+                            <ul class="nav nav-main">
+                                @*<li>
+                                        <a class="nav-link" href="#">
+                                            <i class="fas fa-home" aria-hidden="true"></i>
+                                            <span>Dashboard</span>
+                                        </a>
+                                    </li>*@
+                                <li class="nav-parent">
+                                    <a class="nav-link" href="#">
+                                        <i class="fas fa-user" aria-hidden="true"></i>
+                                        <span>Kullanıcı işlemleri</span>
+                                    </a>
+                                    <ul class="nav nav-children">
+                                        <li>
+                                            <a class="nav-link" href="~/Admin/User/List">
+                                                Kullanıcı Listesi
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="nav-link" href="~/Admin/User/Create">
+                                                Kulanıcı Ekle
+                                            </a>
+                                        </li>
+                                        @*<li class="nav-parent">
+                                                <a>
+                                                    Otel Özellikleri Yönetimi
+                                                </a>
+                                                <ul class="nav nav-children">
+                                                    <li>
+                                                        <a class="nav-link" href="otel-zincirleri.html">
+                                                            Otel Zincirleri
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="nav-link" href="pansiyon-tipi.html">
+                                                            Pansiyon Tipleri
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </li>*@
+                                    </ul>
+                                </li>
+                                <li class="nav-parent">
+                                    <a class="nav-link" href="#">
+                                        <i class="fas fa-shopping-basket" aria-hidden="true"></i>
+                                        <span>Siparişler</span>
+                                    </a>
+                                    <ul class="nav nav-children">
+                                        <li>
+                                            <a class="nav-link" href="~/Admin/User/OrderList">
+                                                Sipariş Listesi
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                @*<li class="nav-parent">
+                                        <a class="nav-link" href="#">
+                                            <i class="fas fa-building" aria-hidden="true"></i>
+                                            <span>Şirket İşlemleri</span>
+                                        </a>
+                                        <ul class="nav nav-children">
+                                            <li>
+                                                <a class="nav-link" href="~/Admin/Company/List">
+                                                    Şirket Listesi
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="nav-link" href="~/Admin/Company/Create">
+                                                    Şirket Ekle
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-parent">
+                                        <a class="nav-link" href="#">
+                                            <i class="fas fa-car" aria-hidden="true"></i>
+                                            <span>Araç İşlemleri</span>
+                                        </a>
+                                        <ul class="nav nav-children">
+                                            <li class="nav-expanded">
+                                                <a class="nav-link" href="~/Admin/Car/List">
+                                                    Araç Listesi
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="nav-link" href="~/Admin/Car/Create">
+                                                    Araç Ekle
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="nav-link" href="~/Admin/Car/CarPointList">
+                                                    Araç Puanları Listesi
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="nav-link" href="~/Admin/Car/CarPointCreate">
+                                                    Araç Puanı Ekle / Güncelle
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="nav-link" href="~/Admin/Car/ExtraMaterialList">
+                                                    Extra Materyal Listesi
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="nav-link" href="~/Admin/Car/ExtraMaterialCreate">
+                                                    Extra Materyal Ekle / Güncelle
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>*@
+                                <li class="nav-parent">
+                                    <a class="nav-link" href="#">
+                                        <i class="fas fa-file-alt" aria-hidden="true"></i>
+                                        <span>Sayfa Düzeni İşlemleri</span>
+                                    </a>
+                                    <ul class="nav nav-children">
+                                        <li>
+                                            <a class="nav-link" href="~/Admin/Content/LanguageList">
+                                                Dil Listesi
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="nav-link" href="~/Admin/Content/LanguageCreate">
+                                                Dil Ekle / Güncelle
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="nav-link" href="~/Admin/Content/ContactList">
+                                                İletişim Sayfası Listesi
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="nav-link" href="~/Admin/Content/ContactCreate">
+                                                İletişim Sayfası Ekle / Güncelle
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="nav-link" href="~/Admin/Content/FAQList">
+                                                SSS Listesi
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="nav-link" href="~/Admin/Content/FAQCreate">
+                                                SSS Ekle / Güncelle
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="nav-link" href="~/Admin/Content/PrivacyPolicyList">
+                                                Gizlilik Sözleşmesi Listesi
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="nav-link" href="~/Admin/Content/PrivacyPolicyCreate">
+                                                Gizlilik Sözleşmesi Ekle / Güncelle
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="nav-link" href="~/Admin/Content/BlogList">
+                                                Blog Listesi
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="nav-link" href="~/Admin/Content/BlogCreate">
+                                                Blog Ekle / Güncelle
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-parent">
+                                    <a class="nav-link" href="https://dashboard.tawk.to/" target="_blank">
+                                        <i class="fas fa-sms"></i>
+                                        <span>Chat Paneline Gidiş</span>
+                                    </a>
+                            </ul>
+                        </nav>
+
+
+                    </div>
+
+
+
+
+                </div>
+
+            </aside>
+            <section role="main" class="content-body">
+                <header class="page-header">
+                    <h2>Tanımlamalar</h2>
+
+                    <div class="right-wrapper text-right">
+                        <ol class="breadcrumbs">
+                            <li>
+                                <a href="/Admin/User/List">
+                                    <i class="fas fa-home"></i>
+                                </a>
+                            </li>
+                            <li><span>@ViewBag.Title</span></li>
+                        </ol>
+                    </div>
+                </header>
+                <div class="col">
+                    <div class="row">
+                        <div class="col-12">
+                            @RenderBody()
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+        </div>
+
+    </section>
+    <script>
+        if (typeof localStorage !== 'undefined') {
+            if (localStorage.getItem('sidebar-left-position') !== null) {
+                var initialPosition = localStorage.getItem('sidebar-left-position'),
+                    sidebarLeft = document.querySelector('#sidebar-left .nano-content');
+
+                sidebarLeft.scrollTop = initialPosition;
+            }
+        }
+    </script>
+    <script src="~/Areas/Admin/vendor/jquery/jquery.js"></script>
+    <script src="~/Areas/Admin/vendor/jquery-browser-mobile/jquery.browser.mobile.js"></script>
+    <script src="~/Areas/Admin/vendor/bootstrap/js/bootstrap.js"></script>
+    <script src="~/Areas/Admin/vendor/common/common.js"></script>
+    <script src="~/Areas/Admin/vendor/nanoscroller/nanoscroller.js"></script>
+
+    <script src="~/Areas/Admin/js/theme.js"></script>
+    <script src="~/Areas/Admin/js/theme.init.js"></script>
+
+    @RenderSection("scripts", required: false)
+</body>
+</html>

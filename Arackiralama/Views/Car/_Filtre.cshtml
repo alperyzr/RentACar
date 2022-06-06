@@ -1,0 +1,453 @@
+﻿@model Arackiralama.Models.VehicleSearchModel
+@{
+    ViewBag.Title = "CarList";
+
+    List<Arackiralama.Models.VehicleModel> CompanyImages = new List<Arackiralama.Models.VehicleModel>();
+    CompanyImages = Model.OrigionalVehicleList.GroupBy(p => p.CompanyName).Select(g => g.First()).ToList();
+
+
+
+    List<Arackiralama.Models.VehicleModel> CarCategories = new List<Arackiralama.Models.VehicleModel>();
+    CarCategories = Model.OrigionalVehicleList.GroupBy(p => p.CategoryID).Select(g => g.First()).ToList();
+
+
+    List<Tuple<string, int>> Categroies = new List<Tuple<string, int>>();
+
+    foreach (var item in CarCategories)
+    {
+
+        if (item.CategoryID == 1)
+        {
+            Categroies.Add(new Tuple<string, int>("Mini", 1));
+        }
+        else if (item.CategoryID == 3)
+        {
+            Categroies.Add(new Tuple<string, int>("Ekonomi", 3));
+        }
+        else if (item.CategoryID == 7)
+        {
+            Categroies.Add(new Tuple<string, int>("Standart", 7));
+        }
+        else if (item.CategoryID == 10)
+        {
+            Categroies.Add(new Tuple<string, int>("Premium", 10));
+        }
+        else
+        {
+            Categroies.Add(new Tuple<string, int>("Tüm Kategoriler",999));
+        }
+    }
+
+
+    var DistinctCategroies = Categroies.GroupBy(x => new { x.Item1 })
+    .Select(x => x.First())
+    .ToList();
+
+
+    List<string> PassengerCounts = Model.OrigionalVehicleList.GroupBy(p => p.PassengerCount).Select(g => g.First().PassengerCount).ToList();
+}
+    <script>
+        $(document).ready(function () {
+            var datas = localStorage.getItem("datas");
+            var stored_datas = {};  
+            if (datas) {
+                stored_datas = JSON.parse(datas);
+            }
+            for (var i = 0; i < stored_datas.length; i++) {
+                var ArrayItemvalue = stored_datas[i];
+                $("input[value = '" + ArrayItemvalue + "']").prop('checked', true);
+            }
+            $("#btnFilter").click(function () {
+              
+                var array = [];
+                localStorage.clear();
+                var checkboxes = document.querySelectorAll('input[type=checkbox]:checked')
+
+                for (var i = 0; i < checkboxes.length; i++) {
+                    array.push(checkboxes[i].value);
+                    //alert(checkboxes[i].value);
+                }
+
+
+                localStorage["datas"] = JSON.stringify(array);
+
+               
+         
+               
+            });
+        });
+    </script>
+@*<script>
+        $(document).ready(function () {
+            $('input[name=CompanyImages]').click(function () {
+                if ($(this).is(':checked')) {
+
+                    $('input[name=filterHdn]').val($('input[name=extraFeeHdn]').val() + $(this).val() + ",");
+                    alert($('input[name=filterHdn]').val());
+                } else {
+                    $('input[name=filterHdn]').val($('input[name=filterHdn]').val().replace(($(this).val() + ","), ''));
+                    alert($('input[name=filterHdn]').val());
+
+                }
+            });
+        });
+    </script>*@
+
+@*<script>*@
+@*$(document).ready(function () {
+        //$('input[name=FilterChecks]').click(function () {
+        //    if ($(this).is(':checked')) {
+        //        $('#FilterBox').text(($('#FilterBox').text() + $(this).val() + ","));
+        //        alert($('input[name=FilterChecks]').val());
+        //    } else {
+        //        $('#FilterBox').text(($('#FilterBox').text() + $(this).val() + ","));
+        //        alert($('input[name=FilterChecks]').val());
+
+        //    }
+        //});
+
+
+        $('.FilterChecks').click(function (event) {
+            event.preventDefault();
+            var searchIDs = $("input:checkbox:checked").map(function () {
+                return $(this).val();
+            }).get(); // <----
+            console.log(searchIDs);
+        });
+
+    });
+    </script>*@
+<div class="row mb-3">
+    <div class="col-12">
+        <div class="carListFilter">
+            <div style="border:1px solid #b7b7b7;">
+                <div class="cartListFilter-header mb-3">
+                    <strong>@Html.Raw(Arackiralama.Resources.LanguageFields.SearchInfoText)</strong>
+                </div>
+                <div class="col-12 mb-3">
+                    <span>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <strong>
+                            @Html.Raw(Arackiralama.Resources.LanguageFields.DeliveryPlace)
+
+                        </strong>
+                        <br />
+                        <span>
+                            @Model.StartRegion.Name
+                            <span class="float-right">
+
+                                <span>@Model.StartAt.Date.ToString("dd-MM-yyyy")</span>
+                                <br />
+                                <span> @Html.Raw(Arackiralama.Resources.LanguageFields.Clock) :@Model.StartTimeHour </span>
+                            </span>
+                        </span>
+                    </span>
+                </div><br />
+                <div class="col-12 mb-3">
+                    <span>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <strong>
+                            @Html.Raw(Arackiralama.Resources.LanguageFields.DropOffPlace)
+
+                        </strong>
+                        <br />
+                        <span>
+                            @Model.EndRegion.Name
+                            <span class="float-right">
+
+                                <span>@Model.EndAt.Date.ToString("dd-MM-yyyy")</span>
+                                <br />
+                                <span>
+                                    @Html.Raw(Arackiralama.Resources.LanguageFields.Clock) :@Model.EndTimeHour
+                                </span>
+                            </span>
+                        </span>
+                    </span>
+                </div>
+                <div class="col-12 mb-3">
+                    <span>
+                        <span>
+                            @Html.Raw(Arackiralama.Resources.LanguageFields.Currency):
+                        </span>
+                        <strong>
+                            @Model.Currency
+                        </strong>
+                    </span>
+                </div>
+                <div class="col-12 mb-3">
+                    <div>
+                        <a href="@Url.Action("Index", "Car")" class="btn btn-save"> @Html.Raw(Arackiralama.Resources.LanguageFields.EditBtnText)</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row mb-3">
+    <div class="col-12">
+        <div class="carListFilter">
+            @using (Html.BeginForm("Filters", "Car", FormMethod.Post))
+            {
+                <input type="hidden" name="UniqueKey" value="@Model.UniqueKey" />
+                <div style="border:1px solid #b7b7b7;">
+                    <div class="cartListFilter-header mb-3">
+                        <strong>
+                            @Html.Raw(Arackiralama.Resources.LanguageFields.Filter)
+                            @*<a href="#"><i class="far fa-trash-alt float-right"></i></a>*@
+                        </strong>
+                    </div>
+                    <div class="col-12 mb-3">
+                        <span>
+                            <img src="~/Contents/img/vites.svg" style="width:15px; height:15px;" />
+
+                            <strong>
+                                @Html.Raw(Arackiralama.Resources.LanguageFields.Gear)
+                            </strong>
+
+
+                        </span>
+                    </div>
+                    @if (Model.OrigionalVehicleList.Any(t => t.TransmissionType == "Automatic"))
+                    {
+                        <div class="col-12">
+
+                            <span>
+                                <input type="checkbox" name="Automatic" value="Automatic" class="mr-1 FilterChecks" />
+                                <span>  @Html.Raw(Arackiralama.Resources.LanguageFields.Automatic)</span>
+                            </span>
+
+                        </div>
+
+
+                    }
+
+                    @if (Model.OrigionalVehicleList.Any(t => t.TransmissionType == "Manual"))
+                    {
+                        <div class="col-12">
+
+                            <span>
+                                <input type="checkbox" name="Manual" value="Manual" class="mr-1 FilterChecks" />
+                                <span> @Html.Raw(Arackiralama.Resources.LanguageFields.Manual)</span>
+                            </span>
+
+                        </div>
+
+
+                    }
+
+                    <div class="col-12">
+                        <center>
+                            <hr />
+                        </center>
+                    </div>
+
+                    @*<div class="col-12 mb-3">
+                        <span>
+                            <i class="fas fa-tachometer-alt"></i>
+                            <strong>
+                                @Html.Raw(Arackiralama.Resources.LanguageFields.Kilometers)
+                            </strong>
+                        </span>
+                    </div>
+                    <div class="col-12">
+                        <span>
+                            <input type="checkbox" checked value="1" class="mr-1" />
+                            <span> @Html.Raw(Arackiralama.Resources.LanguageFields.UnLimited) </span>
+                        </span>
+
+                    </div>*@
+                    @*<div class="col-12">
+                            <span>
+                                <input type="checkbox" class="mr-1" />
+                                <span>Limitsiz</span>
+                            </span>
+
+                        </div>*@
+                    <div class="col-12">
+                        <center>
+                            <hr />
+                        </center>
+                    </div>
+
+
+                    <div class="col-12 mb-3">
+                        <span>
+                            <i class="fas fa-cog"></i>
+                            <strong>
+                                @Html.Raw(Arackiralama.Resources.LanguageFields.VehicleFeatures)
+                            </strong>
+                        </span>
+                    </div>
+
+                    @if (Model.OrigionalVehicleList.Any(t => t.AirConditionInd))
+                    {
+                        <div class="col-12">
+                            <span>
+                                <input type="checkbox" name="AirConditionInd" value="AirConditionInd" class="mr-1 FilterChecks" />
+                                <span>@Html.Raw(Arackiralama.Resources.LanguageFields.AirConditionIng)</span>
+                            </span>
+
+                        </div>
+                    }
+                    @if (Model.OrigionalVehicleList.Any(t => t.FuelType == "Dizel"))
+                    {
+                        <div class="col-12">
+                            <span>
+                                <input type="checkbox" name="Dizel" value="Dizel" class="mr-1 FilterChecks" />
+                                <span>@Html.Raw(Arackiralama.Resources.LanguageFields.Diesel)</span>
+                            </span>
+
+                        </div>
+                    }
+                    @if (Model.OrigionalVehicleList.Any(t => t.FuelType == "hybrid"))
+                    {
+                        <div class="col-12">
+                            <span>
+                                <input type="checkbox" name="hybrid" value="hybrid" class="mr-1 FilterChecks" />
+                                <span>@Html.Raw(Arackiralama.Resources.LanguageFields.Hybrid)</span>
+                            </span>
+
+                        </div>
+                    }
+                    @if (Model.OrigionalVehicleList.Any(t => t.FuelType == "Petrol"))
+                    {
+                        <div class="col-12">
+                            <span>
+                                <input type="checkbox" name="Petrol" value="Petrol" class="mr-1 FilterChecks" />
+                                <span>@Html.Raw(Arackiralama.Resources.LanguageFields.Gasoline)</span>
+                            </span>
+
+                        </div>
+                    }
+                    @*<div class="col-12">
+                            <center>
+                                <hr />
+                            </center>
+                        </div>
+                        <div class="col-12 mb-3">
+                            <span>
+
+                                <strong>
+                                    @Html.Raw(Arackiralama.Resources.LanguageFields.CustomerEvaluation)
+                                </strong>
+                            </span>
+                        </div>
+                        <div class="col-12">
+                            <span>
+                                <input type="checkbox" class="mr-1 FilterChecks" />
+                                <span>@Html.Raw(Arackiralama.Resources.LanguageFields.PointButtonVeryNice)</span>
+                            </span>
+
+                        </div>
+                        <div class="col-12">
+                            <span>
+                                <input type="checkbox" class="mr-1 FilterChecks" />
+                                <span>@Html.Raw(Arackiralama.Resources.LanguageFields.PointButtonNice)</span>
+                            </span>
+
+                        </div>*@
+
+                    <div class="col-12">
+                        <center>
+                            <hr />
+                        </center>
+                    </div>
+                    <div class="col-12 mb-3">
+                        <span>
+
+                            <strong>
+                                @Html.Raw(Arackiralama.Resources.LanguageFields.Suppliers)
+                            </strong>
+                        </span>
+                    </div>
+                    @foreach (var item in CompanyImages)
+                    {
+
+
+                        <div class="col-12 mb-2">
+                            <span>
+                                <input type="checkbox" name="CompanyName[]" value="@item.CompanyName" class="mr-1 FilterChecks" />
+                                <span>
+                                    <img src="@item.CompanyImage" class="mr-1" title="@item.CompanyName" alt="@item.CompanyName" />
+                                    <span>@item.CompanyName</span>
+                                </span>
+
+                            </span>
+
+                        </div>
+                    }
+                    <div class="col-12">
+                        <center>
+                            <hr />
+                        </center>
+                    </div>
+
+                    <div class="col-12 mb-3">
+                        <span>
+
+                            <strong>
+                                @Html.Raw(Arackiralama.Resources.LanguageFields.VehicleCategory)
+                            </strong>
+                        </span>
+                    </div>
+                    @foreach (var item in DistinctCategroies)
+                    {
+
+
+                        <div class="col-12 mb-2">
+                            <span>
+                                <input type="checkbox" name="Categories[]" value="@item.Item2" class="mr-1 FilterChecks" />
+                                <span>
+                                    <span>@item.Item1</span>
+                                </span>
+
+                            </span>
+
+                        </div>
+                    }
+                    <div class="col-12">
+                        <center>
+                            <hr />
+                        </center>
+                    </div>
+
+
+                    <div class="col-12 mb-3">
+                        <span>
+
+                            <strong>
+                                @Html.Raw(Arackiralama.Resources.LanguageFields.PassengerCounts)
+                            </strong>
+                        </span>
+                    </div>
+                    @foreach (var item in PassengerCounts)
+                    {
+
+
+                        <div class="col-12 mb-2">
+                            <span>
+                                <input type="checkbox" name="PassengerCount[]" value="@item" class="mr-1 FilterChecks" />
+                                <span>
+                                    <span>@item kişi</span>
+                                </span>
+
+                            </span>
+
+                        </div>
+                    }
+                    <div class="col-12">
+                        <center>
+                            <hr />
+                        </center>
+                    </div>
+
+
+                    <div class="col-12 mb-3">
+                        <input type="submit" id="btnFilter" class="btn btn-save btn-block" value="@Html.Raw(Arackiralama.Resources.LanguageFields.SearchButton)" />
+                    </div>
+                </div>
+
+            }
+        </div>
+    </div>
+</div>

@@ -1,0 +1,107 @@
+﻿@model Arackiralama.ViewModels.Car.ExtraMaterialViewModel
+@{
+    ViewBag.Title = "Ekstra Materyal Ekle / Güncele";
+}
+
+<div class="col">
+    <div class="row">
+        @if (ViewBag.Message!=null)
+        {
+            <div class="col-12 mb-3">
+                <div class="alert alert-success">
+                    @ViewBag.message
+                </div>
+            </div>
+        }
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">Ekstra Materyal Ekle / Güncele</h2>
+                </div>
+            </div>
+            @using (Html.BeginForm("ExtraMaterialCreate", "Car", FormMethod.Post,new { @enctype = "multipart/form-data" }))
+            {
+            <div class="card-body p-3">
+
+                <div class="row mb-3">
+                    <div class="col-12 col-md-3">
+                        <span style="float:right;" class="float-right-absorbe">
+                            İcon
+                        </span>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        @if (!String.IsNullOrEmpty(Model.ImageUrl))
+                        {
+                            <img src="@Model.ImageUrl" class="panel-upload-img" />
+                        }
+                        @Html.TextBoxFor(m => m.Icon, new { type = "file" })
+                        @Html.ValidationMessageFor(m => m.Icon, "", new { style = "color:red;font-size:12px" })
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-12 col-md-3">
+                        <span style="float:right;" class="float-right-absorbe">
+                            Materyal
+                        </span>
+                    </div>
+                    <div class="col-12 col-md-6">
+                       @Html.TextBoxFor(m => m.Materyal, null,new {@class="form-control"})
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-12 col-md-3">
+                        <span style="float:right;" class="float-right-absorbe">
+                           Açıklama
+                        </span>
+                    </div>
+                    <div class="col-12 col-md-6">
+                       @Html.TextBoxFor(m => m.Aciklama, null, new { @class = "form-control" })
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-12 col-md-3">
+                        <span style="float:right;" class="float-right-absorbe">
+                           Minumum Değer
+                        </span>
+                    </div>
+                    <div class="col-12 col-md-6">
+                      @Html.TextBoxFor(m => m.MinDeger, null, new { @class = "form-control" })
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-12 col-md-3">
+                        <span style="float:right;" class="float-right-absorbe">
+                           Maksimum Değer
+                        </span>
+                    </div>
+                    <div class="col-12 col-md-6">
+                       @Html.TextBoxFor(m => m.MaxDeger, null, new { @class = "form-control" })
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-12 col-md-3">
+                        <span style="float:right;" class="float-right-absorbe">
+                            Aktif mi ?
+                        </span>
+                    </div>
+                    <div class="col-12 col-md-3">
+                        @Html.RadioButtonFor(m => m.IsActive, "Aktif")<span>Aktif</span>
+                    </div>
+                    <div class="col-12 col-md-3">
+                        @Html.RadioButtonFor(m => m.IsActive, "Aktif Değil")<span>Aktif Değil</span>
+                    </div>
+                </div>
+               
+              
+                <center>
+                    <div class="col-12 mb-3">
+                        <input type="submit" class="btn btn-success" value="Kaydet" />
+                    </div>
+                </center>
+              
+            </div>
+            }
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,76 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+    Layout = null;
+}
+<head>
+    <link rel="stylesheet" href="~/Contents/Style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Shadows+Into+Light" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="~/Areas/Admin/vendor/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="~/Areas/Admin/vendor/animate/animate.css">
+
+    <link rel="stylesheet" href="~/Areas/Admin/vendor/font-awesome/css/all.min.css">
+    <link rel="stylesheet" href="~/Areas/Admin/css/theme.css">
+    <script src="~/Areas/Admin/vendor/modernizr/modernizr.js"></script>
+</head>
+<div class="container mt-5">
+    @if (ViewBag.ErrorMessage!=null)
+    {
+        <div class="row">
+            <div class="col-12 alert alert-danger">
+                @ViewBag.ErrorMessage
+            </div>
+
+        </div>
+    }
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <span>Giriş Yapınız</span>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        @using (Html.BeginForm("LoginControl", "Admin", FormMethod.Post,new { @style = "width:100%;" }))
+                        {
+
+                            <div class="col-12">
+                                <span>
+                                    Kullanıcı Adı
+                                </span>
+                            </div>
+                            <div class="col-12 mb-3">
+                                <input type="text" name="username" class="form-control" />
+                            </div>
+                            <div class="col-12">
+                                <span>
+                                    Şifre
+                                </span>
+                            </div>
+                            <div class="col-12 mb-3">
+                                <input type="password" name="password" class="form-control" />
+                            </div>
+                            <div class="col-12 mb-3">
+                                <input type="submit" value="Giriş yap" class="btn btn-primary btn-block scroll-to" />
+                                @*<a href="../..//User/Index" class="btn btn-info">Giriş yap</a>*@
+                            </div>
+                           
+                        }
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="~/Areas/Admin/vendor\jquery\jquery.js"></script>
+<script src="~/Areas/Admin/vendor\jquery-browser-mobile\jquery.browser.mobile.js"></script>
+<script src="~/Areas/Admin/vendor\bootstrap\js\bootstrap.js"></script>
+<script src="~/Areas/Admin/vendor\common\common.js"></script>
+<script src="~/Areas/Admin/vendor\nanoscroller\nanoscroller.js"></script>
+
+<script src="~/Areas/Admin/js\theme.js"></script>
+<script src="~/Areas/Admin/js\theme.init.js"></script>
+
+

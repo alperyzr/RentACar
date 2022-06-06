@@ -1,0 +1,47 @@
+﻿@using Arackiralama.Models;
+@model Arackiralama.Models.VehicleSearchModel
+@{
+    ViewBag.Title = "ConfirmAction";
+    AracKiralamaEntities1 db = new AracKiralamaEntities1();
+    var OrderID = db.VehicleOrders.FirstOrDefault(t=>t.OrderID==Model.Orders.ID).ConfirmedID;
+}
+<body>
+    <div class="row">
+        <div class="col-md-3 mb-1">
+            <button id="active-button1" style="width:100%;" disabled="disabled" class="btn btn-step btn-save" type="button" data-toggle="collapse" data-target="#edit-step1"><span style="color:#fff;">1.</span> @Html.Raw(Arackiralama.Resources.LanguageFields.SearchResults)</button>
+        </div>
+        <div class="col-md-3 mb-1">
+            <button id="active-button2" style="width:100%;" disabled="disabled" class="btn btn-step btn-save collapsed" type="button" data-toggle="collapse" data-target="#edit-step2"><span style="color:#fff;">2.</span>  @Html.Raw(Arackiralama.Resources.LanguageFields.Options)</button>
+        </div>
+        <div class="col-md-3 mb-1">
+            <button id="active-button3" style="width:100%;" disabled="disabled" class="btn btn-step btn-save collapsed" type="button" data-toggle="collapse" data-target="#edit-step3"><span style="color:#fff;">3.</span>  @Html.Raw(Arackiralama.Resources.LanguageFields.Details)</button>
+        </div>
+        <div class="col-md-3 mb-1">
+            <button id="active-button4" style="width:100%;" class="btn btn-step btn-save collapsed" type="button" data-toggle="collapse" data-target="#edit-step4"><span style="color:#fff;">4.</span>@Html.Raw(Arackiralama.Resources.LanguageFields.Confirmation)</button>
+        </div>
+    </div>
+</body>
+<div id="edit-step4" @*class="collapse" aria-labelledby="headingTwo" data-parent="#steps"*@>
+    <div class="row mb-3">
+        <div class="col-12">
+            <div class="carinfo-steptwo-rightbox-content">
+                <div class="col-12 mt-3">
+                    <center>
+                        <i class="far fa-check-circle" style="font-size:40px; color:green;"></i>
+                    </center>
+                </div>
+                <div class="col-12 mt-3 mb-3">
+                    <center>
+                        <span>
+                            @Html.Raw(Arackiralama.Resources.LanguageFields.TransactionApproved)<br />
+                            @Html.Raw(Arackiralama.Resources.LanguageFields.YourOrderNumver)<strong>@OrderID</strong><br />
+                            @Html.Raw(Arackiralama.Resources.LanguageFields.ChoosingUs)
+                        </span>
+                    </center>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

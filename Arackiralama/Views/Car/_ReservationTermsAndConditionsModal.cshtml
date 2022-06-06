@@ -1,0 +1,451 @@
+﻿<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    /* W3.CSS 4.13 June 2019 by Jan Egil and Borge Refsnes */
+   
+
+    .w3-wide {
+        letter-spacing: 4px
+    }
+
+
+    .w3-btn, .w3-button {
+        border: none;
+        display: inline-block;
+        padding: 8px 16px;
+        vertical-align: middle;
+        overflow: hidden;
+        text-decoration: none;
+        color: inherit;
+        background-color: inherit;
+        text-align: center;
+        cursor: pointer;
+        white-space: nowrap
+    }
+
+        .w3-btn:hover {
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19)
+        }
+
+    .w3-btn, .w3-button {
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none
+    }
+
+        .w3-disabled, .w3-btn:disabled, .w3-button:disabled {
+            cursor: not-allowed;
+            opacity: 0.3
+        }
+
+            .w3-disabled *, :disabled * {
+                pointer-events: none
+            }
+
+            .w3-btn.w3-disabled:hover, .w3-btn:disabled:hover {
+                box-shadow: none
+            }
+
+    .w3-block {
+        display: block;
+        width: 100%
+    }
+
+   
+
+    .w3-container:after, .w3-container:before, .w3-panel:after, .w3-panel:before, .w3-row:after, .w3-row:before, .w3-row-padding:after, .w3-row-padding:before,
+    .w3-cell-row:before, .w3-cell-row:after, .w3-clear:after, .w3-clear:before, .w3-bar:before, .w3-bar:after {
+        content: "";
+        display: table;
+        clear: both
+    }
+
+    
+    .w3-content, .w3-auto {
+        margin-left: auto;
+        margin-right: auto
+    }
+
+   
+
+    .w3-hide {
+        display: none !important
+    }
+
+    .w3-show-block, .w3-show {
+        display: block !important
+    }
+
+    .w3-show-inline-block {
+        display: inline-block !important
+    }
+
+    
+
+    .w3-container, .w3-panel {
+        padding: 0.01em 16px
+    }
+
+    .w3-panel {
+        margin-top: 16px;
+        margin-bottom: 16px
+    }
+
+   
+
+    .w3-code {
+        width: auto;
+        background-color: #fff;
+        padding: 8px 12px;
+        border-left: 4px solid #4CAF50;
+        word-wrap: break-word
+    }
+
+    .w3-left-align {
+        text-align: left !important
+    }
+
+    .w3-right-align {
+        text-align: right !important
+    }
+
+    
+    .w3-section, .w3-code {
+        margin-top: 16px !important;
+        margin-bottom: 16px !important
+    }
+
+   
+
+    .w3-left {
+        float: left !important
+    }
+
+    .w3-right {
+        float: right !important
+    }
+
+   
+    .w3-green, .w3-hover-green:hover {
+        color: #fff !important;
+        background-color: #4CAF50 !important
+    }
+
+    .w3-light-green, .w3-hover-light-green:hover {
+        color: #000 !important;
+        background-color: #8bc34a !important
+    }
+
+   
+
+    .w3-black, .w3-hover-black:hover {
+        color: #fff !important;
+        background-color: #000 !important
+    }
+
+    
+
+    
+</style>
+<body>
+    @if (Session["culture"].ToString() == "tr-TR")
+    {
+        <div class="modal fade" id="ReservationTermsAndConditions" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Rezervasyon Şartları ve Koşulları</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="w3-container">
+
+                            <span onclick="myFunction('Demo1')" class="w3-btn w3-block w3-green w3-left-align" style="margin-top:10px;">GİRİŞ:</span>
+                            <div id="Demo1" class="w3-container w3-hide">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <span>
+                                            TBu rezervasyon motoru CarTrawler'ın teknolojisi tarafından desteklenmektedir ve araba kiralama veya kara taşımacılığı (taksi, transfer hizmetleri ve şoförlü araç kiralama, özel transferler, business class transferleri, birinci sınıf transferler, otobüs dahil) ancak bunlarla sınırlı olmamak üzere CarTrawler teknolojisini kullanmanızı sağlar. ve üçüncü şahıs araç kiralama veya kara taşımacılığı tedarikçilerinden (“Ulaşım Tedarikçileri”) mini otobüs transferleri, tren transferleri, tekerlekli sandalye transferleri ve limuzin transferleri ("Ulaşım").
+
+                                            Bu CarTrawler rezervasyon motoru Kullanım Koşulları'nı (“Rezervasyon Koşulları”) bu rezervasyon motorunun tüm içeriği için geçerli olduğundan lütfen dikkatle okuyun. Bu rezervasyon motorunun herhangi bir bölümünü kullanarak, bu Rezervasyon Koşullarını kabul ettiğinizi (bize kayıt yaptırmayı ya da Ulaştırma rezervasyonu yapmayı seçip seçmediğinize bakılmaksızın) ve (i) bu rezervasyon motorunu, Rezervasyon Koşulları ve (ii) Rezervasyon Koşullarının CarTrawler ile sizinle aranızda yasal bir sözleşme oluşturması. Bu Rezervasyon Koşullarını kabul etmiyorsanız ve / veya bunlarla sınırlı kalmayı kabul etmiyorsanız, bu rezervasyon motorunu kullanmayın ve / veya derhal kullanmayı bırakın.
+
+                                            Bu rezervasyon motorunu kullanarak, ulaşım, Nakliye Tedarikçileri, bu rezervasyon motorunda yayınlanan seyahat ve tatillerle ilgili bilgiler dahil ancak bunlarla sınırlı olmamak üzere tüm bilgilerin yanlışlıklar ve / veya tipografik hatalar içerebileceğini ve CarTrawler'ın hiçbir sorumluluk kabul etmeyeceğini kabul edersiniz. bu tür yanlışlıklar veya hatalar.
+
+                                            CarTrawler, kendi takdirine bağlı olarak, bu Rezervasyon Koşullarını istediği zaman bu kaydı güncelleyerek değiştirebilir. Bu Rezervasyon Koşullarının bazı hükümlerinin yerini, bu rezervasyon motoruna eriştiğiniz web sitesinde yer alan açıkça belirlenmiş yasal bildirimler veya şartlar alabilir.
+
+                                            Bu Rezervasyon Koşulları, CarTrawler Müşteri Mükemmeliyet Merkezi (“CCE”) aracılığıyla yapılan tüm rezervasyonlar için de geçerlidir ve rezervasyonunuzu CCE aracılığıyla telefonla yaptığınız yerde size e-posta ile gönderilecektir.
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <span onclick="myFunction('Demo2')" class="w3-btn w3-block w3-green w3-left-align" style="margin-top:10px;">HAKKIMIZDA BİLGİ:</span>
+                            <div id="Demo2" class="w3-container w3-hide">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <span>
+                                            This booking engine is operated by Etrawler Unlimited Company, an Irish registered company trading as CarTrawler, (“CarTrawler”, “we”, “us” or “our”). We are registered in Ireland under company number 93433 and have our registered office at Classon House, Dundrum Business Park, Dundrum, Dublin 14, Ireland which is also our main trading address. CarTrawler’s contact details are included on the Voucher or available from www.cartrawler.com.
+
+                                            CarTrawler, sizi bu rezervasyon motoru aracılığıyla Ulaşım Tedarikçilerine tanıtarak Ulaşım rezervasyonlarını kolaylaştırır. CarTrawler herhangi bir Ulaşıma sahip değildir veya işletmemektedir ve bir Ulaştırma Tedarikçisi değildir. Ulaşım sözleşmeniz (“Ulaşım Koşulları”) sizinle CarTrawler'ın taraf olmayacağı Ulaşım Tedarikçisi arasında olacaktır. İlgili Taşıma Tedarikçisinin sunduğu Taşıma'yı seçip ilgili rezervasyon bilgilerini girdiğinizde ilgili Taşıma Koşullarına bu rezervasyon motoru üzerinden erişilebilir. Bu rezervasyon motoru aracılığıyla bir Ulaşım Tedarikçisi ile rezervasyon yaptığınızda, ilgili Ulaşım Tedarikçisinin Ulaşım Koşullarını kabul etmiş sayılırsınız. CarTrawler, herhangi bir Nakliye Tedarikçisi ve / veya herhangi bir Nakliye Tedarikçisi tarafından sunulan veya sağlanan herhangi bir Nakliye ile ilgili hiçbir garanti vermez. Ulaşım Tedarikçisi, size bu rezervasyon motoru aracılığıyla rezerve edilen Ulaşım'ı sağlamaktan tek başına sorumludur.
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <span onclick="myFunction('Demo3')" class="w3-btn w3-block w3-green w3-left-align" style="margin-top:10px;">ÜCRETLER VE MASRAFLAR:</span>
+                            <div id="Demo3" class="w3-container w3-hide">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <span>
+                                            Bu rezervasyon motoru ve bu rezervasyon motorunda yapılan herhangi bir rezervasyon için Ulaşım için verilen herhangi bir fiyatın doğruluğu, bu rezervasyon motoru aracılığıyla sağladığınız rezervasyon bilgilerine (sürücünün yaşı, konumu ve saati dahil ancak bunlarla sınırlı olmamak üzere) bağlıdır. alma ve / veya bırakma).
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <span onclick="myFunction('Demo4')" class="w3-btn w3-block w3-green w3-left-align" style="margin-top:10px;">SERVİS ERİŞİMİ:</span>
+                            <div id="Demo4" class="w3-container w3-hide">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <span>
+                                            CarTrawler, rezervasyon motorunun günde 24 saat normal olarak kullanılabilir olmasını sağlamaya çabalarken, CarTrawler, herhangi bir nedenle, rezervasyon motoru herhangi bir zamanda veya herhangi bir süre boyunca kullanılamıyorsa yükümlü olmayacaktır. Sistem arızası, bakım, onarım veya CarTrawler'ın kontrolü dışındaki nedenlerle rezervasyon motoruna erişim geçici olarak ve bildirimde bulunmaksızın askıya alınabilir.
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <span onclick="myFunction('Demo5')" class="w3-btn w3-block w3-green w3-left-align" style="margin-top:10px;">REZERVASYON KOŞULLARI:</span>
+                            <div id="Demo5" class="w3-container w3-hide">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <span>
+                                            Lütfen bu rezervasyon motoru aracılığıyla Nakliye Tedarikçileri ile yapmış olduğunuz rezervasyonlar için aşağıdaki koşulları okuyun.
+
+                                            A. Rezervasyon Yapma
+                                            CarTrawler küresel olarak çalıştığı için, Ulaşım rezervasyonu için dört tür iş ödeme modeli kullanır. Rezervasyon yaparken kullanabileceğiniz ödeme modeli, bulunduğunuz yere ve / veya seçilen Nakliye Tedarikçisinin Nakliye Koşullarına bağlı olacaktır.
+
+                                            Dört iş ödeme modeli aşağıdaki gibidir:
+                                            Rezervasyonunuzu yaptığınız sırada rezervasyon depozitosu ödersiniz ve Taşımayı kullanmadan önce Ulaşım Tedarikçisinin masasına vardığınızda bakiyeyi Ulaşım Tedarikçisine ödersiniz; veya
+                                            Rezervasyonunuz yapılırken bir rezervasyon depozitosu ödersiniz ve bakiye Ulaşım Tedarikçisinin masasına varışınızdan önce ödenir; veya
+                                            Ulaşım ücretinin tamamını rezervasyonunuz sırasında ödersiniz ve araç kiralama durumunda, Ulaşım Tedarikçisinin masasına vardığınızda yalnızca yakıt (benzin / dizel) ve isteğe bağlı ekstralar için ödeme yaparsınız; veya
+                                            Rezervasyonunuzu yaparken hiçbir ücret ödemezsiniz. Ulaşım Tedarikçisini kullanmadan önce Ulaşım Tedarikçisinin masasına vardığınızda Ulaşım Tedarikçisinin tüm masrafını ödersiniz.
+
+                                            Rezervasyon yaptığınız sırada ödeme yapmadığınız durumlarda, Nakliye Tedarikçisinden ödenmesi gereken tüm ödemeleri vadesi geldiğinde ve ne zaman sona ereceğinden yalnızca siz sorumlu olursunuz.
+
+                                            Rezervasyonunuzu tamamlamadan önce gerekli olan her türlü ön ödeme konusunda bilgilendirileceksiniz. Şüpheye yer bırakmamak için, rezervasyonunuzu yaparken talep ettiğiniz herhangi bir “isteğe bağlı ekstra” ın (çocuk koltukları, GPS'ler, ek sürücüler dahil, ancak bunlarla sınırlı olmamak üzere) fiyatı, rezervasyonun yapıldığı sırada sizden ücretlendirilmez. . “İsteğe bağlı ekstraların” ödenmesi, Ulaşımın teslim alınması / kullanılmasından önce Ulaşım Tedarikçisinin masasına varışta doğrudan Ulaşım Tedarikçisine yapılmalıdır. Lütfen CarTrawler'ın istenen “isteğe bağlı ekstraların” kullanılabilirliğini veya fiyatını garanti edemeyeceğini unutmayın.
+
+                                            Her zaman, sizin tarafınızdan talep edilen ve / veya satın alınan ek hizmetlerin ve / veya “isteğe bağlı ekstraların” ve ücretler ve yakıt ücretleri dahil ancak bunlarla sınırlı olmamak üzere geçerli tüm ek ücretlerin ödenmesinden siz sorumlusunuz ve herhangi bir hizmetten veya ilgili Nakliye Tedarikçisi tarafından uygulanan yönetim ücretleri. Bulunduğunuz yere bağlı olarak, rezervasyon motorunda açıkça görüntülenecek olan rezervasyon motoru üzerinden rezervasyon yapmak için bir dizi ödeme yöntemini destekliyoruz.
+
+                                            Bir ödeme işlemcisine aktarılan tüm veriler şifreli bir güvenli sunucu üzerinden aktarılır. Rezervasyonunuzda herhangi bir değişiklik yapmanız gerekirse, bunu Kuponunuzda listelenen iletişim yöntemlerinden biri aracılığıyla veya www.cartrawler.com adresindeki web sitemizde listelenen iletişim yöntemleriyle bildirerek CarTrawler'a kesin ayrıntıları bildirmeniz gerekir. CarTrawler, değişikliklerin işlenebileceğini garanti edemez; ancak tatmin edici bir sonuca ulaşmak için her türlü çaba gösterilecektir. Taşımacılık Tedarikçisinden Ulaşımınızın alınması / kullanılması veya alınmaması veya kullanılmaması durumunda değişiklikler yapılamaz. Araç kiralamada, işe erken ayrılırsanız CarTrawler size geri ödeme yapamaz. Kiralık aracınızın teslim alınmasından sonra araç kiralama sürenizin uzatılmasına ihtiyaç duymanız durumunda (araç kiralama kuponunun kapsamadığı tarihler), doğrudan yerel tedarik oranlarında Nakliye Tedarikçisine yapılan ek masrafları ödemeniz gerekir. araba talep edilen ek süre için mevcutsa, o zaman geçerli. Rezervasyon yaparken, gerekirse Taşımayı çalıştırma veya kullanma yeteneğinizle ilgili herhangi bir fiziksel veya zihinsel durum hakkında Ulaşım Tedarikçisini bilgilendirmek sizin sorumluluğunuzdadır. Kaza durumunda, Taşıma Tedarikçisini bu gibi durumlar hakkında bilgilendirmezseniz, ilgili herhangi bir sigorta poliçesi kapsamında talepte bulunamayabilirsiniz. araç talep edilen ek süre için mevcutsa. Rezervasyon yaparken, gerekirse Taşımayı çalıştırma veya kullanma yeteneğinizle ilgili herhangi bir fiziksel veya zihinsel durum hakkında Ulaşım Tedarikçisini bilgilendirmek sizin sorumluluğunuzdadır. Kaza durumunda, Taşıma Tedarikçisini bu gibi durumlar hakkında bilgilendirmezseniz, ilgili herhangi bir sigorta poliçesi kapsamında talepte bulunamayabilirsiniz. araç talep edilen ek süre için mevcutsa. Rezervasyon yaparken, gerekirse Taşımayı çalıştırma veya kullanma yeteneğinizle ilgili herhangi bir fiziksel veya zihinsel durum hakkında Ulaşım Tedarikçisini bilgilendirmek sizin sorumluluğunuzdadır. Kaza durumunda, Taşıma Tedarikçisini bu gibi durumlar hakkında bilgilendirmezseniz, ilgili herhangi bir sigorta poliçesi kapsamında talepte bulunamayabilirsiniz.
+
+                                            GEREKLİ BELGELER VE / VEYA KREDİ KARTI SUNULMAMASI DURUMUNDA, ARAÇ KİRALAMA TEDARİKÇİSİ ARABAYI YENİDEN ÇIKARABİLİR VE GERİ İADE VERİLMEYECEKTİR. ARAÇ KİRALAMA İÇİN, ARABANIZIN ALINMASI İÇİN, (I) İKİNCİ BİR LİSANS SIRASINDA BİR LİSANS VERİLEN BİR LİSANS SIRASINDA HERHANGİ BİR LİSANS DÜZENLENEN BİR LİSANS SUNULMASI GEREKİR. PARÇALAR), (II) ARAÇ KİRALAMA İLE İLGİLİ HERHANGİ BİR SİGORTA POLİTİKASINDA REZERVASYONDA ANA SÜRÜCÜ OLARAK LİSTELENEN KİŞİ İSİMİNDE GEÇERLİ PASAPORTUNUZ VE GEÇERLİ KREDİ KARTINIZ, VE (III) KUMANDANIZIN BASKILI KOPYASI. ULAŞTIRMA TEDARİKÇİSİNİN VE / VEYA YEREL HUKUKUN DAHA İLERİ VE / VEYA ALTERNATİF GEREKSİNİMLERİ İÇİN LÜTFEN ULAŞIM KOŞULLARINIZI İNCELEYİN. ÖRNEĞİN,
+
+                                            Rezervasyon yaptırır ancak Ulaşım hizmetini almaz / kullanmazsanız (ve aşağıda belirtilen iptal politikasına göre bu rezervasyonu iptal etmediyseniz) geri ödeme yapılmaz.
+
+                                            Rezervasyonun yapıldığı Ulaşımın teslim alınması / geçmesi için geç gelmeyi beklediğiniz takdirde, bunları bilgilendirmek için Ulaşım Tedarikçisine başvurmak sizin sorumluluğunuzdadır.
+
+                                            Uçuş iptali veya gecikmesi durumunda, CarTrawler herhangi bir geri ödeme yapmaktan sorumlu olmayacaktır.
+
+                                            B. Rezervasyon Onayı
+                                            Rezervasyonunuz onaylandıktan sonra CarTrawler, rezervasyonunuzun ayrıntılarını içeren ve yazdırılması ve üzerindeki Nakliye Tedarikçisine sunulması gereken Ulaşım Tedarikçisi adına e-posta yoluyla Ulaşım kuponunuzla (“Kupon”) yayınlayacaktır. Ulaşımın teslim alınması / kullanılması. Kuponunuzu almazsanız lütfen hemen bizimle iletişime geçin. Kupon, Nakliye Tedarikçisinin tahsil ettiği hizmet ücretinin veya vergilerin ayrıntılarını veya Taşımanın teslim alınması / kullanılması sırasında talep ettiğiniz ek hizmetleri içermez ve fatura değildir. CarTrawler, Kuponda yer alan bilgileri (örneğin, Ulaşım, rezervasyonun yapıldığı ülke, yer, tarih ve saat) dikkatlice kontrol etmenizi önerir. Herhangi bir tutarsızlık varsa, bu tür tutarsızlıkları anında Kuponunuzda listelenen iletişim yöntemlerinden biri aracılığıyla veya www.cartrawler.com web sitemizde listelenen iletişim yöntemleri aracılığıyla derhal bildirmelisiniz. CarTrawler, rezervasyonla ilgili bir hata bulunması ve / veya CarTrawler rezervasyon motoru aracılığıyla görüntülenmesi veya size bildirilmesi durumunda ilgili Ulaşım tarafınızdan rezervasyon yapıldıktan sonra rezervasyonu değiştirme hakkını saklı tutar. Kupon veya başka türlü. Böyle bir durumda CarTrawler size makul olan en kısa sürede bildirimde bulunmaya çalışacaktır ve değiştirilen şartları (varsa) kabul etmeyi veya alternatif olarak rezervasyonunuzu iptal edip tam bir geri ödeme almayı seçebilirsiniz. CarTrawler kuponları fiziksel olarak saklamaz, ancak, Kuponunuza istediğiniz zaman erişmek istediğinizde, kuponunuza rezervasyon motorunun "Rezervasyonu Yönet" sekmesinden erişilebilir. Ulaşımın alınması / kullanılmasından önce Kuponunuzun bir kopyasını yazdırmanız ve Ulaşım Tedarikçisine sunmanız gerekecektir. CarTrawler, rezervasyonunuzun tabi olacağı Kuponda ayrıntıları verilen Taşıma Koşullarını okumanızı tavsiye eder. Ulaşım Koşulları bu rezervasyon motorunda da mevcuttur, ancak Zaman zaman Ulaşım Tedarikçisi tarafından değiştirilebilir. CarTrawler, rezervasyonunuzun tabi olacağı Kuponda ayrıntıları verilen Taşıma Koşullarını okumanızı tavsiye eder. Ulaşım Koşulları bu rezervasyon motorunda da mevcuttur, ancak Zaman zaman Ulaşım Tedarikçisi tarafından değiştirilebilir. CarTrawler, rezervasyonunuzun tabi olacağı Kuponda ayrıntıları verilen Taşıma Koşullarını okumanızı tavsiye eder. Ulaşım Koşulları bu rezervasyon motorunda da mevcuttur, ancak Zaman zaman Ulaşım Tedarikçisi tarafından değiştirilebilir.
+
+                                            Makbuzda yer alan rezervasyon numarası, rezervasyonla ilgili tüm sorular, iptaller veya değişiklikler için belirtilmelidir.
+
+                                            C. İptaller
+                                            Bir rezervasyonu iptal etmek isterseniz, bunu Kuponunuzda listelenen iletişim yöntemlerinden birini kullanarak veya web sitemizdeki www.cartrawler.com adresinde yer alan iletişim yöntemlerinden, alma / kullanmadan önce yapabilirsiniz. Ulaştırma. Ek ücretler uygulanabileceğinden, doğrudan Taşıma Tedarikçisi ile rezervasyonunuzu iptal etmeyin. İptal politikası, taşıma / yönetim ücretleri ve rezervasyonunuz için geçerli olabilecek özel koşullar hakkında ayrıntılı bilgi için lütfen Taşıma Koşulları'na bakın.
+
+                                            CarTrawler'ın planlanan Ulaşım / kullanım zamanından 24 saat önce bir iptal bildirimi aldığı bu bölümde belirtildiği şekilde, genel olarak ödenen tutarın tam bir geri ödemesi yapılacaktır. Bu, aşağıda D paragrafında belirtilen mücbir sebep hükümlerine tabidir. CarTrawler'ın, araç kiralamanın planlanan alım / kullanım süresinden 24 saatten daha az bir iptal bildirimi aldığı araç kiralama rezervasyonları için, rezervasyon için ödenen tutarın 50 € 'yu aşması durumunda, ödenen tutarın eksi 50 € idari ücretin iadesini alın. Yine bu, aşağıda D paragrafında belirtilen mücbir sebep hükümlerine tabidir. Kara taşımacılığı rezervasyonlarında, CarTrawler'ın kara taşımacılığının planlanan teslim alma / kullanım zamanından 24 saat önce bir iptal bildirimi aldığı durumlarda, tutarın iadesi yapılmaz. Bu paragrafta belirtilen iptal politikasının, rezervasyonunuz için geçerli olan herhangi bir Nakliye Koşulunda yer alan Nakliye Tedarikçisinin iptal politikasına tabi olduğunu lütfen unutmayın. Bu paragrafta belirtilen ve (bunlarla sınırlı olmamak kaydıyla, iptal iptali bildirimi süresinde ve / veya (ii) geçerli yönetim ücretinin tutarını içeren ancak bunlarla sınırlı olmayan iptal politikasındaki herhangi bir değişiklik için lütfen Ulaşım Koşullarınıza bakın. . Varışta tüm Ulaşım ücretinin ödenmesi durumunda rezervasyonun iptal edilmesi durumunda, iptal ücreti alınmaz. Bu paragrafta belirtilen iptal politikasının, rezervasyonunuz için geçerli olan herhangi bir Nakliye Koşulunda yer alan Nakliye Tedarikçisinin iptal politikasına tabi olduğunu lütfen unutmayın. Bu paragrafta belirtilen ve (bunlarla sınırlı olmamak kaydıyla, iptal iptali bildirimi süresinde ve / veya (ii) geçerli yönetim ücretinin tutarını içeren ancak bunlarla sınırlı olmayan iptal politikasındaki herhangi bir değişiklik için lütfen Ulaşım Koşullarınıza bakın. . Varışta tüm Ulaşım ücretinin ödenmesi durumunda rezervasyonun iptal edilmesi durumunda, iptal ücreti alınmaz. Bu paragrafta belirtilen iptal politikasının, rezervasyonunuz için geçerli olan herhangi bir Nakliye Koşulunda yer alan Nakliye Tedarikçisinin iptal politikasına tabi olduğunu lütfen unutmayın. Bu paragrafta belirtilen ve (bunlarla sınırlı olmamak kaydıyla, iptal iptali bildirimi süresinde ve / veya (ii) geçerli yönetim ücretinin tutarını içeren ancak bunlarla sınırlı olmayan iptal politikasındaki herhangi bir değişiklik için lütfen Ulaşım Koşullarınıza bakın. . Varışta tüm Ulaşım ücretinin ödenmesi durumunda rezervasyonun iptal edilmesi durumunda, iptal ücreti alınmaz. Bu paragrafta belirtilen ve (bunlarla sınırlı olmamak kaydıyla, iptal iptali bildirimi süresinde ve / veya (ii) geçerli yönetim ücretinin tutarını içeren ancak bunlarla sınırlı olmayan iptal politikasından kaynaklanan herhangi bir değişiklik için lütfen Ulaşım Koşullarınıza bakın. . Varışta tüm Ulaşım ücretinin ödenmesi durumunda rezervasyonun iptal edilmesi durumunda, iptal ücreti alınmaz. Bu paragrafta belirtilen ve (bunlarla sınırlı olmamak kaydıyla, iptal iptali bildirimi süresinde ve / veya (ii) geçerli yönetim ücretinin tutarını içeren ancak bunlarla sınırlı olmayan iptal politikasından kaynaklanan herhangi bir değişiklik için lütfen Ulaşım Koşullarınıza bakın. . Varışta tüm Ulaşım ücretinin ödenmesi durumunda rezervasyonun iptal edilmesi durumunda, iptal ücreti alınmaz.
+
+                                            Lütfen sınırlı olmamakla birlikte otobüs, otobüs ve / veya tren dahil olmak üzere belirli Ulaşım türlerinde iptal veya geri ödeme yapılamayacağını unutmayın. Lütfen bu tür politikaların tüm ayrıntıları için Ulaşım Koşullarında yer alan ilgili Nakliye Tedarikçisinin iptal ve iade politikasını gözden geçirin.
+
+                                            Ulaşım rezervasyonunuzla birlikte satın almış olabileceğiniz herhangi bir yan ürün ve / veya hizmetin iptalini sağlamak ve iptal etmek sizin sorumluluğunuzdadır. Bu, üçüncü taraflarca sağlanan Fazla Sigorta Yok sigorta kapsamı gibi ürünleri içerir, ancak bunlarla sınırlı değildir.
+
+                                            Kredi / bankamatik kartı rezervasyonunu iptal etmeniz veya değiştirmeniz halinde CarTrawler, orijinal rezervasyonunuz ile sonraki iptal veya değişiklik arasındaki parasal döviz kurlarındaki değişiklik nedeniyle maruz kaldığınız parasal kayıplardan sorumlu olmayacaktır. . Ulaşımın teslim alınması / kullanılmasının başlaması gereken tarih ve saatten sonra iptal edilemez.
+
+                                            D. Mücbir Sebep
+                                            Bu Rezervasyon Koşullarını ihlal etmeyeceğiz veya makul kontrolümüz dışındaki olaylardan, koşullardan veya nedenlerden kaynaklanıyorsa, bu Rezervasyon Koşulları kapsamındaki yükümlülüklerimizin yerine getirilmesinde gecikme veya yerine getirmekten sorumlu olmayacağız. Bu tür olaylar, koşullar ve nedenler “mücbir sebep olayları” olarak bilinir ve bunlarla sınırlı olmamakla birlikte bunlar Tanrı, sel, kuraklık, deprem veya diğer doğal afetler, salgın hastalıklar veya pandemiler, terörist saldırıları içerebilir, ancak bunlarla sınırlı değildir iç savaşlar, iç savaş ya da isyanlar, savaşlar, savaş tehdidi ya da hazırlığı, silahlı çatışmalar, yaptırımların uygulanması ve ambargolar. Bu gibi durumlarda, icra süresi, yükümlülüğün yerine getirilmesinin ertelendiği veya yerine getirilemediği süreye kadar uzatılacaktır. Ek olarak,
+
+                                            E. Ulaştırma Fiyatlandırma ve Döviz Kurları
+                                            CarTrawler, rezervasyon motoru aracılığıyla gösterilen Ulaşım için verilen fiyatların, bu rezervasyon motoru aracılığıyla bu tür Ulaşım ile rezervasyon yaptığınız zaman da dahil, ancak bunlarla sınırlı olmamak üzere, tüm önemli yönleriyle her zaman doğru olmasını sağlamak için her türlü çabayı göstermektedir. Bununla birlikte, CarTrawler ve / veya Ulaştırma Tedarikçisi, belirtilen fiyatta bir manifest veya patent hatası olması durumunda, ilgili Ulaşım sizin tarafınızdan rezerve edildikten sonra Ulaşım fiyatını değiştirme hakkını saklı tutar. Böyle bir durumda CarTrawler size makul olan en kısa sürede bildirimde bulunmaya çalışacaktır ve değiştirilen fiyatı ödemeyi seçebilir veya alternatif olarak rezervasyonunuzu iptal edip tam bir geri ödeme alabilirsiniz. CarTrawler tarafından fiyatları seçtiğiniz para biriminde görüntülemek için kullanılan döviz kurları sık sık güncellenmektedir. Kredi kartı veya bankamatik kartı şirketiniz tarafından kullanılan döviz kurları değişiklik gösterebilir. CarTrawler, bu rezervasyon motoru aracılığıyla görüntülenen fiyat ile kullanılan döviz kuru nedeniyle kredi kartı veya bankamatik kartı şirketiniz tarafından tahsil edilen tutar arasındaki herhangi bir tutarsızlıktan sorumlu değildir.
+
+                                            F. Şikayet Prosedürü
+                                            Küresel nakliye tedarikçileri ağımızla ortaklaşa en iyi müşteri deneyimini sunma konusunda tutkuluyuz. Bunun teslim edilmediğini düşünüyorsanız, seyahatinizi tamamladıktan sonra aşağıdaki yöntemleri kullanarak bir şikayet kaydedebilirsiniz:
+
+                                            Çevrimiçi Rezervasyon Yöneticisi: Lütfen şikayetinizin ayrıntılarını, ilgili belgelerle birlikte Rezervasyon Yöneticinizdeki 'Müşteri Desteği' sekmesinden gönderin.
+
+                                            Telefon: Lütfen kiralama kuponunuzun altında listelenen telefon numarasına bakın
+
+                                            Yorum: CarTrawler Müşteri Hizmetleri, Classon House, Dundrum Business Park, Dublin 14, İrlanda
+
+                                            Şikayetler, Ulaşım hizmetini kullanmanızın tamamlanmasından sonraki 30 gün içinde alınmalıdır (araç kiralama için bırakma tarihi veya kara taşımacılığı hizmetinin sona erme planlandığı tarih). Bu süreden sonra alınan şikayetler işleme alınmayacaktır. Şikayetinizin eksiksiz araştırılması için lütfen 20 iş gününe kadar bekleyin. Şikayetin CarTrawler şikayet prosedürü yoluyla çözülmemesi durumunda, mevcut anlaşmazlık çözümü seçenekleri hakkında daha fazla bilgi için http://ec.europa.eu/consumers/odr/ adresindeki Çevrimiçi Anlaşmazlık Çözümü Platformuna başvurabilirsiniz.
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+    else
+    {
+        <div class="modal fade" id="ReservationTermsAndConditions" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Rezervasyon Şartları ve Koşulları</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="w3-container">
+
+                            <span onclick="myFunction('Demo1')" class="w3-btn w3-block w3-green w3-left-align" style="margin-top:10px;">INTRODUCTION:</span>
+                            <div id="Demo1" class="w3-container w3-hide">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <span>
+                                            This booking engine is powered by AracvarArac’s technology and allows you to use AracVarArac’s technology to book car hire or ground transportation (including but not limited to taxis, transfer services and chauffeur drive vehicle rental, private transfers, business class transfers, first class transfers, bus and mini bus transfers, train transfers, wheelchair transfers and limousine transfers) (“Transportation”) from third party car hire or ground transportation suppliers (“Transportation Suppliers”).
+
+                                            Please read these AracVarArac booking engine Terms and Conditions of Use (“Booking Conditions”) carefully as they apply to the entire contents of this booking engine. By using any part of this booking engine you indicate your acceptance of these Booking Conditions (regardless of whether or not you choose to register with us or book Transportation) and you agree (i) to conduct your use of this booking engine in accordance with the Booking Conditions and (ii) that the Booking Conditions constitute a legal agreement between AracVarArac and you. If you do not accept and/or do not agree to be bound by these Booking Conditions, do not use and/or immediately cease using this booking engine.
+
+                                            By using this booking engine you acknowledge that all information including, but not limited to, information relating to Transportation, Transportation Suppliers, travel and holidays published on this booking engine may include inaccuracies and/or typographical errors and that AracVarArac will not be liable for any such inaccuracies or errors.
+
+                                            AracVarArac may, at its absolute discretion, amend these Booking Conditions at any time by updating this posting. Certain provisions of these Booking Conditions may be superseded by expressly designated legal notices or terms located on website through which you accessed this booking engine.
+
+                                            These Booking Conditions also apply to all bookings made through the AracVarArac Customer Centre of Excellence (“CCE”) and will be e-mailed to you where you make your booking by telephone through the CCE.
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <span onclick="myFunction('Demo2')" class="w3-btn w3-block w3-green w3-left-align" style="margin-top:10px;">INFORMATION ABOUT US:</span>
+                            <div id="Demo2" class="w3-container w3-hide">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <span>
+                                            This booking engine is operated by Etrawler Unlimited Company, an Irish registered company trading as AracVarArac, (“AracVarArac”, “we”, “us” or “our”). We are registered in Ireland under company number 93433 and have our registered office at Classon House, Dundrum Business Park, Dundrum, Dublin 14, Ireland which is also our main trading address. AracVarArac’s contact details are included on the Voucher or available from www.AracVarArac.com.
+
+                                            AracVarArac facilitates Transportation bookings by introducing you to Transportation Suppliers through this booking engine. AracVarArac does not own or operate any Transportation and is not a Transportation Supplier. Your contract for Transportation (“Transportation Conditions”) will be between you and the Transportation Supplier to which AracVarArac will not be a party. The relevant Transportation Conditions can be accessed through this booking engine once you select Transportation offered by such Transportation Supplier and insert relevant booking information. On making a booking with a Transportation Supplier through this booking engine, you are bound by and deemed to have accepted the Transportation Conditions of the relevant Transportation Supplier. AracVarArac makes no warranty or representation in relation to any Transportation Supplier and/or any Transportation offered or provided by any Transportation Supplier. The Transportation Supplier is solely responsible for providing you with Transportation booked through this booking engine.
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <span onclick="myFunction('Demo3')" class="w3-btn w3-block w3-green w3-left-align" style="margin-top:10px;">FEES AND CHARGES:</span>
+                            <div id="Demo3" class="w3-container w3-hide">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <span>
+                                            The accuracy of any price quoted for Transportation via this booking engine and any booking made on this booking engine is dependent upon and subject to the booking information you provide via this booking engine (including but not limited to the age of the driver, location and time of pick up and/or drop off).
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <span onclick="myFunction('Demo4')" class="w3-btn w3-block w3-green w3-left-align" style="margin-top:10px;">SERVICE ACCESS:</span>
+                            <div id="Demo4" class="w3-container w3-hide">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <span>
+                                            While AracVarArac endeavors to ensure that the booking engine is normally available 24 hours a day, AracVarArac will not be liable if, for any reason, the booking engine is unavailable at any time or for any period. Access to the booking engine may be suspended temporarily and without notice in the case of system failure, maintenance, repair or for reasons beyond AracVarArac’s control.
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <span onclick="myFunction('Demo5')" class="w3-btn w3-block w3-green w3-left-align" style="margin-top:10px;">BOOKING CONDITIONS:</span>
+                            <div id="Demo5" class="w3-container w3-hide">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <span>
+                                            Please read the following conditions which apply to bookings made by you with Transportation Suppliers through this booking engine.
+
+                                            A. Making a Booking
+                                            As AracVarArac operates globally, it uses four types of business payment model for booking Transportation. The payment model available to you when making a booking will depend upon your location and/or the Transportation Conditions of the Transportation Supplier selected.
+
+                                            The four business payment models are as follows:
+                                            You pay a booking deposit at the time of making your booking and you pay the balance to the Transportation Supplier on arrival at the Transportation Supplier’s desk prior to use of the Transportation; or
+                                            You pay a booking deposit at the time of making your booking and the balance is paid in advance of your arrival at the Transportation Supplier’s desk; or
+                                            You pay the entire cost of the Transportation at the time of making your booking and, in the case of car hire, you only pay for fuel (petrol/diesel) and optional extras on arrival at the Transportation Supplier’s desk; or
+                                            You pay nothing at the time of making your booking. You will pay the Transportation Supplier the entire cost of the Transportation on arrival to the Transportation Supplier’s desk prior to use of the Transportation.
+
+                                            Please note that where you have not made a payment at the time of making your booking you are solely responsible for making all outstanding payments due to the Transportation Supplier as and when they fall due.
+
+                                            You will be informed of any upfront payment required prior to completing your booking. For the avoidance of doubt, the price of any “optional extras” (including, but not limited to, child seats, GPSs, additional drivers) requested by you when making your booking will not be charged to you at the time of making the booking. Payment of “optional extras” must be made directly to the Transportation Supplier on arrival at the Transportation Supplier’s desk before pick-up/use of the Transportation. Please note that AracVarArac cannot guarantee the availability or price of any “optional extras” requested.
+
+                                            At all times, you are responsible for payment of any additional services and/or “optional extras” requested and/or purchased by you and any additional applicable charges including, but not limited to tolls and fuel charges and you are responsible for any service or administration charges applied by the relevant Transportation Supplier. We support a number of payment methods for making a booking through the booking engine depending on your location, which will be clearly displayed within the booking engine.
+
+                                            Any data transferred to a payment processer is transferred through an encrypted secure server. If you need to make any amendments to your booking, you must either communicate this through one of the communication methods listed on your Voucher or via the communication methods listed on our website at www.AracVarArac.com, clearly informing AracVarArac of the exact details. AracVarArac cannot guarantee that amendments can be processed; however every effort will be made to reach a satisfactory outcome. Amendments cannot be processed after pick-up/use of, or failure to pick-up or use, your Transportation from the Transportation Supplier. For car hire, AracVarArac is unable to offer you a refund if you end your hire early. In the event that you require an extension of your car hire period after the pick-up of your hired car (dates not covered by the car hire voucher), you must pay any additional costs incurred directly to the Transportation Supplier at the local rental rates prevailing at that time, if the car is available for the additional time requested. On making a booking, it is your responsibility to inform the Transportation Supplier, if necessary, of any physical or mental condition relevant to your ability to operate or use the Transportation. In the event of an accident, you may not be able to claim under any relevant insurance policy if you fail to inform the Transportation Supplier of such conditions.
+
+                                            IN THE EVENT OF A FAILURE TO PRESENT THE REQUIRED DOCUMENTS AND/OR CREDIT CARD, THE CAR HIRE SUPPLIER MAY REFUSE TO RELEASE THE CAR AND NO REFUND WILL BE GIVEN. FOR CAR HIRE, ON THE PICK-UP OF YOUR CAR, YOU WILL BE REQUIRED TO PRESENT (I) A FULL DRIVING LICENSE FROM YOUR COUNTRY OF ORIGIN (BOTH PARTS IN THE CASE OF A LICENSE ISSUED IN THE UNITED KINGDOM WHICH IS ISSUED IN TWO PARTS), (II) YOUR VALID PASSPORT AND A VALID CREDIT CARD IN THE NAME OF THE PERSON LISTED AS THE MAIN DRIVER ON THE BOOKING WITH SUFFICIENT AVAILABLE FUNDS TO COVER THE EXCESS ON ANY INSURANCE POLICY RELATED TO THE CAR HIRE (AS APPLICABLE), AND (III) A PRINTED COPY OF YOUR VOUCHER. PLEASE REVIEW YOUR TRANSPORTATION CONDITIONS FOR ANY FURTHER AND/OR ALTERNATIVE REQUIREMENTS OF THE TRANSPORTATION SUPPLIER AND/OR LOCAL LAW. FOR EXAMPLE, IN THE UNITED KINGDOM PROOF OF ADDRESS MAY ALSO BE REQUIRED.
+
+                                            If you make a booking but do not pick-up/use the Transportation (and have not cancelled such booking in accordance with the cancellation policy set out below), no refund will be given.
+
+                                            Please be advised that in the event that you expect to arrive late to pick-up/avail of the booked Transportation it is your responsibility to contact the Transportation Supplier to inform them.
+
+                                            In the event of a flight cancellation or delay, AracVarArac will not be responsible for providing any refunds.
+
+                                            B. Confirmation of Booking
+                                            Once your booking has been confirmed, AracVarArac will issue you with your Transportation voucher (“Voucher”) via e-mail on behalf of the Transportation Supplier, which includes the details of your booking and must be printed and presented to the Transportation Supplier at the time of pick-up/use of the Transportation. If you do not receive your Voucher please contact us immediately. The Voucher does not include details of the service charge or taxes charged by the Transportation Supplier or additional services requested by you at the time of pick-up/use of the Transportation and it is not an invoice. AracVarArac recommends that you carefully check the details contained in the Voucher (e.g. country, location, date and period of time for which the Transportation has been booked). If there are any discrepancies, you should immediately communicate such discrepancies either through one of the communication methods listed on your Voucher or via the communication methods listed on our website www.AracVarArac.com, clearly informing AracVarArac of the exact details of such discrepancies. AracVarArac reserves the right to amend the booking after the relevant Transportation has been booked by you in the event of the discovery of an error in respect of the booking and/or incorrect information having been displayed through the AracVarArac booking engine or communicated to you in the Voucher or otherwise. Where this happens AracVarArac will endeavour to notify you as soon as reasonably practicable and you may elect to accept the amended terms (if applicable) or, alternatively, cancel your booking and receive a full refund. AracVarArac does not physically store Vouchers, however your Voucher will be accessible through the “Manage Booking” tab of the booking engine in the event you wish to access your Voucher at any time. You will need to print a copy of your Voucher and present it to the Transportation Supplier prior to pick-up/use of the Transportation. AracVarArac advises that you read the Transportation Conditions detailed in the Voucher to which your booking will be subject. The Transportation Conditions are also available on this booking engine but may be changed by the Transportation Supplier from time to time.
+
+                                            The booking number included on the Voucher should be quoted for all enquiries, cancellations or modifications of the booking.
+
+                                            C. Cancellations
+                                            If you wish to cancel a booking, you may do so through one of the communication methods listed on your Voucher or via the communication methods listed on our website, www.AracVarArac.com in advance of the time of pick-up/use of the Transportation. Do not cancel your booking with the Transportation Supplier directly, as additional fees may apply. Please see the Transportation Conditions for details on the cancellation policy, any handling/administration charges, and any special conditions that may apply to your booking.
+
+                                            Save as otherwise set out in this section where AracVarArac receives a cancellation notice more than 24 hours before the scheduled time of pick-up/use of the Transportation, a full refund of the amount paid will, in general, be granted. This is subject to the force majeure provisions set out below at paragraph D. In respect of car hire bookings, where AracVarArac receives a cancellation notice less than 24 hours before the scheduled time of pick-up/use of the car hire, you will, where the amount already paid for the booking exceeds €50, receive a refund of the amount paid minus the €50 administration charge. Again, this is subject to the force majeure provisions set out below at paragraph D. In respect of ground transportation bookings, where AracVarArac receives a cancellation notice less than 24 hours before the scheduled time of pick-up/use of the ground transportation, no refund of the amount will be paid. Please note that the cancellation policy set out in this paragraph, is subject to the Transportation Supplier’s cancellation policy contained in any Transportation Conditions applicable to your booking. Please consult your Transportation Conditions for any variation from the cancellation policy set out in this paragraph which may include, but is not limited to, a variation in the (i) cancellation notice period required and/or (ii) amount of any applicable administration charge. In the event of a cancellation of a booking when the entire Transportation fee is payable on arrival, there is no charge for a cancellation.
+
+                                            Please note that no cancellations or refunds may be available in respect of certain types of Transportation including, but not limited, coach, bus and/or train. Please review the cancellation and refund policy of the relevant Transportation Supplier contained in the Transportation Conditions for full details of such policies.
+
+                                            It is your responsibility to ensure and arrange cancellation of any ancillary product and/or service that you may have purchased in conjunction with your Transportation booking. This includes, but is not limited to, products such as No Excess Insurance cover provided by third parties.
+
+                                            In the event that you cancel or amend a credit/debit card booking, AracVarArac will not be liable for any monetary losses suffered by you as a result of a change in monetary exchange rates between the time of your original booking and its subsequent cancellation or amendment. No cancellation is permitted after the date and time that the pick-up/use of the Transportation is due to commence.
+
+                                            D. Force Majeure
+                                            We shall not be in breach of these Booking Conditions nor liable for delay in performing, or failure to perform, any of our obligations under these Booking Conditions if such delay or failure result from events, circumstances or causes beyond our reasonable control. Such events, circumstances and causes are known as “force majeure events”, and by way of example these may include, but are not limited to, acts of God, flood, drought, earthquake or other natural disaster, epidemics or pandemics, terrorist attacks, civil wars, civil commotion or riots, wars, threat of or preparation for war, armed conflicts, the imposition of sanctions, and embargos. In such circumstances the time for performance shall be extended by a period equivalent to the period during which performance of the obligation has been delayed or failed to be performed. In addition, if we or car rental services generally are affected by a force majeure event we will be entitled to provide a voucher or refund credit note in lieu of a cash refund if your booking is cancelled.
+
+                                            E. Transportation Pricing & Exchange Rates
+                                            AracVarArac makes every effort to ensure that prices quoted for Transportation displayed through the booking engine are accurate in all material respects at all times including, but not limited to, the time you book such Transportation via this booking engine. Nonetheless, AracVarArac and or the Transportation Supplier reserves the right to amend the price of Transportation after the relevant Transportation has been booked by you in the event of a manifest or patent error in the price quoted. Where this happens AracVarArac will endeavour to notify you as soon as reasonably practicable and you may elect to either pay the amended price or, alternatively, cancel your booking and receive a full refund. The foreign exchange rates used by AracVarArac to display prices in the currency chosen by you are updated frequently. Foreign exchange rates used by your credit card or debit card company may vary. AracVarArac is not responsible for any discrepancy between the price displayed via this booking engine and the amount charged by your credit card or debit card company due to the rate of exchange used.
+
+                                            F. Complaints Procedure
+                                            We are passionate about delivering the very best customer experience in partnership with our global network of transportation suppliers. If you feel this has not been delivered, you can log a complaint upon completion of your trip via the following methods:
+
+                                            Online Booking Manager: Please submit the details of your complaint, along with any relevant documentation, via the ‘Customer Support’ tab in your Booking Manager.
+
+                                            Phone: Please refer to the phone number listed at the bottom of your rental voucher
+
+                                            Post: AracVarArac Customer Service, Classon House, Dundrum Business Park, Dublin 14, Ireland
+
+                                            Complaints must be received within 30 days of completion of your use of the Transportation service (drop-off date of car rental or date when ground transportation service was scheduled to end). Complaints received after this time will not be processed. Please allow up to 20 working days for full investigation of your complaint. In the event that the complaint is not resolved through the AracVarArac complaints procedure, you may refer to the On-line Dispute Resolution Platform at http://ec.europa.eu/consumers/odr/ for further information on available dispute resolution options.
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+    <script>
+        function myFunction(id) {
+            var x = document.getElementById(id);
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+    </script>
+</body>
